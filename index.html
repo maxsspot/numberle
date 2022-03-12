@@ -15,12 +15,6 @@
 		<title>Numerale</title>
 	</head>
 	<body>
-	<div id = "mode">
-		<h1>CHOOSE A MODE</h1>
-		<a onclick = "var number=Math.floor(Math.random()*15)+1;document.getElementById ('mode').style.transform = 'scale(0.0)';localStorage.set('mode','easy')">Easy (1-15)</a>
-		<a onclick = "localStorage.set('mode','normal');document.getElementById ('mode').style.transform = 'scale(0.0)';">Normal (1-25)</a>
-		<a onclick = "var number=Math.floor(Math.random()*50)+1;document.getElementById ('mode').style.transform = 'scale(0.0)';localStorage.set('mode','hard')">Hard (1-50)</a>
-	</div>
         <br>
         <a style = "float:left;margin-left:15px;" onclick = "alert('Find the correct number in 5 guesses.\n\nWHAT EACH COLOR MEANS:\nORANGE: Number is too small\nBLUE: Number is too big.');"><i class="fas fa-question-circle fa-lg"></i> How to play</a>
         <a style = "float:right;margin-right:15px;cursor:text;">Good luck!</a>
