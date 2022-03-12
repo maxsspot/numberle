@@ -4,6 +4,7 @@ var number = Math.floor(Math.random()*25) + 1;
                 document.getElementById ("go2").style.display = "block";
                 document.getElementById ("one").disabled = true;
                 document.getElementById ("two").disabled = false;
+                        document.getElementById ("two").focus();
                 if (document.getElementById ("one").value < number) {
                     document.getElementById ("one").style.backgroundColor = "orange";
                 } else if (document.getElementById ("one").value > number) {
@@ -19,6 +20,7 @@ var number = Math.floor(Math.random()*25) + 1;
                 document.getElementById ("go3").style.display = "block";
                 document.getElementById ("two").disabled = true;
                 document.getElementById ("three").disabled = false;
+                        document.getElementById ("three").focus();
                 if (document.getElementById ("two").value < number) {
                     document.getElementById ("two").style.backgroundColor = "orange";
                 } else if (document.getElementById ("two").value > number) {
@@ -34,6 +36,7 @@ var number = Math.floor(Math.random()*25) + 1;
                 document.getElementById ("go4").style.display = "block";
                 document.getElementById ("three").disabled = true;
                 document.getElementById ("four").disabled = false;
+                        document.getElementById ("four").focus();
                 if (document.getElementById ("three").value < number) {
                     document.getElementById ("three").style.backgroundColor = "orange";
                 } else if (document.getElementById ("three").value > number) {
@@ -49,6 +52,7 @@ var number = Math.floor(Math.random()*25) + 1;
                 document.getElementById ("go5").style.display = "block";
                 document.getElementById ("four").disabled = true;
                 document.getElementById ("five").disabled = false;
+                        document.getElementById ("five").focus();
                 if (document.getElementById ("four").value < number) {
                     document.getElementById ("four").style.backgroundColor = "orange";
                 } else if (document.getElementById ("four").value > number) {
