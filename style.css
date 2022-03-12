@@ -3,6 +3,14 @@
     padding:0;
 }
 
+#mode {
+	background-color:#1B1212;
+	width:100%;
+	height:100%;
+	position:fixed;
+	transition:all 1s;
+}
+
 body {
 	text-align:center;
     color:white;
