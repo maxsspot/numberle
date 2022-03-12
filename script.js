@@ -1,3 +1,4 @@
+document.getElementById ("one").focus();
 var number = Math.floor(Math.random()*25) + 1;
             function tryguess () {
                 document.getElementById ("go").style.display = "none";
