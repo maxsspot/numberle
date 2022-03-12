@@ -1,4 +1,4 @@
-var number = Math.floor(Math.random()*15) + 1;
+var number = Math.floor(Math.random()*25) + 1;
             function tryguess () {
                 document.getElementById ("go").style.display = "none";
                 document.getElementById ("go2").style.display = "block";
