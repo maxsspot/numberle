@@ -1,0 +1,74 @@
+* {
+    margin:0;
+    padding:0;
+}
+
+body {
+	text-align:center;
+    color:white;
+    font-family:"Fredoka", sans-serif;
+    background-color:black;
+}
+
+input {
+    border:grey solid 2px;
+    border-radius:5px;
+    height:50px;
+    width:50px;
+    text-align:center;
+    margin:3px;
+    transition:all 0.5s;
+    background-color:transparent;
+}
+
+a {
+    color:white;
+    cursor:pointer;
+}
+
+hr {
+    width:99%;
+    margin-left:auto;
+    margin-right:auto;
+    background-color:white;
+    border:white solid 1px;
+    border-radius:50px;
+}
+
+#go2, #go3, #go4, #go5 {
+    display:none;
+}
+
+input:focus {
+    border:white solid 2px;
+}
+
+button, input {
+    outline:none;
+    color:white;
+    font-family:"Fredoka", sans-serif;
+}
+
+button {
+    width:150px;
+    height:35px;
+    background-color:transparent;
+    border:grey solid 2px;
+    border-radius:50px;
+    position:fixed;
+    left:44%;
+    right:44%;
+    color:white;
+    cursor:pointer;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
