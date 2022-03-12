@@ -5,7 +5,7 @@
     "start_url":"index.html",
     "display":"standalone",
     "background_color":"black",
-    "theme_color":"black",
+    "theme_color":"#1b1212",
     "scope":"/",
     "description":"A number guessing game similar to Wordle.",
     "icons":[
