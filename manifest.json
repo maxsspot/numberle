@@ -1,0 +1,23 @@
+
+{
+    "name":"Numerale",
+    "short_name":"Numerale",
+    "start_url":"index.html",
+    "display":"standalone",
+    "background_color":"black",
+    "theme_color":"black",
+    "scope":"/",
+    "description":"A number guessing game similar to Wordle.",
+    "icons":[
+    {
+    "src":"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fpngimg.com%2Fuploads%2Fletter_n%2Fletter_n_PNG17.png&f=1&nofb=1",                     
+    "sizes":"192x192",
+    "type":"image/png"
+    },
+    {
+    "src":"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fpngimg.com%2Fuploads%2Fletter_n%2Fletter_n_PNG17.png&f=1&nofb=1",
+    "sizes":"512x512",
+    "type":"image/png"
+    }
+  ]
+}
