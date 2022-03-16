@@ -11,8 +11,6 @@ var number = Math.floor(Math.random()*35) + 1;
                 } else if (document.getElementById ("one").value > number) {
                     document.getElementById ("one").style.backgroundColor = "blue";
                 } else if (document.getElementById ("one").value == number) {
-                    localStorage.setItem ("one","1");
-                    document.getElementById ("score").innerHTML = localStorage.getItem ("one");
                     alert ("YOU WON! \n\nThe game will restart when you close this box.");
                     location.reload();
                 }
@@ -30,8 +28,6 @@ var number = Math.floor(Math.random()*35) + 1;
                 } else if (document.getElementById ("two").value > number) {
                     document.getElementById ("two").style.backgroundColor = "blue";
                 } else if (document.getElementById ("two").value == number) {
-                    localStorage.setItem ("two","2");
-                            document.getElementById ("score").innerHTML = localStorage.getItem ("two");
                     alert ("YOU WON! \n\nThe game will restart when you close this box.");
                     location.reload();
                 }
@@ -48,8 +44,6 @@ var number = Math.floor(Math.random()*35) + 1;
                 } else if (document.getElementById ("three").value > number) {
                     document.getElementById ("three").style.backgroundColor = "blue";
                 } else if (document.getElementById ("three").value == number) {
-                    localStorage.setItem ("three","3");
-                            document.getElementById ("score").innerHTML = localStorage.getItem ("three");
                     alert ("YOU WON! \n\nThe game will restart when you close this box.");
                     location.reload();
                 }
@@ -66,8 +60,6 @@ var number = Math.floor(Math.random()*35) + 1;
                 } else if (document.getElementById ("four").value > number) {
                     document.getElementById ("four").style.backgroundColor = "blue";
                 } else if (document.getElementById ("four").value == number) {
-                    localStorage.setItem ("four","4");
-                            document.getElementById ("score").innerHTML = localStorage.getItem ("four");
                     alert ("YOU WON! \n\nThe game will restart when you close this box.");
                     location.reload();
                 }
@@ -83,8 +75,6 @@ var number = Math.floor(Math.random()*35) + 1;
                     alert ("YOU LOST! \n\nThe number was: " + number + "\n\nThe game will restart when you close this box.");
                     location.reload();
                 } else if (document.getElementById ("five").value == number) {
-                    localStorage.setItem ("five","5");
-                            document.getElementById ("five").innerHTML = localStorage.getItem ("five");
                     alert ("YOU WON! \n\nThe game will restart when you close this box.");
                     location.reload();
                 } else if (document.getElementById ("five").value != number) {
@@ -92,7 +82,3 @@ var number = Math.floor(Math.random()*35) + 1;
                     location.reload();
                 }
             }
-
-            setInterval(function(){ 
-                document.getElementById ("timer").value = startNumber;
-            }, 1000);
