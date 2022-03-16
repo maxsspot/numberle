@@ -2,10 +2,10 @@
 {
     "name":"Numerale",
     "short_name":"Numerale",
-    "start_url":"/",
+    "start_url":"index.html",
     "display":"standalone",
     "background_color":"black",
-    "theme_color":"white",
+    "theme_color":"#36454f",
     "scope":"/",
     "description":"A number guessing game similar to Wordle.",
     "icons":[
