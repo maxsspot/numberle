@@ -83,7 +83,7 @@ var number = Math.floor(Math.random()*35) + 1;
                 }
             }
 
-setInterval(function(){ 
+window.setInterval(function(){ 
     if (document.getElementById ("go").value = null || document.getElementById ("go2").value = null || document.getElementById ("go3").value = null || document.getElementById ("go4").value = null || document.getElementById ("go5").value = null) {
               document.getElementById ("go").disabled = true;
                 document.getElementById ("go2").disabled = true;
@@ -91,4 +91,4 @@ setInterval(function(){
                 document.getElementById ("go4").disabled = true;
                 document.getElementById ("go5").disabled = true;
     }
-}, 1000);
+}, 100);
