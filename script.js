@@ -1,4 +1,5 @@
 'use strict';
+location.href = "numerale.netlify.app/index.html";
 document.getElementById ("one").focus();
 var number = Math.floor(Math.random()*35) + 1;
             function tryguess () {
