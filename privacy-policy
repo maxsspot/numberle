@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang = "en-us">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta charset = "UTF-8">
+		<link rel="manifest" href="manifest.json">
+        <link href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.0/css/all.min.css" rel = "stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300&display=swap" rel="stylesheet">
+		
+    <link rel = "icon" href = "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.mardigrasoutlet.com%2Fmedia%2Fcatalog%2Fproduct%2Fcache%2F4%2Fimage%2F1000x1000%2F9df78eab33525d08d6e5fb8d27136e95%2Fa%2Fb%2Fab2038.1.jpg&f=1&nofb=1" type = "image/x-icon"> 
+            <script async src='script.js'></script> 
+        <link href='style.css' rel='stylesheet' type='text/css'/>
+		<title>Numerale - Privacy Policy</title>
+	</head>
+	<body>
+  <br>
+        <h2>We dont collect your data, this is just required.</h2>
+		<script>
+			window.addEventListener('load', () => {
+      registerSW();
+    });
+ 
+    // Register the Service Worker
+    async function registerSW() {
+      if ('serviceWorker' in navigator) {
+        try {
+          await navigator
+                .serviceWorker
+                .register('serviceworker.js');
+        }
+        catch (e) {
+          console.log('SW registration failed');
+        }
+      }
+    }
+			</script>
+    </body>
+</html>
