@@ -62,7 +62,7 @@ button, input {
 button {
     width:150px;
     height:35px;
-    background-color:transparent;
+    background-color:grey;
     border:grey solid 2px;
     border-radius:50px;
     position:fixed;
