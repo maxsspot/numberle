@@ -84,16 +84,16 @@ var number = Math.floor(Math.random()*35) + 1;
 
 window.setInterval(function() {
   document.addEventListener("keydown", function (e) {
-    if (e.code === "Enter" && document.getElementById ('go').display == 'block') { 
-        tryguess();
-    } else if (e.code === "Enter" && document.getElementById ('go2').display == 'block') { 
-            tryguess2();           
-    } else if (e.code === "Enter" && document.getElementById ('go3').display == 'block') { 
-            tryguess3();           
-    } else if (e.code === "Enter" && document.getElementById ('go4').display == 'block') { 
-            tryguess4();           
-    } else if (e.code === "Enter" && document.getElementById ('go5').display == 'block') { 
-            tryguess5();           
+    if (event.keyCode === "Enter" && document.getElementById ('go').display == 'block') { 
+        document.getElementById("go").click();
+    } else if (event.keyCode === "Enter" && document.getElementById ('go2').display == 'block') { 
+                document.getElementById("go2").click();  
+    } else if (event.keyCode === "Enter" && document.getElementById ('go3').display == 'block') { 
+                  document.getElementById("go3").click();     
+    } else if (event.keyCode === "Enter" && document.getElementById ('go4').display == 'block') { 
+                     document.getElementById("go4").click();
+    } else if (event.keyCode === "Enter" && document.getElementById ('go5').display == 'block') { 
+                      document.getElementById("go5").click();
     }
 });
 }, 1000);
