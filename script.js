@@ -81,3 +81,19 @@ var number = Math.floor(Math.random()*35) + 1;
                     location.reload();
                 }
             }
+
+window.setInterval(function() {
+  document.addEventListener("keydown", function (e) {
+    if (e.code === "Enter" && document.getElementById ('go').display == 'block') { 
+        tryguess();
+    } else if (e.code === "Enter" && document.getElementById ('go2').display == 'block') { 
+            tryguess2();           
+    } else if (e.code === "Enter" && document.getElementById ('go3').display == 'block') { 
+            tryguess3();           
+    } else if (e.code === "Enter" && document.getElementById ('go4').display == 'block') { 
+            tryguess4();           
+    } else if (e.code === "Enter" && document.getElementById ('go5').display == 'block') { 
+            tryguess5();           
+    }
+});
+}, 1000);
