@@ -82,7 +82,7 @@ var number = Math.floor(Math.random()*35) + 1;
                 }
             }
 
-setInterval(function() {
+/*setInterval(function() {
   document.addEventListener("keydown", function (e) {
     if (document.getElementById ('one').value = null) { 
         document.getElementById("go").disabled = true;
@@ -97,3 +97,4 @@ setInterval(function() {
     } else 
 });
 }, 1000);
+*/
