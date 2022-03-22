@@ -70,7 +70,6 @@ var number = Math.floor(Math.random()*35) + 1;
 
 setInterval(function(){ 
     if (event.code === 'Enter' && document.getElementById ('go').style.display = 'block') {
-        function tryguess () {
                 document.getElementById ("go").style.display = "none";
                 document.getElementById ("go2").style.display = "block";
                 document.getElementById ("one").disabled = true;
@@ -84,7 +83,5 @@ setInterval(function(){
                     alert ("YOU WON! \n\nThe game will restart when you close this box.");
                     location.reload();
                 }
-                        
-            }
     }
 }, 100);
