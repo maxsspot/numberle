@@ -69,8 +69,8 @@ var number = Math.floor(Math.random()*35) + 1;
             }
 
 setInterval(function(){ 
-            document.addEventListener("keyup", function(event) {
-                        if (event.code === 'Enter' && document.getElementById ('go').style.display = 'block') {
+                        document.addEventListener("keydown", function(event) {
+                        if (event.key === 'Enter' && document.getElementById ('go').style.display == 'block') {
                 document.getElementById ("go").style.display = "none";
                 document.getElementById ("go2").style.display = "block";
                 document.getElementById ("one").disabled = true;
