@@ -84,16 +84,16 @@ var number = Math.floor(Math.random()*35) + 1;
 
 setInterval(function() {
   document.addEventListener("keydown", function (e) {
-    if (event.keyCode === "Enter" && document.getElementById ('go').display == 'block') { 
-        document.getElementById("go").click();
-    } else if (event.keyCode === "Enter" && document.getElementById ('go2').display == 'block') { 
-                document.getElementById("go2").click();  
-    } else if (event.keyCode === "Enter" && document.getElementById ('go3').display == 'block') { 
-                  document.getElementById("go3").click();     
-    } else if (event.keyCode === "Enter" && document.getElementById ('go4').display == 'block') { 
-                     document.getElementById("go4").click();
-    } else if (event.keyCode === "Enter" && document.getElementById ('go5').display == 'block') { 
-                      document.getElementById("go5").click();
-    }
+    if (document.getElementById ('one').value = null) { 
+        document.getElementById("go").disabled = true;
+    } else if (document.getElementById ('two').value = null) { 
+        document.getElementById("go2").disabled = true;
+    } else if (document.getElementById ('three').value = null) { 
+        document.getElementById("go3").disabled = true;
+    } else if (document.getElementById ('four').value = null) { 
+        document.getElementById("go4").disabled = true;
+    } else if (document.getElementById ('five').value = null) { 
+        document.getElementById("go5").disabled = true;
+    } else 
 });
 }, 1000);
