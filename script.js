@@ -1,21 +1,6 @@
 document.getElementById ("one").focus();
 var number = Math.floor(Math.random()*35) + 1;
-            function tryguess () {
-                document.getElementById ("go").style.display = "none";
-                document.getElementById ("go2").style.display = "block";
-                document.getElementById ("one").disabled = true;
-                document.getElementById ("two").disabled = false;
-                        document.getElementById ("two").focus();
-                if (document.getElementById ("one").value < number) {
-                    document.getElementById ("one").style.backgroundColor = "orange";
-                } else if (document.getElementById ("one").value > number) {
-                    document.getElementById ("one").style.backgroundColor = "blue";
-                } else if (document.getElementById ("one").value == number) {
-                    alert ("YOU WON! \n\nThe game will restart when you close this box.");
-                    location.reload();
-                }
-                        
-            }
+            
 
             function tryguess2 () {
                 document.getElementById ("go2").style.display = "none";
@@ -82,3 +67,24 @@ var number = Math.floor(Math.random()*35) + 1;
                     location.reload();
                 }
             }
+
+setInterval(function(){ 
+    if (event.code === 'Enter' && document.getElementById ('go').style.display = 'block') {
+        function tryguess () {
+                document.getElementById ("go").style.display = "none";
+                document.getElementById ("go2").style.display = "block";
+                document.getElementById ("one").disabled = true;
+                document.getElementById ("two").disabled = false;
+                        document.getElementById ("two").focus();
+                if (document.getElementById ("one").value < number) {
+                    document.getElementById ("one").style.backgroundColor = "orange";
+                } else if (document.getElementById ("one").value > number) {
+                    document.getElementById ("one").style.backgroundColor = "blue";
+                } else if (document.getElementById ("one").value == number) {
+                    alert ("YOU WON! \n\nThe game will restart when you close this box.");
+                    location.reload();
+                }
+                        
+            }
+    }
+}, 100);
