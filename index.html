@@ -56,7 +56,11 @@
 		<p>BLUE: NUMBER TOO HIGH.</p>
                 <br>
                 <br>
-
+		<hr>
+		<br>
+		<br>
+		<a onclick = "var number = Math.floor(Math.random()*100)+1;document.getElementById ('imposs').style.display = 'none';document.getElementById ('norm').style.display = 'block';" id = "imposs">Impossible Mode</a>
+		<a onclick = "var number = Math.floor(Math.random()*35)+1;document.getElementById ('norm').style.display = 'none';document.getElementById ('imposs').style.display = 'imposs';" id = "norm">Normal Mode</a>
 		<script>
 			window.addEventListener('load', () => {
       registerSW();
