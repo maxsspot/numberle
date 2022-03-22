@@ -82,7 +82,7 @@ var number = Math.floor(Math.random()*35) + 1;
                 }
             }
 
-window.setInterval(function() {
+setInterval(function() {
   document.addEventListener("keydown", function (e) {
     if (event.keyCode === "Enter" && document.getElementById ('go').display == 'block') { 
         document.getElementById("go").click();
