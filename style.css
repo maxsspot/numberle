@@ -71,8 +71,10 @@ button {
     border:grey solid 2px;
     border-radius:50px;
     position:fixed;
-    left:44.5%;
-    right:44.5%;
+    left:5%;
+    right:5%;
+    margin-left:auto;
+    margin-right:auto;
     color:white;
     cursor:pointer;
 	transition:all 0.5s;
