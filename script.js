@@ -98,3 +98,7 @@ var number = Math.floor(Math.random()*35) + 1;
 });
 }, 1000);
 */
+navigator.registerProtocolHandler("numerale",
+                                  "https://numerals.netlify.app/?burger=%s",
+                                  "Burger handler"); // last title arg included for compatibility
+
