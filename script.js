@@ -98,3 +98,16 @@ var number = Math.floor(Math.random()*35) + 1;
 });
 }, 1000);
 */
+setInterval(function(){ 
+    if (document.getElementById ('go').value = null) { 
+        document.getElementById("one").disabled = true;
+    } else if (document.getElementById ('go2').value = null) { 
+        document.getElementById("two").disabled = true;
+    } else if (document.getElementById ('go3').value = null) { 
+        document.getElementById("three").disabled = true;
+    } else if (document.getElementById ('go4').value = null) { 
+        document.getElementById("four").disabled = true;
+    } else if (document.getElementById ('go5').value = null) { 
+        document.getElementById("five").disabled = true;
+    }
+}, 1);
