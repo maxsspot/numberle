@@ -104,16 +104,16 @@ setInterval(function(){
     const c = parseInt(document.getElementById ('three').value);
     const d = parseInt(document.getElementById ('four').value);
     const e = parseInt(document.getElementById ('five').value);
-    const returnnumber = "35";
-    if (a > 35) { 
-           a.value = returnnumber;     
-    } else if (b > 35) { 
-           b.value = returnnumber;     
-    } else if (c > 35) { 
-           c.value = returnnumber;     
-    } else if (d > 35) { 
-           d.value = returnnumber;     
-    } else if (e > 35) { 
-           e.value = returnnumber;     
+    const max = 35;
+    if (a > max) { 
+           a.value = max;     
+    } else if (b > max) { 
+           b.value = max;     
+    } else if (c > max) { 
+           c.value = max;     
+    } else if (d > max) { 
+           d.value = max;     
+    } else if (e > max) { 
+           e.value = max;     
     } 
 }, 1);
