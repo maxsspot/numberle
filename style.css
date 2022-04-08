@@ -16,6 +16,7 @@
 body {
 	text-align:center;
     color:white;
+	overflow:hidden;
     font-family:"Fredoka", sans-serif;
     background-color:black;
 }
