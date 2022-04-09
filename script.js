@@ -106,14 +106,14 @@ setInterval(function(){
     const e = parseInt(document.getElementById ('five').value);
     const max = 35;
     if (a > max) { 
-           a.value = null;     
+           a.value = "35";     
     } else if (b > max) { 
-           b.value = null;     
+           b.value = "35";     
     } else if (c > max) { 
-           c.value = null;     
+           c.value = "35";     
     } else if (d > max) { 
-           d.value = null;     
+           d.value = "35";     
     } else if (e > max) { 
-           e.value = null;     
+           e.value = "35";     
     } 
 }, 1);
