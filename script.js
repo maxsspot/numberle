@@ -82,7 +82,7 @@ var number = Math.floor(Math.random()*35) + 1;
                 }
             }
 
-document.onkeyup = function (e) {
+/*document.onkeyup = function (e) {
     if (e.key == "Enter" && document.getElementById ("one").disabled) {
         tryguess();
     } else if (e.key == "Enter" && document.getElementById ("two").disabled) {
@@ -95,3 +95,4 @@ document.onkeyup = function (e) {
         tryguess5();
     }
 }
+*/
