@@ -83,15 +83,19 @@ var number = Math.floor(Math.random()*35) + 1;
             }
 
 document.onkeyup = function (e) {
-    if (e.key == "Enter" && document.getElementById ("two").disabled) {
+            if (e.key == "Enter" && document.getElementById ("two").disabled) {
         tryguess();
-    } else if (e.key == "Enter" && document.getElementById ("three").disabled) {
+    } 
+            if (e.key == "Enter" && document.getElementById ("three").disabled) {
         tryguess2();
-    } else if (e.key == "Enter" && document.getElementById ("four").disabled) {
+    } 
+            if (e.key == "Enter" && document.getElementById ("four").disabled) {
         tryguess3();
-    } else if (e.key == "Enter" && document.getElementById ("five").disabled) {
+    } 
+            if (e.key == "Enter" && document.getElementById ("five").disabled) {
         tryguess4();
-    } else if (e.key == "Enter" && document.getElementById ("one").disabled && document.getElementById ("two").disabled && document.getElementById ("three").disabled && document.getElementById ("four").disabled) {
+    } 
+            if (e.key == "Enter" && document.getElementById ("one").disabled && document.getElementById ("two").disabled && document.getElementById ("three").disabled && document.getElementById ("four").disabled) {
         tryguess5();
     }
 }
