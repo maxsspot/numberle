@@ -83,13 +83,13 @@ var number = Math.floor(Math.random()*35) + 1;
             }
 
 document.onkeyup = function (e) {
-    if (e.key == "Enter" && document.getElementById ("two").disabled) {
+    if (e.key == "Enter" && document.getElementById ("one").disabled) {
         tryguess();
-    } else if (e.key == "Enter" && document.getElementById ("three").disabled) {
+    } else if (e.key == "Enter" && document.getElementById ("two").disabled) {
         tryguess2();
-    } else if (e.key == "Enter" && document.getElementById ("four").disabled) {
+    } else if (e.key == "Enter" && document.getElementById ("three").disabled) {
         tryguess3();
-    } else if (e.key == "Enter" && document.getElementById ("five").disabled) {
+    } else if (e.key == "Enter" && document.getElementById ("four").disabled) {
         tryguess4();
     } else if (e.key == "Enter" && document.getElementById ("five").disabled == false) {
         tryguess5();
