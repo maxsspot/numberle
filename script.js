@@ -82,77 +82,20 @@ var number = Math.floor(Math.random()*35) + 1;
                 }
             }
 
-document.onkeyup = function (e) {
+/* document.onkeyup = function (e) {
             if (e.key == "Enter" && document.getElementById ("two").disabled) {
-         document.getElementById ("go").style.display = "none";
-                document.getElementById ("go2").style.display = "block";
-                document.getElementById ("one").disabled = true;
-                document.getElementById ("two").disabled = false;
-                        document.getElementById ("two").focus();
-                if (document.getElementById ("one").value < number) {
-                    document.getElementById ("one").style.backgroundColor = "orange";
-                } else if (document.getElementById ("one").value > number) {
-                    document.getElementById ("one").style.backgroundColor = "blue";
-                } else if (document.getElementById ("one").value == number) {
-                    alert ("YOU WON! \n\nThe game will restart when you close this box.");
-                    location.reload();
+         
                 }     
-    } else if (e.key == "Enter" && document.getElementById ("three").disabled) {
-        document.getElementById ("go2").style.display = "none";
-                document.getElementById ("go3").style.display = "block";
-                document.getElementById ("two").disabled = true;
-                document.getElementById ("three").disabled = false;
-                        document.getElementById ("three").focus();
-                if (document.getElementById ("two").value < number) {
-                    document.getElementById ("two").style.backgroundColor = "orange";
-                } else if (document.getElementById ("two").value > number) {
-                    document.getElementById ("two").style.backgroundColor = "blue";
-                } else if (document.getElementById ("two").value == number) {
-                    alert ("YOU WON! \n\nThe game will restart when you close this box.");
-                    location.reload();
-                }
+    } else if (e.key == "Enter" && document.getElementById ("").disabled) {
+       
+                
     } else if (e.key == "Enter" && document.getElementById ("four").disabled) {
-        document.getElementById ("go3").style.display = "none";
-                document.getElementById ("go4").style.display = "block";
-                document.getElementById ("three").disabled = true;
-                document.getElementById ("four").disabled = false;
-                        document.getElementById ("four").focus();
-                if (document.getElementById ("three").value < number) {
-                    document.getElementById ("three").style.backgroundColor = "orange";
-                } else if (document.getElementById ("three").value > number) {
-                    document.getElementById ("three").style.backgroundColor = "blue";
-                } else if (document.getElementById ("three").value == number) {
-                    alert ("YOU WON! \n\nThe game will restart when you close this box.");
-                    location.reload();
-                }
+        
     } else if (e.key == "Enter" && document.getElementById ("five").disabled) {
-        document.getElementById ("go4").style.display = "none";
-                document.getElementById ("go5").style.display = "block";
-                document.getElementById ("four").disabled = true;
-                document.getElementById ("five").disabled = false;
-                        document.getElementById ("five").focus();
-                if (document.getElementById ("four").value < number) {
-                    document.getElementById ("four").style.backgroundColor = "orange";
-                } else if (document.getElementById ("four").value > number) {
-                    document.getElementById ("four").style.backgroundColor = "blue";
-                } else if (document.getElementById ("four").value == number) {
-                    alert ("YOU WON! \n\nThe game will restart when you close this box.");
-                    location.reload();
-                }
+        
     } else if (e.key == "Enter" && document.getElementById ("five").disabled == false) {
-document.getElementById ("go4").style.display = "none";
-                document.getElementById ("go5").style.display = "block";
-                document.getElementById ("four").disabled = true;
-                document.getElementById ("five").disabled = false;
-                        document.getElementById ("five").focus();
-                if (document.getElementById ("four").value < number) {
-                    document.getElementById ("four").style.backgroundColor = "orange";
-                } else if (document.getElementById ("four").value > number) {
-                    document.getElementById ("four").style.backgroundColor = "blue";
-                } else if (document.getElementById ("four").value == number) {
-                    alert ("YOU WON! \n\nThe game will restart when you close this box.");
-                    location.reload();
-                }
+
     }
             
 }
+*/
