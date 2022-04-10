@@ -82,38 +82,16 @@ var number = Math.floor(Math.random()*35) + 1;
                 }
             }
 
-/*setInterval(function() {
-  document.addEventListener("keydown", function (e) {
-    if (document.getElementById ('one').value = null) { 
-        document.getElementById("go").disabled = true;
-    } else if (document.getElementById ('two').value = null) { 
-        document.getElementById("go2").disabled = true;
-    } else if (document.getElementById ('three').value = null) { 
-        document.getElementById("go3").disabled = true;
-    } else if (document.getElementById ('four').value = null) { 
-        document.getElementById("go4").disabled = true;
-    } else if (document.getElementById ('five').value = null) { 
-        document.getElementById("go5").disabled = true;
-    } else 
-});
-}, 1000);
-*/
-setInterval(function(){ 
-    const a = parseInt(document.getElementById ('one').value);
-    const b = parseInt(document.getElementById ('two').value);
-    const c = parseInt(document.getElementById ('three').value);
-    const d = parseInt(document.getElementById ('four').value);
-    const e = parseInt(document.getElementById ('five').value);
-    const max = 35;
-    if (a > max) { 
-           a.value = "35";     
-    } else if (b > max) { 
-           b.value = "35";     
-    } else if (c > max) { 
-           c.value = "35";     
-    } else if (d > max) { 
-           d.value = "35";     
-    } else if (e > max) { 
-           e.value = "35";     
-    } 
-}, 1);
+document.onkeyup = function (e) {
+    if (e.key == "Enter" && document.getElementById ("two").disabled) {
+        tryguess();
+    } else if (e.key == "Enter" && document.getElementById ("three").disabled) {
+        tryguess2();
+    } else if (e.key == "Enter" && document.getElementById ("four").disabled) {
+        tryguess3();
+    } else if (e.key == "Enter" && document.getElementById ("five").disabled) {
+        tryguess4();
+    } else if (e.key == "Enter" && document.getElementById ("five").disabled == false) {
+        tryguess5();
+    }
+}
