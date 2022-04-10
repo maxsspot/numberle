@@ -84,16 +84,27 @@ var number = Math.floor(Math.random()*35) + 1;
 
 document.onkeyup = function (e) {
             if (e.key == "Enter" && document.getElementById ("two").disabled) {
-        tryguess();
-    } 
-            if (e.key == "Enter" && document.getElementById ("three").disabled) {
-        tryguess2();
-    } 
-            if (e.key == "Enter" && document.getElementById ("four").disabled) {
-        tryguess3();
-    } 
-            if (e.key == "Enter" && document.getElementById ("five").disabled) {
-        tryguess4();
-    } 
+         document.getElementById ("go").style.display = "none";
+                document.getElementById ("go2").style.display = "block";
+                document.getElementById ("one").disabled = true;
+                document.getElementById ("two").disabled = false;
+                        document.getElementById ("two").focus();
+                if (document.getElementById ("one").value < number) {
+                    document.getElementById ("one").style.backgroundColor = "orange";
+                } else if (document.getElementById ("one").value > number) {
+                    document.getElementById ("one").style.backgroundColor = "blue";
+                } else if (document.getElementById ("one").value == number) {
+                    alert ("YOU WON! \n\nThe game will restart when you close this box.");
+                    location.reload();
+                }     
+    } else if (e.key == "Enter" && document.getElementById ("three").disabled) {
+        
+    } elseif (e.key == "Enter" && document.getElementById ("four").disabled) {
+        
+    } else if (e.key == "Enter" && document.getElementById ("five").disabled) {
+        
+    } else if (e.key == "Enter" && document.getElementById ("five").disabled == false) {
+
+    }
             
 }
