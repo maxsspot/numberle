@@ -99,7 +99,7 @@ document.onkeyup = function (e) {
                 }     
     } else if (e.key == "Enter" && document.getElementById ("three").disabled) {
         
-    } elseif (e.key == "Enter" && document.getElementById ("four").disabled) {
+    } else if (e.key == "Enter" && document.getElementById ("four").disabled) {
         
     } else if (e.key == "Enter" && document.getElementById ("five").disabled) {
         
