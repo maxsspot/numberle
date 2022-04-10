@@ -95,7 +95,5 @@ document.onkeyup = function (e) {
             if (e.key == "Enter" && document.getElementById ("five").disabled) {
         tryguess4();
     } 
-            if (e.key == "Enter" && document.getElementById ("one").disabled && document.getElementById ("two").disabled && document.getElementById ("three").disabled && document.getElementById ("four").disabled) {
-        tryguess5();
-    }
+            
 }
