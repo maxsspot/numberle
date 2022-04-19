@@ -81,17 +81,3 @@ var number = Math.floor(Math.random()*35) + 1;
                     location.reload();
                 }
             }
-
-document.onkeydown = function (e) {
-    if (e.key == "Enter" && document.getElementById ("two").disabled) {
-             tryguess();
-    } else if (e.key == "Enter" && document.getElementById ("three").disabled) {
-             tryguess2();          
-    } else if (e.key == "Enter" && document.getElementById ("four").disabled) {
-             tryguess3();          
-    } else if (e.key == "Enter" && document.getElementById ("five").disabled) {
-             tryguess4();          
-    } else {
-             tryguess5();          
-    }
-}
