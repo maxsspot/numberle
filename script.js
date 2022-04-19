@@ -83,3 +83,8 @@ var number = Math.floor(Math.random()*35) + 1;
             }
 
 
+grecaptcha.ready(function(){
+    grecaptcha.render("container", {
+      sitekey: "6Le6KIcfAAAAALq0oY90OVSUgY-65-9NabZz0Fns"
+    });
+  });
