@@ -12,7 +12,7 @@ var number = Math.floor(Math.random()*35) + 1;
                     document.getElementById ("one").style.backgroundColor = "blue";
                 } else if (document.getElementById ("one").value == number) {
                     Swal.fire('YOU WON', 'The game will restart in a moment.', 'success');
-                    setTimeout(() => {location.reload();)}, 3000);
+                            setTimeout(function(){ location.reload(); }, 3000);
                 }           
             }
 
@@ -28,7 +28,7 @@ var number = Math.floor(Math.random()*35) + 1;
                     document.getElementById ("two").style.backgroundColor = "blue";
                 } else if (document.getElementById ("two").value == number) {
                             Swal.fire('YOU WON', 'The game will restart in a moment.', 'success');
-                    setTimeout(() => {location.reload();)}, 3000);
+                    setTimeout(function(){ location.reload(); }, 3000);
                 }
             }
 
@@ -44,7 +44,7 @@ var number = Math.floor(Math.random()*35) + 1;
                     document.getElementById ("three").style.backgroundColor = "blue";
                 } else if (document.getElementById ("three").value == number) {
                             Swal.fire('YOU WON', 'The game will restart in a moment.', 'success');
-                    setTimeout(() => {location.reload();)}, 3000);
+                    setTimeout(function(){ location.reload(); }, 3000);
                 }
             }
 
@@ -60,7 +60,7 @@ var number = Math.floor(Math.random()*35) + 1;
                     document.getElementById ("four").style.backgroundColor = "blue";
                 } else if (document.getElementById ("four").value == number) {
                             Swal.fire('YOU WON', 'The game will restart in a moment.', 'success');
-                    setTimeout(() => {location.reload();)}, 3000);
+                   setTimeout(function(){ location.reload(); }, 3000);
                 }
             }
 
@@ -68,16 +68,16 @@ var number = Math.floor(Math.random()*35) + 1;
                 if (document.getElementById ("five").value < number) {
                     document.getElementById ("five").style.backgroundColor = "orange";
                     Swal.fire('YOU LOST', 'The game will restart in a moment.', 'error');
-                    setTimeout(() => {location.reload();)}, 3000);
+                    setTimeout(function(){ location.reload(); }, 3000);
                 } else if (document.getElementById ("five").value > number) {
                     document.getElementById ("five").style.backgroundColor = "blue";
                     Swal.fire('YOU LOST', 'The game will restart in a moment.', 'error');
-                    setTimeout(() => {location.reload();)}, 3000);
+                    setTimeout(function(){ location.reload(); }, 3000);
                 } else if (document.getElementById ("five").value == number) {
                             Swal.fire('YOU WON', 'The game will restart in a moment.', 'success');
-                    setTimeout(() => {location.reload();)}, 3000);
+                    setTimeout(function(){ location.reload(); }, 3000);
                 } else if (document.getElementById ("five").value != number) {
                     Swal.fire('YOU LOST', 'The game will restart in a moment.', 'error');
-                    setTimeout(() => {location.reload();)}, 3000);
+                    setTimeout(function(){ location.reload(); }, 3000);
                 }
             }
