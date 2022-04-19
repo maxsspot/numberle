@@ -86,5 +86,7 @@ var number = Math.floor(Math.random()*35) + 1;
 document.addEventListener('keydown', function(event) {
   if (event.ctrlKey && event.key === 'u') {
     event.preventDefault();
+  } else if (event.ctrlKey && && event.shiftKey && event.key === 'i') {
+    event.preventDefault();      
   }
 });
