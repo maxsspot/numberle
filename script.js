@@ -82,20 +82,16 @@ var number = Math.floor(Math.random()*35) + 1;
                 }
             }
 
-/* document.onkeyup = function (e) {
-            if (e.key == "Enter" && document.getElementById ("two").disabled) {
-         
-                }     
-    } else if (e.key == "Enter" && document.getElementById ("").disabled) {
-       
-                
-    } else if (e.key == "Enter" && document.getElementById ("four").disabled) {
-        
-    } else if (e.key == "Enter" && document.getElementById ("five").disabled) {
-        
-    } else if (e.key == "Enter" && document.getElementById ("five").disabled == false) {
-
+document.onkeyup = function (e) {
+    if (e.key == "Enter" && document.getElementById ("one").enabled) {
+             tryguess();
+    } else if (e.key == "Enter" && document.getElementById ("two").enabled) {
+             tryguess2();          
+    } else if (e.key == "Enter" && document.getElementById ("three").enabled) {
+             tryguess3();          
+    } else if (e.key == "Enter" && document.getElementById ("four").enabled) {
+             tryguess4();          
+    } else if (e.key == "Enter" && document.getElementById ("five").enabled) {
+             tryguess5();          
     }
-            
 }
-*/
