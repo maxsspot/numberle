@@ -68,8 +68,8 @@ button, input {
 }
 
 button {
-    width:200px;
-    height:45px;
+    width:175px;
+    height:40px;
     background-color:grey;
     border:grey solid 2px;
     border-radius:50px;
