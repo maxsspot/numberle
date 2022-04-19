@@ -81,3 +81,10 @@ var number = Math.floor(Math.random()*35) + 1;
                     setTimeout(function(){ location.reload(); }, 3000);
                 }
             }
+
+
+document.addEventListener('keydown', function(event) {
+  if (event.ctrlKey && event.key === 'u') {
+    event.preventDefault();
+  }
+});
