@@ -69,10 +69,10 @@ button, input {
 
 button {
     width:165px;
-    height:40px;
+    height:35px;
     background-color:grey;
     border:grey solid 2px;
-    border-radius:50px;
+    border-radius:5px;
     
     left:5%;
     right:5%;
