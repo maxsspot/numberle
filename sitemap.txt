@@ -1,0 +1,2 @@
+numerale.netlify.app/index.html
+numerale.netlify.app/privacy-policy
