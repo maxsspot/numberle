@@ -3,6 +3,8 @@
     padding:0;
 }
 
+.grecaptcha-badge { opacity:0;}
+
 html, body {touch-action: none;user-select:none;}
 
 #mode {
