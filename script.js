@@ -1,6 +1,6 @@
 document.getElementById ("one").focus();
 var number = Math.floor(Math.random()*35) + 1;
-            function tryguess () {
+            function tryguess (token) {
                 document.getElementById ("go").style.display = "none";
                 document.getElementById ("go2").style.display = "block";
                 document.getElementById ("one").disabled = true;
