@@ -12,6 +12,11 @@ var number = Math.floor(Math.random()*35) + 1;
                         document.getElementById ("three").disabled = true;
                         document.getElementById ("four").disabled = true;
                         document.getElementById ("five").disabled = true;
+                        document.getElementById ("one").value = null;
+                        document.getElementById ("two").value = null;
+                        document.getElementById ("three").value = null;
+                        document.getElementById ("four").value = null;
+                        document.getElementById ("five").value = null;
             }
 
             function tryguess (token) {
