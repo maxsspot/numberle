@@ -17,6 +17,11 @@ var number = Math.floor(Math.random()*35) + 1;
                         document.getElementById ("three").value = null;
                         document.getElementById ("four").value = null;
                         document.getElementById ("five").value = null;
+                        document.getElementById ("one").style.backgroundColor = "black";
+                        document.getElementById ("two").style.backgroundColor = "black";
+                        document.getElementById ("three").style.backgroundColor = "black";
+                        document.getElementById ("four").style.backgroundColor = "black";
+                        document.getElementById ("five").style.backgroundColor = "black";
             }
 
             function tryguess (token) {
