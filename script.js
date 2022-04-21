@@ -1,6 +1,7 @@
 document.getElementById ("one").focus();
 var number = Math.floor(Math.random()*35) + 1;
             function restart () {
+                        location.reload();
                         var number = Math.floor(Math.random()*35) + 1;
                         document.getElementById ("one").focus();
                         document.getElementById ("go").style.display = "block";
