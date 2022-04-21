@@ -17,13 +17,3 @@ self.addEventListener("fetch", function (event) {
     })
   );
 });
-
-export function forceSWupdate() {
-    if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.ready.then(registration => {
-            registration.update().then(() => {
- 
-            });
-        });
-    }
- }   
