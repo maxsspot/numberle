@@ -1,7 +1,7 @@
 document.getElementById ("one").focus();
 var number = Math.floor(Math.random()*35) + 1;
             function restart () {
-                        setTimeout(function(){ location.reload(); , 2000);                    
+                        setTimeout(function(){ location.reload(); }, 2000);                    
             }
 
             function tryguess (token) {
