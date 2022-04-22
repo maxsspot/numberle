@@ -4,7 +4,7 @@ var number = Math.floor(Math.random()*35) + 1;
                         setTimeout(function(){ location.reload(); }, 2000);                    
             }
 
-            function tryguess (token) {
+            function tryguess () {
                 document.getElementById ("go").style.display = "none";
                 document.getElementById ("go2").style.display = "block";
                 document.getElementById ("one").disabled = true;
