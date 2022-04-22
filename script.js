@@ -1,5 +1,8 @@
 document.getElementById ("one").focus();
 var number = Math.floor(Math.random()*35) + 1;
+            function restart () {
+                        location.reload();                        
+            }
 
             function tryguess (token) {
                 document.getElementById ("go").style.display = "none";
