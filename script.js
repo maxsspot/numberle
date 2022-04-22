@@ -1,30 +1,5 @@
 document.getElementById ("one").focus();
 var number = Math.floor(Math.random()*35) + 1;
-            function restart () {
-                        location.reload();
-                        var number = Math.floor(Math.random()*35) + 1;
-                        document.getElementById ("one").focus();
-                        document.getElementById ("go").style.display = "block";
-                document.getElementById ("go2").style.display = "none";
-                        document.getElementById ("go3").style.display = "none";
-                        document.getElementById ("go4").style.display = "none";
-                        document.getElementById ("go5").style.display = "none";
-                document.getElementById ("one").disabled = false;
-                document.getElementById ("two").disabled = true;
-                        document.getElementById ("three").disabled = true;
-                        document.getElementById ("four").disabled = true;
-                        document.getElementById ("five").disabled = true;
-                        document.getElementById ("one").value = null;
-                        document.getElementById ("two").value = null;
-                        document.getElementById ("three").value = null;
-                        document.getElementById ("four").value = null;
-                        document.getElementById ("five").value = null;
-                        document.getElementById ("one").style.backgroundColor = "black";
-                        document.getElementById ("two").style.backgroundColor = "black";
-                        document.getElementById ("three").style.backgroundColor = "black";
-                        document.getElementById ("four").style.backgroundColor = "black";
-                        document.getElementById ("five").style.backgroundColor = "black";
-            }
 
             function tryguess (token) {
                 document.getElementById ("go").style.display = "none";
