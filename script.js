@@ -16,7 +16,14 @@ const number = Math.floor(Math.random()*35) + 1;
                 } else if (document.getElementById ("one").value > number) {
                     document.getElementById ("one").style.backgroundColor = "blue";
                 } else if (document.getElementById ("one").value == number) {
-                    Swal.fire('YOU WON', 'The game will restart when this box is closed.', 'success');
+                    
+                            Swal.fire({
+                            title: 'YOU WON!',
+                            icon: 'success',
+                            timer: 2000,
+                            showConfirmButton: false,
+                            allowOutsideClick: false
+                        })
                             restart();
                 }           
             }
@@ -32,7 +39,14 @@ const number = Math.floor(Math.random()*35) + 1;
                 } else if (document.getElementById ("two").value > number) {
                     document.getElementById ("two").style.backgroundColor = "blue";
                 } else if (document.getElementById ("two").value == number) {
-                            Swal.fire('YOU WON', 'The game will restart when this box is closed.', 'success');
+                            //Swal.fire('YOU WON', 'The game will restart when this box is closed.', 'success');
+                             Swal.fire({
+                            title: 'YOU WON!',
+                            icon: 'success',
+                            timer: 2000,
+                            showConfirmButton: false,
+                            allowOutsideClick: false
+                        })
                     restart();
                 }
             }
@@ -48,7 +62,14 @@ const number = Math.floor(Math.random()*35) + 1;
                 } else if (document.getElementById ("three").value > number) {
                     document.getElementById ("three").style.backgroundColor = "blue";
                 } else if (document.getElementById ("three").value == number) {
-                            Swal.fire('YOU WON', 'The game will restart when this box is closed.', 'success');
+                            //Swal.fire('YOU WON', 'The game will restart when this box is closed.', 'success');
+                             Swal.fire({
+                            title: 'YOU WON!',
+                            icon: 'success',
+                            timer: 2000,
+                            showConfirmButton: false,
+                            allowOutsideClick: false
+                        })
                     restart();
                 }
             }
@@ -64,7 +85,14 @@ const number = Math.floor(Math.random()*35) + 1;
                 } else if (document.getElementById ("four").value > number) {
                     document.getElementById ("four").style.backgroundColor = "blue";
                 } else if (document.getElementById ("four").value == number) {
-                            Swal.fire('YOU WON', 'The game will restart when this box is closed.', 'success');
+                            //Swal.fire('YOU WON', 'The game will restart when this box is closed.', 'success');
+                             Swal.fire({
+                            title: 'YOU WON!',
+                            icon: 'success',
+                            timer: 2000,
+                            showConfirmButton: false,
+                            allowOutsideClick: false
+                        })
                    restart();
                 }
             }
@@ -72,17 +100,46 @@ const number = Math.floor(Math.random()*35) + 1;
             function tryguess5 () {
                 if (document.getElementById ("five").value < number) {
                     document.getElementById ("five").style.backgroundColor = "orange";
-                    Swal.fire('YOU LOST', 'The game will restart when this box is closed.', 'error');
+                    //Swal.fire('YOU LOST', 'The game will restart when this box is closed.', 'error');
+                            Swal.fire({
+                            title: 'YOU LOST!',
+                            icon: 'error',
+                            timer: 2000,
+                            showConfirmButton: false,
+                            allowOutsideClick: false
+                        })
                     restart();
                 } else if (document.getElementById ("five").value > number) {
                     document.getElementById ("five").style.backgroundColor = "blue";
-                    Swal.fire('YOU LOST', 'The game will restart when this box is closed.', 'error');
+                    //Swal.fire('YOU LOST', 'The game will restart when this box is closed.', 'error');
+                            Swal.fire({
+                            title: 'YOU LOST!',
+                            icon: 'error',
+                            timer: 2000,
+                            showConfirmButton: false,
+                            allowOutsideClick: false
+                        })
                     restart();
                 } else if (document.getElementById ("five").value == number) {
-                            Swal.fire('YOU WON', 'The game will restart when this box is closed.', 'success');
+                            //Swal.fire('YOU WON', 'The game will restart when this box is closed.', 'success');
+                             Swal.fire({
+                            title: 'YOU WON!',
+                            icon: 'success',
+                            timer: 2000,
+                            showConfirmButton: false,
+                            allowOutsideClick: false
+                        })
+                            restart();
                     restart();
                 } else if (document.getElementById ("five").value != number) {
-                    Swal.fire('YOU LOST', 'The game will restart when this box is closed.', 'error');
+                    //Swal.fire('YOU LOST', 'The game will restart when this box is closed.', 'error');
+                            Swal.fire({
+                            title: 'YOU LOST!',
+                            icon: 'error',
+                            timer: 2000,
+                            showConfirmButton: false,
+                            allowOutsideClick: false
+                        })
                     restart();
                 }
             }
@@ -90,11 +147,7 @@ const number = Math.floor(Math.random()*35) + 1;
 document.addEventListener('keydown', (event) => {
    keysPressed[event.key] = true;
 
-   if (keysPressed['Control'] && event.key == 'u') {
-       event.preventDefault();
-   } else if (keysPressed['Control'] && keysPressed['Shift'] && event.key == 'i') {
-       event.preventDefault();
-   } else if (keysPressed['Control'] && event.key == 's') {
+   if (keysPressed['Control'] && event.key == 's') {
        event.preventDefault();
    }
 });
