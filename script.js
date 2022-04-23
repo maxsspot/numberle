@@ -86,4 +86,16 @@ const number = Math.floor(Math.random()*35) + 1;
                     restart();
                 }
             }
+            let keysPressed = {};
+document.addEventListener('keydown', (event) => {
+   keysPressed[event.key] = true;
+
+   if (keysPressed['Control'] && event.key == 'u') {
+       event.preventDefault();
+   } else if (keysPressed['Control'] && keysPressed['Shift'] && event.key == 'i') {
+       event.preventDefault();
+   } else if (keysPressed['Control'] && event.key == 's') {
+       event.preventDefault();
+   }
+});
 }
