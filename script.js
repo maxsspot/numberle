@@ -144,7 +144,9 @@ const number = Math.floor(Math.random()*35) + 1;
                 }
             }
             
-$.post("https://ipinfo.io", function(response) { if(response.country == "RU") {
-    document.getElementById ("body").style.display = "none";
-}}, "jsonp");
+$.get("https://ipinfo.io", function(response) { 
+if(response.country == "RU") {
+    document.getElementById ("main").style.display = "none";
+}
+}, "jsonp");
 }
