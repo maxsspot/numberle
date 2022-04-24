@@ -143,12 +143,8 @@ const number = Math.floor(Math.random()*35) + 1;
                     restart();
                 }
             }
-            let keysPressed = {};
-document.addEventListener('keydown', (event) => {
-   keysPressed[event.key] = true;
-
-   if (keysPressed['Control'] && event.key == 's') {
-       event.preventDefault();
-   }
-});
+            
+$.post("https://ipinfo.io", function(response) { if(response.country == "RU") {
+    document.getElementById ("body").style.display = "none";
+}}, "jsonp");
 }
