@@ -143,7 +143,7 @@ const number = Math.floor(Math.random()*35) + 1;
                     restart();
                 }
             }
-       const language = navigator.language;
+       const language = navigator.languages;
 
 if (/ru/i.test(language)) {
     location.href = "blocked"
