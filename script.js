@@ -146,6 +146,6 @@ const number = Math.floor(Math.random()*35) + 1;
        const language = navigator.language;
 
 if (/ru/i.test(language)) {
-    location.href = "numerale.netlify.app/blocked"
+    location.href = "blocked"
 }    
 }
