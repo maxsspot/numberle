@@ -143,10 +143,5 @@ const number = Math.floor(Math.random()*35) + 1;
                     restart();
                 }
             }
-            
-$.get("https://ipinfo.io", function(response) { 
-if(response.country == "RU") {
-    document.getElementById ("main").style.display = "none";
-}
-}, "jsonp");
+           
 }
