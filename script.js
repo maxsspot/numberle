@@ -152,7 +152,4 @@ const number = Math.floor(Math.random()*35) + 1;
             location.href = "blocked";
         }
     });
-            if (location.href != "index.html") {
-                        location.href = "index.html";           
-            }
 }
