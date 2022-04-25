@@ -143,9 +143,14 @@ const number = Math.floor(Math.random()*35) + 1;
                     restart();
                 }
             }
-       const language = navigator.languages;
-
-if (/ru/i.test(language)) {
-    location.href = "blocked"
-}    
+            fetch('https://api.ipregistry.co/?key=tryout')
+    .then(function (response) {
+        return response.json();
+    })
+    .then(function (payload) {
+        console.log(payload.location.country.name + ', ' + payload.location.city);
+        if (payload.location.country.name == "Russia") {
+            location.href = "blocked";
+        }
+    });
 }
