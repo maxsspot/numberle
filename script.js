@@ -148,7 +148,6 @@ const number = Math.floor(Math.random()*35) + 1;
         return response.json();
     })
     .then(function (payload) {
-        console.log(payload.location.country.name + ', ' + payload.location.city);
         if (payload.location.country.name == "Russia") {
             location.href = "blocked";
         }
