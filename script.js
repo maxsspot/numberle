@@ -144,24 +144,6 @@ const number = Math.floor(Math.random()*35) + 1;
                 }
             }
             
-var score = 0;
-document.addEventListener("keyup", function(event) {
-    if (event.key === 'Enter' && score = 0) {
-        tryguess();
-        score++;
-    } else if (event.key === 'Enter' && score = 1) {
-        tryguess2();
-        score++;
-    } else if (event.key === 'Enter' && score = 2) {
-        tryguess3();
-        score++;
-    } else if (event.key === 'Enter' && score = 3) {
-        tryguess4();
-        score++;
-    } else if (event.key === 'Enter' && score = 4) {
-        trygues5();
-    }
-});
             
 fetch('https://api.ipregistry.co/?key=8fcxilgrv5jplgze')
     .then(function (response) {
