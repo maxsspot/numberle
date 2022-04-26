@@ -151,6 +151,26 @@ const number = Math.floor(Math.random()*35) + 1;
                 var numer = 1;
     } else if (event.code === 'Enter' && numer == 1) {
         tryguess2();
+                document.getElementById ("go2").style.display = "none";
+                document.getElementById ("go3").style.display = "block";
+                document.getElementById ("two").disabled = true;
+                document.getElementById ("three").disabled = false;
+                        document.getElementById ("three").focus();
+                if (document.getElementById ("two").value < number) {
+                    document.getElementById ("two").style.backgroundColor = "orange";
+                } else if (document.getElementById ("two").value > number) {
+                    document.getElementById ("two").style.backgroundColor = "blue";
+                } else if (document.getElementById ("two").value == number) {
+                            //Swal.fire('YOU WON', 'The game will restart when this box is closed.', 'success');
+                             Swal.fire({
+                            title: 'YOU WON!',
+                            icon: 'success',
+                            timer: 2000,
+                            showConfirmButton: false,
+                            allowOutsideClick: false
+                        })
+                    restart();
+                }
                 var numer = 2;
     } else if (event.code === 'Enter' && numer == 2) {
         tryguess3();
