@@ -148,7 +148,7 @@ const number = Math.floor(Math.random()*35) + 1;
                         var numer = 0;
     if (event.code === 'Enter' && numer == 0) {
         tryguess();
-                numer++;
+                var numer = 1;
     }
                         
     if (event.code === 'Enter' && numer == 1) {
