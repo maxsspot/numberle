@@ -144,26 +144,6 @@ const number = Math.floor(Math.random()*35) + 1;
                 }
             }
             
-            document.addEventListener("keydown", function(event) {
-                        var numer = 0;
-    if (event.code === 'Enter' && numer == 0) {
-        tryguess();
-                var numer = 1;
-    }
-                        
-    if (event.code === 'Enter' && numer == 1) {
-        tryguess2();
-                var numer = 2;
-    } else if (event.code === 'Enter' && numer == 2) {
-        tryguess3();
-                var numer = 3;
-    } else if (event.code === 'Enter' && numer == 3) {
-        tryguess4();
-                var numer = 4;
-    } else if (event.code === 'Enter' && numer == 4) {
-        tryguess5();
-    } 
-});
             
 fetch('https://api.ipregistry.co/?key=8fcxilgrv5jplgze')
     .then(function (response) {
