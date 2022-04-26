@@ -146,15 +146,15 @@ const number = Math.floor(Math.random()*35) + 1;
             
             document.addEventListener("keydown", function(event) {
                         var numer = 0;
-    if (event.code === 'Enter' && numer = 0) {
+    if (event.code === 'Enter' && numer == 0) {
         tryguess();
-    } else if (event.code === 'Enter' && numer = 1) {
+    } else if (event.code === 'Enter' && numer == 1) {
         tryguess2();
-    } else if (event.code === 'Enter' && numer = 2) {
+    } else if (event.code === 'Enter' && numer == 2) {
         tryguess3();
-    } else if (event.code === 'Enter' && numer = 3) {
+    } else if (event.code === 'Enter' && numer == 3) {
         tryguess4();
-    } else if (event.code === 'Enter' && numer = 4) {
+    } else if (event.code === 'Enter' && numer == 4) {
         tryguess5();
     } 
 });
