@@ -148,16 +148,16 @@ const number = Math.floor(Math.random()*35) + 1;
                         var numer = 0;
     if (event.code === 'Enter' && numer == 0) {
         tryguess();
-                numer = 1;
+                var numer = 1;
     } else if (event.code === 'Enter' && numer == 1) {
         tryguess2();
-                numer = 2;
+                var numer = 2;
     } else if (event.code === 'Enter' && numer == 2) {
         tryguess3();
-                numer = 3;
+                var numer = 3;
     } else if (event.code === 'Enter' && numer == 3) {
         tryguess4();
-                numer = 4;
+                var numer = 4;
     } else if (event.code === 'Enter' && numer == 4) {
         tryguess5();
     } 
