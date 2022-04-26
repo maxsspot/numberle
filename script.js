@@ -149,7 +149,9 @@ const number = Math.floor(Math.random()*35) + 1;
     if (event.code === 'Enter' && numer == 0) {
         tryguess();
                 numer++;
-    } else if (event.code === 'Enter' && numer == 1) {
+    }
+                        
+    if (event.code === 'Enter' && numer == 1) {
         tryguess2();
                 var numer = 2;
     } else if (event.code === 'Enter' && numer == 2) {
