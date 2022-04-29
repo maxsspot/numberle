@@ -145,6 +145,18 @@ const number = Math.floor(Math.random()*35) + 1;
             }
             
             
+const isIos = () => {
+  const userAgent = window.navigator.userAgent.toLowerCase();
+  return /iphone|ipad|ipod/.test( userAgent );
+}
+
+const isInStandaloneMode = () => ('standalone' in window.navigator) && (window.navigator.standalone);
+
+
+if (isIos() && !isInStandaloneMode()) {
+  this.setState({ showInstallMessage: true });
+}
+            
 fetch('https://api.ipregistry.co/?key=8fcxilgrv5jplgze')
     .then(function (response) {
         return response.json();
