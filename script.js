@@ -145,7 +145,7 @@ const number = Math.floor(Math.random()*35) + 1;
             }
             
 setInterval(function(){ 
-    if (document.getElementById ("one").length > 0) {
+    if (document.getElementById ("one").value != null) {
                 document.getElementById ("go").disabled = false;
     } else {
                 document.getElementById ("go").disabled = true;
