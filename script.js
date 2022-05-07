@@ -150,6 +150,12 @@ setInterval(function(){
     } else {
                 document.getElementById ("go").disabled = true;
     }
+            
+    if (document.getElementById ("two").value.length > 0) {
+                document.getElementById ("go2").disabled = false;
+    } else {
+                document.getElementById ("go2").disabled = true;
+    }
 }, 1);
             
 fetch('https://api.ipregistry.co/?key=8fcxilgrv5jplgze')
