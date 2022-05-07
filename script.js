@@ -98,6 +98,7 @@ const number = Math.floor(Math.random()*35) + 1;
             }
 
             function tryguess5 () {
+                        document.getElementById ("five").disabled = true;
                 if (document.getElementById ("five").value < number) {
                     document.getElementById ("five").style.backgroundColor = "orange";
                     //Swal.fire('YOU LOST', 'The game will restart when this box is closed.', 'error');
