@@ -145,35 +145,11 @@ const number = Math.floor(Math.random()*35) + 1;
             }
             
 setInterval(function(){ 
-    if (document.getElementById ("one").value.length > 0) {
-                document.getElementById ("go").disabled = false;
-    } else {
-                document.getElementById ("go").disabled = true;
-    }
-            
-    if (document.getElementById ("two").value.length > 0) {
-                document.getElementById ("go2").disabled = false;
-    } else {
-                document.getElementById ("go2").disabled = true;
-    }
-            
-            if (document.getElementById ("three").value.length > 0) {
-                document.getElementById ("go3").disabled = false;
-    } else {
-                document.getElementById ("go3").disabled = true;
-    }
-            
-            if (document.getElementById ("four").value.length > 0) {
-                document.getElementById ("go4").disabled = false;
-    } else {
-                document.getElementById ("go4").disabled = true;
-    }
-            
-            if (document.getElementById ("five").value.length > 0) {
-                document.getElementById ("go5").disabled = false;
-    } else {
-                document.getElementById ("go5").disabled = true;
-    }
+    if(document.getElementById("one").value.length>0){document.getElementById("go").disabled=!1}else{document.getElementById("go").disabled=!0}
+if(document.getElementById("two").value.length>0){document.getElementById("go2").disabled=!1}else{document.getElementById("go2").disabled=!0}
+if(document.getElementById("three").value.length>0){document.getElementById("go3").disabled=!1}else{document.getElementById("go3").disabled=!0}
+if(document.getElementById("four").value.length>0){document.getElementById("go4").disabled=!1}else{document.getElementById("go4").disabled=!0}
+if(document.getElementById("five").value.length>0){document.getElementById("go5").disabled=!1}else{document.getElementById("go5").disabled=!0}
 }, 1);
             
 fetch('https://api.ipregistry.co/?key=8fcxilgrv5jplgze')
