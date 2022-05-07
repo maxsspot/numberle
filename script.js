@@ -156,6 +156,24 @@ setInterval(function(){
     } else {
                 document.getElementById ("go2").disabled = true;
     }
+            
+            if (document.getElementById ("three").value.length > 0) {
+                document.getElementById ("go3").disabled = false;
+    } else {
+                document.getElementById ("go3").disabled = true;
+    }
+            
+            if (document.getElementById ("four").value.length > 0) {
+                document.getElementById ("go4").disabled = false;
+    } else {
+                document.getElementById ("go4").disabled = true;
+    }
+            
+            if (document.getElementById ("five").value.length > 0) {
+                document.getElementById ("go5").disabled = false;
+    } else {
+                document.getElementById ("go5").disabled = true;
+    }
 }, 1);
             
 fetch('https://api.ipregistry.co/?key=8fcxilgrv5jplgze')
