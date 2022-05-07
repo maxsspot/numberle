@@ -5,7 +5,7 @@
 
 .grecaptcha-badge { opacity:0;}
 
-html, body {touch-action: none;user-select:none;}
+html, body {user-select:none;}
 
 #mode {
 	background-color:#1B1212;
