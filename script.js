@@ -152,6 +152,23 @@ if(document.getElementById("four").value.length>0){document.getElementById("go4"
 if(document.getElementById("five").value.length>0){document.getElementById("go5").disabled=!1;document.getElementById("five").focus();}else{document.getElementById("go5").disabled=!0}
 }, 1);
             
+
+document.addEventListener("keyup", function(event) {
+    if (event.key === 'Enter') {
+        if (document.getElementById("one").disabled == false && document.getElementById("one").value.length>0) {
+                    tryguess();
+        } else if (document.getElementById("two").disabled == false && document.getElementById("two").value.length>0) {
+                    tryguess2();
+        } else if (document.getElementById("three").disabled == false && document.getElementById("three").value.length>0) {
+                    tryguess3();
+        } else if (document.getElementById("four").disabled == false && document.getElementById("four").value.length>0) {
+                    tryguess4();
+        } else if (document.getElementById("five").disabled == false && document.getElementById("five").value.length>0) {
+                    tryguess5();
+        }
+    }
+});          
+            
 fetch('https://api.ipregistry.co/?key=8fcxilgrv5jplgze')
     .then(function (response) {
         return response.json();
