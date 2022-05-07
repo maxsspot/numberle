@@ -144,7 +144,13 @@ const number = Math.floor(Math.random()*35) + 1;
                 }
             }
             
-           
+setInterval(function(){ 
+    if (document.getElementById ("one").value == null) {
+                document.getElementById ("go").disabled = true;
+    } else if (document.getElementById ("one").value != null) {
+                document.getElementById ("go").disabled = false;
+    }
+}, 1000);
             
 fetch('https://api.ipregistry.co/?key=8fcxilgrv5jplgze')
     .then(function (response) {
