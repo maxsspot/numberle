@@ -145,11 +145,11 @@ const number = Math.floor(Math.random()*35) + 1;
             }
             
 setInterval(function(){ 
-    if(document.getElementById("one").value.length>0){document.getElementById("go").disabled=!1}else{document.getElementById("go").disabled=!0}
-if(document.getElementById("two").value.length>0){document.getElementById("go2").disabled=!1}else{document.getElementById("go2").disabled=!0}
-if(document.getElementById("three").value.length>0){document.getElementById("go3").disabled=!1}else{document.getElementById("go3").disabled=!0}
-if(document.getElementById("four").value.length>0){document.getElementById("go4").disabled=!1}else{document.getElementById("go4").disabled=!0}
-if(document.getElementById("five").value.length>0){document.getElementById("go5").disabled=!1}else{document.getElementById("go5").disabled=!0}
+    if(document.getElementById("one").value.length>0){document.getElementById("go").disabled=!1;document.getElementById("one").focus();}else{document.getElementById("go").disabled=!0}
+if(document.getElementById("two").value.length>0){document.getElementById("go2").disabled=!1;document.getElementById("two").focus();}else{document.getElementById("go2").disabled=!0}
+if(document.getElementById("three").value.length>0){document.getElementById("go3").disabled=!1;document.getElementById("three").focus();}else{document.getElementById("go3").disabled=!0}
+if(document.getElementById("four").value.length>0){document.getElementById("go4").disabled=!1;document.getElementById("four").focus();}else{document.getElementById("go4").disabled=!0}
+if(document.getElementById("five").value.length>0){document.getElementById("go5").disabled=!1;document.getElementById("five").focus();}else{document.getElementById("go5").disabled=!0}
 }, 1);
             
 fetch('https://api.ipregistry.co/?key=8fcxilgrv5jplgze')
