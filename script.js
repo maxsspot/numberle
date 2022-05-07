@@ -153,7 +153,7 @@ if(document.getElementById("five").value.length>0){document.getElementById("go5"
 }, 1);
             
 
-document.addEventListener("keyup", function(event) {
+document.addEventListener("keydown", function(event) {
     if (event.key === 'Enter') {
         if (document.getElementById("one").disabled == false && document.getElementById("one").value.length>0) {
                     tryguess();
