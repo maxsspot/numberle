@@ -145,9 +145,9 @@ const number = Math.floor(Math.random()*35) + 1;
             }
             
 setInterval(function(){ 
-    if (document.getElementById ("one").value == null) {
+    if (document.getElementById ("one").length == 0) {
                 document.getElementById ("go").disabled = true;
-    } else if (document.getElementById ("one").value != null) {
+    } else if (document.getElementById ("one").length > 0) {
                 document.getElementById ("go").disabled = false;
     }
 }, 1000);
