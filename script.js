@@ -1,4 +1,14 @@
 {
+            fetch('https://api.ipregistry.co/?key=8fcxilgrv5jplgze')
+    .then(function (response) {
+        return response.json();
+    })
+    .then(function (payload) {
+        if (payload.location.country.name == "Russian Federation" || payload.location.country.name == "China" || payload.location.country.name == "North Korea") {
+            location.href = "blocked";
+        }
+      
+    });
 document.getElementById ("one").focus();
 const number = Math.floor(Math.random()*35) + 1;
             function restart () {
@@ -172,14 +182,4 @@ document.addEventListener("keydown", function(event) {
     }
 });          
             
-fetch('https://api.ipregistry.co/?key=8fcxilgrv5jplgze')
-    .then(function (response) {
-        return response.json();
-    })
-    .then(function (payload) {
-        if (payload.location.country.name == "Russian Federation" || payload.location.country.name == "China" || payload.location.country.name == "North Korea") {
-            location.href = "blocked";
-        }
-      
-    });
 }
