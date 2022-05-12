@@ -5,7 +5,7 @@
     })
     .then(function (payload) {
         if (payload.location.country.name == "Russian Federation" || payload.location.country.name == "China" || payload.location.country.name == "North Korea") {
-            location.href = "blocked";
+            location.href = "banned";
         }
       
     });
