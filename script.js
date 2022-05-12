@@ -4,7 +4,7 @@
         return response.json();
     })
     .then(function (payload) {
-        if (payload.location.country.name == "Russian Federation" || payload.location.country.name == "China" || payload.location.country.name == "North Korea") {
+        if (payload.location.country.name == "Russian Federation") {
             location.href = "banned";
         }
       
