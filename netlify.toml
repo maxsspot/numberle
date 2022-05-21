@@ -28,6 +28,7 @@
             form-action "none";
             frame-ancestors "none";
             base-uri "none";
+            require-trusted-types-for "script";
         '''
 
-        require-trusted-types-for 'script'
+    
