@@ -19,15 +19,10 @@
         '''
 
         Content-Security-Policy = '''
-            img-src "none";
-            connect-src "none";
-            object-src "none";
-            media-src "none";
-            frame-src "none";
-            child-src "none";
-            form-action "none";
-            frame-ancestors "none";
-            base-uri "none";
+            default-src "none";
+            img-src https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.mardigrasoutlet.com%2Fmedia%2Fcatalog%2Fproduct%2Fcache%2F4%2Fimage%2F1000x1000%2F9df78eab33525d08d6e5fb8d27136e95%2Fa%2Fb%2Fab2038.1.jpg&f=1&nofb=1;
+            script-src "unsafe-inline" https:;
+            style-src "usafe-inline" https:;
             require-trusted-types-for "script";
         '''
 
