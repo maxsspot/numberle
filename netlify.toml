@@ -3,7 +3,7 @@
     [headers.values]
         X-Frame-Options = "deny"
         X-XSS-Protection = "1"
-        Cache-Control = "no-store"
+        Content-Type = "text/html; charset=UTF-8"
         Expect-CT = "max-age=86400, enforce"
         X-Content-Type-Options = "nosniff"
         Referrer-Policy = "no-referrer"
