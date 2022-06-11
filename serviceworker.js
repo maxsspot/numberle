@@ -1,4 +1,4 @@
-var staticCacheName = "numerale";
+var staticCacheName = "numerale1.1";
 
 self.addEventListener("install", function (e) {
   e.waitUntil(
