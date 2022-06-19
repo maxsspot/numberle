@@ -5,7 +5,7 @@
     "start_url":"index.html",
     "display":"standalone",
     "background_color":"black",
-    "theme_color":"white",
+    "theme_color":"black",
     "scope":"/",
     "offline_enabled": "true",
     "description":"Numerale is a number guessing game similar to Wordle.",
