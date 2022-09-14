@@ -1,14 +1,4 @@
 {
-            fetch('https://api.ipregistry.co/?key=8fcxilgrv5jplgze')
-    .then(function (response) {
-        return response.json();
-    })
-    .then(function (payload) {
-        if (payload.location.country.name == "Russian Federation") {
-            location.href = "banned";
-        }
-      
-    });
 document.getElementById ("one").focus();
 const number = Math.floor(Math.random()*35) + 1;
             function restart () {
