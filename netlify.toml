@@ -17,8 +17,10 @@
             preload
         '''
 
-        Permissions-Policy = '''
-            interest-cohort=(none)
+        Feature-Policy = '''
+            microphone()
+            camera()
+            geolocation()
+            battery()
+            document-domain()
         '''
-
-    
