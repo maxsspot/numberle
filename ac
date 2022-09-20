@@ -1,0 +1,6 @@
+{
+  const locationright = "numerale.netlify.app/index.html"
+  if (location.href != locationright) {
+    location.href = locationright;
+  }
+}
