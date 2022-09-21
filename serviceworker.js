@@ -1,6 +1,7 @@
 let CACHE_NAME = 'numerale1.1';
 let urlsToCache = [
-    '/'
+    '/',
+    '/ab2038.1-1160085212.jpg',
 ];
 
 self.addEventListener('install', function(event) {
@@ -14,12 +15,16 @@ self.addEventListener('install', function(event) {
     );
 });
 
-/*self.addEventListener("fetch", function (event) {
-  console.log(event.request.url);
- 
+self.addEventListener('fetch', function(event) {
   event.respondWith(
-    caches.match(event.request).then(function (response) {
-      return response || fetch(event.request);
-    })
+    caches.match(event.request)
+      .then(function(response) {
+        // Cache hit - return response
+        if (response) {
+          return response;
+        }
+        return fetch(event.request);
+      }
+    )
   );
-});*/
+});
