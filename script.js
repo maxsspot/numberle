@@ -176,6 +176,7 @@ document.addEventListener("keydown", function(event) {
   // Cancel the event as stated by the standard.
   event.preventDefault();
   location.reload();
+                        event.returnValue = '';
 });
             
 }
