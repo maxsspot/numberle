@@ -19,5 +19,12 @@
         Permissions-Policy = '''
             camera=(), 
             microphone=(), 
-            geolocation=()
+            geolocation=(),
+            accelerometer=(),
+            ambient-light-sensor(),
+            battery=(),
+            document-domain=(),
+            gyroscope=(),
+            magnetometer=(),
+            usb=()
         '''
