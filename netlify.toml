@@ -16,11 +16,4 @@
             includeSubDomains;
             preload
         '''
-
-        Permissions-Policy = '''
-            microphone 'none'
-            camera 'none'
-            geolocation 'none'
-            battery 'none'
-            document-domain 'none'
-        '''
+        Permissions-Policy: camera=(), microphone=(), geolocation=()
