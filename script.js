@@ -171,12 +171,5 @@ document.addEventListener("keydown", function(event) {
         }
     }
 });          
- 
-            window.addEventListener('beforeunload', (event) => {
-  // Cancel the event as stated by the standard.
-  event.preventDefault();
-  location.reload();
-                        event.returnValue = '';
-});
             
 }
