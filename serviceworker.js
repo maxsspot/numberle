@@ -17,3 +17,7 @@ self.addEventListener("fetch", function (event) {
     })
   );
 });
+
+const ASSETS = [
+    "/"
+];
