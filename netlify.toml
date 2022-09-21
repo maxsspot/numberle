@@ -27,8 +27,8 @@
             magnetometer=(),
             usb=()
         '''
-
-    Content-Security_policy = '''
-        font-src 'fonts.google.com',
         
-    '''
+        Content-Security-Policy = '''
+            navigate-to 'none';
+            form-action 'none';
+        '''
