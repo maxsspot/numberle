@@ -21,7 +21,6 @@
             microphone=(), 
             geolocation=(),
             accelerometer=(),
-            ambient-light-sensor(),
             battery=(),
             document-domain=(),
             gyroscope=(),
