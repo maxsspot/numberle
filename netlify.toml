@@ -18,9 +18,9 @@
         '''
 
         Permissions-Policy = '''
-            microphone()
-            camera()
-            geolocation()
-            battery()
-            document-domain()
+            microphone 'none'
+            camera 'none'
+            geolocation 'none'
+            battery 'none'
+            document-domain 'none'
         '''
