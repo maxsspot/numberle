@@ -17,7 +17,7 @@
             preload
         '''
 
-        Feature-Policy = '''
+        Permissions-Policy = '''
             microphone()
             camera()
             geolocation()
