@@ -27,3 +27,8 @@
             magnetometer=(),
             usb=()
         '''
+
+    Content-Security_policy = '''
+        font-src 'fonts.google.com',
+        
+    '''
