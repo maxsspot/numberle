@@ -1,0 +1,8 @@
+User-Agent: *
+Allow: /index.html
+Allow: /privacy-policy
+Disallow: /script.js
+DIsallow: /styles.css
+DIsallow: /serviceworker.js
+DIsallow: /netlify.toml
+DIsallow: /manifest.json
