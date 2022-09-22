@@ -1,8 +1,10 @@
+Sitemap: sitemap.txt
+
 User-Agent: *
 Allow: /index.html
-Allow: /privacy-policy.html
+Disallow: /privacy-policy.html
 Disallow: /script.js
-DIsallow: /styles.css
-DIsallow: /serviceworker.js
-DIsallow: /netlify.toml
-DIsallow: /manifest.json
+Disallow: /styles.css
+Disallow: /serviceworker.js
+Disallow: /netlify.toml
+Disallow: /manifest.json
