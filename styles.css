@@ -7,6 +7,13 @@
 
 html, body {user-select:none;}
 
+#top {
+	width:100%;
+	background-color:white;
+	position:fixed;
+	color:black;
+}
+
 #mode {
 	background-color:#1B1212;
 	width:300px;
