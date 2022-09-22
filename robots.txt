@@ -1,6 +1,6 @@
 User-Agent: *
 Allow: /index.html
-Allow: /privacy-policy
+Allow: /privacy-policy.html
 Disallow: /script.js
 DIsallow: /styles.css
 DIsallow: /serviceworker.js
