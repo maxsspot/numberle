@@ -1,5 +1,9 @@
 {
-document.getElementById ("one").focus();
+document.onload = function ()  {
+            document.documentElement.requestFullscreen()
+}
+            
+            document.getElementById ("one").focus();
 const number = Math.floor(Math.random()*35) + 1;
             function restart () {
                         setTimeout(function(){ location.reload(); }, 2000);                    
