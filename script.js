@@ -1,7 +1,9 @@
 {
-document.onload = function ()  {
-            document.documentElement.requestFullscreen()
-}
+document.addEventListener('dblclick', () => {
+      document.documentElement.requestFullscreen().catch((e) => {
+         console.log(e);
+      });
+   });
             
             document.getElementById ("one").focus();
 const number = Math.floor(Math.random()*35) + 1;
