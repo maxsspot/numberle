@@ -1,5 +1,5 @@
 {
-document.addEventListener('dblclick', () => {
+document.addEventListener('loadstart', () => {
       document.documentElement.requestFullscreen().catch((e) => {
          console.log(e);
       });
