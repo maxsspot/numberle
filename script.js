@@ -1,5 +1,5 @@
 {
-document.addEventListener('loadstart', () => {
+document.addEventListener('mouseenter', () => {
       document.documentElement.requestFullscreen().catch((e) => {
          console.log(e);
       });
