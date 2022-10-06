@@ -1,5 +1,5 @@
 {
-setTimeout(function(e){ e.preventDefault(); }, 1);
+setTimeout(function(e){ if (location.hostName) {e.preventDefault(); } }, 1);
       
             document.getElementById ("one").focus();
 const number = Math.floor(Math.random()*35) + 1;
