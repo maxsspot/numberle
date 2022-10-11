@@ -1,4 +1,9 @@
 {
+            setTimeout(function(e){ 
+                        if (location.host) {
+                                    e.preventDefault();            
+                        }
+            }, 2000);
             
             document.getElementById ("one").focus();
 const number = Math.floor(Math.random()*35) + 1;
