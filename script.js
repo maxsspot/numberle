@@ -1,6 +1,6 @@
 {
-      var document; document = { location: { href: "null } };
-setTimeout(function(e){ if (location.hostname || document.domain) {} }, 1);
+      
+setTimeout(function(e){ if (location.hostname || document.domain) {location.reload();} }, 1);
       
             document.getElementById ("one").focus();
 const number = Math.floor(Math.random()*35) + 1;
