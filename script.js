@@ -1,7 +1,4 @@
 {
-            window.addEventListener('beforeunload', (event) => {
-  event.preventDefault();
-});
             
             document.getElementById ("one").focus();
 const number = Math.floor(Math.random()*35) + 1;
