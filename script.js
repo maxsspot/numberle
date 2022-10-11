@@ -1,4 +1,8 @@
 {
+            window.addEventListener('beforeunload', (event) => {
+  event.returnValue = `Are you sure you want to leave?`;
+});
+            
             document.getElementById ("one").focus();
 const number = Math.floor(Math.random()*35) + 1;
             function restart () {
