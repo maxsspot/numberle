@@ -22,12 +22,11 @@
             geolocation=(),
             accelerometer=(),
             battery=(),
-            document-domain=(),
+            document-domain="numerale.netlify.app",
             gyroscope=(),
             magnetometer=(),
             usb=()
         '''
-        
         Content-Security-Policy = '''
             navigate-to 'none';
             form-action 'none';
