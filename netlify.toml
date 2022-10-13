@@ -28,7 +28,7 @@
             usb=()
         '''
         Content-Security-Policy = '''
-            navigate-to 'none';
+            navigate-to 'numerale.netlify.app';
             form-action 'none';
             media-src 'none';
             object-src 'none';
