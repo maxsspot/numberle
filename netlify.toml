@@ -22,7 +22,7 @@
             geolocation=(),
             accelerometer=(),
             battery=(),
-            document-domain="numerale.netlify.app",
+            document-domain=(),
             gyroscope=(),
             magnetometer=(),
             usb=()
