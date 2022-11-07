@@ -24,7 +24,7 @@
   ],
     "protocol_handlers": [
   {
-    "protocol": "numerale",
+    "protocol": "web+numerale",
     "url": "/index.html"
   }
 ]
