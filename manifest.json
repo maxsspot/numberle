@@ -4,11 +4,13 @@
     "short_name":"Numerale",
     "start_url":"index.html",
     "display":"standalone",
-    "background_color":"black",
-    "theme_color":"black",
+    "background_color":"#000000",
+    "theme_color":"#000000",
     "scope":"/",
     "offline_enabled": "true",
     "description":"Numerale is a number guessing game similar to Wordle.",
+    "orientation": "any",
+    
     "icons":[
     {
     "src":"ab2038.1-1160085212.jpg",                     
