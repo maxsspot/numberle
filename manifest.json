@@ -22,4 +22,10 @@
     "type":"image/jpg"
     }
   ]
+    "protocol_handlers": [
+  {
+    "protocol": "numerale",
+    "url": "/index.html"
+  }
+]
 }
