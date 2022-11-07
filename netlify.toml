@@ -28,6 +28,7 @@
             usb=()
         '''
         Content-Security-Policy = '''
+            script-src 'self' 'https:'
             navigate-to 'none';
             form-action 'none';
             media-src 'none';
