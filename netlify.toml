@@ -28,7 +28,6 @@
             usb=()
         '''
         Content-Security-Policy = '''
-            script-src 'nonce-aGVsbG95b3VlcGljaHVtYW5iZWluZy4uLi4uLi4uLi4uLmdvb2Rqb2JkZWNvZGluZ3RoaXM=' 'nonce-eW91YXJlc29jb29sd293emFzYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYQ==';
             navigate-to 'none';
             form-action 'none';
             media-src 'none';
