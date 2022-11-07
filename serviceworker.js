@@ -1,4 +1,4 @@
-let CACHE_NAME = 'numerale1.8;
+let CACHE_NAME = 'numerale1.9;
 let urlsToCache = [
     '/',
     '/ab2038.1-1160085212.jpg',
@@ -13,18 +13,4 @@ self.addEventListener('install', function(event) {
         return cache.addAll(urlsToCache);
         })
     );
-});
-
-self.addEventListener('fetch', function(event) {
-  event.respondWith(
-    caches.match(event.request)
-      .then(function(response) {
-        // Cache hit - return response
-        if (response) {
-          return response;
-        }
-        return fetch(event.request);
-      }
-    )
-  );
 });
