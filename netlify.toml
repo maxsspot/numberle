@@ -28,7 +28,7 @@
             usb=()
         '''
         Content-Security-Policy = '''
-            script-src *;
+            script-src * 'unsafe-inline';
             navigate-to 'none';
             form-action 'none';
             media-src 'none';
