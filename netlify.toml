@@ -23,7 +23,6 @@
             autoplay=(), 
             battery=(), 
             camera=(), 
-            cross-origin-isolated=(), 
             display-capture=(), 
             document-domain=(), 
             encrypted-media=(), 
