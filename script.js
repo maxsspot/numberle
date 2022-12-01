@@ -172,7 +172,7 @@ document.addEventListener("keydown", function(event) {
         }
     }
             
-    if (event.key === "p") {
+    if (event.key === "q") {
                 Swal.fire('HOW TO PLAY', 'Find the correct number in 5 guesses. Numbers range from 1-35.', 'question');
     }
 });          
