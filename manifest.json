@@ -24,10 +24,4 @@
     "type":"image/jpg"
     }
   ],
-    "protocol_handlers": [
-  {
-    "protocol": "playnumerale",
-    "url": "/index.html"
-  }
-]
 }
