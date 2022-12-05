@@ -4,6 +4,13 @@
 }
 
 .grecaptcha-badge { opacity:0;}
+html {
+  overflow:   scroll;
+}
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
+}
 
 html, body {user-select:none;}
 
