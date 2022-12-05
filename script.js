@@ -176,5 +176,10 @@ document.addEventListener("keydown", function(event) {
                 Swal.fire('HOW TO PLAY', 'Find the correct number in 5 guesses. Numbers range from 1-35.', 'question');
     }
 });          
-            
+            var items = document.querySelectorAll("body>b:not(.k1)");
+           if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
+for (var i = 0; i < items.length; i++) {
+    items[i].style.display = 'none';
+}
+} 
 }
