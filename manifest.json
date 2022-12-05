@@ -10,6 +10,8 @@
     "offline_enabled": "true",
     "description":"Numerale is a number guessing game similar to Wordle.",
     "orientation": "any",
+    "categories": ["games", "entertainment"],
+    "display_override": ["standalone"],
     "icons":[
     {
     "src":"ab2038.1-1160085212.png",                     
