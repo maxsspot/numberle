@@ -47,7 +47,7 @@
         '''
         
         Content-Security-Policy = '''
-            script-src * 'unsafe-inline';
+            script-src 'unsafe-inline';
             navigate-to 'none';
             form-action 'none';
             media-src 'none';
