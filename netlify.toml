@@ -11,6 +11,7 @@
         Cross-Origin-Embedder-Policy = "require-corp"
         Access-Control-Allow-Origin = "https://numerale.netlify.app"
         X-Forwarded-Proto = "https"
+        X-Permitted-Cross-Domain-Policies = "none"
         
         Strict-Transport-Security = '''
             max-age=31557600;
