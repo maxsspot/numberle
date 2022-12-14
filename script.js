@@ -1,4 +1,4 @@
-{
+( () => {
             
             document.getElementById ("one").focus();
 const number = Math.floor(Math.random()*35) + 1;
@@ -190,4 +190,4 @@ for (var i = 0; i < items.length; i++) {
     items[i].style.display = 'none';
 }
 } 
-}
+} )();
