@@ -142,8 +142,8 @@ const number = Math.floor(Math.random()*35) + 1;
                             allowOutsideClick: false
                         })
                             x++;
-                            localStorage.setItem ("wins", x++);
-                            document.getElementById ("wins").innerHTML = winsye.value;
+                            localStorage.setItem ("wins", x);
+                            document.getElementById ("wins").innerHTML = winsye;
                             restart();
                     restart();
                 } else if (document.getElementById ("five").value != number) {
