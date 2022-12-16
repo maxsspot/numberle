@@ -1,4 +1,4 @@
-let CACHE_NAME = 'numerale2.2';
+let CACHE_NAME = 'numerale2.3';
 let urlsToCache = [
     '/',
     '/ab2038.1-1160085212.jpg',
