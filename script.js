@@ -2,7 +2,7 @@
 ( () => {
             var x = 0;
             var winsye = localStorage.setItem ("winscount", x)
-            document.getElementById ("wins").value = winsye;
+            document.getElementById ("wins").innerHTML = winsye;
             document.getElementById ("one").focus();
 const number = Math.floor(Math.random()*35) + 1;
             function restart () {
