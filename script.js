@@ -1,6 +1,7 @@
 
 ( () => {
-            var x = 0;
+            var x;
+            x = 0;
             var winsye = localStorage.setItem ("winscount", x)
             document.getElementById ("wins").innerHTML = winsye;
             document.getElementById ("one").focus();
