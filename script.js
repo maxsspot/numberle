@@ -1,6 +1,7 @@
 
 ( () => {
-            
+            var x;
+            var winsye = localStorage.setItem ("winscount", x)
             document.getElementById ("one").focus();
 const number = Math.floor(Math.random()*35) + 1;
             function restart () {
@@ -140,6 +141,9 @@ const number = Math.floor(Math.random()*35) + 1;
                             showConfirmButton: false,
                             allowOutsideClick: false
                         })
+                            x++;
+                            localStorage.setItem ("wins", x++);
+                            document.getElementById ("wins").innerHTML = winsye.value;
                             restart();
                     restart();
                 } else if (document.getElementById ("five").value != number) {
