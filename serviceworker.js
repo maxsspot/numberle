@@ -1,6 +1,6 @@
 let CACHE_NAME = 'numerale2.3';
 let urlsToCache = [
-    '/index.html',
+    '/',
     '/ab2038.1-1160085212.jpg',
 ];
 
