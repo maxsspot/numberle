@@ -1,9 +1,8 @@
 
 ( () => {
-            var x;
-            x = 0;
+            var x = 0;
             var winsye = localStorage.setItem ("winscount", x)
-            document.getElementById ("wins").innerHTML = winsye;
+            document.getElementById ("wins").innerHTML = winsye.value;
             document.getElementById ("one").focus();
 const number = Math.floor(Math.random()*35) + 1;
             function restart () {
