@@ -1,4 +1,4 @@
-"use strict";
+
 ( () => {
             
             document.getElementById ("one").focus();
