@@ -142,7 +142,7 @@ const number = Math.floor(Math.random()*35) + 1;
                             showConfirmButton: false,
                             allowOutsideClick: false
                         })
-                            x++;
+                            var x = x+=1;
                             localStorage.setItem ("wins", x);
                             document.getElementById ("wins").innerHTML = winsye;
                             restart();
