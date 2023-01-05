@@ -165,7 +165,7 @@ setInterval(function(){
       
       document.getElementById("go").disabled=!1;
       document.getElementById("one").focus();
-      Swal.fire({ title: 'NUMER TOO HIGH.', timer: 2000, showConfirmButton: false, allowOutsideClick: false, toast: true, position: 'bottom-start' })
+      Swal.fire({ title: 'NUMER TOO HIGH/LOW.', timer: 2000, showConfirmButton: false, allowOutsideClick: false, toast: true, position: 'bottom' })
     
     }else{document.getElementById("go").disabled=!0}
 if(document.getElementById("two").value.length>0){document.getElementById("go2").disabled=!1;document.getElementById("two").focus();}else{document.getElementById("go2").disabled=!0}
