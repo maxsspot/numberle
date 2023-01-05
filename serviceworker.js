@@ -1,4 +1,4 @@
-let CACHE_NAME = 'numerale2.4';
+let CACHE_NAME = 'numerale2.5';
 let urlsToCache = [
     '/',
     '/index.html',
