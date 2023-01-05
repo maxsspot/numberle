@@ -9,7 +9,7 @@
         Cross-Origin-Opener-Policy = "same-origin"
         Cross-Origin-Resource-Policy = "same-origin"
         Cross-Origin-Embedder-Policy = "require-corp"
-        Access-Control-Allow-Origin = "https://maximize-studios.itch.io/"
+        Access-Control-Allow-Origin = "https://numerale.netlify.app"
         X-Forwarded-Proto = "https"
         X-Permitted-Cross-Domain-Policies = "none"
         
