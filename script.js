@@ -119,7 +119,8 @@ const number = Math.floor(Math.random()*35) + 1;
                             icon: 'error',
                             timer: 2000,
                             showConfirmButton: false,
-                            allowOutsideClick: false
+                            allowOutsideClick: false,
+                            toast: true
                         })
                     restart();
                 } else if (document.getElementById ("five").value > number) {
