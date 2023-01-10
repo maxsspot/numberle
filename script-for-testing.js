@@ -175,7 +175,7 @@ if(document.getElementById("five").value.length>0){document.getElementById("go5"
 if(document.getElementById("one").value>35||document.getElementById("one").value<1){
   document.getElementById("one").value=null;
   document.getElementById("two").focus();
-  setTimeout(function(){document.getElementById("one").focus();}, 2);
+  setTimeout(function(){document.getElementById("one").focus();}, 20;
 }else if(document.getElementById("two").value>35||document.getElementById("two").value<1){
   document.getElementById("two").value=null
 }else if(document.getElementById("three").value>35||document.getElementById("three").value<1){
