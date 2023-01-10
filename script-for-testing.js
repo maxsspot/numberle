@@ -180,7 +180,7 @@ if(document.getElementById("one").value>35||document.getElementById("one").value
                             showConfirmButton: false,
                             allowOutsideClick: false,
                             toast:true,
-                            position:'bottom-start'
+                            position:'bottom'
                         })
 }else if(document.getElementById("two").value>35||document.getElementById("two").value<1){
   document.getElementById("two").value=null
