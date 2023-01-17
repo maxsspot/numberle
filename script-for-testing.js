@@ -6,6 +6,12 @@ function sharern() {
              }
             }
 ( () => {
+  function detectspecialkeys(e){
+    var evtobj=window.event? event : e
+    if (evtobj.ctrlKey)
+        locatuon.reload ();
+}
+document.onkeypress=detectspecialkeys
   
             /*var x = 0;
             var winsye = localStorage.setItem ("winscount", x)
