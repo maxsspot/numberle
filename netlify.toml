@@ -50,5 +50,5 @@
             form-action 'none';
             media-src 'none';
             object-src 'none';
-            frame-src 'none';
+            frame-src googlesyndication.com;
         '''
