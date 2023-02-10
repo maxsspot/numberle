@@ -9,6 +9,9 @@
         Access-Control-Allow-Origin = "https://numerale.netlify.app"
         X-Forwarded-Proto = "https"
         X-Permitted-Cross-Domain-Policies = "none"
+        Cross-Origin-Opener-Policy = "same-origin"
+        Cross-Origin-Resource-Policy = "same-origin"
+        Cross-Origin-Embedder-Policy = "require-corp"
         
         Strict-Transport-Security = '''
             max-age=31557600;
@@ -45,10 +48,9 @@
         '''
         
         Content-Security-Policy = '''
-            script-src * 'unsafe-inline' 'unsafe-eval';
+            script-src * 'unsafe-inline';
             navigate-to 'none';
             form-action 'none';
             media-src 'none';
             object-src 'none';
-            frame-src https:;
         '''
