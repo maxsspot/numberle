@@ -201,4 +201,11 @@ for (var i = 0; i < items.length; i++) {
     items[i].style.display = 'none';
 }
 } 
+  
+  document.querySelector("input").addEventListener("keydown", function(event) {
+  if (event.which === 69) {
+    event.preventDefault();
+  }
+});
+  
 } )();
