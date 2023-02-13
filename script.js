@@ -203,7 +203,7 @@ for (var i = 0; i < items.length; i++) {
 } 
   
   document.querySelector("input").addEventListener("keydown", function(event) {
-  if (event.which === 69) {
+  if (event.key === "e" || event.key === "-") {
     event.preventDefault();
   }
 });
