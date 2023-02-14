@@ -1,6 +1,6 @@
 function sharern() {
              if (navigator.share) { 
-                         navigator.share({ title:'Play Numerale today!', text:'Hey there, I found this game called Numerale and thought you would enjoy it! \n\nhttps://play.google.com/store/apps/details?id=app.netlify.numerale.twa&gl=US is the link to install for Android and https://www.microsoft.com/en-us/p/numerale/9n1q25gx2nn3?activetab=pivot:overviewtab is the link to install for PC!'}) 
+                         navigator.share({ title:'Play Numerale today!', text:'Hey there, I found this game called Numerale and thought you would enjoy it! \n\nhttps://play.google.com/store/apps/details?id=app.netlify.numerale.twa&gl=US is the link to install it!'}) 
                                      .then(() => console.log('Successful share')) 
                          .catch((error) => console.log('Error sharing', error));  
              }
