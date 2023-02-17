@@ -1,0 +1,7 @@
+SHORTCUTS:
+Q - Open how to play
+W - Open share UI
+Enter - Make a number guess
+
+These shortcuts should work on all PC's. If you encounter an error with these 
+shortcuts or this game, report it here: https://maximizestudios.netlify.app/bug-report
