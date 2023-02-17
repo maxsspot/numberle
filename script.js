@@ -116,7 +116,7 @@ const number = Math.floor(Math.random()*35) + 1;
                     //Swal.fire('YOU LOST', 'The game will restart when this box is closed.', 'error');
                             Swal.fire({
                             title: 'YOU LOST!',
-                            text: 'The correct number was: ' + number + '.',
+                            text: 'The correct number was: ' + number + '',
                             icon: 'error',
                             timer: 2000,
                             showConfirmButton: false,
@@ -128,7 +128,7 @@ const number = Math.floor(Math.random()*35) + 1;
                     //Swal.fire('YOU LOST', 'The game will restart when this box is closed.', 'error');
                             Swal.fire({
                             title: 'YOU LOST!',
-                            text: 'The correct number was: ' + number + '.',
+                            text: 'The correct number was: ' + number + '',
                             icon: 'error',
                             timer: 2000,
                             showConfirmButton: false,
@@ -153,7 +153,7 @@ const number = Math.floor(Math.random()*35) + 1;
                     //Swal.fire('YOU LOST', 'The game will restart when this box is closed.', 'error');
                             Swal.fire({
                             title: 'YOU LOST!',
-                            text: 'The correct number was: ' + number + '.',
+                            text: 'The correct number was: ' + number + '',
                             icon: 'error',
                             timer: 2000,
                             showConfirmButton: false,
