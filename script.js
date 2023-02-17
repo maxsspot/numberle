@@ -210,7 +210,13 @@ for (var i = 0; i < items.length; i++) {
 } */
   
   document.querySelector("input").addEventListener("keydown", function(event) {
-  if (event.key === "e" || event.key === "-") {
+    var ye = document.getElementById("one").value;
+    var ye2 = document.getElementById("two").value;
+    var ye3 = document.getElementById("three").value;
+    var ye4 = document.getElementById("four").value;
+    var ye5 = document.getElementById("five").value;
+    
+  if (event.key === "e" || event.key === "-" || ye.value == 0 || ye.value > 35) {
     event.preventDefault();
   }
 });
