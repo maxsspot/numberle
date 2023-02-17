@@ -192,19 +192,22 @@ document.addEventListener("keydown", function(event) {
         } else if (document.getElementById("five").disabled == false && document.getElementById("five").value.length>0) {
                     tryguess5();
         }
-    }
-           
+    }    
   
     if (event.key === "q") {
                 Swal.fire('HOW TO PLAY', 'Find the correct number in 5 guesses. Numbers range from 1-35.', 'question');
     }
+  
+    if (event.key === "w") {
+                sharen();
+    }
 });          
-            var items = document.querySelectorAll("body>b:not(.k1)");
+            /*var items = document.querySelectorAll("body>b:not(.k1)");
            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
 for (var i = 0; i < items.length; i++) {
     items[i].style.display = 'none';
 }
-} 
+} */
   
   document.querySelector("input").addEventListener("keydown", function(event) {
   if (event.key === "e" || event.key === "-") {
