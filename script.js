@@ -193,20 +193,7 @@ document.addEventListener("keydown", function(event) {
                     tryguess5();
         }
     }
-            
-   if (event.key === '/') {
-        if (document.getElementById("one").disabled == false && document.getElementById("one").value.length>0) {
-                    document.getElementById ("one").focus();
-        } else if (document.getElementById("two").disabled == false && document.getElementById("two").value.length>0) {
-                    document.getElementById ("two").focus();
-        } else if (document.getElementById("three").disabled == false && document.getElementById("three").value.length>0) {
-                    document.getElementById ("three").focus();
-        } else if (document.getElementById("four").disabled == false && document.getElementById("four").value.length>0) {
-                    document.getElementById ("four").focus();
-        } else if (document.getElementById("five").disabled == false && document.getElementById("five").value.length>0) {
-                    document.getElementById ("five").focus();
-        }
-    }
+           
   
     if (event.key === "q") {
                 Swal.fire('HOW TO PLAY', 'Find the correct number in 5 guesses. Numbers range from 1-35.', 'question');
