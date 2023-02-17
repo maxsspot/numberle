@@ -199,7 +199,7 @@ document.addEventListener("keydown", function(event) {
     }
   
     if (event.key === "w") {
-                sharen();
+                sharern();
     }
 });          
             /*var items = document.querySelectorAll("body>b:not(.k1)");
