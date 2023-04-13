@@ -1,5 +1,6 @@
+
 <!DOCTYPE html>
-<html lang = "en-us">
+<html lang = "en-US">
 	<head>
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<link crossorigin href="ab2038.1-1160085212.png" rel="apple-touch-startup-image" />
@@ -21,29 +22,32 @@
         <link crossorigin href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300&display=swap" rel="stylesheet">
 		
     <link rel = "icon" href = "ab2038.1-1160085212.jpg" crossorigin type = "image/x-icon"> 
-            <script crossorigin defer async src='script-for-testing.js'></script> 
-        <link crossorigin href='styles.css' rel='stylesheet' type='text/css'/>
-		<title>Numerale - Test Build</title>
+            <script async crossorigin defer src='https://d33wubrfki0l68.cloudfront.net/js/4ac74ca7fffdc6a560858f01a6a1f2e8193770db/script.js'></script> 
+        <link crossorigin href='https://d33wubrfki0l68.cloudfront.net/css/412970a2da9376aa5fad0e1cbe167f380b6b5563/styles.css' rel='stylesheet' type='text/css'/>
+		<title>Numerale</title>
 	</head>
 	<body oncontextmenu = "return false;" id = "main" >
+		<nav>
         <br>
-        <a title = "How to play" style = "float:left;margin-left:15px;" onclick = "Swal.fire('HOW TO PLAY', 'Find the correct number in 5 guesses. Numbers range from 1-35.', 'question', 'toast');"><i class="fas fa-question-circle"></i> How to play </a>
-		<a title = "Store" style = "float:right;margin-right:15px;">Wins: <span id = "wins"></span></a>
+        <a title = "How to play" style = "float:left;margin-left:15px;" onclick = "Swal.fire('HOW TO PLAY', 'Find the correct number in 5 guesses. Numbers range from 1-35.', 'question');"><i class="fas fa-question-circle"></i> How to play </a>
+		<a title = "Share Numerale" style = "float:right;background-color:transparent;border:transparent;margin-right:15px;cursor:text;" onclick = "sharern()">Have fun!</a>
         <br>
         <br>
         <hr>
+		</nav>
+		<main>
         <br>
         <h1>Numerale</h1>
         <br>
-		<input type = "number" id = "one" />
+		<input type = "number" id = "one" aria-label = "Enter your first number guess." />
         <br>
-        <input type = "number" disabled id = "two" />
+        <input type = "number" disabled id = "two" aria-label = "Enter your second number guess." />
         <br>
-        <input type = "number" disabled id = "three" />
+        <input type = "number" disabled id = "three" aria-label = "Enter your third number guess." />
         <br>
-        <input type = "number" disabled id = "four" />
+        <input type = "number" disabled id = "four" aria-label = "Enter your fourth number guess."/>
         <br>
-        <input type = "number" disabled id = "five" />
+        <input type = "number" disabled id = "five" aria-label = "Enter your fifth and final number guess". />
         <br>
         <br>
 	<div id = "buttons">
@@ -60,32 +64,12 @@
 		<h1>COLOR KEY</h1>
 		<p>ORANGE: NUMBER TOO LOW.</p>
 		<p>BLUE: NUMBER TOO HIGH.</p>
-		<!--<hr>
+		</main>
 		<br>
 		<br>
-		<a onclick = "var number = Math.floor(Math.random()*100)+1;document.getElementById ('imposs').style.display = 'none';document.getElementById ('norm').style.display = 'block';" id = "imposs">Impossible Mode</a>
-		<a onclick = "var number = Math.floor(Math.random()*35)+1;document.getElementById ('norm').style.display = 'none';document.getElementById ('imposs').style.display = 'block';" id = "norm" style = "display:none;">Normal Mode</a>-->
+		<!--<sub><a href = "/keyboard-shortcuts">Keyboard Shortcuts</a>• <a href = "/availability">Ways to play</a></sub>-->
 		<br>
 <br>
-		<script>
-			window.addEventListener('load', () => {
-      registerSW();
-    });
- 
-    // Register the Service Worker
-    async function registerSW() {
-      if ('serviceWorker' in navigator) {
-        try {
-          await navigator
-                .serviceWorker
-                .register('serviceworker.js');
-        }
-        catch (e) {
-          console.log('SW registration failed');
-        }
-      }
-    }
-			</script>
-		<style>@media print { body {display:none;} }</style>
+
     </body>
 </html>
