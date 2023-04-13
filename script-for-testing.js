@@ -1,21 +1,14 @@
 function sharern() {
              if (navigator.share) { 
-                         navigator.share({ title:'Play Numerale today!', text:'Hey there, I found this game called Numerale and thought you would enjoy it! \n\nhttps://play.google.com/store/apps/details?id=app.netlify.numerale.twa&gl=US is the link to install for Android and https://www.microsoft.com/en-us/p/numerale/9n1q25gx2nn3?activetab=pivot:overviewtab is the link to install for PC!'}) 
+                         navigator.share({ title:'Play Numerale today!', text:'Hey there, I found this game called Numerale and thought you would enjoy it! \n\nhttps://play.google.com/store/apps/details?id=app.netlify.numerale.twa&gl=US is the link to install it!'}) 
                                      .then(() => console.log('Successful share')) 
                          .catch((error) => console.log('Error sharing', error));  
              }
             }
-( () => {
-  function detectspecialkeys(e){
-    var evtobj=window.event? event : e
-    if (evtobj.ctrlKey)
-        locatuon.reload ();
-}
-document.onkeypress=detectspecialkeys
-  
-            /*var x = 0;
+
+            var x = 0;
             var winsye = localStorage.setItem ("winscount", x)
-            document.getElementById ("wins").innerHTML = winsye.value;*/
+            document.getElementById ("wins").innerHTML = winsye.value;
             document.getElementById ("one").focus();
 const number = Math.floor(Math.random()*35) + 1;
             function restart () {
@@ -123,7 +116,7 @@ const number = Math.floor(Math.random()*35) + 1;
                     //Swal.fire('YOU LOST', 'The game will restart when this box is closed.', 'error');
                             Swal.fire({
                             title: 'YOU LOST!',
-                            text: number,
+                            text: 'The correct number was: ' + number + '',
                             icon: 'error',
                             timer: 2000,
                             showConfirmButton: false,
@@ -135,7 +128,7 @@ const number = Math.floor(Math.random()*35) + 1;
                     //Swal.fire('YOU LOST', 'The game will restart when this box is closed.', 'error');
                             Swal.fire({
                             title: 'YOU LOST!',
-                            text: number,
+                            text: 'The correct number was: ' + number + '',
                             icon: 'error',
                             timer: 2000,
                             showConfirmButton: false,
@@ -151,8 +144,8 @@ const number = Math.floor(Math.random()*35) + 1;
                             showConfirmButton: false,
                             allowOutsideClick: false
                         })
-                            /*var x = x+=1;
-                            localStorage.setItem ("wins", x);
+                            var x = x+=1;
+                            localStorage.setItem ("winscount", x);
                             document.getElementById ("wins").innerHTML = winsye;*/
                             restart();
                     restart();
@@ -160,7 +153,7 @@ const number = Math.floor(Math.random()*35) + 1;
                     //Swal.fire('YOU LOST', 'The game will restart when this box is closed.', 'error');
                             Swal.fire({
                             title: 'YOU LOST!',
-                            text: number,
+                            text: 'The correct number was: ' + number + '',
                             icon: 'error',
                             timer: 2000,
                             showConfirmButton: false,
@@ -182,19 +175,7 @@ if(document.getElementById("three").value.length>0){document.getElementById("go3
 if(document.getElementById("four").value.length>0){document.getElementById("go4").disabled=!1;document.getElementById("four").focus();}else{document.getElementById("go4").disabled=!0}
 if(document.getElementById("five").value.length>0){document.getElementById("go5").disabled=!1;document.getElementById("five").focus();}else{document.getElementById("go5").disabled=!0}
 
-if(document.getElementById("one").value>35||document.getElementById("one").value<1){
-  document.getElementById("one").value=null;
-  document.getElementById("two").focus();
-  setTimeout(function(){document.getElementById("one").focus();}, 20;
-}else if(document.getElementById("two").value>35||document.getElementById("two").value<1){
-  document.getElementById("two").value=null
-}else if(document.getElementById("three").value>35||document.getElementById("three").value<1){
-  document.getElementById("three").value=null
-}else if(document.getElementById("four").value>35||document.getElementById("four").value<1){
-  document.getElementById("four").value=null
-}else if(document.getElementById("five").value>35||document.getElementById("five").value<1){
-  document.getElementById("five").value=null
-}
+if(document.getElementById("one").value>35||document.getElementById("one").value<1){document.getElementById("one").value=null}else if(document.getElementById("two").value>35||document.getElementById("two").value<1){document.getElementById("two").value=null}else if(document.getElementById("three").value>35||document.getElementById("three").value<1){document.getElementById("three").value=null}else if(document.getElementById("four").value>35||document.getElementById("four").value<1){document.getElementById("four").value=null}else if(document.getElementById("five").value>35||document.getElementById("five").value<1){document.getElementById("five").value=null}
 }, 0.1);
             
 
@@ -211,16 +192,26 @@ document.addEventListener("keydown", function(event) {
         } else if (document.getElementById("five").disabled == false && document.getElementById("five").value.length>0) {
                     tryguess5();
         }
-    }
-            
+    }    
+  
     if (event.key === "q") {
                 Swal.fire('HOW TO PLAY', 'Find the correct number in 5 guesses. Numbers range from 1-35.', 'question');
     }
+  
+    if (event.key === "w") {
+                sharern();
+    }
 });          
-            var items = document.querySelectorAll("body>b:not(.k1)");
+            /*var items = document.querySelectorAll("body>b:not(.k1)");
            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
 for (var i = 0; i < items.length; i++) {
     items[i].style.display = 'none';
 }
-} 
-} )();
+} */
+  
+  document.querySelector("input").addEventListener("keydown", function(event) {
+  if (event.key === "e" || event.key === "-") {
+    event.preventDefault();
+  }
+});
+  
