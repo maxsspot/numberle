@@ -5,7 +5,7 @@ function sharern() {
                          .catch((error) => console.log('Error sharing', error));  
              }
             }
-( () => {
+{
             /*var x = 0;
             var winsye = localStorage.setItem ("winscount", x)
             document.getElementById ("wins").innerHTML = winsye.value;*/
@@ -215,4 +215,4 @@ for (var i = 0; i < items.length; i++) {
   }
 });
   
-} )();
+}
