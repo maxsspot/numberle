@@ -6,11 +6,13 @@ function sharern() {
              }
             }
 
+
             var x = 0;
             var winsye = localStorage.setItem ("winscount", x)
             document.getElementById ("wins").innerHTML = winsye.value;
+
             document.getElementById ("one").focus();
-const number = Math.floor(Math.random()*35) + 1;
+            const number = Math.floor(Math.random()*35) + 1;
             function restart () {
                         setTimeout(function(){ location.reload(); }, 2000);                    
             }
@@ -144,7 +146,7 @@ const number = Math.floor(Math.random()*35) + 1;
                             showConfirmButton: false,
                             allowOutsideClick: false
                         })
-                            var x = x+=1;
+                            x+=1;
                             localStorage.setItem ("winscount", x);
                             document.getElementById ("wins").innerHTML = winsye;
                             restart();
