@@ -210,7 +210,7 @@ for (var i = 0; i < items.length; i++) {
 } */
   
   document.querySelector("input").addEventListener("keydown", function(event) {
-    var ones = document.getElementById ("one");
+    var ones = document.getElementById ("one").value;
     var twos = document.getElementById ("two");
     var threes = document.getElementById ("three");
     var fours = document.getElementById ("four");
