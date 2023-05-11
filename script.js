@@ -210,7 +210,12 @@ for (var i = 0; i < items.length; i++) {
 } */
   
   document.querySelector("input").addEventListener("keydown", function(event) {
-  if (event.key === "e" || event.key === "-") {
+    var ones = document.getElementById ("one");
+    var twos = document.getElementById ("two");
+    var threes = document.getElementById ("three");
+    var fours = document.getElementById ("four");
+    var fives = document.getElementById ("five");
+  if (event.key === "e" || event.key === "-" || ones > 35) {
     event.preventDefault();
   }
 });
