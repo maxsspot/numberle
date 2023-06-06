@@ -4,8 +4,8 @@
     "short_name":"Numerale",
     "start_url":"index.html",
     "display":"standalone",
-    "background_color":"#000000",
-    "theme_color":"#000000",
+    "background_color":"black",
+    "theme_color":"black",
     "scope":"/",
     "orientation": "any",
     "icons":[
