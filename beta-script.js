@@ -228,6 +228,15 @@ for (var i = 0; i < items.length; i++) {
             showConfirmButton: false,
             allowOutsideClick: false
      })
+    } else if (ones > 35 || twos > 35 || threes > 35 || fours > 35 || fives > 35) {
+      Swal.fire({
+            text: 'Maximum number is 35!',
+            timer: 2000,
+            toast: true,
+            position: 'top',
+            showConfirmButton: false,
+            allowOutsideClick: false
+     })
     }
 });
   
