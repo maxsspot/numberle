@@ -222,10 +222,9 @@ for (var i = 0; i < items.length; i++) {
     if(ones == 0 || twos == 0 || threes == 0 || fours == 0 || fives == 0) {
       Swal.fire({
             text: 'Minimum number is 1!',
-            icon: 'error',
             timer: 2000,
             toast: true,
-            position: 'top-end',
+            position: 'top-middle',
             showConfirmButton: false,
             allowOutsideClick: false
      })
