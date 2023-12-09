@@ -211,12 +211,24 @@ for (var i = 0; i < items.length; i++) {
   
   document.querySelector("input").addEventListener("keydown", function(event) {
     var ones = document.getElementById ("one").value;
-    var twos = document.getElementById ("two");
-    var threes = document.getElementById ("three");
-    var fours = document.getElementById ("four");
-    var fives = document.getElementById ("five");
-  if (event.key === "e" || event.key === "-" || ones > 35) {
+    var twos = document.getElementById ("two").value;
+    var threes = document.getElementById ("three").value;
+    var fours = document.getElementById ("four").value;
+    var fives = document.getElementById ("five").value;
+  if (event.key === "e" || event.key === "-") {
     event.preventDefault();
   }
+
+    if(ones = 0 || twos = 0 || threes = 0 || fours = 0 || fives = 0) {
+      Swal.fire({
+            text: 'Minimum number is 1!',
+            icon: 'error',
+            timer: 2000,
+            toast: true,
+            position: 'top-end',
+            showConfirmButton: false,
+            allowOutsideClick: false
+     })
+    }
 });
   
