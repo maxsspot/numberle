@@ -224,7 +224,7 @@ for (var i = 0; i < items.length; i++) {
             text: 'Minimum number is 1!',
             timer: 2000,
             toast: true,
-            position: 'top-middle',
+            position: 'top',
             showConfirmButton: false,
             allowOutsideClick: false
      })
