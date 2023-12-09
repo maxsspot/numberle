@@ -6,13 +6,11 @@ function sharern() {
              }
             }
 
-
-            var x = 0;
+            /*var x = 0;
             var winsye = localStorage.setItem ("winscount", x)
-            document.getElementById ("wins").innerHTML = winsye.value;
-
+            document.getElementById ("wins").innerHTML = winsye.value;*/
             document.getElementById ("one").focus();
-            const number = Math.floor(Math.random()*35) + 1;
+const number = Math.floor(Math.random()*35) + 1;
             function restart () {
                         setTimeout(function(){ location.reload(); }, 2000);                    
             }
@@ -146,9 +144,9 @@ function sharern() {
                             showConfirmButton: false,
                             allowOutsideClick: false
                         })
-                            x+=1;
-                            localStorage.setItem ("winscount", x);
-                            document.getElementById ("wins").innerHTML = winsye;
+                            /*var x = x+=1;
+                            localStorage.setItem ("wins", x);
+                            document.getElementById ("wins").innerHTML = winsye;*/
                             restart();
                     restart();
                 } else if (document.getElementById ("five").value != number) {
@@ -212,7 +210,12 @@ for (var i = 0; i < items.length; i++) {
 } */
   
   document.querySelector("input").addEventListener("keydown", function(event) {
-  if (event.key === "e" || event.key === "-") {
+    var ones = document.getElementById ("one").value;
+    var twos = document.getElementById ("two");
+    var threes = document.getElementById ("three");
+    var fours = document.getElementById ("four");
+    var fives = document.getElementById ("five");
+  if (event.key === "e" || event.key === "-" || ones > 35) {
     event.preventDefault();
   }
 });
