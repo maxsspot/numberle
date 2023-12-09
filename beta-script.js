@@ -219,7 +219,7 @@ for (var i = 0; i < items.length; i++) {
     event.preventDefault();
   }
 
-    if(ones == 0 || twos == 0 || threes == 0 || fours == 0 || fives == 0) {
+    if(ones == "0" || twos == "0" || threes == "0" || fours == "0" || fives == "0") {
       Swal.fire({
             text: 'Minimum number is 1!',
             timer: 2000,
