@@ -17,7 +17,9 @@ setInterval (function() {
           icon: 'error',
           showConfirmButton: true,
           allowOutsideClick: false
-      })
+      }).then(function() {
+          location.reload();
+      });
     }
   }
 },1000);
