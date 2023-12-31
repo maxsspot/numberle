@@ -7,7 +7,7 @@ setInterval (function() {
     initialTime--;
   }
   time.innerHTML = initialTime;
-  if (initialTime = 0) {
+  if (initialTime === 0) {
     shouldcountdown=false;
     Swal.fire({
         title: 'Out of time!',
