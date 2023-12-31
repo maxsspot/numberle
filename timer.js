@@ -58,11 +58,12 @@ const number = Math.floor(Math.random()*35) + 1;
                             Swal.fire({
                             title: 'YOU WON!',
                             icon: 'success',
-                            timer: 2000,
-                            showConfirmButton: false,
+                            
+                            showConfirmButton: true,
                             allowOutsideClick: false
                         })
-                            restart();
+                            
+                  shouldcountdown=false;
                 }           
             }
 
@@ -81,11 +82,12 @@ const number = Math.floor(Math.random()*35) + 1;
                              Swal.fire({
                             title: 'YOU WON!',
                             icon: 'success',
-                            timer: 2000,
-                            showConfirmButton: false,
+                            
+                            showConfirmButton: true,
                             allowOutsideClick: false
                         })
-                    restart();
+                    
+                  shouldcountdown=false;
                 }
             }
 
@@ -104,11 +106,12 @@ const number = Math.floor(Math.random()*35) + 1;
                              Swal.fire({
                             title: 'YOU WON!',
                             icon: 'success',
-                            timer: 2000,
-                            showConfirmButton: false,
+                            
+                            showConfirmButton: true,
                             allowOutsideClick: false
                         })
-                    restart();
+                    
+                  shouldcountdown=false;
                 }
             }
 
@@ -127,11 +130,11 @@ const number = Math.floor(Math.random()*35) + 1;
                              Swal.fire({
                             title: 'YOU WON!',
                             icon: 'success',
-                            timer: 2000,
-                            showConfirmButton: false,
+                            
+                            showConfirmButton: true,
                             allowOutsideClick: false
                         })
-                   restart();
+                  shouldcountdown=false;
                 }
             }
 
@@ -144,11 +147,11 @@ const number = Math.floor(Math.random()*35) + 1;
                             title: 'YOU LOST!',
                             text: 'The correct number was: ' + number + '',
                             icon: 'error',
-                            timer: 2000,
-                            showConfirmButton: false,
+                            
+                            showConfirmButton: true,
                             allowOutsideClick: false,
                         })
-                    restart();
+                    shouldcountdown=false;
                 } else if (document.getElementById ("five").value > number) {
                     document.getElementById ("five").style.backgroundColor = "blue";
                     //Swal.fire('YOU LOST', 'The game will restart when this box is closed.', 'error');
@@ -156,36 +159,36 @@ const number = Math.floor(Math.random()*35) + 1;
                             title: 'YOU LOST!',
                             text: 'The correct number was: ' + number + '',
                             icon: 'error',
-                            timer: 2000,
-                            showConfirmButton: false,
+                            
+                            showConfirmButton: true,
                             allowOutsideClick: false
                         })
-                    restart();
+                    shouldcountdown=false;
                 } else if (document.getElementById ("five").value == number) {
                             //Swal.fire('YOU WON', 'The game will restart when this box is closed.', 'success');
                              Swal.fire({
                             title: 'YOU WON!',
                             icon: 'success',
-                            timer: 2000,
-                            showConfirmButton: false,
+                            
+                            showConfirmButton: true,
                             allowOutsideClick: false
                         })
                             /*var x = x+=1;
                             localStorage.setItem ("wins", x);
                             document.getElementById ("wins").innerHTML = winsye;*/
-                            restart();
-                    restart();
+                            
+                    shouldcountdown=false;
                 } else if (document.getElementById ("five").value != number) {
                     //Swal.fire('YOU LOST', 'The game will restart when this box is closed.', 'error');
                             Swal.fire({
                             title: 'YOU LOST!',
                             text: 'The correct number was: ' + number + '',
                             icon: 'error',
-                            timer: 2000,
-                            showConfirmButton: false,
+                            
+                            showConfirmButton: true,
                             allowOutsideClick: false
                         })
-                    restart();
+                    shouldcountdown=false;
                 }
             }
             
