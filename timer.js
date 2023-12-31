@@ -8,8 +8,8 @@ setInterval (function() {
     initialTime--;
   }
   time.innerHTML = initialTime;
-  if (initialTime === 0) {
-    shouldcountdown=false;
+  if (initialTime == 0) {
+    //shouldcountdown=false;
     if (shouldalert) {
       shouldalert=false;
       Swal.fire({
@@ -20,6 +20,8 @@ setInterval (function() {
       }).then(function() {
           location.reload();
       });
+    } else if (initialtime < 0) {
+      document.title = "Stop Cheating!";
     }
   }
 },1000);
