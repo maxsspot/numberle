@@ -1,6 +1,7 @@
 var time = document.getElementById ("timer");
-var initialTime = 25;
+var initialTime = 20;
 var shouldcountdown = true;
+var shouldalert = true;
 
 setInterval (function() {
   if (shouldcountdown) {
@@ -9,11 +10,14 @@ setInterval (function() {
   time.innerHTML = initialTime;
   if (initialTime === 0) {
     shouldcountdown=false;
-    Swal.fire({
-        title: 'Out of time!',
-        icon: 'error',
-        showConfirmButton: false,
-        allowOutsideClick: false
-    })
+    if (shouldalert) {
+      shouldalert=false;
+      Swal.fire({
+          title: 'Out of time!',
+          icon: 'error',
+          showConfirmButton: true,
+          allowOutsideClick: false
+      })
+    }
   }
 },1000);
