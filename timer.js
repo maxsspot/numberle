@@ -181,7 +181,7 @@ const number = Math.floor(Math.random()*35) + 1;
                              Swal.fire({
                             title: 'YOU WON!',
                             icon: 'success',
-                            
+                            timer: 10000000,
                             showConfirmButton: true,
                             allowOutsideClick: false
                         }).then(function() {
