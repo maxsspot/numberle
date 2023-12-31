@@ -20,7 +20,8 @@ setInterval (function() {
       }).then(function() {
           location.reload();
       });
-    } else if (initialtime < 0) {
+    } 
+    if (initialtime < 0) {
       document.title = "Stop Cheating!";
     }
   }
