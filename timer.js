@@ -11,7 +11,7 @@ setInterval (function() {
   
   time.innerHTML = initialTime;
   if (initialTime == 0) {
-    //shouldcountdown=false;
+    shouldcountdown=false;
     if (shouldalert) {
       shouldalert=false;
       Swal.fire({
@@ -28,7 +28,6 @@ setInterval (function() {
   if (initialTime < 0) {
       document.title = "Stop Cheating!";
   }
-  
 },1000);
 
 function sharern() {
