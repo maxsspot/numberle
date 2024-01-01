@@ -13,9 +13,9 @@
   "screenshots": [],
   "icons": [
     {
-      "src": "numeralelogo.png",
+      "src": "numeralelogomanifest.png",
       "type": "image/png",
-      "sizes": "328x341"
+      "sizes": "512x532"
     }
   ],
   "shortcuts": []
