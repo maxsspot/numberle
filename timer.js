@@ -258,7 +258,7 @@ document.addEventListener("keydown", function(event) {
                 Swal.fire('HOW TO PLAY', 'Find the correct number in 5 guesses. Numbers range from 1-35.', 'question');
     }
 
-  const isSweetAlertVisible = document.querySelector('.swal2-container.swal2-shown') !== null;
+  const isSweetAlertVisible = document.querySelector('swal2-container swal2-center swal2-backdrop-show') !== null;
 
   if (isSweetAlertVisible && e.key === 'Enter') {
     e.preventDefault();
