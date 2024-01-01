@@ -195,9 +195,6 @@ const number = Math.floor(Math.random()*35) + 1;
                             icon: 'success',
                             showConfirmButton: true,
                             allowEnterKey: false,
-                               setTimeout(function() {
-                                 allowEnterKey: true,
-                               },1000);
                             allowOutsideClick: false,
                                //focusConfirm: false
                         }).then((result) => {
@@ -205,6 +202,12 @@ const number = Math.floor(Math.random()*35) + 1;
             location.reload();
         }
     });
+                  setTimeout(function() {
+    Swal.update({
+        allowEnterKey: true,
+    });
+}, 1000);
+                
                             /*var x = x+=1;
                             localStorage.setItem ("wins", x);
                             document.getElementById ("wins").innerHTML = winsye;*/
