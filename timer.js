@@ -295,9 +295,6 @@ document.addEventListener("keydown", function(event) {
                 Swal.fire('HOW TO PLAY', 'Find the correct number in 5 guesses. Numbers range from 1-35.', 'question');
     }
   
-  if (e.key = 'Enter') {
-    e.preventDefault();
-  }
   
     if (event.key === "w") {
                 sharern();
