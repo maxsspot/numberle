@@ -19,8 +19,8 @@ setInterval (function() {
           icon: 'error',
           showConfirmButton: true,
           allowOutsideClick: false,
-        allowEnterKey: false
-      }).then(function() {
+        focusConfirm: false
+        }).then(function() {
           location.reload();
       });
     }
