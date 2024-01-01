@@ -73,7 +73,7 @@ const number = Math.floor(Math.random()*35) + 1;
                             Swal.fire({
                             title: 'YOU WON!',
                             icon: 'success',
-                            
+                            allowEnterKey: false,
                             showConfirmButton: true,
                             allowOutsideClick: false
                         }).then(function() {
@@ -99,7 +99,7 @@ const number = Math.floor(Math.random()*35) + 1;
                              Swal.fire({
                             title: 'YOU WON!',
                             icon: 'success',
-                            
+                            allowEnterKey: false,
                             showConfirmButton: true,
                             allowOutsideClick: false
                         }).then(function() {
@@ -125,7 +125,7 @@ const number = Math.floor(Math.random()*35) + 1;
                              Swal.fire({
                             title: 'YOU WON!',
                             icon: 'success',
-                            
+                            allowEnterKey: false,
                             showConfirmButton: true,
                             allowOutsideClick: false
                         }).then(function() {
@@ -170,7 +170,7 @@ const number = Math.floor(Math.random()*35) + 1;
                             title: 'YOU LOST!',
                             text: 'The correct number was: ' + number + '',
                             icon: 'error',
-                            //focusConfirm: false,
+                            allowEnterKey: false,
                             showConfirmButton: true,
                             allowOutsideClick: false,
                         }).then((result) => {
