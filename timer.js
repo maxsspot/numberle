@@ -253,16 +253,25 @@ if(document.getElementById("five").value.length>0){document.getElementById("go5"
 
 var oneElement = document.getElementById ("one");
 let one1 = oneElement.value.slice(0, -1);
+var twoElement = document.getElementById ("one");
+let two2 = twoElement.value.slice(0, -1);
+var threeElement = document.getElementById ("one");
+let three3 = threeElement.value.slice(0, -1);
+var fourElement = document.getElementById ("one");
+let four4 = fourElement.value.slice(0, -1);
+var fiveElement = document.getElementById ("one");
+let five5 = fiveElement.value.slice(0, -1);
+  
 if(oneElement.value>35||oneElement.value<1){
   oneElement.value=one1;
-}else if(document.getElementById("two").value>35||document.getElementById("two").value<1){
-  document.getElementById("two").value=null
-}else if(document.getElementById("three").value>35||document.getElementById("three").value<1){
-  document.getElementById("three").value=null
-}else if(document.getElementById("four").value>35||document.getElementById("four").value<1){
-  document.getElementById("four").value=null
-}else if(document.getElementById("five").value>35||document.getElementById("five").value<1){
-  document.getElementById("five").value=null
+}else if(twoElement.value>35||twoElement.value<1){
+  twoElement.value=two2;
+}else if(threeElement.value>35||threeElement.value<1){
+  threeElement.value=three3;
+}else if(fourElement.value>35||fourElement.value<1){
+  fourElement.value=four4;
+}else if(fiveElement.value>35||fiveElement.value<1){
+  fiveElement.value=five5;
 }
 }, 1);
             
