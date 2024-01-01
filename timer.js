@@ -253,13 +253,13 @@ if(document.getElementById("five").value.length>0){document.getElementById("go5"
 
 var oneElement = document.getElementById ("one");
 let one1 = oneElement.value.slice(0, -1);
-var twoElement = document.getElementById ("one");
+var twoElement = document.getElementById ("two");
 let two2 = twoElement.value.slice(0, -1);
-var threeElement = document.getElementById ("one");
+var threeElement = document.getElementById ("three");
 let three3 = threeElement.value.slice(0, -1);
-var fourElement = document.getElementById ("one");
+var fourElement = document.getElementById ("four");
 let four4 = fourElement.value.slice(0, -1);
-var fiveElement = document.getElementById ("one");
+var fiveElement = document.getElementById ("five");
 let five5 = fiveElement.value.slice(0, -1);
   
 if(oneElement.value>35||oneElement.value<1){
