@@ -4,9 +4,11 @@ var shouldcountdown = true;
 var shouldalert = true;
 
 setInterval (function() {
+  
   if (shouldcountdown) {
     initialTime--;
   }
+  
   time.innerHTML = initialTime;
   if (initialTime == 0) {
     //shouldcountdown=false;
@@ -23,7 +25,7 @@ setInterval (function() {
     }
   }
 
-  if (initialtime < 0) {
+  if (initialTime < 0) {
       document.title = "Stop Cheating!";
   }
   
