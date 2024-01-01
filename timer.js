@@ -161,7 +161,7 @@ const number = Math.floor(Math.random()*35) + 1;
                             title: 'YOU LOST!',
                             text: 'The correct number was: ' + number + '',
                             icon: 'error',
-                            focusConfirm: false,
+                            //focusConfirm: false,
                             showConfirmButton: true,
                             allowOutsideClick: false,
                         }).then((result) => {
@@ -180,7 +180,7 @@ const number = Math.floor(Math.random()*35) + 1;
                             
                             showConfirmButton: true,
                             allowOutsideClick: false,
-                              focusConfirm: false
+                              //focusConfirm: false
                         }).then((result) => {
         if (result.isConfirmed) {
             location.reload();
@@ -192,10 +192,9 @@ const number = Math.floor(Math.random()*35) + 1;
                              Swal.fire({
                             title: 'YOU WON!',
                             icon: 'success',
-                            timer: 10000000,
                             showConfirmButton: true,
                             allowOutsideClick: false,
-                               focusConfirm: false
+                               //focusConfirm: false
                         }).then((result) => {
         if (result.isConfirmed) {
             location.reload();
@@ -212,7 +211,7 @@ const number = Math.floor(Math.random()*35) + 1;
                             title: 'YOU LOST!',
                             text: 'The correct number was: ' + number + '',
                             icon: 'error',
-                            focusConfirm: false,
+                            //focusConfirm: false,
                             showConfirmButton: true,
                             allowOutsideClick: false
                         }).then((result) => {
@@ -258,6 +257,12 @@ document.addEventListener("keydown", function(event) {
     if (event.key === "q") {
                 Swal.fire('HOW TO PLAY', 'Find the correct number in 5 guesses. Numbers range from 1-35.', 'question');
     }
+
+  const isSweetAlertVisible = document.querySelector('.swal2-container.swal2-shown') !== null;
+
+  if (isSweetAlertVisible && e.key === 'Enter') {
+    e.preventDefault();
+  }
   
     if (event.key === "w") {
                 sharern();
