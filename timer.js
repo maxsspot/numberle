@@ -20,11 +20,13 @@ setInterval (function() {
       }).then(function() {
           location.reload();
       });
-    } 
-    if (initialtime < 0) {
-      document.title = "Stop Cheating!";
     }
   }
+
+  if (initialtime < 0) {
+      document.title = "Stop Cheating!";
+  }
+  
 },1000);
 
 function sharern() {
