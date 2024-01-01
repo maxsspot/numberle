@@ -9,7 +9,9 @@
   "short_name": "Numerale",
   "start_url": "/",
   "theme_color": "#ffffff",
-  "categories": [],
+  "categories": [
+    "games"
+  ],
   "screenshots": [],
   "icons": [
     {
