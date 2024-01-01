@@ -31,7 +31,7 @@ setInterval (function() {
   }
 },1000);
 
-var mode = document.getElementById ("mode");
+var mode = document.getElementById ("modechooser");
 mode.addEventListener('change', function() {
       if (mode.value == "Normal Mode") {
         window.location = "https://numerale.netlify.app";
