@@ -39,6 +39,10 @@ body {
 overflow:visible;
 }
 
+select {
+	font-family:"Fredoka", sans-serif;
+}
+
 input {
     border:grey solid 2px;
     border-radius:5px;
