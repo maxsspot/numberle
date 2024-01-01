@@ -11,7 +11,7 @@ setInterval (function() {
   
   time.innerHTML = initialTime;
   if (initialTime == 0) {
-    /*shouldcountdown=false;
+    shouldcountdown=false;
     if (shouldalert) {
       shouldalert=false;
       Swal.fire({
@@ -23,7 +23,7 @@ setInterval (function() {
         }).then(function() {
           location.reload();
       });
-    }*/
+    }
   }
 
   if (initialTime < 0) {
