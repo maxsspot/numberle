@@ -36,7 +36,7 @@ mode.addEventListener('change', function() {
       if (mode.value == "Normal Mode") {
         window.location = "https://numerale.netlify.app";
       }
-    });
+});
 
 function sharern() {
              if (navigator.share) { 
