@@ -161,7 +161,7 @@ const number = Math.floor(Math.random()*35) + 1;
                             title: 'YOU LOST!',
                             text: 'The correct number was: ' + number + '',
                             icon: 'error',
-                            
+                            focusConfirm: false,
                             showConfirmButton: true,
                             allowOutsideClick: false,
                         }).then((result) => {
@@ -179,7 +179,8 @@ const number = Math.floor(Math.random()*35) + 1;
                             icon: 'error',
                             
                             showConfirmButton: true,
-                            allowOutsideClick: false
+                            allowOutsideClick: false,
+                              focusConfirm: false
                         }).then((result) => {
         if (result.isConfirmed) {
             location.reload();
@@ -193,7 +194,8 @@ const number = Math.floor(Math.random()*35) + 1;
                             icon: 'success',
                             timer: 10000000,
                             showConfirmButton: true,
-                            allowOutsideClick: false
+                            allowOutsideClick: false,
+                               focusConfirm: false
                         }).then((result) => {
         if (result.isConfirmed) {
             location.reload();
@@ -210,7 +212,7 @@ const number = Math.floor(Math.random()*35) + 1;
                             title: 'YOU LOST!',
                             text: 'The correct number was: ' + number + '',
                             icon: 'error',
-                            
+                            focusConfirm: false,
                             showConfirmButton: true,
                             allowOutsideClick: false
                         }).then((result) => {
