@@ -31,6 +31,13 @@ setInterval (function() {
   }
 },1000);
 
+var mode = document.getElementById ("mode");
+mode.addEventListener('change', function() {
+      if (mode.value == "Normal Mode") {
+        window.location = "https://numerale.netlify.app";
+      }
+    });
+
 function sharern() {
              if (navigator.share) { 
                          navigator.share({ title:'Play Numerale today!', text:'Hey there, I found this game called Numerale and thought you would enjoy it! \n\nhttps://play.google.com/store/apps/details?id=app.netlify.numerale.twa&gl=US is the link to install it!'}) 
