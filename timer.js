@@ -251,10 +251,12 @@ if(document.getElementById("three").value.length>0){document.getElementById("go3
 if(document.getElementById("four").value.length>0){document.getElementById("go4").disabled=!1;document.getElementById("four").focus();}else{document.getElementById("go4").disabled=!0}
 if(document.getElementById("five").value.length>0){document.getElementById("go5").disabled=!1;document.getElementById("five").focus();}else{document.getElementById("go5").disabled=!0}
 
+  var shouldrefresh = true;
 if(document.getElementById("one").value>35||document.getElementById("one").value<1){
   document.getElementById("one").value=null
-  if (document.getElementById("one").value!=null) {
+  if (document.getElementById("one").value!=null && shouldrefresh===true) {
     location.reload();
+    shouldrefresh=false;
   }
 }else if(document.getElementById("two").value>35||document.getElementById("two").value<1){
   document.getElementById("two").value=null
