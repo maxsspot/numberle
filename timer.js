@@ -18,6 +18,7 @@ setInterval (function() {
           title: 'Out of time!',
           icon: 'error',
           showConfirmButton: true,
+          allowEnterKey: false,
           allowOutsideClick: false,
         focusConfirm: false
         }).then(function() {
