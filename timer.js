@@ -195,6 +195,9 @@ const number = Math.floor(Math.random()*35) + 1;
                             icon: 'success',
                             showConfirmButton: true,
                             allowEnterKey: false,
+                               setTimeout(function() {
+                                 allowEnterKey: true,
+                               },1000);
                             allowOutsideClick: false,
                                //focusConfirm: false
                         }).then((result) => {
