@@ -163,9 +163,11 @@ const number = Math.floor(Math.random()*35) + 1;
                             
                             showConfirmButton: true,
                             allowOutsideClick: false,
-                        }).then(function() {
-          location.reload();
-      });
+                        }).then((result) => {
+        if (result.isConfirmed) {
+            location.reload();
+        }
+    });
                     shouldcountdown=false;
                 } else if (document.getElementById ("five").value > number) {
                     document.getElementById ("five").style.backgroundColor = "blue";
@@ -177,9 +179,11 @@ const number = Math.floor(Math.random()*35) + 1;
                             
                             showConfirmButton: true,
                             allowOutsideClick: false
-                        }).then(function() {
-          location.reload();
-      });
+                        }).then((result) => {
+        if (result.isConfirmed) {
+            location.reload();
+        }
+    });
                     shouldcountdown=false;
                 } else if (document.getElementById ("five").value == number) {
                             //Swal.fire('YOU WON', 'The game will restart when this box is closed.', 'success');
@@ -189,9 +193,11 @@ const number = Math.floor(Math.random()*35) + 1;
                             timer: 10000000,
                             showConfirmButton: true,
                             allowOutsideClick: false
-                        }).then(function() {
-          location.reload();
-      });
+                        }).then((result) => {
+        if (result.isConfirmed) {
+            location.reload();
+        }
+    });
                             /*var x = x+=1;
                             localStorage.setItem ("wins", x);
                             document.getElementById ("wins").innerHTML = winsye;*/
@@ -206,9 +212,11 @@ const number = Math.floor(Math.random()*35) + 1;
                             
                             showConfirmButton: true,
                             allowOutsideClick: false
-                        }).then(function() {
-          location.reload();
-      });
+                        }).then((result) => {
+        if (result.isConfirmed) {
+            location.reload();
+        }
+    });
                     shouldcountdown=false;
                 }
             }
