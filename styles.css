@@ -41,6 +41,7 @@ overflow:visible;
 
 select {
 	font-family:"Fredoka", sans-serif;
+	outline:none;
 }
 
 input {
