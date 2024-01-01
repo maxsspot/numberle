@@ -18,7 +18,8 @@ setInterval (function() {
           title: 'Out of time!',
           icon: 'error',
           showConfirmButton: true,
-          allowOutsideClick: false
+          allowOutsideClick: false,
+        allowEnterKey: false
       }).then(function() {
           location.reload();
       });
