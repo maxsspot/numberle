@@ -1,3 +1,5 @@
+var modeCurrent;
+
 var mode = document.getElementById ("modechooser");
 mode.addEventListener('change', function() {
       if (mode.value == "Timed Normal Mode") {
@@ -7,12 +9,12 @@ mode.addEventListener('change', function() {
 
 ///////////////////////////////////////////////
 
-
-
 if (window.location.pathname == "/challenge" || window.location.pathname == "/challenge.html") {
       var number = Math.floor(Math.random()*50) + 1;
+      modeCurrent = "challenge";
 } else if (window.location.pathname == "/index" || window.location.pathname == "/index.html" || window.location.pathname == "/") {
       var number = Math.floor(Math.random()*35) + 1;
+      modeCurrent = "normal";
 }
 
 ///////////////////////////////////////////////
@@ -227,8 +229,14 @@ document.addEventListener("keydown", function(event) {
         }
     }    
   
-    if (event.key === "q") {
+    if (modeCurrent=="challenge") {
+          if (event.key === "q") {
+                Swal.fire('HOW TO PLAY', 'Find the correct number in 5 guesses. Numbers range from 1-50.', 'question');
+          }
+    } else if (modeCurrent == "normal") {
+          if (event.key === "q") {
                 Swal.fire('HOW TO PLAY', 'Find the correct number in 5 guesses. Numbers range from 1-35.', 'question');
+          }
     }
   
     if (event.key === "w") {
