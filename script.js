@@ -200,16 +200,10 @@ let four4 = fourElement.value.slice(0, -1);
 var fiveElement = document.getElementById ("five");
 let five5 = fiveElement.value.slice(0, -1);
       
-if(oneElement.value>35||oneElement.value<1){
-  oneElement.value=one1;
-}else if(twoElement.value>35||twoElement.value<1){
-  twoElement.value=two2;
-}else if(threeElement.value>35||threeElement.value<1){
-  threeElement.value=three3;
-}else if(fourElement.value>35||fourElement.value<1){
-  fourElement.value=four4;
-}else if(fiveElement.value>35||fiveElement.value<1){
-  fiveElement.value=five5;
+if (currentMode == "normal") {
+      if(oneElement.value>35||oneElement.value<1){ oneElement.value=one1; }else if(twoElement.value>35||twoElement.value<1){ twoElement.value=two2; }else if(threeElement.value>35||threeElement.value<1){ threeElement.value=three3; }else if(fourElement.value>35||fourElement.value<1){ fourElement.value=four4; }else if(fiveElement.value>35||fiveElement.value<1){ fiveElement.value=five5; }
+} else if (currentMode == "challenge") {
+      if(oneElement.value>50||oneElement.value<1){ oneElement.value=one1; }else if(twoElement.value>50||twoElement.value<1){ twoElement.value=two2; }else if(threeElement.value>50||threeElement.value<1){ threeElement.value=three3; }else if(fourElement.value>50||fourElement.value<1){ fourElement.value=four4; }else if(fiveElement.value>50||fiveElement.value<1){ fiveElement.value=five5; }
 }
 }, 0.1);
             
