@@ -277,6 +277,7 @@ if (modeCurrent=="Timed Normal") {
   if(oneElement.value>35||oneElement.value<1){ oneElement.value=one1; }else if(twoElement.value>35||twoElement.value<1){ twoElement.value=two2; }else if(threeElement.value>35||threeElement.value<1){ threeElement.value=three3; }else if(fourElement.value>35||fourElement.value<1){ fourElement.value=four4; }else if(fiveElement.value>35||fiveElement.value<1){ fiveElement.value=five5; }
 } else if (modeCurrent=="Timed Challenge") {
   if(oneElement.value>50||oneElement.value<1){ oneElement.value=one1; }else if(twoElement.value>50||twoElement.value<1){ twoElement.value=two2; }else if(threeElement.value>50||threeElement.value<1){ threeElement.value=three3; }else if(fourElement.value>50||fourElement.value<1){ fourElement.value=four4; }else if(fiveElement.value>50||fiveElement.value<1){ fiveElement.value=five5; }
+}
 }, 1);
             
 
