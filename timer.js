@@ -33,14 +33,6 @@ setInterval (function() {
   }
 },1000);
 
-document.onvisibilitychanged = () =>  {
-  if (document.visibilitystate = "hidden") {
-    shouldcountdown=false;
-  } else {
-    shouldcountdown=true;
-  }
-}
-
 if (window.location.pathname == "/timed") {
   var number = Math.floor(Math.random()*35) + 1;
   modeCurrent="Timed Normal";
