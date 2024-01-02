@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang = "en-US">
+	<head>
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+                <meta name="keywords" content="numerale, numerals, number guessing game"/>
+                <link rel="canonical" href="https://numerale.netlify.app/index.html">
+                <meta name="description" content="You have five chances to guess the random number. The number ranges from 1 to 35 and changes every round. Do you think you could do it?">
+                <meta name="google-site-verification" content="a0a5tEpiGzUwSogFn5ASJ0URLkgzpJC5GHIFos0OYxk" />
+		<link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@5.0.15/dark.min.css" rel="stylesheet">
+		<script crossorigin async defer src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+		<meta charset = "UTF-8">
+                <meta property="og:title" content="Numerale">
+                <meta property="og:description" content="You have five chances to guess the random number. The number ranges from 1 to 35 and changes every round. Do you think you could do it?">
+                <meta name="twitter:title" content="Numerale">
+                <meta name="twitter:description" content="You have five chances to guess the random number. The number ranges from 1 to 35 and changes every round. Do you think you could do it?">
+		<link rel="apple-touch-icon" crossorigin href="numeralelogo.png" />
+		<link rel="manifest" href="manifest.json">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link crossorigin href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300&display=swap" rel="stylesheet">
+		
+    <link rel = "icon" href = "numeralelogo.png" crossorigin type = "image/x-icon"> 
+	    <script defer async src = 'timer.js'></script>
+        <link crossorigin href='styles.css' rel='stylesheet' type='text/css'/>
+		<title>Numerale Timed Challenge</title>
+	</head>
+	<body oncontextmenu = "return false;" id = "main" >
+		<nav>
+        <br>
+        <a title = "How to play" style = "float:left;margin-left:15px;" onclick = "Swal.fire('HOW TO PLAY', 'Find the correct number in 5 guesses. Numbers range from 1-35.', 'question');"><i class="fas fa-question-circle"></i> How to play </a>
+		<select style = "float:right;color:white;background-color:transparent;border:transparent;margin-right:15px;cursor:pointer;" id = "modechooser">
+			<option style = "color:black;" value = "Normal Mode">Normal Mode</option>
+			<option style = "color:black;" value = "Timed Normal Mode" selected>Timed Normal Mode</option>
+			<option style = "color:black;" value = "Challenge Mode">Challenge Mode</option>
+		</select>
+        <br>
+        <br>
+        <hr>
+		</nav>
+		<main>
+        <br>
+			<a style = "margin:auto;cursor:text;font-size:35px;" id = "timer">20</a>
+			<br>
+        <h1>Numerale</h1>
+        <br>
+		<input type = "number" id = "one" aria-label = "Enter your first number guess." />
+        <br>
+        <input type = "number" disabled id = "two" aria-label = "Enter your second number guess." />
+        <br>
+        <input type = "number" disabled id = "three" aria-label = "Enter your third number guess." />
+        <br>
+        <input type = "number" disabled id = "four" aria-label = "Enter your fourth number guess."/>
+        <br>
+        <input type = "number" disabled id = "five" aria-label = "Enter your fifth and final number guess". />
+        <br>
+        <br>
+	<div id = "buttons">
+<button id = "go" onclick = "tryguess()">Guess</button>
+	<button style = "display:none;" id = "go2" onclick = "tryguess2()">Guess</button>
+		<button style = "display:none;" id = "go3" onclick = "tryguess3()">Guess </button>
+			<button style = "display:none;" onclick = "tryguess4()" id = "go4">Guess</button>
+				<button style = "display:none;" onclick = "tryguess5()"id = "go5">Guess</button>
+		</div>
+			<br>
+	<hr>
+		<br>
+		<h1>COLOR KEY</h1>
+		<p>ORANGE: NUMBER TOO LOW.</p>
+		<p>BLUE: NUMBER TOO HIGH.</p>
+		</main>
+		<br>
+		<br>
+		<!--<sub><a href = "/keyboard-shortcuts">Keyboard Shortcuts</a>• <a href = "/availability">Ways to play</a></sub>-->
+		<br>
+<br>
+
+    </body>
+</html>
