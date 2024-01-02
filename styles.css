@@ -42,6 +42,14 @@ overflow:visible;
 select {
 	font-family:"Fredoka", sans-serif;
 	outline:none;
+	transition:all 0.5s;
+	border-radius:5px;
+}
+select:hover {
+	background-color:lightgray;
+}
+select:active {
+	background-color:lightgray;
 }
 
 input {
