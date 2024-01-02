@@ -35,7 +35,9 @@ setInterval (function() {
 
 document.addEventListener("visibilitychange", function() {
     if (document.hidden) {
+      if (shouldalert=true) {
        shouldcountdown=false;
+      }
     } else {
        shouldcountdown=true;
     }
