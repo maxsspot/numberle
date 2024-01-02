@@ -85,7 +85,7 @@ function sharern() {
                     document.getElementById ("one").style.backgroundColor = "blue";
                 } else if (document.getElementById ("one").value == number) {
                     
-                            Swal.fire({
+                            ({
                             title: 'YOU WON!',
                             icon: 'success',
                             allowEnterKey: false,
@@ -301,7 +301,11 @@ document.addEventListener("keydown", function(event) {
     }    
   
     if (event.key === "q") {
+          if (modeCurrent=="Timed Challenge") {
+                Swal.fire('HOW TO PLAY', 'Find the correct number in 5 guesses. Numbers range from 1-50.', 'question');
+          } else if (modeCurrent=="Timed Normal") {
                 Swal.fire('HOW TO PLAY', 'Find the correct number in 5 guesses. Numbers range from 1-35.', 'question');
+          }
     }
   
   
