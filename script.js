@@ -5,7 +5,7 @@ mode.addEventListener('change', function() {
       if (mode.value == "Timed Normal Mode") {
         window.location = "https://numerale.netlify.app/timed";
       } else if (mode.value == "Normal Mode") {
-        window.location = "https://numerale.netlify.app/normal";
+        window.location = "https://numerale.netlify.app/";
       } else if (mode.value == "Challenge Mode") {
         window.location = "https://numerale.netlify.app/challenge";
       }
