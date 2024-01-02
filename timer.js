@@ -31,6 +31,12 @@ setInterval (function() {
   }
 },1000);
 
+if (window.location.pathname == "/timed") {
+  var number = Math.floor(Math.random()*35) + 1;
+} else if (window.location.pathname == "/timed-challenge") {
+  var number = Math.floor(Math.random()*50) + 1;
+}
+
 var mode = document.getElementById ("modechooser");
 mode.addEventListener('change', function() {
       if (mode.value == "Normal Mode") {
@@ -52,7 +58,7 @@ function sharern() {
             var winsye = localStorage.setItem ("winscount", x)
             document.getElementById ("wins").innerHTML = winsye.value;*/
             document.getElementById ("one").focus();
-const number = Math.floor(Math.random()*35) + 1;
+
             function restart () {
                         setTimeout(function(){ location.reload(); }, 2000);                    
             }
