@@ -32,10 +32,11 @@ setInterval (function() {
 },1000);
 
 var mode = document.getElementById ("modechooser");
-mode.value = "Timed Normal Mode";
 mode.addEventListener('change', function() {
       if (mode.value == "Normal Mode") {
         window.location = "https://numerale.netlify.app";
+      } else if (mode.value == "Challenge Mode") {
+        window.location = "https://numerale.netlify.app/challenge";
       }
 });
 
