@@ -33,6 +33,16 @@ setInterval (function() {
   }
 },1000);
 
+document.addEventListener("visibilitychange", function() {
+    if (document.hidden) {
+        // The user has switched tabs or left the page
+        console.log("User left the tab or switched tabs");
+    } else {
+        // The user has returned to the tab
+        console.log("User returned to the tab");
+    }
+});
+
 if (window.location.pathname == "/timed") {
   var number = Math.floor(Math.random()*35) + 1;
   modeCurrent="Timed Normal";
