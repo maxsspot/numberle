@@ -2,12 +2,14 @@ var modeCurrent;
 
 var mode = document.getElementById ("modechooser");
 mode.addEventListener('change', function() {
-      if (mode.value == "Timed Normal Mode") {
+      if (mode.value == "Normal Mode") {
+        window.location = "https://numerale.netlify.app";
+      } else if (mode.value == "Timed Normal Mode") {
         window.location = "https://numerale.netlify.app/timed";
-      } else if (mode.value == "Normal Mode") {
-        window.location = "https://numerale.netlify.app/";
       } else if (mode.value == "Challenge Mode") {
         window.location = "https://numerale.netlify.app/challenge";
+      } else if (mode.value == "Timed Challenge Mode") {
+        window.location = "https://numerale.netlify.app/timed-challenge";
       }
 });
 
