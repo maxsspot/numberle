@@ -1,7 +1,7 @@
 var mode = document.getElementById ("modechooser");
 mode.value = "Normal Mode";
 mode.addEventListener('change', function() {
-      if (mode.value == "Timed Mode") {
+      if (mode.value == "Timed Normal Mode") {
         window.location = "https://numerale.netlify.app/timed";
       }
 });
