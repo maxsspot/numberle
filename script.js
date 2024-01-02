@@ -6,11 +6,28 @@ mode.addEventListener('change', function() {
       }
 });
 
+///////////////////////////////////////////////
+
+var oneElement = document.getElementById ("one");
+let one1 = oneElement.value.slice(0, -1);
+var twoElement = document.getElementById ("two");
+let two2 = twoElement.value.slice(0, -1);
+var threeElement = document.getElementById ("three");
+let three3 = threeElement.value.slice(0, -1);
+var fourElement = document.getElementById ("four");
+let four4 = fourElement.value.slice(0, -1);
+var fiveElement = document.getElementById ("five");
+let five5 = fiveElement.value.slice(0, -1);
+
 if (window.location.pathname == "/challenge" || window.location.pathname == "/challenge.html") {
       var number = Math.floor(Math.random()*50) + 1;
+      if(oneElement.value>50||oneElement.value<1){ oneElement.value=one1; }else if(twoElement.value>50||twoElement.value<1){ twoElement.value=two2; }else if(threeElement.value>50||threeElement.value<1){ threeElement.value=three3; }else if(fourElement.value>50||fourElement.value<1){ fourElement.value=four4; }else if(fiveElement.value>50||fiveElement.value<1){ fiveElement.value=five5; }
 } else {
       var number = Math.floor(Math.random()*35) + 1;
+      if(oneElement.value>35||oneElement.value<1){ oneElement.value=one1; }else if(twoElement.value>35||twoElement.value<1){ twoElement.value=two2; }else if(threeElement.value>35||threeElement.value<1){ threeElement.value=three3; }else if(fourElement.value>35||fourElement.value<1){ fourElement.value=four4; }else if(fiveElement.value>35||fiveElement.value<1){ fiveElement.value=five5; }
 }
+
+///////////////////////////////////////////////
 
             /*var x = 0;
             var winsye = localStorage.setItem ("winscount", x)
@@ -181,26 +198,17 @@ if(document.getElementById("three").value.length>0){document.getElementById("go3
 if(document.getElementById("four").value.length>0){document.getElementById("go4").disabled=!1;document.getElementById("four").focus();}else{document.getElementById("go4").disabled=!0}
 if(document.getElementById("five").value.length>0){document.getElementById("go5").disabled=!1;document.getElementById("five").focus();}else{document.getElementById("go5").disabled=!0}
 
-var oneElement = document.getElementById ("one");
-let one1 = oneElement.value.slice(0, -1);
-var twoElement = document.getElementById ("two");
-let two2 = twoElement.value.slice(0, -1);
-var threeElement = document.getElementById ("three");
-let three3 = threeElement.value.slice(0, -1);
-var fourElement = document.getElementById ("four");
-let four4 = fourElement.value.slice(0, -1);
-var fiveElement = document.getElementById ("five");
-let five5 = fiveElement.value.slice(0, -1);
+
   
-if(oneElement.value>35||oneElement.value<1){
+if(oneElement.value>50||oneElement.value<1){
   oneElement.value=one1;
-}else if(twoElement.value>35||twoElement.value<1){
+}else if(twoElement.value>50||twoElement.value<1){
   twoElement.value=two2;
-}else if(threeElement.value>35||threeElement.value<1){
+}else if(threeElement.value>50||threeElement.value<1){
   threeElement.value=three3;
-}else if(fourElement.value>35||fourElement.value<1){
+}else if(fourElement.value>50||fourElement.value<1){
   fourElement.value=four4;
-}else if(fiveElement.value>35||fiveElement.value<1){
+}else if(fiveElement.value>50||fiveElement.value<1){
   fiveElement.value=five5;
 }
 }, 0.1);
