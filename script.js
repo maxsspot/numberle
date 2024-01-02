@@ -6,19 +6,17 @@ mode.addEventListener('change', function() {
       }
 });
 
-function sharern() {
-             if (navigator.share) { 
-                         navigator.share({ title:'Play Numerale today!', text:'Hey there, I found this game called Numerale and thought you would enjoy it! \n\nhttps://play.google.com/store/apps/details?id=app.netlify.numerale.twa&gl=US is the link to install it!'}) 
-                                     .then(() => console.log('Successful share')) 
-                         .catch((error) => console.log('Error sharing', error));  
-             }
-            }
+if (window.location.pathname == "/challenge" || window.location.pathname == "/challenge.html") {
+      var number = Math.floor(Math.random()*50) + 1;
+} else {
+      var number = Math.floor(Math.random()*35) + 1;
+}
 
             /*var x = 0;
             var winsye = localStorage.setItem ("winscount", x)
             document.getElementById ("wins").innerHTML = winsye.value;*/
             document.getElementById ("one").focus();
-const number = Math.floor(Math.random()*35) + 1;
+
             function restart () {
                         setTimeout(function(){ location.reload(); }, 2000);                    
             }
