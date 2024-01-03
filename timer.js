@@ -29,7 +29,7 @@ setInterval (function() {
   }
 
   if (initialTime < 0) {
-      document.title = "Stop Cheating!";
+    location.reload();
   }
 },1000);
 
