@@ -107,7 +107,6 @@ function sharern() {
                             allowOutsideClick: false
                         })
                   restart();
-      });
                             
                   shouldcountdown=false;
                 }           
