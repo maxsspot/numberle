@@ -5,7 +5,7 @@ var initialTime = 15;
 var shouldcountdown = false;
 var shouldalert = true;
 
-function startTImer () {
+function startTimer () {
   shouldcountdown=true;
 }
 
