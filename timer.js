@@ -25,10 +25,11 @@ setInterval (function() {
           icon: 'error',
           timer: 2000,
           allowOutsideClick: false,
-        focusConfirm: false
-        }).then(function() {
-          location.reload();
-      });
+          focusConfirm: false,
+          showConfirmButton: false
+        })
+
+        restart();
     }
   }
 
