@@ -99,14 +99,14 @@ function sharern() {
                     document.getElementById ("one").style.backgroundColor = "blue";
                 } else if (document.getElementById ("one").value == number) {
                     
-                            ({
+                            Swal.fire ({
                             title: 'YOU WON!',
                             icon: 'success',
                             showConfirmButton: false,
                             timer: 2000,
                             allowOutsideClick: false
-                        }).then(function() {
-          location.reload();
+                        })
+                  restart();
       });
                             
                   shouldcountdown=false;
@@ -131,9 +131,9 @@ function sharern() {
                             showConfirmButton: false,
                             timer: 2000,
                             allowOutsideClick: false
-                        }).then(function() {
-          location.reload();
-      });
+                        })
+
+                  restart();
                     
                   shouldcountdown=false;
                 }
@@ -157,9 +157,8 @@ function sharern() {
                             showConfirmButton: false,
                             timer: 2000,
                             allowOutsideClick: false
-                        }).then(function() {
-          location.reload();
-      });
+                        })
+                  restart();
                     
                   shouldcountdown=false;
                 }
@@ -183,9 +182,9 @@ function sharern() {
                             showConfirmButton: false,
                             timer: 2000,
                             allowOutsideClick: false
-                        }).then(function() {
-          location.reload();
-      });
+                        })
+
+                  restart();
                   shouldcountdown=false;
                 }
             }
@@ -202,11 +201,9 @@ function sharern() {
                             showConfirmButton: false,
                             timer: 2000,
                             allowOutsideClick: false,
-                        }).then((result) => {
-        if (result.isConfirmed) {
-            location.reload();
-        }
-    });
+                        })
+
+                  restart();
                     shouldcountdown=false;
                 } else if (document.getElementById ("five").value > number) {
                     document.getElementById ("five").style.backgroundColor = "blue";
@@ -219,11 +216,9 @@ function sharern() {
                             timer: 2000,
                             allowOutsideClick: false,
                               //focusConfirm: false
-                        }).then((result) => {
-        if (result.isConfirmed) {
-            location.reload();
-        }
-    });
+                        })
+
+                  restart();
                     shouldcountdown=false;
                 } else if (document.getElementById ("five").value == number) {
                             //Swal.fire('YOU WON', 'The game will restart when this box is closed.', 'success');
@@ -234,16 +229,10 @@ function sharern() {
                             showConfirmButton: false,
                             allowOutsideClick: false,
                                //focusConfirm: false
-                        }).then((result) => {
-        if (result.isConfirmed) {
-            location.reload();
-        }
-    });
-                  setTimeout(function() {
-    Swal.update({
-        allowEnterKey: true,
-    });
-}, 1000);
+                        })
+
+                  restart();
+                  
                 
                             /*var x = x+=1;
                             localStorage.setItem ("wins", x);
@@ -259,11 +248,9 @@ function sharern() {
                             showConfirmButton: false,
                             timer: 2000,
                             allowOutsideClick: false
-                        }).then((result) => {
-        if (result.isConfirmed) {
-            location.reload();
-        }
-    });
+                        })
+
+                  restart();
                     shouldcountdown=false;
                 }
             }
