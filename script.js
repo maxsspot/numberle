@@ -29,6 +29,7 @@ if (window.location.pathname == "/challenge" || window.location.pathname == "/ch
             var winsye = localStorage.setItem ("winscount", x)
             document.getElementById ("wins").innerHTML = winsye.value;*/
             document.getElementById ("one").focus();
+            document.getElementById ("one").click();
 
             function restart () {
                         setTimeout(function(){ location.reload(); }, 2000);                    
