@@ -23,7 +23,7 @@ setInterval (function() {
       Swal.fire({
           title: 'Out of time!',
           icon: 'error',
-          showConfirmButton: true,
+          timer: 2000,
           allowOutsideClick: false,
         focusConfirm: false
         }).then(function() {
@@ -103,7 +103,7 @@ function sharern() {
                             title: 'YOU WON!',
                             icon: 'success',
                             allowEnterKey: false,
-                            showConfirmButton: true,
+                            timer: 2000,
                             allowOutsideClick: false
                         }).then(function() {
           location.reload();
@@ -129,7 +129,7 @@ function sharern() {
                             title: 'YOU WON!',
                             icon: 'success',
                             allowEnterKey: false,
-                            showConfirmButton: true,
+                            timer: 2000,
                             allowOutsideClick: false
                         }).then(function() {
           location.reload();
@@ -155,7 +155,7 @@ function sharern() {
                             title: 'YOU WON!',
                             icon: 'success',
                             allowEnterKey: false,
-                            showConfirmButton: true,
+                            timer: 2000,
                             allowOutsideClick: false
                         }).then(function() {
           location.reload();
@@ -181,7 +181,7 @@ function sharern() {
                             title: 'YOU WON!',
                             icon: 'success',
                             allowEnterKey: false,
-                            showConfirmButton: true,
+                            timer: 2000,
                             allowOutsideClick: false
                         }).then(function() {
           location.reload();
@@ -200,7 +200,7 @@ function sharern() {
                             text: 'The correct number was: ' + number + '',
                             icon: 'error',
                             allowEnterKey: false,
-                            showConfirmButton: true,
+                            timer: 2000,
                             allowOutsideClick: false,
                         }).then((result) => {
         if (result.isConfirmed) {
@@ -216,7 +216,7 @@ function sharern() {
                             text: 'The correct number was: ' + number + '',
                             icon: 'error',
                             allowEnterKey: false,
-                            showConfirmButton: true,
+                            timer: 2000,
                             allowOutsideClick: false,
                               //focusConfirm: false
                         }).then((result) => {
@@ -230,7 +230,7 @@ function sharern() {
                              Swal.fire({
                             title: 'YOU WON!',
                             icon: 'success',
-                            showConfirmButton: true,
+                            timer: 2000,
                             allowEnterKey: false,
                             allowOutsideClick: false,
                                //focusConfirm: false
@@ -257,7 +257,7 @@ function sharern() {
                             text: 'The correct number was: ' + number + '',
                             icon: 'error',
                             allowEnterKey: false,
-                            showConfirmButton: true,
+                            timer: 2000,
                             allowOutsideClick: false
                         }).then((result) => {
         if (result.isConfirmed) {
