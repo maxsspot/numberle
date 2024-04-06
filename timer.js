@@ -102,7 +102,7 @@ function sharern() {
                             ({
                             title: 'YOU WON!',
                             icon: 'success',
-                            allowEnterKey: false,
+                            showConfirmButton: false,
                             timer: 2000,
                             allowOutsideClick: false
                         }).then(function() {
@@ -128,7 +128,7 @@ function sharern() {
                              Swal.fire({
                             title: 'YOU WON!',
                             icon: 'success',
-                            allowEnterKey: false,
+                            showConfirmButton: false,
                             timer: 2000,
                             allowOutsideClick: false
                         }).then(function() {
@@ -154,7 +154,7 @@ function sharern() {
                              Swal.fire({
                             title: 'YOU WON!',
                             icon: 'success',
-                            allowEnterKey: false,
+                            showConfirmButton: false,
                             timer: 2000,
                             allowOutsideClick: false
                         }).then(function() {
@@ -180,7 +180,7 @@ function sharern() {
                              Swal.fire({
                             title: 'YOU WON!',
                             icon: 'success',
-                            allowEnterKey: false,
+                            showConfirmButton: false,
                             timer: 2000,
                             allowOutsideClick: false
                         }).then(function() {
@@ -199,7 +199,7 @@ function sharern() {
                             title: 'YOU LOST!',
                             text: 'The correct number was: ' + number + '',
                             icon: 'error',
-                            allowEnterKey: false,
+                            showConfirmButton: false,
                             timer: 2000,
                             allowOutsideClick: false,
                         }).then((result) => {
@@ -215,7 +215,7 @@ function sharern() {
                             title: 'YOU LOST!',
                             text: 'The correct number was: ' + number + '',
                             icon: 'error',
-                            allowEnterKey: false,
+                            showConfirmButton: false,
                             timer: 2000,
                             allowOutsideClick: false,
                               //focusConfirm: false
@@ -231,7 +231,7 @@ function sharern() {
                             title: 'YOU WON!',
                             icon: 'success',
                             timer: 2000,
-                            allowEnterKey: false,
+                            showConfirmButton: false,
                             allowOutsideClick: false,
                                //focusConfirm: false
                         }).then((result) => {
@@ -256,7 +256,7 @@ function sharern() {
                             title: 'YOU LOST!',
                             text: 'The correct number was: ' + number + '',
                             icon: 'error',
-                            allowEnterKey: false,
+                            showConfirmButton: false,
                             timer: 2000,
                             allowOutsideClick: false
                         }).then((result) => {
