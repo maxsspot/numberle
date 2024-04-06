@@ -2,8 +2,12 @@ var modeCurrent;
 
 var time = document.getElementById ("timer");
 var initialTime = 15;
-var shouldcountdown = true;
+var shouldcountdown = false;
 var shouldalert = true;
+
+function startTImer () {
+  shouldcountdown=true;
+}
 
 setInterval (function() {
   
