@@ -1,7 +1,7 @@
 var modeCurrent;
 
 var time = document.getElementById ("timer");
-var initialTime = 15;
+var initialTime = 10;
 var shouldcountdown = false;
 var shouldalert = true;
 
