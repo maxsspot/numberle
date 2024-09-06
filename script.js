@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
       var challengeMode = document.createElement ("option");challengeMode.value = "Challenge Mode";challengeMode.text = "Challenge Mode";mode.appendChild(challengelMode);
       
       var timedChallengeMode = document.createElement ("option");timedChallengeMode.value = "Timed Challenge Mode";timedChallengeMode.text = "Timed Challenge Mode";mode.appendChild(normalMode);
-}
+});
                           
 mode.addEventListener('change', function() {
       if (mode.value == "Normal Mode") {
