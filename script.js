@@ -1,6 +1,17 @@
 var modeCurrent;
 
 var mode = document.getElementById ("modechooser");
+
+document.addEventListener('DOMContentLoaded', function() {
+      var normalMode = document.createElement ("option");normalMode.value = "Normal Mode";normalMode.text = "Normal Mode";mode.appendChild(normalMode);
+      
+      var timedNormalMode = document.createElement ("option");timedNormalMode.value = "Timed Normal Mode";timedNormalMode.text = "Timed Normal Mode";mode.appendChild(timedNormalMode);
+      
+      var challengeMode = document.createElement ("option");challengeMode.value = "Challenge Mode";challengeMode.text = "Challenge Mode";mode.appendChild(challengelMode);
+      
+      var timedChallengeMode = document.createElement ("option");timedChallengeMode.value = "Timed Challenge Mode";timedChallengeMode.text = "Timed Challenge Mode";mode.appendChild(normalMode);
+}
+                          
 mode.addEventListener('change', function() {
       if (mode.value == "Normal Mode") {
         window.location = "https://numerale.netlify.app";
