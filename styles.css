@@ -52,6 +52,10 @@ select:active {
 	background-color:lightgray;
 }
 
+option {
+	color:black;
+}
+
 input {
     border:grey solid 2px;
     border-radius:5px;
