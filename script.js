@@ -26,19 +26,19 @@ mode.addEventListener('change', function() {
 if (window.location.pathname == "/index" || window.location.pathname == "/index.html" || window.location.pathname == "/") {
       var number = Math.floor(Math.random()*35) + 1;
       modeCurrent = "normal";
-      mode.innerHTML = "Normal Mode";
+      normalMode.selected();
 } else if (window.location.pathname == "/timed" || window.location.pathname == "/timed.html") {
       var number = Math.floor(Math.random()*35) + 1;
       modeCurrent = "normal";
-      mode.innerHTML = "Timed Normal Mode";
+      timedNormalMode.selected();
 } else if (window.location.pathname == "/challenge" || window.location.pathname == "/challenge.html") {
       var number = Math.floor(Math.random()*50) + 1;
       modeCurrent = "challenge";
-      mode.innerHTML = "Challenge Mode";
+      challengeMode.selected();
 } else if (window.location.pathname == "/timed-challenge" || window.location.pathname == "/timed-challenge.html") {
       var number = Math.floor(Math.random()*50) + 1;
       modeCurrent = "challenge";
-      mode.innerHTML = "Timed Challenge Mode";
+      timedChallengeMode.selected();
 }
 
 ///////////////////////////////////////////////
