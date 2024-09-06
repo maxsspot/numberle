@@ -11,28 +11,34 @@ var timedChallengeMode = document.createElement ("option");timedChallengeMode.va
 mode.addEventListener('change', function() {
       if (mode.value == "Normal Mode") {
         window.location = "https://numerale.netlify.app";
-        mode.innerText = "Normal Mode";
       } else if (mode.value == "Timed Normal Mode") {
         window.location = "https://numerale.netlify.app/timed";
-        mode.innerText = "Timed Normal Mode";
       } else if (mode.value == "Challenge Mode") {
         window.location = "https://numerale.netlify.app/challenge";
-        mode.innerText = "Challenge Mode";
       } else if (mode.value == "Timed Challenge Mode") {
         window.location = "https://numerale.netlify.app/timed-challenge";
-        mode.innerText = "Timed Challenge Mode";
       }
 });
 
 ///////////////////////////////////////////////
 
-// Changes random number depending on the mode
-if (window.location.pathname == "/challenge" || window.location.pathname == "/challenge.html") {
-      var number = Math.floor(Math.random()*50) + 1;
-      modeCurrent = "challenge";
-} else if (window.location.pathname == "/index" || window.location.pathname == "/index.html" || window.location.pathname == "/") {
+// Changes random number and shown mode depending on the mode
+if (window.location.pathname == "/index" || window.location.pathname == "/index.html" || window.location.pathname == "/") {
       var number = Math.floor(Math.random()*35) + 1;
       modeCurrent = "normal";
+      mode.textContent = "Normal Mode";
+} else if (window.location.pathname == "/timed" || window.location.pathname == "/timed.html") {
+      var number = Math.floor(Math.random()*35) + 1;
+      modeCurrent = "normal";
+      mode.textContent = "Timed Normal Mode";
+} else if (window.location.pathname == "/challenge" || window.location.pathname == "/challenge.html") {
+      var number = Math.floor(Math.random()*50) + 1;
+      modeCurrent = "challenge";
+      mode.textContent = "Challenge Mode";
+} else if (window.location.pathname == "/timed-challenge" || window.location.pathname == "/timed-challenge.html") {
+      var number = Math.floor(Math.random()*50) + 1;
+      modeCurrent = "challenge";
+      mode.textContent = "Timed Challenge Mode";
 }
 
 ///////////////////////////////////////////////
