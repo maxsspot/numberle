@@ -6,25 +6,27 @@ var normalMode = document.createElement ("option");normalMode.value = "Normal Mo
 var timedNormalMode = document.createElement ("option");timedNormalMode.value = "Timed Normal Mode";timedNormalMode.text = "Timed Normal Mode";mode.appendChild(timedNormalMode);
 var challengeMode = document.createElement ("option");challengeMode.value = "Challenge Mode";challengeMode.text = "Challenge Mode";mode.appendChild(challengeMode);
 var timedChallengeMode = document.createElement ("option");timedChallengeMode.value = "Timed Challenge Mode";timedChallengeMode.text = "Timed Challenge Mode";mode.appendChild(timedChallengeMode);
-                          
+
+// Performs actions depending on the mode
 mode.addEventListener('change', function() {
       if (mode.value == "Normal Mode") {
         window.location = "https://numerale.netlify.app";
-        mode.text = "Normal Mode";
+        mode.innerText = "Normal Mode";
       } else if (mode.value == "Timed Normal Mode") {
         window.location = "https://numerale.netlify.app/timed";
-        mode.text = "Timed Normal Mode";
+        mode.innerText = "Timed Normal Mode";
       } else if (mode.value == "Challenge Mode") {
         window.location = "https://numerale.netlify.app/challenge";
-        mode.text = "Challenge Mode";
+        mode.innerText = "Challenge Mode";
       } else if (mode.value == "Timed Challenge Mode") {
         window.location = "https://numerale.netlify.app/timed-challenge";
-        mode.text = "Timed Challenge Mode";
+        mode.innerText = "Timed Challenge Mode";
       }
 });
 
 ///////////////////////////////////////////////
 
+// Changes random number depending on the mode
 if (window.location.pathname == "/challenge" || window.location.pathname == "/challenge.html") {
       var number = Math.floor(Math.random()*50) + 1;
       modeCurrent = "challenge";
