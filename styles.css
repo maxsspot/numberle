@@ -67,10 +67,6 @@ input, #multiBox {
     background-color:transparent;
 }
 
-#multiBox {
-	width:165px;
-}
-
 #buttons {
 	left:50%;
 	right:50%;
