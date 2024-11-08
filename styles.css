@@ -94,6 +94,10 @@ input:focus {
     border:white solid 2px;
 }
 
+#multiBox:focus {
+    border:white solid 2px;
+}
+
 button, input {
     outline:none;
     color:white;
