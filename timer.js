@@ -1,11 +1,62 @@
+var modeCurrent;
+
+var time = document.getElementById ("timer");
+var initialTime = 10;
+var shouldcountdown = false;
+var shouldalert = true;
+
+function startTimer () {
+  shouldcountdown=true;
+}
+
+setInterval (function() {
+  
+  if (shouldcountdown) {
+    initialTime--;
+  }
+  
+  time.innerHTML = initialTime;
+  if (initialTime == 0) {
+    shouldcountdown=false;
+    if (shouldalert) {
+      shouldalert=false;
+      Swal.fire({
+          title: 'Out of time!',
+          icon: 'error',
+          timer: 2000,
+          allowOutsideClick: false,
+          focusConfirm: false,
+          showConfirmButton: false
+        })
+
+        restart();
+    }
+  }
+
+  if (initialTime < 0) {
+    location.reload();
+  }
+},1000);
+
+document.addEventListener("visibilitychange", function() {
+    if (document.hidden) {
+      if (shouldalert=true) {
+       shouldcountdown=false;
+      }
+    } else {
+       shouldcountdown=true;
+    }
+});
+
+if (window.location.pathname == "/timed") {
+  var number = Math.floor(Math.random()*35) + 1;
+  modeCurrent="Timed Normal";
+} else if (window.location.pathname == "/timed-challenge") {
+  var number = Math.floor(Math.random()*50) + 1;
+  modeCurrent="Timed Challenge";
+}
+
 var mode = document.getElementById ("modechooser");
-
-var normalMode = document.createElement ("option");normalMode.value = "Normal Mode";normalMode.text = "Normal Mode";mode.appendChild(normalMode);      
-var timedNormalMode = document.createElement ("option");timedNormalMode.value = "Timed Normal Mode";timedNormalMode.text = "Timed Normal Mode";mode.appendChild(timedNormalMode);
-var challengeMode = document.createElement ("option");challengeMode.value = "Challenge Mode";challengeMode.text = "Challenge Mode";mode.appendChild(challengeMode);
-var timedChallengeMode = document.createElement ("option");timedChallengeMode.value = "Timed Challenge Mode";timedChallengeMode.text = "Timed Challenge Mode";mode.appendChild(timedChallengeMode);
-
-// Performs actions depending on the mode
 mode.addEventListener('change', function() {
       if (mode.value == "Normal Mode") {
         window.location = "https://numerale.netlify.app";
@@ -18,28 +69,13 @@ mode.addEventListener('change', function() {
       }
 });
 
-///////////////////////////////////////////////
-
-// Changes random number and shown mode depending on the mode
-if (window.location.pathname == "/index" || window.location.pathname == "/index.html" || window.location.pathname == "/") {
-      var number = Math.floor(Math.random()*35) + 1;
-      modeCurrent = "normal";
-      normalMode.selected = true;
-} else if (window.location.pathname == "/timed" || window.location.pathname == "/timed.html") {
-      var number = Math.floor(Math.random()*35) + 1;
-      modeCurrent = "normal";
-      timedNormalMode.selected = true;
-} else if (window.location.pathname == "/challenge" || window.location.pathname == "/challenge.html") {
-      var number = Math.floor(Math.random()*50) + 1;
-      modeCurrent = "challenge";
-      challengeMode.selected = true;
-} else if (window.location.pathname == "/timed-challenge" || window.location.pathname == "/timed-challenge.html") {
-      var number = Math.floor(Math.random()*50) + 1;
-      modeCurrent = "challenge";
-      timedChallengeMode.selected = true;
-}
-
-///////////////////////////////////////////////
+function sharern() {
+             if (navigator.share) { 
+                         navigator.share({ title:'Play Numerale today!', text:'Hey there, I found this game called Numerale and thought you would enjoy it! \n\nhttps://play.google.com/store/apps/details?id=app.netlify.numerale.twa&gl=US is the link to install it!'}) 
+                                     .then(() => console.log('Successful share')) 
+                         .catch((error) => console.log('Error sharing', error));  
+             }
+            }
 
             /*var x = 0;
             var winsye = localStorage.setItem ("winscount", x)
@@ -64,14 +100,16 @@ if (window.location.pathname == "/index" || window.location.pathname == "/index.
                     document.getElementById ("one").style.backgroundColor = "blue";
                 } else if (document.getElementById ("one").value == number) {
                     
-                            Swal.fire({
+                            Swal.fire ({
                             title: 'YOU WON!',
                             icon: 'success',
-                            timer: 2000,
                             showConfirmButton: false,
+                            timer: 2000,
                             allowOutsideClick: false
                         })
-                            restart();
+                  restart();
+                            
+                  shouldcountdown=false;
                 }           
             }
 
@@ -90,11 +128,14 @@ if (window.location.pathname == "/index" || window.location.pathname == "/index.
                              Swal.fire({
                             title: 'YOU WON!',
                             icon: 'success',
-                            timer: 2000,
                             showConfirmButton: false,
+                            timer: 2000,
                             allowOutsideClick: false
                         })
-                    restart();
+
+                  restart();
+                    
+                  shouldcountdown=false;
                 }
             }
 
@@ -113,11 +154,13 @@ if (window.location.pathname == "/index" || window.location.pathname == "/index.
                              Swal.fire({
                             title: 'YOU WON!',
                             icon: 'success',
-                            timer: 2000,
                             showConfirmButton: false,
+                            timer: 2000,
                             allowOutsideClick: false
                         })
-                    restart();
+                  restart();
+                    
+                  shouldcountdown=false;
                 }
             }
 
@@ -136,11 +179,13 @@ if (window.location.pathname == "/index" || window.location.pathname == "/index.
                              Swal.fire({
                             title: 'YOU WON!',
                             icon: 'success',
-                            timer: 2000,
                             showConfirmButton: false,
+                            timer: 2000,
                             allowOutsideClick: false
                         })
-                   restart();
+
+                  restart();
+                  shouldcountdown=false;
                 }
             }
 
@@ -153,11 +198,13 @@ if (window.location.pathname == "/index" || window.location.pathname == "/index.
                             title: 'YOU LOST!',
                             text: 'The correct number was: ' + number + '',
                             icon: 'error',
-                            timer: 2000,
                             showConfirmButton: false,
+                            timer: 2000,
                             allowOutsideClick: false,
                         })
-                    restart();
+
+                  restart();
+                    shouldcountdown=false;
                 } else if (document.getElementById ("five").value > number) {
                     document.getElementById ("five").style.backgroundColor = "blue";
                     //Swal.fire('YOU LOST', 'The game will restart when this box is closed.', 'error');
@@ -165,11 +212,14 @@ if (window.location.pathname == "/index" || window.location.pathname == "/index.
                             title: 'YOU LOST!',
                             text: 'The correct number was: ' + number + '',
                             icon: 'error',
-                            timer: 2000,
                             showConfirmButton: false,
-                            allowOutsideClick: false
+                            timer: 2000,
+                            allowOutsideClick: false,
+                              //focusConfirm: false
                         })
-                    restart();
+
+                  restart();
+                    shouldcountdown=false;
                 } else if (document.getElementById ("five").value == number) {
                             //Swal.fire('YOU WON', 'The game will restart when this box is closed.', 'success');
                              Swal.fire({
@@ -177,24 +227,31 @@ if (window.location.pathname == "/index" || window.location.pathname == "/index.
                             icon: 'success',
                             timer: 2000,
                             showConfirmButton: false,
-                            allowOutsideClick: false
+                            allowOutsideClick: false,
+                               //focusConfirm: false
                         })
+
+                  restart();
+                  
+                
                             /*var x = x+=1;
                             localStorage.setItem ("wins", x);
                             document.getElementById ("wins").innerHTML = winsye;*/
-                            restart();
-                    restart();
+                            
+                    shouldcountdown=false;
                 } else if (document.getElementById ("five").value != number) {
                     //Swal.fire('YOU LOST', 'The game will restart when this box is closed.', 'error');
                             Swal.fire({
                             title: 'YOU LOST!',
                             text: 'The correct number was: ' + number + '',
                             icon: 'error',
-                            timer: 2000,
                             showConfirmButton: false,
+                            timer: 2000,
                             allowOutsideClick: false
                         })
-                    restart();
+
+                  restart();
+                    shouldcountdown=false;
                 }
             }
             
@@ -210,8 +267,7 @@ if(document.getElementById("three").value.length>0){document.getElementById("go3
 if(document.getElementById("four").value.length>0){document.getElementById("go4").disabled=!1;document.getElementById("four").focus();}else{document.getElementById("go4").disabled=!0}
 if(document.getElementById("five").value.length>0){document.getElementById("go5").disabled=!1;document.getElementById("five").focus();}else{document.getElementById("go5").disabled=!0}
 
-
-  var oneElement = document.getElementById ("one");
+var oneElement = document.getElementById ("one");
 let one1 = oneElement.value.slice(0, -1);
 var twoElement = document.getElementById ("two");
 let two2 = twoElement.value.slice(0, -1);
@@ -221,13 +277,13 @@ var fourElement = document.getElementById ("four");
 let four4 = fourElement.value.slice(0, -1);
 var fiveElement = document.getElementById ("five");
 let five5 = fiveElement.value.slice(0, -1);
-      
-if (modeCurrent == "normal") {
-      if(oneElement.value>35||oneElement.value<1){ oneElement.value=one1; }else if(twoElement.value>35||twoElement.value<1){ twoElement.value=two2; }else if(threeElement.value>35||threeElement.value<1){ threeElement.value=three3; }else if(fourElement.value>35||fourElement.value<1){ fourElement.value=four4; }else if(fiveElement.value>35||fiveElement.value<1){ fiveElement.value=five5; }
-} else if (modeCurrent == "challenge") {
-      if(oneElement.value>50||oneElement.value<1){ oneElement.value=one1; }else if(twoElement.value>50||twoElement.value<1){ twoElement.value=two2; }else if(threeElement.value>50||threeElement.value<1){ threeElement.value=three3; }else if(fourElement.value>50||fourElement.value<1){ fourElement.value=four4; }else if(fiveElement.value>50||fiveElement.value<1){ fiveElement.value=five5; }
+
+if (modeCurrent=="Timed Normal") {
+  if(oneElement.value>35||oneElement.value<1){ oneElement.value=one1; }else if(twoElement.value>35||twoElement.value<1){ twoElement.value=two2; }else if(threeElement.value>35||threeElement.value<1){ threeElement.value=three3; }else if(fourElement.value>35||fourElement.value<1){ fourElement.value=four4; }else if(fiveElement.value>35||fiveElement.value<1){ fiveElement.value=five5; }
+} else if (modeCurrent=="Timed Challenge") {
+  if(oneElement.value>50||oneElement.value<1){ oneElement.value=one1; }else if(twoElement.value>50||twoElement.value<1){ twoElement.value=two2; }else if(threeElement.value>50||threeElement.value<1){ threeElement.value=three3; }else if(fourElement.value>50||fourElement.value<1){ fourElement.value=four4; }else if(fiveElement.value>50||fiveElement.value<1){ fiveElement.value=five5; }
 }
-}, 0.1);
+}, 1);
             
 
 document.addEventListener("keydown", function(event) {
@@ -245,15 +301,14 @@ document.addEventListener("keydown", function(event) {
         }
     }    
   
-    if (modeCurrent=="challenge") {
-          if (event.key === "q") {
+    if (event.key === "q") {
+          if (modeCurrent=="Timed Challenge") {
                 Swal.fire('HOW TO PLAY', 'Find the correct number in 5 guesses. Numbers range from 1-50.', 'question');
-          }
-    } else if (modeCurrent == "normal") {
-          if (event.key === "q") {
+          } else if (modeCurrent=="Timed Normal") {
                 Swal.fire('HOW TO PLAY', 'Find the correct number in 5 guesses. Numbers range from 1-35.', 'question');
           }
     }
+  
   
     if (event.key === "w") {
                 sharern();
@@ -276,3 +331,4 @@ for (var i = 0; i < items.length; i++) {
     event.preventDefault();
   }
 });
+  
