@@ -1,3 +1,4 @@
+document.addEventListener("DOMContentLoaded", function() {
 var mode = document.getElementById ("modechooser");
 
 var normalMode = document.createElement ("option");normalMode.value = "Normal Mode";normalMode.text = "Normal Mode";mode.appendChild(normalMode);      
@@ -8,7 +9,7 @@ var timedChallengeMode = document.createElement ("option");timedChallengeMode.va
 if (window.location.pathname == "/index" || window.location.pathname == "/index.html" || window.location.pathname == "/") {
       var number = Math.floor(Math.random()*35) + 1;
       modeCurrent = "normal";
-      normalMode.selected = true;
+      normalMode.selected = true
 } else if (window.location.pathname == "/timed" || window.location.pathname == "/timed.html") {
       var number = Math.floor(Math.random()*35) + 1;
       modeCurrent = "normal";
@@ -22,3 +23,4 @@ if (window.location.pathname == "/index" || window.location.pathname == "/index.
       modeCurrent = "challenge";
       timedChallengeMode.selected = true;
 }
+});
