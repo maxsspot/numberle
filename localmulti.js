@@ -153,7 +153,12 @@ function checkWin () {
                               icon: 'success',
                               allowEnterKey: false,
                               allowOutsideClick: false
-                        })
+                        }).then((result) => {
+                          if (result.isConfirmed) {
+                            location.reload();
+                          }
+                        });
+                        
                         break;
                   case 2:
                         Swal.fire({
@@ -161,7 +166,12 @@ function checkWin () {
                               icon: 'success',
                               allowEnterKey: false,
                               allowOutsideClick: false
-                        })
+                        }).then((result) => {
+                          if (result.isConfirmed) {
+                            location.reload();
+                          }
+                        });
+                        
                         break;
                   case 3:
                         Swal.fire({
@@ -169,7 +179,12 @@ function checkWin () {
                               icon: 'success',
                               allowEnterKey: false,
                               allowOutsideClick: false
-                        })
+                        }).then((result) => {
+                          if (result.isConfirmed) {
+                            location.reload();
+                          }
+                        });
+                        
                         break;
                   case 4:
                         Swal.fire({
@@ -177,7 +192,12 @@ function checkWin () {
                               icon: 'success',
                               allowEnterKey: false,
                               allowOutsideClick: false
-                        })
+                        }).then((result) => {
+                          if (result.isConfirmed) {
+                            location.reload();
+                          }
+                        });
+                        
                         break;
                   case 5:
                         Swal.fire({
@@ -185,11 +205,14 @@ function checkWin () {
                               icon: 'success',
                               allowEnterKey: false,
                               allowOutsideClick: false
-                        })
+                        }).then((result) => {
+                          if (result.isConfirmed) {
+                            location.reload();
+                          }
+                        });
+                        
                         break;
                   }
-
-            //location.reload();
             } else {
                   determinePlayer();
             }
