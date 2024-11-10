@@ -149,7 +149,7 @@ function checkWin () {
             switch (currentPlayer) {
                   case 1:
                         Swal.fire({
-                              title: p1nameInp.value + "wins!",
+                              title: p1nameInp.value + " wins!",
                               icon: 'success',
                               allowEnterKey: false,
                               allowOutsideClick: false
@@ -157,7 +157,7 @@ function checkWin () {
                         break;
                   case 2:
                         Swal.fire({
-                              title: p2nameInp.value + "wins!",
+                              title: p2nameInp.value + " wins!",
                               icon: 'success',
                               allowEnterKey: false,
                               allowOutsideClick: false
@@ -165,7 +165,7 @@ function checkWin () {
                         break;
                   case 3:
                         Swal.fire({
-                              title: p3nameInp.value + "wins!",
+                              title: p3nameInp.value + " wins!",
                               icon: 'success',
                               allowEnterKey: false,
                               allowOutsideClick: false
@@ -173,7 +173,7 @@ function checkWin () {
                         break;
                   case 4:
                         Swal.fire({
-                              title: p4nameInp.value + "wins!",
+                              title: p4nameInp.value + " wins!",
                               icon: 'success',
                               allowEnterKey: false,
                               allowOutsideClick: false
@@ -181,7 +181,7 @@ function checkWin () {
                         break;
                   case 5:
                         Swal.fire({
-                              title: p5nameInp.value + "wins!",
+                              title: p5nameInp.value + " wins!",
                               icon: 'success',
                               allowEnterKey: false,
                               allowOutsideClick: false
