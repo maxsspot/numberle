@@ -34,19 +34,19 @@ function updatePlayers () {
       switch (parseInt(playerNumber.value)) {
             case 2:
                   hideAllNameInps();
-                  p1nameInp.style.display = "block";p2nameInp.style.display = "block";
+                  p1nameInp.style.display = "inline-block";p2nameInp.style.display = "inline-block";
                   break;
             case 3:
                   hideAllNameInps();
-                  p1nameInp.style.display = "block";p2nameInp.style.display = "block";p3nameInp.style.display = "block";
+                  p1nameInp.style.display = "inline-block";p2nameInp.style.display = "inline-block";p3nameInp.style.display = "inline-block";
                   break;
             case 4:
                   hideAllNameInps();
-                  p1nameInp.style.display = "block";p2nameInp.style.display = "block";p3nameInp.style.display = "block";p4nameInp.style.display = "block";
+                  p1nameInp.style.display = "inline-block";p2nameInp.style.display = "inline-block";p3nameInp.style.display = "inline-block";p4nameInp.style.display = "inline-block";
                   break;
             case 5:
                   hideAllNameInps();
-                  p1nameInp.style.display = "block";p2nameInp.style.display = "block";p3nameInp.style.display = "block";p4nameInp.style.display = "block";p5nameInp.style.display = "block";
+                  p1nameInp.style.display = "inline-block";p2nameInp.style.display = "inline-block";p3nameInp.style.display = "inline-block";p4nameInp.style.display = "inline-block";p5nameInp.style.display = "inline-block";
                   break;
       }
 }
