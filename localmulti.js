@@ -189,7 +189,7 @@ function checkWin () {
                         break;
                   }
 
-            location.reload();
+            //location.reload();
             } else {
                   determinePlayer();
             }
