@@ -102,6 +102,7 @@ if (window.location.pathname == "/index" || window.location.pathname == "/index.
             document.getElementById ("one").focus();
 
             function restart () {
+              shouldcountdown=false;
                         setTimeout(function(){ location.reload(); }, 2000);                    
             }
             
