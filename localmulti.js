@@ -60,18 +60,22 @@ function updatePlayers () {
             case 2:
                   hideAllNameInps();
                   p1nameInp.style.display = "inline-block";p2nameInp.style.display = "inline-block";
+                  document.getElementById ("p1br").style.display = "inline-block";document.getElementById ("p2br").style.display = "inline-block";
                   break;
             case 3:
                   hideAllNameInps();
                   p1nameInp.style.display = "inline-block";p2nameInp.style.display = "inline-block";p3nameInp.style.display = "inline-block";
+                  document.getElementById ("p1br").style.display = "inline-block";document.getElementById ("p2br").style.display = "inline-block";document.getElementById ("p3br").style.display = "inline-block";
                   break;
             case 4:
                   hideAllNameInps();
                   p1nameInp.style.display = "inline-block";p2nameInp.style.display = "inline-block";p3nameInp.style.display = "inline-block";p4nameInp.style.display = "inline-block";
+                  document.getElementById ("p1br").style.display = "inline-block";document.getElementById ("p2br").style.display = "inline-block";document.getElementById ("p3br").style.display = "inline-block";document.getElementById ("p4br").style.display = "inline-block";
                   break;
             case 5:
                   hideAllNameInps();
                   p1nameInp.style.display = "inline-block";p2nameInp.style.display = "inline-block";p3nameInp.style.display = "inline-block";p4nameInp.style.display = "inline-block";p5nameInp.style.display = "inline-block";
+                  document.getElementById ("p1br").style.display = "inline-block";document.getElementById ("p2br").style.display = "inline-block";document.getElementById ("p3br").style.display = "inline-block";document.getElementById ("p4br").style.display = "inline-block";
                   break;
       }
 }
@@ -85,6 +89,11 @@ function hideAllNameInps () {
       p3nameInp.style.display = "none";
       p4nameInp.style.display = "none";
       p5nameInp.style.display = "none";
+
+      document.getElementById ("p1br").style.display = "none";
+      document.getElementById ("p2br").style.display = "none";
+      document.getElementById ("p3br").style.display = "none";
+      document.getElementById ("p4br").style.display = "none";
 }
 
 // Applys settings for the local multiplayer
