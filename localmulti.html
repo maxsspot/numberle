@@ -27,26 +27,31 @@
 	<body oncontextmenu = "return false;" id = "main" >
 	<div id = "settingsMenu">
 		<br>
-		
 		<h1>SETTINGS</h1>
-
+		<br><!-------------------->
+		<h2>Number of Players</h2>
 		<br>
-		
 		<label for = "playerNumber">Players: </label>
-		<select id = "playerNumber">
+		<select id = "playerNumber" onchange = "updatePlayers()">
 			<option value = "2">2 Players</option>
 			<option value = "3">3 Players</option>
 			<option value = "4">4 Players</option>
 			<option value = "5">5 Players</option>
 		</select>
-		
-		<br><br>
-		
+		<br><br><!-------------------->
+		<h2>Player Names</h2>
+		<br>
+		<input id = "p1name" value = "Player 1" />
+		<input id = "p2name" value = "Player 2" />
+		<input id = "p3name" value = "Player 3" />
+		<input id = "p4name" value = "Player 4" />
+		<input id = "p5name" value = "Player 5" />
+		<br><br><!-------------------->
+		<h2>Miscellaneous</h2>
+		<br>
 		<label>Maximum Number: </label>
 		<input id = "maxNumber" type = "number" />
-		
-		<br><br>
-		
+		<br><br><!-------------------->
 		<input id = "saveOptions" type = "checkbox" />
 		<label for = "saveOptions">Save and skip this in the future</label>
 
