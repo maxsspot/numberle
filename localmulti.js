@@ -29,6 +29,7 @@ var p4nameInp = document.getElementById ("p4name");
 var p5nameInp = document.getElementById ("p5name");
 var playerNumber = document.getElementById ("playerNumber");
 var maxNumText = document.getElementById ("highest");
+var lowNumText = document.getElementById ("lowest");
 var randomNumber;
 var currentPlayer = 1;
 var currentPlayerText = document.getElementById ("currentPlayer");
