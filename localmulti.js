@@ -89,6 +89,8 @@ function hideAllNameInps () {
 
 // Applys settings for the local multiplayer
 function applySettings () {
+      guessBox.focus();
+      
       var max = parseInt(document.getElementById ("maxNumber").value);
       number = Math.floor(Math.random()*max) + 1;
 
