@@ -146,44 +146,46 @@ function determinePlayer () {
 // Checks for a win
 function checkWin () {
       if (guessBox.value == number) {
-      switch (currentPlayer) {
-            case 1:
-                  Swal.fire({
-                        title: p1nameInp.value + "wins!",
-                        icon: 'success',
-                        allowOutsideClick: false
-                  })
-                  break;
-            case 2:
-                  Swal.fire({
-                        title: p2nameInp.value + "wins!",
-                        icon: 'success',
-                        allowOutsideClick: false
-                  })
-                  break;
-            case 3:
-                  Swal.fire({
-                        title: p3nameInp.value + "wins!",
-                        icon: 'success',
-                        allowOutsideClick: false
-                  })
-                  break;
-            case 4:
-                  Swal.fire({
-                        title: p4nameInp.value + "wins!",
-                        icon: 'success',
-                        allowOutsideClick: false
-                  })
-                  break;
-            case 5:
-                  Swal.fire({
-                        title: p5nameInp.value + "wins!",
-                        icon: 'success',
-                        allowOutsideClick: false
-                  })
-                  break;
-      } else {
-            determinePlayer();
+            switch (currentPlayer) {
+                  case 1:
+                        Swal.fire({
+                              title: p1nameInp.value + "wins!",
+                              icon: 'success',
+                              allowOutsideClick: false
+                        })
+                        break;
+                  case 2:
+                        Swal.fire({
+                              title: p2nameInp.value + "wins!",
+                              icon: 'success',
+                              allowOutsideClick: false
+                        })
+                        break;
+                  case 3:
+                        Swal.fire({
+                              title: p3nameInp.value + "wins!",
+                              icon: 'success',
+                              allowOutsideClick: false
+                        })
+                        break;
+                  case 4:
+                        Swal.fire({
+                              title: p4nameInp.value + "wins!",
+                              icon: 'success',
+                              allowOutsideClick: false
+                        })
+                        break;
+                  case 5:
+                        Swal.fire({
+                              title: p5nameInp.value + "wins!",
+                              icon: 'success',
+                              allowOutsideClick: false
+                        })
+                        break;
+                  }
+            } else {
+                  determinePlayer();
+            }
 }
 
 // A player made a guess
