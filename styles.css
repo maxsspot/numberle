@@ -27,6 +27,11 @@ html, body {user-select:none;}
 	background-color:transparent;
 	border:transparent;
 	border-bottom:grey solid 1px;
+	border-radius:0px;
+}
+
+#maxNumber:focus {
+	border-bottom:white solid 1px;
 }
 
 #top {
