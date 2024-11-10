@@ -22,3 +22,8 @@ mode.addEventListener('change', function() {
 //////////////////////////
 //////////////////////////
 
+var p1nameInp = document.getElementById ("p1name");
+var p1nameInp = document.getElementById ("p2name");
+var p1nameInp = document.getElementById ("p3name");
+var p1nameInp = document.getElementById ("p4name");
+var p1nameInp = document.getElementById ("p5name");
