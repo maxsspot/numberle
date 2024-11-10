@@ -34,10 +34,6 @@ html, body {user-select:none;}
 	border-bottom:white solid 1px;
 }
 
-input[type="checkbox"] {
-	transform:scale(0.7);
-}
-
 #top {
 	width:100%;
 	background-color:white;
