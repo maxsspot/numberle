@@ -17,6 +17,8 @@ mode.addEventListener('change', function() {
         window.location = "https://numerale.netlify.app/challenge";
       } else if (mode.value == "Timed Challenge Mode") {
         window.location = "https://numerale.netlify.app/timed-challenge";
+      } else if (mode.value == "Local Multiplayer") {
+        window.location = "https://numerale.netlify.app/localmulti";
       }
 });
 
