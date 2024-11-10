@@ -233,6 +233,8 @@ function checkWin () {
 // A player made a guess
 guessBox.addEventListener("keydown", function(event) {
     if (event.key === 'Enter' && guessBox.value != "") {
+        checkWin();
+          
         if (parseInt(guessBox.value) < number && parseInt(guessBox.value) > parseInt(lowNumText.innerHTML)) {
             lowNumText.innerHTML = guessBox.value;
         } else if (parseInt(guessBox.value) > number && parseInt(guessBox.value) < parseInt(maxNumText.innerHTML)) {
@@ -240,10 +242,8 @@ guessBox.addEventListener("keydown", function(event) {
         }
           
         if (currentPlayer == parseInt(playerNumber.value)) {
-            checkWin();
             currentPlayer = 1;
         } else {
-            checkWin();
             currentPlayer++;
         }
           
