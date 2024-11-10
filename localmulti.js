@@ -196,8 +196,6 @@ guessBox.addEventListener("keydown", function(event) {
         } else if (parseInt(guessBox.value) > number && parseInt(guessBox.value) < parseInt(maxNumText.innerHTML)) {
             maxNumText.innerHTML = guessBox.value;
         }
-
-        guessBox.value = "";
           
         if (currentPlayer == parseInt(playerNumber.value)) {
             currentPlayer = 1;
@@ -206,5 +204,7 @@ guessBox.addEventListener("keydown", function(event) {
         }
 
         checkWin();
+          
+        guessBox.value = "";
     }
 });
