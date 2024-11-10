@@ -238,12 +238,12 @@ guessBox.addEventListener("keydown", function(event) {
         } else if (parseInt(guessBox.value) > number && parseInt(guessBox.value) < parseInt(maxNumText.innerHTML)) {
             maxNumText.innerHTML = guessBox.value;
         }
-
-        checkWin();
           
         if (currentPlayer == parseInt(playerNumber.value)) {
+            checkWin();
             currentPlayer = 1;
         } else {
+            checkWin();
             currentPlayer++;
         }
           
