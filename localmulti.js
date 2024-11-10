@@ -113,11 +113,12 @@ function resetSettings () {
 // A player made a guess
 document.addEventListener("keydown", function(event) {
     if (event.key === 'Enter') {
-        guessBox.value = "";
-        if (guessBox.value < number && guessBox.value > lowNumText) {
+        if (parseInt(guessBox.value) < number && parseInt(guessBox.value) > parseInt(lowNumText.innerHTML)) {
             lowNumText.innerHTML = guessBox.value;
-        } else if (guessBox.value > number && guessBox.value < maxNumText) {
-            highNumText.innerHTML = guessBox.value;
+        } else if (parseInt(guessBox.value) > number && parseInt(guessBox.value) < parseInt(maxNumText.innerHTML)) {
+            maxNumText.innerHTML = guessBox.value;
         }
+
+        guessBox.value = "";
     }
 });
