@@ -37,11 +37,17 @@ var settingsMenu = document.getElementById ("settingsMenu");
 var saveOptions = document.getElementById ("saveOptions");
 var guessBox = document.getElementById ("multiBox");
 
-// Skips setting page if user selected it
+// Skips setting page if user selected it and also loads saved values
 if (localStorage.getItem ("skipSettings")) {
       settingsMenu.style.transition = "all 0s";
       applySettings();
       settingsMenu.style.transition = "all 0.5s";
+
+      p1nameInp.value = localStorage.getItem ("player1name");p2nameInp.value = localStorage.getItem ("player2name");p3nameInp.value = localStorage.getItem ("player3name");p4nameInp.value = localStorage.getItem ("player4name");p5nameInp.value = localStorage.getItem ("player5name");
+
+      document.getElementById ("maxNumber").value = localStorage.getItem ("maxNumber");
+      
+      maxNumText.innerHTML = localStorage.getItem ("maxNumber");
 }
 
 // Changes the amount of shown custom name inputs
@@ -91,7 +97,8 @@ function applySettings () {
       if (saveOptions.checked) {
             localStorage.setItem ("skipSettings","true");
             localStorage.setItem ("playerNumber",playerNumber);
-
+            localStorage.setItem ("maxNumber",maxNumText);
+            
             if (parseInt(playerNumber.value) == 2) {
                   localStorage.setItem ("player1name",p1nameInp.value); localStorage.setItem ("player2name",p2nameInp.value);
             } else if (parseInt(playerNumber.value) == 3) {
