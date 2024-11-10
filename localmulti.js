@@ -28,7 +28,6 @@ var p3nameInp = document.getElementById ("p3name");
 var p4nameInp = document.getElementById ("p4name");
 var p5nameInp = document.getElementById ("p5name");
 var playerNumber = document.getElementById ("playerNumber");
-var max = document.getElementById ("maxNumber");
 var maxNumText = document.getElementById ("highest");
 var randomNumber;
 var currentPlayer = 1;
@@ -70,12 +69,12 @@ function hideAllNameInps () {
 
 // Applys settings for the local multiplayer
 function applySettings () {
-      var max  = parseInt(document.getElementById ("maxNumber").value);
+      var max = parseInt(document.getElementById ("maxNumber").value);
       var number = Math.floor(Math.random()*max) + 1;
 
       settingsMenu.style.opacity = "0";
       settingsMenu.style.pointerEvents = "none";
 
       currentPlayerText.innerHTML = p1nameInp.value;
-      maxNumText.innerHTML = max.value;
+      maxNumText.innerHTML = max;
 }
