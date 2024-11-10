@@ -117,4 +117,4 @@ document.addEventListener("keydown", function(event) {
             lowNumText.innerHTML = guessBox.value;
         } 
     }
-}
+});
