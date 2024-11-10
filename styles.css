@@ -40,6 +40,15 @@ input[type="checkbox"] {
 	vertical-align:middle;
 }
 
+#apply {
+	color:lightblue;
+	cursor:pointer;
+}
+
+#apply:hover {
+	text-decoration:underline;
+}
+
 #top {
 	width:100%;
 	background-color:white;
