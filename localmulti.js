@@ -80,7 +80,7 @@ function hideAllNameInps () {
 // Applys settings for the local multiplayer
 function applySettings () {
       var max = parseInt(document.getElementById ("maxNumber").value);
-      var number = Math.floor(Math.random()*max) + 1;
+      number = Math.floor(Math.random()*max) + 1;
 
       settingsMenu.style.opacity = "0";
       settingsMenu.style.pointerEvents = "none";
