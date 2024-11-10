@@ -34,7 +34,13 @@ var randomNumber;
 var currentPlayer = 1;
 var currentPlayerText = document.getElementById ("currentPlayer");
 var settingsMenu = document.getElementById ("settingsMenu");
-      
+var saveOptions = document.getElementById ("saveOptions");
+
+// Skips setting page if user selected it
+if (localStorage.getItem ("skipSettings")) {
+      applySettings();
+}
+
 // Changes the amount of shown custom name inputs
 function updatePlayers () {
       switch (parseInt(playerNumber.value)) {
@@ -78,4 +84,25 @@ function applySettings () {
 
       currentPlayerText.innerHTML = p1nameInp.value;
       maxNumText.innerHTML = max;
+
+      if (saveOptions.checked) {
+            localStorage.setItem ("skipSettings","true");
+            localStorage.setItem ("playerNumber",playerNumber);
+
+            if (parseInt(playerNumber.value) == 2) {
+                  localStorage.setItem ("player1name",p1nameInp.value); localStorage.setItem ("player2name",p2nameInp.value);
+            } else if (parseInt(playerNumber.value) == 3) {
+                  localStorage.setItem ("player1name",p1nameInp.value); localStorage.setItem ("player2name",p2nameInp.value); localStorage.setItem ("player3name",p3nameInp.value);
+            } else if (parseInt(playerNumber.value) == 4) {
+                  localStorage.setItem ("player1name",p1nameInp.value); localStorage.setItem ("player2name",p2nameInp.value); localStorage.setItem ("player3name",p3nameInp.value); localStorage.setItem ("player4name",p4nameInp.value);
+            } else if (parseInt(playerNumber.value) == 5) {
+                  localStorage.setItem ("player1name",p1nameInp.value); localStorage.setItem ("player2name",p2nameInp.value); localStorage.setItem ("player3name",p3nameInp.value); localStorage.setItem ("player4name",p4nameInp.value); localStorage.setItem ("player5name",p5nameInp.value);
+            }
+      }
+}
+
+// Resets settings for the local multiplayer
+function resetSettings () {
+      localStorage.clear();
+      location.reload();
 }
