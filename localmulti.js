@@ -27,11 +27,11 @@ var p2nameInp = document.getElementById ("p2name");
 var p3nameInp = document.getElementById ("p3name");
 var p4nameInp = document.getElementById ("p4name");
 var p5nameInp = document.getElementById ("p5name");
-var playerNumber = document.getElementById ("playerNumber").value;
+var playerNumber = document.getElementById ("playerNumber");
 
 // Changes the amount of shown custom name inputs
 function updatePlayers () {
-      switch (playerNumber) {
+      switch (playerNumber.value) {
             case 2:
                   hideAllNameInps();
                   p1nameInp.style.display = "block";p2nameInp.style.display = "block";
