@@ -143,7 +143,7 @@ document.addEventListener("keydown", function(event) {
 
         guessBox.value = "";
           
-        if (currentPlayer == parseInt(playerNumber)) {
+        if (currentPlayer == parseInt(playerNumber.value)) {
             currentPlayer = 1;
         } else {
             currentPlayer++;
