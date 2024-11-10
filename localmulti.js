@@ -97,7 +97,7 @@ function applySettings () {
       if (saveOptions.checked) {
             localStorage.setItem ("skipSettings","true");
             localStorage.setItem ("playerNumber",playerNumber);
-            localStorage.setItem ("maxNumber",maxNumText);
+            localStorage.setItem ("maxNumber",maxNumText.innerHTML);
             
             if (parseInt(playerNumber.value) == 2) {
                   localStorage.setItem ("player1name",p1nameInp.value); localStorage.setItem ("player2name",p2nameInp.value);
