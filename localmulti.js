@@ -38,7 +38,9 @@ var saveOptions = document.getElementById ("saveOptions");
 
 // Skips setting page if user selected it
 if (localStorage.getItem ("skipSettings")) {
+      settingsMenu.style.transition = "all 0s";
       applySettings();
+      settingsMenu.style.transition = "all 0.5s";
 }
 
 // Changes the amount of shown custom name inputs
