@@ -51,6 +51,8 @@ function updatePlayers () {
       }
 }
 
+updatePlayers();
+
 // Hides all name inputs
 function hideAllNameInps () {
       p1nameInp.style.display = "none";
