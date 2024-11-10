@@ -30,11 +30,12 @@ var p5nameInp = document.getElementById ("p5name");
 var playerNumber = document.getElementById ("playerNumber");
 var maxNumText = document.getElementById ("highest");
 var lowNumText = document.getElementById ("lowest");
-var randomNumber;
+var number;
 var currentPlayer = 1;
 var currentPlayerText = document.getElementById ("currentPlayer");
 var settingsMenu = document.getElementById ("settingsMenu");
 var saveOptions = document.getElementById ("saveOptions");
+var guessBox = document.getElementById ("multiBox");
 
 // Skips setting page if user selected it
 if (localStorage.getItem ("skipSettings")) {
@@ -107,4 +108,13 @@ function applySettings () {
 function resetSettings () {
       localStorage.clear();
       location.reload();
+}
+
+// A player made a guess
+document.addEventListener("keydown", function(event) {
+    if (event.key === 'Enter') {
+        if (guessBox.value < number && guessBox.value > lowNumText) {
+            lowNumText.innerHTML = guessBox.value;
+        } 
+    }
 }
