@@ -21,7 +21,7 @@ html, body {user-select:none;}
 	position:fixed;
 }
 
-#maxNumber {
+#maxNumber, #p1name, #p2name, #p3name, #p4name, #p5name {
 	width:30px;
 	height:30px;
 	background-color:transparent;
@@ -30,7 +30,31 @@ html, body {user-select:none;}
 	border-radius:0px;
 }
 
+#p1name, #p2name, #p3name, #p4name, #p5name {
+	width:100px;
+}
+
 #maxNumber:focus {
+	border-bottom:white solid 1px;
+}
+
+#p1name:focus {
+	border-bottom:white solid 1px;
+}
+
+#p2name:focus {
+	border-bottom:white solid 1px;
+}
+
+#p3name:focus {
+	border-bottom:white solid 1px;
+}
+
+#p4name:focus {
+	border-bottom:white solid 1px;
+}
+
+#p5name:focus {
 	border-bottom:white solid 1px;
 }
 
