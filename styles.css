@@ -81,6 +81,18 @@ input[type="checkbox"] {
 	color:black;
 }
 
+#resetSettings {
+	padding:10px;
+	background-color:transparent;
+	border:grey solid 1px;
+	border-radius:10px;
+	transition:all 0.5s;
+}
+
+#resetSettings:hover {
+	background-color:grey;	
+}
+
 #mode {
 	background-color:#1B1212;
 	width:300px;
