@@ -82,14 +82,14 @@ input[type="checkbox"] {
 }
 
 #resetSettings {
-	background-color:transparent;
-	border:grey solid 1px;
+	background-color:red;
+	border:transparent solid 1px;
 	border-radius:5px;
 	transition:all 0.5s;
 }
 
 #resetSettings:hover {
-	background-color:grey;	
+	text-decoration:underline;
 }
 
 #mode {
