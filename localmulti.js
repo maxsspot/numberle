@@ -45,6 +45,8 @@ if (localStorage.getItem ("skipSettings")) {
 
       p1nameInp.value = localStorage.getItem ("player1name");p2nameInp.value = localStorage.getItem ("player2name");p3nameInp.value = localStorage.getItem ("player3name");p4nameInp.value = localStorage.getItem ("player4name");p5nameInp.value = localStorage.getItem ("player5name");
 
+      currentPlayerText.innerHTML = localStorage.getItem ("player1name");
+      
       document.getElementById ("maxNumber").value = localStorage.getItem ("maxNumber");
       
       maxNumText.innerHTML = localStorage.getItem ("maxNumber");
