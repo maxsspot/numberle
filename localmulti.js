@@ -110,6 +110,28 @@ function resetSettings () {
       location.reload();
 }
 
+// Determines what to do based on the current player
+function determinePlayer () {
+      switch (currentPlayer) {
+            case 1:
+                  currentPlayerText.innerHTML = p1nameInp.value;
+                  break;
+            case 2:
+                  currentPlayerText.innerHTML = p2nameInp.value;
+                  break;
+            case 3:
+                  currentPlayerText.innerHTML = p3nameInp.value;
+                  break;
+            case 4:
+                  currentPlayerText.innerHTML = p4nameInp.value;
+                  break;
+            case 5:
+                  currentPlayerText.innerHTML = p5nameInp.value;
+                  currentPlayer=0;
+                  break;
+      }
+}
+
 // A player made a guess
 document.addEventListener("keydown", function(event) {
     if (event.key === 'Enter') {
@@ -120,5 +142,7 @@ document.addEventListener("keydown", function(event) {
         }
 
         guessBox.value = "";
+        currentPlayer++;
+        determinePlayer();
     }
 });
