@@ -226,6 +226,11 @@ function checkWin () {
                         break;
                   }
             } else {
+                    if (currentPlayer == parseInt(playerNumber.value)) {
+                        currentPlayer = 1;
+                    } else {
+                        currentPlayer++;
+                    }
                   determinePlayer();
             }
 }
@@ -239,12 +244,6 @@ guessBox.addEventListener("keydown", function(event) {
             lowNumText.innerHTML = guessBox.value;
         } else if (parseInt(guessBox.value) > number && parseInt(guessBox.value) < parseInt(maxNumText.innerHTML)) {
             maxNumText.innerHTML = guessBox.value;
-        }
-          
-        if (currentPlayer == parseInt(playerNumber.value)) {
-            currentPlayer = 1;
-        } else {
-            currentPlayer++;
         }
           
         guessBox.value = "";
