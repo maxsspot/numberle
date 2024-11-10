@@ -151,6 +151,7 @@ function checkWin () {
                         Swal.fire({
                               title: p1nameInp.value + "wins!",
                               icon: 'success',
+                              timer: null,
                               allowOutsideClick: false
                         })
                         break;
@@ -158,6 +159,7 @@ function checkWin () {
                         Swal.fire({
                               title: p2nameInp.value + "wins!",
                               icon: 'success',
+                              timer: null,
                               allowOutsideClick: false
                         })
                         break;
@@ -165,6 +167,7 @@ function checkWin () {
                         Swal.fire({
                               title: p3nameInp.value + "wins!",
                               icon: 'success',
+                              timer: null,
                               allowOutsideClick: false
                         })
                         break;
@@ -172,6 +175,7 @@ function checkWin () {
                         Swal.fire({
                               title: p4nameInp.value + "wins!",
                               icon: 'success',
+                              timer: null,
                               allowOutsideClick: false
                         })
                         break;
@@ -179,6 +183,7 @@ function checkWin () {
                         Swal.fire({
                               title: p5nameInp.value + "wins!",
                               icon: 'success',
+                              timer: null,
                               allowOutsideClick: false
                         })
                         break;
