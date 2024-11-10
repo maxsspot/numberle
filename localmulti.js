@@ -112,9 +112,12 @@ function resetSettings () {
 
 // A player made a guess
 document.addEventListener("keydown", function(event) {
+    guessBox.value = "";
     if (event.key === 'Enter') {
         if (guessBox.value < number && guessBox.value > lowNumText) {
             lowNumText.innerHTML = guessBox.value;
-        } 
+        } else if (guessBox.value > number && guessBox.value < maxNumText) {
+            highNumText.innerHTML = guessBox.value;
+        }
     }
 });
