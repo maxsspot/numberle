@@ -142,7 +142,13 @@ document.addEventListener("keydown", function(event) {
         }
 
         guessBox.value = "";
-        currentPlayer++;
+          
+        if (currentPlayer == parseInt(playerNumber)) {
+            currentPlayer = 1;
+        } else {
+            currentPlayer++;
+        }
+          
         determinePlayer();
     }
 });
