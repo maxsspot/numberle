@@ -27,7 +27,8 @@
 	<body oncontextmenu = "return false;" id = "main" >
 		<nav>
         <br>
-        <a style = "cursor:default;color:white;float:left;margin-left:15px;"><span id = "currentPlayer"></span>, go!</a>
+	<button style = "background-color:transparent;border:transparent;" title = "Open Settings"><i class="fa-solid fa-gear fa-lg"></i></button>
+        <a style = "cursor:default;color:white;float:left;margin-left:15px;"> | <span id = "currentPlayer"></span>, go!</a>
 		<select style = "float:right;color:white;background-color:transparent;border:transparent;margin-right:15px;cursor:pointer;" id = "modechooser">
 			<!--<option style = "color:black;" value = "Normal Mode" selected>Normal Mode</option>
 			<option style = "color:black;" value = "Timed Normal Mode">Timed Normal Mode</option>
@@ -48,7 +49,6 @@
         <br>
 	<div id = "buttons">
 <!--<button id = "go" onclick = "makeAGuess()">Guess</button>-->
-		<br><br>
 		<p><span id = "lowest">0</span> < x < <span id = "highest">100</span></p>
 		</div>
 		<br>
