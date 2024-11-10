@@ -51,7 +51,7 @@ if (localStorage.getItem ("skipSettings")) {
       
       maxNumText.innerHTML = localStorage.getItem ("maxNumber");
 
-      playerNumber = localStorage.getItem ("playerNumber");
+      playerNumber.value = localStorage.getItem ("playerNumber");
 }
 
 // Changes the amount of shown custom name inputs
