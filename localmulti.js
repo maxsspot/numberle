@@ -152,6 +152,7 @@ function checkWin () {
                               title: p1nameInp.value + "wins!",
                               icon: 'success',
                               stopKeydownPropagation: true,
+                              keydownListenerCapture: true,
                               allowOutsideClick: false
                         })
                         break;
@@ -160,6 +161,7 @@ function checkWin () {
                               title: p2nameInp.value + "wins!",
                               icon: 'success',
                               stopKeydownPropagation: true,
+                              keydownListenerCapture: true,
                               allowOutsideClick: false
                         })
                         break;
@@ -168,6 +170,7 @@ function checkWin () {
                               title: p3nameInp.value + "wins!",
                               icon: 'success',
                               stopKeydownPropagation: true,
+                              keydownListenerCapture: true,
                               allowOutsideClick: false
                         })
                         break;
@@ -176,6 +179,7 @@ function checkWin () {
                               title: p4nameInp.value + "wins!",
                               icon: 'success',
                               stopKeydownPropagation: true,
+                              keydownListenerCapture: true,
                               allowOutsideClick: false
                         })
                         break;
@@ -184,6 +188,7 @@ function checkWin () {
                               title: p5nameInp.value + "wins!",
                               icon: 'success',
                               stopKeydownPropagation: true,
+                              keydownListenerCapture: true,
                               allowOutsideClick: false
                         })
                         break;
