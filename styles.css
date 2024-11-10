@@ -82,8 +82,9 @@ input[type="checkbox"] {
 }
 
 #resetSettings {
-	background-color:red;
+	background-color:transparent;
 	border:transparent solid 1px;
+	color:red;
 	border-radius:5px;
 	transition:all 0.5s;
 }
