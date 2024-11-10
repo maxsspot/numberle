@@ -145,7 +145,7 @@ function determinePlayer () {
 
 // A player made a guess
 document.addEventListener("keydown", function(event) {
-    if (event.key === 'Enter') {
+    if (event.key === 'Enter' && guessBox.value != "") {
         if (parseInt(guessBox.value) < number && parseInt(guessBox.value) > parseInt(lowNumText.innerHTML)) {
             lowNumText.innerHTML = guessBox.value;
         } else if (parseInt(guessBox.value) > number && parseInt(guessBox.value) < parseInt(maxNumText.innerHTML)) {
