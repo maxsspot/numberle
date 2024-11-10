@@ -31,7 +31,7 @@ var playerNumber = document.getElementById ("playerNumber");
 
 // Changes the amount of shown custom name inputs
 function updatePlayers () {
-      switch (playerNumber.value) {
+      switch (parseInt(playerNumber.value)) {
             case 2:
                   hideAllNameInps();
                   p1nameInp.style.display = "block";p2nameInp.style.display = "block";
