@@ -34,6 +34,12 @@ html, body {user-select:none;}
 	border-bottom:white solid 1px;
 }
 
+input[type="checkbox"] {
+	height:1em;
+	width:1em;
+	vertical-align:middle;
+}
+
 #top {
 	width:100%;
 	background-color:white;
