@@ -31,6 +31,7 @@ var playerNumber = document.getElementById ("playerNumber");
 var max;
 var randomNumber;
 var currentPlayer = 1;
+var currentPlayerText = document.getElementById ("currentPlayer");
 var settingsMenu = document.getElementById ("settingsMenu");
       
 // Changes the amount of shown custom name inputs
@@ -73,4 +74,6 @@ function applySettings () {
 
       settingsMenu.style.opacity = "0";
       settingsMenu.style.pointerEvents = "none";
+
+      currentPlayerText.innerHTML = p1nameInp.value;
 }
