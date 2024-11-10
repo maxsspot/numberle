@@ -25,6 +25,27 @@
 		<title>Numerale - Local Multiplayer</title>
 	</head>
 	<body oncontextmenu = "return false;" id = "main" >
+	<div id = "settingsMenu">
+		<h1>SETTINGS</h1>
+		
+		<label for = "playerNumber">Players: </label>
+		<select id = "playerNumber">
+			<option value = "2">2 Players</option>
+			<option value = "3">3 Players</option>
+			<option value = "4">4 Players</option>
+			<option value = "5">5 Players</option>
+		</select>
+		
+		<br>
+		
+		<label>Maximum Number: </label>
+		<input id = "maxNumber" type = "number" />
+		
+		<br>
+		
+		<input id = "saveOptions" type = "checkbox" />
+		<label for = "saveOptions">Save and skip this in the future</label>
+	</div>
 		<nav>
         <br>
 	<span style = "background-color:transparent;border:transparent;float:left;margin-left:15px;cursor:pointer;" title = "Open Settings"><i class="fa-solid fa-gear fa-lg"></i></span>
