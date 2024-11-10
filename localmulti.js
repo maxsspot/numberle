@@ -23,7 +23,39 @@ mode.addEventListener('change', function() {
 //////////////////////////
 
 var p1nameInp = document.getElementById ("p1name");
-var p1nameInp = document.getElementById ("p2name");
-var p1nameInp = document.getElementById ("p3name");
-var p1nameInp = document.getElementById ("p4name");
-var p1nameInp = document.getElementById ("p5name");
+var p2nameInp = document.getElementById ("p2name");
+var p3nameInp = document.getElementById ("p3name");
+var p4nameInp = document.getElementById ("p4name");
+var p5nameInp = document.getElementById ("p5name");
+var playerNumber = document.getElementById ("playerNumber").value;
+
+// Changes the amount of shown custom name inputs
+function updatePlayers () {
+      switch (playerNumber) {
+            case 2:
+                  hideAllNameInps();
+                  p1nameInp.style.display = "block";p2nameInp.style.display = "block";
+                  break;
+            case 3:
+                  hideAllNameInps();
+                  p1nameInp.style.display = "block";p2nameInp.style.display = "block";p3nameInp.style.display = "block";
+                  break;
+            case 4:
+                  hideAllNameInps();
+                  p1nameInp.style.display = "block";p2nameInp.style.display = "block";p3nameInp.style.display = "block";p4nameInp.style.display = "block";
+                  break;
+            case 5:
+                  hideAllNameInps();
+                  p1nameInp.style.display = "block";p2nameInp.style.display = "block";p3nameInp.style.display = "block";p4nameInp.style.display = "block";p5nameInp.style.display = "block";
+                  break;
+      }
+}
+
+// Hides all name inputs
+function hideAllNameInps () {
+      p1nameInp.style.display = "none";
+      p2nameInp.style.display = "none";
+      p3nameInp.style.display = "none";
+      p4nameInp.style.display = "none";
+      p5nameInp.style.display = "none";
+}
