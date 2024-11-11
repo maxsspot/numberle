@@ -104,6 +104,7 @@ function hideAllNameInps () {
 
 // Applys settings for the local multiplayer
 function applySettings () {
+   if (!p1nameInp.value.includes ("<") && !p1nameInp.value.includes (">") && !p2nameInp.value.includes ("<") && !p2nameInp.value.includes (">") && !p3nameInp.value.includes ("<") && !p3nameInp.value.includes (">") && !p4nameInp.value.includes ("<") && !p4nameInp.value.includes (">") && !p5nameInp.value.includes ("<") && !p5nameInp.value.includes (">")) {
       guessBox.focus();
       
       var max = parseInt(document.getElementById ("maxNumber").value);
@@ -130,6 +131,7 @@ function applySettings () {
                   localStorage.setItem ("player1name",p1nameInp.value); localStorage.setItem ("player2name",p2nameInp.value); localStorage.setItem ("player3name",p3nameInp.value); localStorage.setItem ("player4name",p4nameInp.value); localStorage.setItem ("player5name",p5nameInp.value);
             }
       }
+   }
 }
 
 // Resets settings for the local multiplayer
