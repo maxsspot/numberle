@@ -17,7 +17,7 @@ html, body {user-select:none;}
 #settingsMenu {
 	background-color:#35454f;
 	width:100%;
-	height:110vh;
+	height:120vh;
 	position:fixed;
 	transition:all 0.5s;
 }
