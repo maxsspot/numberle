@@ -37,6 +37,24 @@ var currentPlayer = 1;
 var currentPlayerText = document.getElementById ("currentPlayer");
 var guessBox = document.getElementById ("multiBox");
 
+// The bots turn
+function botsTurn () {
+      guessBox.disabled = true;
+      
+      var botsGuess = Math.floor(Math.random()*parseInt(maxNumText)) + 1;
+      botsGuessSplit = botsGuess.split();
+
+      guessBox.value += botsGuessSplit[0]
+
+      setTimeout(function() {
+            guessBox.value += botsGuessSplit[1]
+      }
+
+      checkWin();
+      
+      guessBox.disabled = false;
+}
+
 // Determines what to do based on the current player
 function determinePlayer () {
       switch (currentPlayer) {
