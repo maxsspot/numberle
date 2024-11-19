@@ -32,7 +32,7 @@ mode.addEventListener('change', function() {
 var playerNumber = document.getElementById ("playerNumber");
 var maxNumText = document.getElementById ("highest");
 var lowNumText = document.getElementById ("lowest");
-var number = Math.floor(Math.random()*50) + 1;;
+var number = Math.floor(Math.random()*50) + 1;
 var currentPlayer = 1;
 var currentPlayerText = document.getElementById ("currentPlayer");
 var guessBox = document.getElementById ("multiBox");
@@ -41,7 +41,7 @@ var guessBox = document.getElementById ("multiBox");
 function botsTurn () {
       guessBox.disabled = true;
       
-      var botsGuess = Math.floor(Math.random()*parseInt(maxNumText)) + 1;
+      var botsGuess = Math.floor(Math.random()*parseInt(maxNumText.innerHTML)) + 1;
       botsGuessSplit = botsGuess.toString().split("");
 
       console.log(botsGuessSplit);
