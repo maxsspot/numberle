@@ -44,21 +44,20 @@ function botsTurn () {
       var botsGuess = Math.floor(Math.random()*parseInt(maxNumText.innerHTML)) + 1;
       botsGuessSplit = botsGuess.toString().split("");
 
-      console.log(botsGuessSplit);
-
       setTimeout(function() {
             guessBox.value += botsGuessSplit[0]
-      },0);
+      },500);
       
       if (botsGuessSplit.length > 1) {
             setTimeout(function() {
                   guessBox.value += botsGuessSplit[1]
-            },1000);
+            },1500);
       }
             
       setTimeout(function() {
             checkWin();
-      },2000);
+            guessBox.value="";
+      },2500);
       
       guessBox.disabled = false;
 }
@@ -72,7 +71,7 @@ function determinePlayer () {
             case 2:
                   currentPlayerText.innerHTML = "Bot"
                   currentPlayer = 1;
-                  botsTurn()
+                  botsTurn();
                   break;
       }
 }
@@ -117,7 +116,6 @@ function checkWin () {
                     
                     determinePlayer();
             }
-      guessBox.value="";
 }
 
 // A player made a guess
