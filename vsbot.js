@@ -60,6 +60,7 @@ function botsTurn () {
       setTimeout(function() {
             checkWin();
             guessBox.value="";
+            currentPlayer=1;
       },2500);
       
       guessBox.disabled = false;
