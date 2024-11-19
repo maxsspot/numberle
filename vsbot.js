@@ -86,7 +86,6 @@ function determinePlayer () {
             case 2:
                   currentPlayerText.innerHTML = "Bot"
                   botsTurn();
-                  currentPlayer = 1;
                   break;
       }
 }
