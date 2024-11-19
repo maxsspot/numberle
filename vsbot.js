@@ -48,10 +48,12 @@ function botsTurn () {
       
       guessBox.value += botsGuessSplit[0]
 
-      setTimeout(function() {
-            guessBox.value += botsGuessSplit[1]
-      },500);
-
+      if (botGuessSplit.length > 1) {
+            setTimeout(function() {
+                  guessBox.value += botsGuessSplit[1]
+            },1000);
+      }
+            
       setTimeout(function() {
             //checkWin();
       },1500);
