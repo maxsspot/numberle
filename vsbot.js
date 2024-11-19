@@ -48,9 +48,11 @@ function botsTurn () {
 
       setTimeout(function() {
             guessBox.value += botsGuessSplit[1]
-      }
+      },500);
 
-      checkWin();
+      setTimeout(function() {
+            checkwin();
+      },1000);
       
       guessBox.disabled = false;
 }
