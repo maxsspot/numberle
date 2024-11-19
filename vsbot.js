@@ -48,7 +48,7 @@ function botsTurn () {
       
       guessBox.value += botsGuessSplit[0]
 
-      if (botGuessSplit.length > 1) {
+      if (botsGuessSplit.length > 1) {
             setTimeout(function() {
                   guessBox.value += botsGuessSplit[1]
             },1000);
