@@ -53,12 +53,12 @@ function botsTurn () {
       if (botsGuessSplit.length > 1) {
             setTimeout(function() {
                   guessBox.value += botsGuessSplit[1]
-            },1000);
+            },1500);
       }
             
       setTimeout(function() {
-            //checkWin();
-      },1500);
+            checkWin();
+      },3000);
       
       guessBox.disabled = false;
 }
