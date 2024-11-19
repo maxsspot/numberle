@@ -42,6 +42,7 @@ var guessBox = document.getElementById ("multiBox");
 
 // The bots turn
 function botsTurn () {
+  if (currentPLayer=2) {
       guessBox.disabled = true;
       
       var min = parseInt(lowNumText.innerHTML);
@@ -73,6 +74,7 @@ function botsTurn () {
       },2500);
       
       guessBox.disabled = false;
+  }
 }
 
 // Determines what to do based on the current player
