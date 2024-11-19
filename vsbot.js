@@ -113,6 +113,7 @@ function checkWin () {
                         break;
                   case 2:
                         currentPlayer--;
+                        guessBox.disabled = true;
                         Swal.fire({
                               title: "Bot wins!",
                               icon: 'success',
