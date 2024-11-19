@@ -60,7 +60,7 @@ function botsTurn () {
       if (botsGuessSplit.length > 1) {
             setTimeout(function() {
                   guessBox.value += botsGuessSplit[1]
-            },1500);
+            },1250);
       }
       
       setTimeout(function() {
@@ -74,7 +74,7 @@ function botsTurn () {
             determinePlayer();
             guessBox.value="";
             currentPlayer=1;
-      },2500);
+      },2250);
       
       guessBox.disabled = false;
   }
