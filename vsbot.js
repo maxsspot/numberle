@@ -7,7 +7,7 @@ var challengeMode = document.createElement ("option");challengeMode.value = "Cha
 var timedChallengeMode = document.createElement ("option");timedChallengeMode.value = "Timed Challenge Mode";timedChallengeMode.text = "Timed Challenge";mode.appendChild(timedChallengeMode);
 var multiPlayer = document.createElement ("option");multiPlayer.text = "MULTIPLAYER";multiPlayer.disabled = true;multiPlayer.style.color="grey";multiPlayer.style.fontWeight="bold";mode.appendChild(multiPlayer);
 var localMultiplayer = document.createElement ("option");localMultiplayer.value = "Local Multiplayer";localMultiplayer.text = "Local Multiplayer";mode.appendChild(localMultiplayer);
-var vsBot = document.createElement ("option");localMultiplayer.value = "VS Bot";localMultiplayer.text = "VS Bot";mode.appendChild(vsBot);
+var vsBot = document.createElement ("option");vsBot.value = "VS Bot";vsBot.text = "VS Bot";mode.appendChild(vsBot);
 
 vsBot.selected = true;
 
