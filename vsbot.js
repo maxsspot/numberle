@@ -112,6 +112,7 @@ function checkWin () {
                         
                         break;
                   case 2:
+                        currentPlayer--;
                         Swal.fire({
                               title: "Bot wins!",
                               icon: 'success',
