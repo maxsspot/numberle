@@ -42,12 +42,12 @@ var guessBox = document.getElementById ("multiBox");
 
 // The bots turn
 function botsTurn () {
-  if (currentPLayer=2) {
+  if (currentPlayer=2) {
       guessBox.disabled = true;
       
       var min = parseInt(lowNumText.innerHTML);
       var max = parseInt(maxNumText.innerHTML);
-      var botsGuess = Math.floor(Math.random() * (max - min + 1)) + min;
+      var botsGuess = Math.floor(Math.random()*parseInt(maxNumText.innerHTML)) + parseInt(lowNumText.innerHTML);
       botsGuessSplit = botsGuess.toString().split("");
 
       setTimeout(function() {
