@@ -53,8 +53,8 @@ function botsTurn () {
       },500);
 
       setTimeout(function() {
-            checkWin();
-      },1000);
+            //checkWin();
+      },1500);
       
       guessBox.disabled = false;
 }
@@ -68,7 +68,7 @@ function determinePlayer () {
             case 2:
                   currentPlayerText.innerHTML = "Bot"
                   currentPlayer = 1;
-                  botsTurn();
+                  botsTurn()
                   break;
       }
 }
@@ -110,7 +110,8 @@ function checkWin () {
                     } else {
                         currentPlayer++;
                     }
-                  determinePlayer();
+                    
+                    determinePlayer();
             }
 }
 
