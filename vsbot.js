@@ -44,7 +44,7 @@ var guessBox = document.getElementById ("multiBox");
 function botsTurn () {
       guessBox.disabled = true;
       
-      var botsGuess = Math.floor(Math.random()*parseInt(maxNumText.innerHTML)) + 1;
+      var botsGuess = Math.floor(Math.random()*parseInt(maxNumText.innerHTML)) + parseInt(lowNumText.innerHTML);
       botsGuessSplit = botsGuess.toString().split("");
 
       setTimeout(function() {
@@ -56,9 +56,16 @@ function botsTurn () {
                   guessBox.value += botsGuessSplit[1]
             },1500);
       }
-            
+
+      if (parseInt(guessBox.value) < number && parseInt(guessBox.value) > parseInt(lowNumText.innerHTML)) {
+            lowNumText.innerHTML = guessBox.value;
+      } else if (parseInt(guessBox.value) > number && parseInt(guessBox.value) < parseInt(maxNumText.innerHTML)) {
+            maxNumText.innerHTML = guessBox.value;
+      }
+      
       setTimeout(function() {
             checkWin();
+            determinePlayer();
             guessBox.value="";
             currentPlayer=1;
       },2500);
