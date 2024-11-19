@@ -44,7 +44,9 @@ var guessBox = document.getElementById ("multiBox");
 function botsTurn () {
       guessBox.disabled = true;
       
-      var botsGuess = Math.floor(Math.random()*parseInt(maxNumText.innerHTML)) + parseInt(lowNumText.innerHTML);
+      var min = parseInt(lowNumText.innerHTML);
+      var max = parseInt(maxNumText.innerHTML);
+      var botsGuess = Math.floor(Math.random() * (max - min + 1)) + min;
       botsGuessSplit = botsGuess.toString().split("");
 
       setTimeout(function() {
