@@ -42,7 +42,7 @@ var guessBox = document.getElementById ("multiBox");
 
 // The bots turn
 function botsTurn () {
-  if (currentPlayer=2) {
+  if (currentPlayer==2) {
       guessBox.disabled = true;
       
       var min = parseInt(lowNumText.innerHTML);
