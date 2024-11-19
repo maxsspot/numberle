@@ -59,14 +59,14 @@ function botsTurn () {
                   guessBox.value += botsGuessSplit[1]
             },1500);
       }
-
-      if (parseInt(guessBox.value) < number && parseInt(guessBox.value) > parseInt(lowNumText.innerHTML)) {
-            lowNumText.innerHTML = guessBox.value;
-      } else if (parseInt(guessBox.value) > number && parseInt(guessBox.value) < parseInt(maxNumText.innerHTML)) {
-            maxNumText.innerHTML = guessBox.value;
-      }
       
       setTimeout(function() {
+            if (parseInt(guessBox.value) < number && parseInt(guessBox.value) > parseInt(lowNumText.innerHTML)) {
+                  lowNumText.innerHTML = guessBox.value;
+            } else if (parseInt(guessBox.value) > number && parseInt(guessBox.value) < parseInt(maxNumText.innerHTML)) {
+                  maxNumText.innerHTML = guessBox.value;
+            }
+            
             checkWin();
             determinePlayer();
             guessBox.value="";
