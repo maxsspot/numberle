@@ -81,6 +81,7 @@ function botsTurn () {
 function determinePlayer () {
       switch (currentPlayer) {
             case 1:
+                  guessBox.focus();
                   currentPlayerText.innerHTML = "Player"
                   break;
             case 2:
