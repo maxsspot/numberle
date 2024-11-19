@@ -53,12 +53,12 @@ function botsTurn () {
       if (botsGuessSplit.length > 1) {
             setTimeout(function() {
                   guessBox.value += botsGuessSplit[1]
-            },1500);
+            },1000);
       }
             
       setTimeout(function() {
             checkWin();
-      },3000);
+      },2000);
       
       guessBox.disabled = false;
 }
@@ -117,6 +117,7 @@ function checkWin () {
                     
                     determinePlayer();
             }
+      guessBox.value="";
 }
 
 // A player made a guess
