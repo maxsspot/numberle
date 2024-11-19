@@ -45,9 +45,11 @@ function botsTurn () {
       botsGuessSplit = botsGuess.toString().split("");
 
       console.log(botsGuessSplit);
-      
-      guessBox.value += botsGuessSplit[0]
 
+      setTimeout(function() {
+            guessBox.value += botsGuessSplit[0]
+      },0);
+      
       if (botsGuessSplit.length > 1) {
             setTimeout(function() {
                   guessBox.value += botsGuessSplit[1]
