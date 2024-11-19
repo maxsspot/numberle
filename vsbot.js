@@ -44,6 +44,8 @@ function botsTurn () {
       var botsGuess = Math.floor(Math.random()*parseInt(maxNumText)) + 1;
       botsGuessSplit = botsGuess.toString().split("");
 
+      console.log(botsGuessSplit);
+      
       guessBox.value += botsGuessSplit[0]
 
       setTimeout(function() {
@@ -51,7 +53,7 @@ function botsTurn () {
       },500);
 
       setTimeout(function() {
-            checkwin();
+            checkWin();
       },1000);
       
       guessBox.disabled = false;
