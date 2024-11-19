@@ -42,7 +42,7 @@ function botsTurn () {
       guessBox.disabled = true;
       
       var botsGuess = Math.floor(Math.random()*parseInt(maxNumText)) + 1;
-      botsGuessSplit = botsGuess.split();
+      botsGuessSplit = botsGuess.split("");
 
       guessBox.value += botsGuessSplit[0]
 
