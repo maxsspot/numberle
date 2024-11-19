@@ -7,8 +7,9 @@ var challengeMode = document.createElement ("option");challengeMode.value = "Cha
 var timedChallengeMode = document.createElement ("option");timedChallengeMode.value = "Timed Challenge Mode";timedChallengeMode.text = "Timed Challenge";mode.appendChild(timedChallengeMode);
 var multiPlayer = document.createElement ("option");multiPlayer.text = "MULTIPLAYER";multiPlayer.disabled = true;multiPlayer.style.color="grey";multiPlayer.style.fontWeight="bold";mode.appendChild(multiPlayer);
 var localMultiplayer = document.createElement ("option");localMultiplayer.value = "Local Multiplayer";localMultiplayer.text = "Local Multiplayer";mode.appendChild(localMultiplayer);
+var vsBot = document.createElement ("option");localMultiplayer.value = "VS Bot";localMultiplayer.text = "VS Bot";mode.appendChild(vsBot);
 
-localMultiplayer.selected = true;
+vsBot.selected = true;
 
 // Performs actions depending on the mode
 mode.addEventListener('change', function() {
@@ -22,6 +23,8 @@ mode.addEventListener('change', function() {
         window.location = "https://numerale.netlify.app/timed-challenge";
       } else if (mode.value == "Local Multiplayer") {
         window.location = "https://numerale.netlify.app/localmulti";
+      } else if (mode.value == "VS Bot") {
+        window.location = "https://numerale.netlify.app/vsbot";
       }
 });
 
@@ -70,8 +73,8 @@ function determinePlayer () {
                   break;
             case 2:
                   currentPlayerText.innerHTML = "Bot"
-                  currentPlayer = 1;
                   botsTurn();
+                  currentPlayer = 1;
                   break;
       }
 }
