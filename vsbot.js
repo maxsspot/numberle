@@ -103,7 +103,8 @@ function checkWin () {
                         Swal.fire({
                               title: "Player wins!",
                               icon: 'success',
-                              allowEnterKey: false,
+                              timer: 2000,
+                              showConfirmButton: false,
                               allowOutsideClick: false
                         }).then((result) => {
                           if (result.isConfirmed) {
@@ -118,7 +119,8 @@ function checkWin () {
                         Swal.fire({
                               title: "Bot wins!",
                               icon: 'success',
-                              allowEnterKey: false,
+                              timer: 2000,
+                              showConfirmButton: false,
                               allowOutsideClick: false
                         }).then((result) => {
                           if (result.isConfirmed) {
