@@ -49,7 +49,7 @@ function botsTurn () {
       
       var min = parseInt(lowNumText.innerHTML);
       var max = parseInt(maxNumText.innerHTML);
-      var botsGuess = Math.floor(Math.random() * (max - 50)) + min;
+      var botsGuess = Math.floor(Math.random() * (50 - max)) + (1 + min);
 
       //alert("Maximum: "+max+" | Minumum: "+min);
         
