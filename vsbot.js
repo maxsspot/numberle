@@ -106,11 +106,11 @@ function checkWin () {
                               timer: 2000,
                               showConfirmButton: false,
                               allowOutsideClick: false
-                        }).then((result) => {
-                          if (result.isConfirmed) {
-                            location.reload();
-                          }
-                        });
+                        })
+
+                        setTimeout(function() {
+                              location.reload();
+                        },2000);
                         
                         break;
                   case 2:
@@ -122,11 +122,11 @@ function checkWin () {
                               timer: 2000,
                               showConfirmButton: false,
                               allowOutsideClick: false
-                        }).then((result) => {
-                          if (result.isConfirmed) {
-                            location.reload();
-                          }
-                        });
+                        })                        
+                              
+                        setTimeout(function() {
+                              location.reload();
+                        },2000);
                         
                         break;
                   }
