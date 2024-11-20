@@ -49,7 +49,7 @@ function botsTurn () {
       
       var min = parseInt(lowNumText.innerHTML);
       var max = parseInt(maxNumText.innerHTML);
-      var botsGuess = Math.floor(Math.random() * (50 - max)) + (1 + min);
+      var botsGuess = Math.floor(Math.random() * max) + min;
 
       //alert("Maximum: "+max+" | Minumum: "+min);
         
@@ -62,7 +62,7 @@ function botsTurn () {
       if (botsGuessSplit.length > 1) {
             setTimeout(function() {
                   guessBox.value += botsGuessSplit[1]
-            },1250);
+            },1000);
       }
       
       setTimeout(function() {
@@ -76,7 +76,7 @@ function botsTurn () {
             determinePlayer();
             guessBox.value="";
             currentPlayer=1;
-      },2250);
+      },2000);
       
       guessBox.disabled = false;
   }
