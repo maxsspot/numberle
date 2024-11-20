@@ -51,7 +51,7 @@ function botsTurn () {
       var max = parseInt(maxNumText.innerHTML);
       var botsGuess = Math.floor(Math.random() * max) + min;
 
-      alert("Maximum: "+max+" | Minumum: "+min);
+      //alert("Maximum: "+max+" | Minumum: "+min);
         
       botsGuessSplit = botsGuess.toString().split("");
 
