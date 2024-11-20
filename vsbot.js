@@ -91,7 +91,6 @@ function determinePlayer () {
                   break;
             case 2:
                   currentPlayerText.innerHTML = "Bot"
-                  botsTurn();
                   break;
       }
 }
@@ -152,5 +151,6 @@ guessBox.addEventListener("keydown", function(event) {
         }
           
         guessBox.value = "";
+        botsTurn();
     }
 });
