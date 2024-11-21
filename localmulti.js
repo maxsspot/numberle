@@ -126,7 +126,8 @@ function applySettings () {
 
       currentPlayerText.innerHTML = p1nameInp.value;
       maxNumText.innerHTML = max;
-
+      highNumWordsText.innerHTML = max;
+         
       if (useWordsInstead.checked) {
             localStorage.setItem ("useWords","true");
 
