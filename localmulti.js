@@ -268,11 +268,11 @@ guessBox.addEventListener("keydown", function(event) {
           
         if (parseInt(guessBox.value) < number && parseInt(guessBox.value) > parseInt(lowNumText.innerHTML)) {
             lowNumText.innerHTML = guessBox.value;
-            lowNumWordsText = guessBox.value;
+            lowNumWordsText.innerHTML = guessBox.value;
             
         } else if (parseInt(guessBox.value) > number && parseInt(guessBox.value) < parseInt(maxNumText.innerHTML)) {
             maxNumText.innerHTML = guessBox.value;
-            highNumWordsText = guessBox.value;
+            highNumWordsText.innerHTML = guessBox.value;
         }
           
         guessBox.value = "";
