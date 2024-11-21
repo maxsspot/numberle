@@ -37,11 +37,14 @@ var p5nameInp = document.getElementById ("p5name");
 var playerNumber = document.getElementById ("playerNumber");
 var maxNumText = document.getElementById ("highest");
 var lowNumText = document.getElementById ("lowest");
+var highNumWordsText = document.getElementById ("highestWords");
+var lowNumWordsText = document.getElementById ("lowestWords");
 var number;
 var currentPlayer = 1;
 var currentPlayerText = document.getElementById ("currentPlayer");
 var settingsMenu = document.getElementById ("settingsMenu");
 var saveOptions = document.getElementById ("saveOptions");
+var useWordsInstead = document.getElementById ("useWords");
 var guessBox = document.getElementById ("multiBox");
 
 // Skips setting page if user selected it and also loads saved values
@@ -57,8 +60,14 @@ if (localStorage.getItem ("skipSettings")) {
       document.getElementById ("maxNumber").value = localStorage.getItem ("maxNumber");
       
       maxNumText.innerHTML = localStorage.getItem ("maxNumber");
-
+      highNumWordsText.innerHTML = localStorage.getItem ("maxNumber");
+      
       playerNumber.value = localStorage.getItem ("playerNumber");
+
+      if (localStorage.getItem ("useWords")) {
+            document.getElementById ("words").style.display = "block";
+            document.getElementById ("inequality").style.display = "none";
+      }
 }
 
 // Changes the amount of shown custom name inputs
@@ -118,6 +127,13 @@ function applySettings () {
       currentPlayerText.innerHTML = p1nameInp.value;
       maxNumText.innerHTML = max;
 
+      if (useWordsInstead.checked) {
+            localStorage.setItem ("useWords","true");
+
+            document.getElementById ("words").style.display = "block";
+            document.getElementById ("inequality").style.display = "none";
+      }
+         
       if (saveOptions.checked) {
             localStorage.setItem ("skipSettings","true");
             localStorage.setItem ("playerNumber",playerNumber.value);
@@ -251,8 +267,11 @@ guessBox.addEventListener("keydown", function(event) {
           
         if (parseInt(guessBox.value) < number && parseInt(guessBox.value) > parseInt(lowNumText.innerHTML)) {
             lowNumText.innerHTML = guessBox.value;
+            lowNumWordsText = guessBox.value;
+            
         } else if (parseInt(guessBox.value) > number && parseInt(guessBox.value) < parseInt(maxNumText.innerHTML)) {
             maxNumText.innerHTML = guessBox.value;
+            highNumWordsText = guessBox.value;
         }
           
         guessBox.value = "";
