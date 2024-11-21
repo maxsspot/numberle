@@ -136,6 +136,8 @@ function applySettings () {
       } else {
             document.getElementById ("words").style.display = "none";
             document.getElementById ("inequality").style.display = "block";
+
+            localStorage.removeItem ("useWords");
       }
          
       if (saveOptions.checked) {
