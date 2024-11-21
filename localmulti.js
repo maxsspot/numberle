@@ -133,6 +133,9 @@ function applySettings () {
 
             document.getElementById ("words").style.display = "block";
             document.getElementById ("inequality").style.display = "none";
+      } else {
+            document.getElementById ("words").style.display = "none";
+            document.getElementById ("inequality").style.display = "block";
       }
          
       if (saveOptions.checked) {
