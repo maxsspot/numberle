@@ -137,7 +137,7 @@ function applySettings () {
             document.getElementById ("words").style.display = "none";
             document.getElementById ("inequality").style.display = "block";
 
-            localStorage.removeItem ("useWords");
+            //localStorage.removeItem ("useWords");
       }
          
       if (saveOptions.checked) {
