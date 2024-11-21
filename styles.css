@@ -35,6 +35,10 @@ html, body {user-select:none;}
 	width:100px;
 }
 
+#words {
+	display:none;
+}
+
 #maxNumber:focus {
 	border-bottom:white solid 1px;
 }
