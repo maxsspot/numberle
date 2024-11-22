@@ -3,7 +3,6 @@
     [headers.values]
         X-Frame-Options = "deny"
         X-XSS-Protection = "1"
-        Expect-CT = "max-age=86400, enforce"
         X-Content-Type-Options = "nosniff"
         Referrer-Policy = "no-referrer"
         Access-Control-Allow-Origin = "https://numerale.netlify.app"
