@@ -41,6 +41,12 @@ html, body {user-select:none;}
 	cursor:pointer;
 }
 
+#timer {
+	margin:auto;
+	cursor:text;
+	font-size:35px;
+}
+
 #maxNumber, #p1name, #p2name, #p3name, #p4name, #p5name {
 	width:30px;
 	height:30px;
