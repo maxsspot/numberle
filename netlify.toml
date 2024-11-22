@@ -11,7 +11,6 @@
         Cross-Origin-Opener-Policy = "same-origin"
         Cross-Origin-Resource-Policy = "same-origin"
         Cross-Origin-Embedder-Policy = "require-corp"
-        Clear-Site-Data = "cache"
         
         Strict-Transport-Security = '''
             max-age=31557600;
