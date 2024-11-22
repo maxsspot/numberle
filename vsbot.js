@@ -1,11 +1,11 @@
 var mode = document.getElementById ("modechooser");
 
-var singlePlayer = document.createElement ("option");singlePlayer.text = "SINGLEPLAYER";singlePlayer.disabled = true;singlePlayer.style.color="grey";singlePlayer.style.fontWeight="bold";mode.appendChild(singlePlayer);
+var singlePlayer = document.createElement ("option");singlePlayer.text = "SINGLEPLAYER";singlePlayer.enabled = false;;singlePlayer.style.color="grey";singlePlayer.style.fontWeight="bold";mode.appendChild(singlePlayer);
 var normalMode = document.createElement ("option");normalMode.value = "Normal Mode";normalMode.text = "Normal";mode.appendChild(normalMode);      
 var timedNormalMode = document.createElement ("option");timedNormalMode.value = "Timed Normal Mode";timedNormalMode.text = "Timed Normal";mode.appendChild(timedNormalMode);
 var challengeMode = document.createElement ("option");challengeMode.value = "Challenge Mode";challengeMode.text = "Challenge";mode.appendChild(challengeMode);
 var timedChallengeMode = document.createElement ("option");timedChallengeMode.value = "Timed Challenge Mode";timedChallengeMode.text = "Timed Challenge";mode.appendChild(timedChallengeMode);
-var multiPlayer = document.createElement ("option");multiPlayer.text = "MULTIPLAYER";multiPlayer.disabled = true;multiPlayer.style.color="grey";multiPlayer.style.fontWeight="bold";mode.appendChild(multiPlayer);
+var multiPlayer = document.createElement ("option");multiPlayer.text = "MULTIPLAYER";multiPlayer.enabled = false;;multiPlayer.style.color="grey";multiPlayer.style.fontWeight="bold";mode.appendChild(multiPlayer);
 var localMultiplayer = document.createElement ("option");localMultiplayer.value = "Local Multiplayer";localMultiplayer.text = "Local Multiplayer";mode.appendChild(localMultiplayer);
 var vsBot = document.createElement ("option");vsBot.value = "VS Bot";vsBot.text = "VS Bot";mode.appendChild(vsBot);
 
@@ -45,7 +45,7 @@ guessBox.focus();
 // The bots turn
 function botsTurn () {
   if (currentPlayer===2) {
-      guessBox.disabled = true;
+      guessBox.enabled = false;;
       
       var min = parseInt(lowNumText.innerHTML);
       var max = parseInt(maxNumText.innerHTML);
@@ -78,7 +78,7 @@ function botsTurn () {
             currentPlayer=1;
       },1500);
       
-      guessBox.disabled = false;
+      guessBox.enabled = true;
   }
 }
 
@@ -115,7 +115,7 @@ function checkWin () {
                         break;
                   case 2:
                         currentPlayer--;
-                        guessBox.disabled = true;
+                        guessBox.enabled = false;;
                         Swal.fire({
                               title: "Bot wins!",
                               icon: 'success',
