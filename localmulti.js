@@ -44,7 +44,7 @@ var currentPlayer = 1;
 var currentPlayerText = document.getElementById ("currentPlayer");
 var settingsMenu = document.getElementById ("settingsMenu");
 var saveOptions = document.getElementById ("saveOptions");
-var useWordsInstead = document.getElementById ("useWords");
+var useIneqInstead = document.getElementById ("useIneq");
 var guessBox = document.getElementById ("multiBox");
 
 // Skips setting page if user selected it and also loads saved values
@@ -64,9 +64,9 @@ if (localStorage.getItem ("skipSettings")) {
       
       playerNumber.value = localStorage.getItem ("playerNumber");
 
-      if (localStorage.getItem ("useWords")) {
-            document.getElementById ("words").style.display = "block";
-            document.getElementById ("inequality").style.display = "none";
+      if (localStorage.getItem ("useIneq")) {
+            document.getElementById ("words").style.display = "none";
+            document.getElementById ("inequality").style.display = "block";
       }
 }
 
@@ -128,14 +128,14 @@ function applySettings () {
       maxNumText.innerHTML = max;
       highNumWordsText.innerHTML = max;
          
-      if (useWordsInstead.checked) {
-            localStorage.setItem ("useWords","true");
+      if (useIneqInstead.checked) {
+            localStorage.setItem ("useIneq","true");
 
-            document.getElementById ("words").style.display = "block";
-            document.getElementById ("inequality").style.display = "none";
-      } else {
             document.getElementById ("words").style.display = "none";
             document.getElementById ("inequality").style.display = "block";
+      } else {
+            document.getElementById ("words").style.display = "block";
+            document.getElementById ("inequality").style.display = "none";
 
             //localStorage.removeItem ("useWords");
       }
