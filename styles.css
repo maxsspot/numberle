@@ -22,6 +22,20 @@ html, body {user-select:none;}
 	transition:all 0.5s;
 }
 
+#howtoplay {
+	float:left;
+	#margin-left:15px;
+}
+
+#modeChooser {
+	float:right;
+	color:white;
+	background-color:transparent;
+	border:transparent;
+	margin-right:15px;
+	cursor:pointer;
+}
+
 #maxNumber, #p1name, #p2name, #p3name, #p4name, #p5name {
 	width:30px;
 	height:30px;
