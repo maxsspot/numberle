@@ -72,6 +72,8 @@ mode.addEventListener('change', function() {
         window.location = "https://numerale.netlify.app/timed-challenge";
       } else if (mode.value == "Local Multiplayer") {
         window.location = "https://numerale.netlify.app/localmulti";
+      } else if (mode.value == "VS Bot") {
+        window.location = "https://numerale.netlify.app/vsbot";
       }
 });
 
