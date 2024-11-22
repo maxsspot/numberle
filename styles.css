@@ -22,9 +22,14 @@ html, body {user-select:none;}
 	transition:all 0.5s;
 }
 
-#howtoplay {
+#howtoplay, #currentPlaying {
 	float:left;
-	#margin-left:15px;
+	margin-left:15px;
+}
+
+#currentPlaying {
+	cursor:default;
+	color:white;
 }
 
 #modeChooser {
