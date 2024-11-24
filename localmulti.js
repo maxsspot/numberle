@@ -131,7 +131,7 @@ function applySettings () {
       maxNumText.innerHTML = max;
       highNumWordsText.innerHTML = max;
          
-      if (useIneqInstead.checked) {
+      /*if (useIneqInstead.checked) {
             localStorage.setItem ("useIneq","true");
 
             document.getElementById ("words").style.display = "none";
@@ -141,7 +141,7 @@ function applySettings () {
             document.getElementById ("inequality").style.display = "none";
 
             //localStorage.removeItem ("useWords");
-      }
+      }*/
          
       if (saveOptions.checked) {
             localStorage.setItem ("skipSettings","true");
