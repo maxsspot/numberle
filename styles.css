@@ -14,6 +14,11 @@ html {
 
 html, body {user-select:none;}
 
+.guidline {
+	width:300px;
+	margin:auto;
+}
+
 #settingsMenu {
 	background-color:#35454f;
 	width:100%;
