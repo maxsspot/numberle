@@ -19,6 +19,20 @@ html, body {user-select:none;}
 	margin:auto;
 }
 
+#onlineMenu {
+	width:150px;
+	height:30px;
+	border:white solid 1px;
+	border-radius:50px;
+	background-color:transparent;
+	margin:5px;
+}
+
+#onlineMenu {
+	background-color:white;
+	color:black;
+}
+
 #settingsMenu {
 	background-color:#35454f;
 	width:100%;
