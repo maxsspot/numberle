@@ -1,4 +1,4 @@
-var menu = document.getElementById("menu");
+var menu = document.getElementById("mainMenu");
 var joinRoom = document.getElementById ("joinARoom");
 
 function hideAll () {
