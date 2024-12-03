@@ -19,13 +19,26 @@ html, body {user-select:none;}
 	margin:auto;
 }
 
-.onlineMenu {
+.onlineMenu, #roomCode {
 	width:150px;
 	height:30px;
 	border:white solid 1px;
 	border-radius:50px;
 	background-color:transparent;
 	margin:5px;
+}
+
+.onlineMenu:hover {
+	text-decoration:underline;
+}
+
+#roomCode {
+	border-radius:5px;
+	text-indent:5px;
+}
+
+a:hover {
+	text-decoration:underline;
 }
 
 #youAgree {
