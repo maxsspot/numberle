@@ -19,7 +19,7 @@ html, body {user-select:none;}
 	margin:auto;
 }
 
-#onlineMenu {
+.onlineMenu {
 	width:150px;
 	height:30px;
 	border:white solid 1px;
