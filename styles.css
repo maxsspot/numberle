@@ -35,12 +35,13 @@ html, body {user-select:none;}
 .codeInput {
 	text-indent:5px;
 	border:transparent;
+	border-radius:0px;
 	border-bottom:white solid 1px;
 	width:100px;
 }
 
 .codeInput:focus {
-	border:white solid 1px;
+	border-bottom:white solid 1px;
 }
 
 #maxNumberOnline {
