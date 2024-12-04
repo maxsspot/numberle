@@ -32,6 +32,10 @@ html, body {user-select:none;}
 	text-decoration:underline;
 }
 
+#changeUsername {
+	border:grey solid 1px;
+}
+
 .codeInput {
 	border:transparent;
 	border-radius:0px;
