@@ -30,6 +30,7 @@ html, body {user-select:none;}
 
 #newRoomSettings {
 	text-align:justify;
+	margin:auto;
 }
 
 .onlineMenu:hover {
