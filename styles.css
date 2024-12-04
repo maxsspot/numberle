@@ -32,7 +32,7 @@ html, body {user-select:none;}
 	text-decoration:underline;
 }
 
-#roomCode {
+#roomCode, #newRoomCode {
 	border-radius:5px;
 	text-indent:5px;
 }
@@ -41,7 +41,7 @@ a:hover {
 	text-decoration:underline;
 }
 
-#joinARoom {
+#joinARoom, #createARoom {
 	display:none;
 }
 
