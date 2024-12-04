@@ -33,13 +33,18 @@ html, body {user-select:none;}
 }
 
 .codeInput {
-	border-radius:5px;
 	text-indent:5px;
+	border:transparent;
+	border-bottom:white solid 1px;
 	width:100px;
 }
 
 .codeInput:focus {
 	border:white solid 1px;
+}
+
+#maxNumberOnline {
+	width:30px;
 }
 
 a:hover {
