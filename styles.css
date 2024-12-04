@@ -28,11 +28,6 @@ html, body {user-select:none;}
 	margin:5px;
 }
 
-#newRoomSettings {
-	text-align:justify;
-	margin:auto;
-}
-
 .onlineMenu:hover {
 	text-decoration:underline;
 }
