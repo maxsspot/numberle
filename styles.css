@@ -37,6 +37,10 @@ html, body {user-select:none;}
 	text-indent:5px;
 }
 
+.codeInput:focus {
+	border:white solid 1px;
+}
+
 a:hover {
 	text-decoration:underline;
 }
