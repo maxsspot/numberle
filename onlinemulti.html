@@ -37,6 +37,8 @@
 		<sub><a onclick = "returnHome()">GO BACK</a></sub>
 		<br><br>
 		<input placeholder = "Type room ID..." id = "joiningCode" class = "codeInput" />
+		<br><br>
+		<button class = "onlineMenu" id = "joinRoom">Join Room</button>
 	</div>
 	<div id = "createARoom">
 		<sub><a onclick = "returnHome()">GO BACK</a></sub>
@@ -46,13 +48,16 @@
 			<input placeholder = "Type room ID..." class = "codeInput" id = "newRoomCode" /><br>-->
 			<label for = "maxNumberOnline">Maximum Number: </label>
 			<input class = "codeInput" id = "maxNumberOnline" /><br>
+			<br><br>
+			<button class = "onlineMenu" id = "createRoom">Create Room</button>
 		</div>
 	</div>
 	<div id = "changeUsername">
 		<sub><a onclick = "returnHome()">GO BACK</a></sub>
 		<br><br>
 		<label for = "newUsernames">New Username:</label> 
-		<input class = "codeInput" id = "username" oninput = "checkForDisallowed()" /><br><br>
+		<input class = "codeInput" id = "username" oninput = "checkForDisallowed()" />
+		<br><br>
 		<button class = "onlineMenu" id = "confirmNameChange">Change</button>
 	</div>
 	</body>
