@@ -33,7 +33,6 @@ html, body {user-select:none;}
 }
 
 .codeInput {
-	text-indent:5px;
 	border:transparent;
 	border-radius:0px;
 	border-bottom:white solid 1px;
@@ -41,6 +40,7 @@ html, body {user-select:none;}
 }
 
 .codeInput:focus {
+	border:transparent;
 	border-bottom:white solid 1px;
 }
 
