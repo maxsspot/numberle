@@ -35,6 +35,7 @@ html, body {user-select:none;}
 .codeInput {
 	border-radius:5px;
 	text-indent:5px;
+	width:100px;
 }
 
 .codeInput:focus {
