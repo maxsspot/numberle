@@ -33,7 +33,7 @@ function openChange () {
 }
 
 function checkForDisallowed () {
-  if (username.value.include ("<") || username.value.includes (">")) {
+  if (username.value.includes ("<") || username.value.includes (">")) {
     username.style.borderBottom = "red solid 1px";
     changeUserButton.style.color = "grey";
     changeUserButton.disabled = true;
