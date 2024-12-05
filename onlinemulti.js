@@ -6,7 +6,7 @@ var username = document.getElementById ("username");
 var confirmSettings = document.getElementById ("confirmNameChange");
 
 document.onload = function(){
-  if (!localStorage.getItem("savedUsername")) {
+  if (localStorage.getItem("savedUsername")===null) {
     username.value = "Player";
   } else {
     username.value = localStorage.getItem("savedUsername")
