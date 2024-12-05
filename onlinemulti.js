@@ -33,7 +33,8 @@ function openChange () {
 }
 
 function checkForDisallowed () {
-  if (username.value.includes ("<") || username.value.includes (">")) {
+  var checkedValue = profanityCleaner.clean(username.value);
+  if (username.value.includes ("<") || username.value.includes (">") || checkedValue.includes("*")) {
     username.style.borderBottom = "red solid 1px";
   } else {
     username.style.borderBottom = "white solid 1px";
