@@ -8,6 +8,8 @@ var censorExplicit = document.getElementById ("filterLanguage");
 var transitionCover = document.getElementById ("transitionCover");
 var lobby = document.getElementById ("lobby");
 var playerContainer = document.getElementById ("playerContainer");
+var roomCode;
+var roomCodeText;
 
 window.onload = function(){
   menu = document.getElementById("mainMenu");
@@ -19,6 +21,7 @@ window.onload = function(){
   censorExplicit = document.getElementById ("filterLanguage");
   transitionCover = document.getElementById ("transitionCover");
   lobby = document.getElementById ("lobby");
+  roomCodeText = document.getElementById ("roomCode");
   
   if (localStorage.getItem("savedUsername")) {
     username.value = localStorage.getItem("savedUsername")
@@ -91,6 +94,8 @@ function createRoomF () {
     lobbyHost.innerHTML = username.value;
     lobbyHost.style.color = "yellow";
     playerContainer.appendChild(lobbyHost);
+    roomCode = Math.floor(Math.random()*999999999) + 100000000;
+    roomCodeText.innerHTML = roomCode;
   },750);
   
   setTimeout(function () {
