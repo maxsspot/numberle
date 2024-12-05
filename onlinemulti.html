@@ -30,7 +30,7 @@
 	<div id = "mainMenu">
 		<button class = "onlineMenu" onclick = "openJoin()">Join a room</button><br>
 		<button class = "onlineMenu" onclick = "openCreate()">Create a room</button><br>
-		<button class = "onlineMenu" id = "changeUsernameB" onclick = "openChange()">Change username</button>
+		<button class = "onlineMenu" id = "changeUsernameB" onclick = "openChange()"><i class="fa-solid fa-gear"></i> Settings</button>
 		<sub id = "youAgree">By playing, you agree to follow the <a href = "guidelines.html">community guidelines</a>.</sub>
 	</div>
 	<div id = "joinARoom">
@@ -49,6 +49,8 @@
 			<label for = "maxNumberOnline">Maximum Number: </label>
 			<input class = "codeInput" id = "maxNumberOnline" />
 			<br><br>
+			<input id = "filterLanguage" />
+			<label for = "filterLanguage">Hide explicit language</label>
 			<button class = "onlineMenu" id = "createRoom">Create Room</button>
 		</div>
 	</div>
