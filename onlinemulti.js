@@ -56,7 +56,7 @@ function openChange () {
 }
 
 function checkForDisallowed () {
-  var checkedValue = profanityCleaner.clean(username.value);
+  var checkedValue = profanityCleaner.clean(username.value.trim().replace(/\s+/g, ""));
   if (username.value.includes ("<") || username.value.includes (">") || checkedValue.includes("*")) {
     username.style.borderBottom = "red solid 1px";
     confirmSettings.disabled = true;
@@ -67,7 +67,7 @@ function checkForDisallowed () {
 }
 
 function confirmSettingsF () {
-  localStorage.setItem("savedUsername",username.value.trim().replace(/\s+/g, ""))
+  localStorage.setItem("savedUsername",username.value)
   if (censorExplicit.checked) {
     localStorage.setItem ("censorExplicit","true");
   } else {
