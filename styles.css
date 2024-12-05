@@ -25,8 +25,9 @@ html, body {user-select:none;}
 	width:300px;
 	height:auto;
 	border:white solid 1px;
-	border-radius:10px;
+	border-radius:5px;
 	padding:5px;
+	margin:auto;
 }
 
 .guideline {
@@ -81,7 +82,7 @@ a:hover {
 	text-decoration:underline;
 }
 
-#joinARoom, #createARoom, #changeUsername {
+#joinARoom, #createARoom, #changeUsername, #lobby {
 	display:none;
 }
 
