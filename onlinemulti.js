@@ -85,7 +85,7 @@ function createRoomF () {
   transitionCover.style.pointerEvents = "all"
 
   setTimeout (function () {
-    hideall();
+    hideAll();
     lobby.style.display = "block";
     var lobbyHost = document.createElement("p");
     lobbyHost.innerHTML = username.value;
