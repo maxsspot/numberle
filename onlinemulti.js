@@ -4,6 +4,7 @@ var createRoom = document.getElementById ("createARoom");
 var changeUsername = document.getElementById ("changeUsername");
 var username = document.getElementById ("username");
 var confirmSettings = document.getElementById ("confirmNameChange");
+var censorExplicit = document.getElementById ("filterLanguage");
 
 window.onload = function(){
   if (localStorage.getItem("savedUsername")) {
@@ -53,5 +54,10 @@ function checkForDisallowed () {
 
 function confirmSettingsF () {
   localStorage.setItem("savedUsername",username.value)
+  if (censorExplicit.checked) {
+    localStorage.setItem ("censorExplicit,"true");
+  } else {
+    localStorage.removeItem ("censorExplicit");
+  }
   returnHome();
 }
