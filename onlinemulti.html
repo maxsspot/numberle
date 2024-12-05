@@ -47,10 +47,7 @@
 			<!--<label for = "newRoomCode">Unique Room ID: </label>
 			<input placeholder = "Type room ID..." class = "codeInput" id = "newRoomCode" /><br>-->
 			<label for = "maxNumberOnline">Maximum Number: </label>
-			<input class = "codeInput" id = "maxNumberOnline" />
-			<br><br>
-			<input id = "filterLanguage" />
-			<label for = "filterLanguage">Hide explicit language</label>
+			<input class = "codeInput" id = "maxNumberOnline" /><br><br>
 			<button class = "onlineMenu" id = "createRoom">Create Room</button>
 		</div>
 	</div>
@@ -60,6 +57,8 @@
 		<label for = "newUsernames">New Username:</label> 
 		<input class = "codeInput" id = "username" oninput = "checkForDisallowed()" />
 		<br><br>
+		<input id = "filterLanguage" type = "checkbox" />
+		<label for = "filterLanguage">Hide explicit language</label>
 		<button class = "onlineMenu" id = "confirmNameChange">Change</button>
 	</div>
 	</body>
