@@ -5,7 +5,8 @@ var changeUsername = document.getElementById ("changeUsername");
 var username = document.getElementById ("username");
 var confirmSettings = document.getElementById ("confirmNameChange");
 var censorExplicit = document.getElementById ("filterLanguage");
-
+var transitionCover = document.getElementById ("transitionCover");
+  
 window.onload = function(){
   if (localStorage.getItem("savedUsername")) {
     username.value = localStorage.getItem("savedUsername")
@@ -60,4 +61,14 @@ function confirmSettingsF () {
     localStorage.removeItem ("censorExplicit");
   }
   returnHome();
+}
+
+function createRoom () {
+  transitionCover.style.opacity = "1";
+  transitionCover.style.pointerEventss = "all"
+
+  setTimeout(function () {
+    transitionCover.style.opacity = "0;
+    transitionCover.style.pointerEvents = "none"
+  },1500);
 }
