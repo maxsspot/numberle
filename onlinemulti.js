@@ -8,6 +8,8 @@ var censorExplicit = document.getElementById ("filterLanguage");
 var transitionCover = document.getElementById ("transitionCover");
   
 window.onload = function(){
+  username = document.getElementById ("username");
+  
   if (localStorage.getItem("savedUsername")) {
     username.value = localStorage.getItem("savedUsername")
   } else {
