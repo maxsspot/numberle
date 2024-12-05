@@ -65,7 +65,7 @@ function confirmSettingsF () {
 
 function createRoomF () {
   transitionCover.style.opacity = "1";
-  transitionCover.style.pointerEventss = "all"
+  transitionCover.style.pointerEvents = "all"
 
   setTimeout(function () {
     transitionCover.style.opacity = "0";
