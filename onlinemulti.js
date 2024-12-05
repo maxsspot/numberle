@@ -6,7 +6,8 @@ var username = document.getElementById ("username");
 var confirmSettings = document.getElementById ("confirmNameChange");
 var censorExplicit = document.getElementById ("filterLanguage");
 var transitionCover = document.getElementById ("transitionCover");
-  
+var lobby = document.getElementById ("lobby");
+
 window.onload = function(){
   menu = document.getElementById("mainMenu");
   joinRoom = document.getElementById ("joinARoom");
@@ -16,6 +17,7 @@ window.onload = function(){
   confirmSettings = document.getElementById ("confirmNameChange");
   censorExplicit = document.getElementById ("filterLanguage");
   transitionCover = document.getElementById ("transitionCover");
+  lobby = document.getElementById ("lobby");
   
   if (localStorage.getItem("savedUsername")) {
     username.value = localStorage.getItem("savedUsername")
@@ -33,6 +35,7 @@ function hideAll () {
   joinRoom.style.display = "none";
   createARoom.style.display = "none";
   changeUsername.style.display = "none";
+  lobby.style.display = "none";
 }
 
 function returnHome () {
@@ -80,6 +83,14 @@ function createRoomF () {
   transitionCover.style.opacity = "1";
   transitionCover.style.pointerEvents = "all"
 
+  setTimeout (function () {
+    hideall();
+    lobby.style.display = "block";
+    var lobbyHost = document.createElement("p");
+    lobbyHost.innerHTML = username.value;
+    lobbyHost.style.color = "yellow";
+  },750);
+  
   setTimeout(function () {
     transitionCover.style.opacity = "0";
     transitionCover.style.pointerEvents = "none"
