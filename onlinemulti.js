@@ -68,7 +68,7 @@ function createRoom () {
   transitionCover.style.pointerEventss = "all"
 
   setTimeout(function () {
-    transitionCover.style.opacity = "0;
+    transitionCover.style.opacity = "0";
     transitionCover.style.pointerEvents = "none"
   },1500);
 }
