@@ -8,7 +8,14 @@ var censorExplicit = document.getElementById ("filterLanguage");
 var transitionCover = document.getElementById ("transitionCover");
   
 window.onload = function(){
+  menu = document.getElementById("mainMenu");
+  joinRoom = document.getElementById ("joinARoom");
+  createRoom = document.getElementById ("createARoom");
+  changeUsername = document.getElementById ("changeUsername");
   username = document.getElementById ("username");
+  confirmSettings = document.getElementById ("confirmNameChange");
+  censorExplicit = document.getElementById ("filterLanguage");
+  transitionCover = document.getElementById ("transitionCover");
   
   if (localStorage.getItem("savedUsername")) {
     username.value = localStorage.getItem("savedUsername")
