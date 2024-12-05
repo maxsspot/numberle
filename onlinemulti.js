@@ -1,18 +1,11 @@
-var menu;
-var joinRoom;
-var createRoom;
-var changeUsername;
-var username;
-var confirmSettings;
+var menu = document.getElementById("mainMenu");
+var joinRoom = document.getElementById ("joinARoom");
+var createRoom = document.getElementById ("createARoom");
+var changeUsername = document.getElementById ("changeUsername");
+var username = document.getElementById ("username");
+var confirmSettings = document.getElementById ("confirmNameChange");
 
 document.onload = function(){
-  var menu = document.getElementById("mainMenu");
-  var joinRoom = document.getElementById ("joinARoom");
-  var createRoom = document.getElementById ("createARoom");
-  var changeUsername = document.getElementById ("changeUsername");
-  var username = document.getElementById ("username");
-  var confirmSettings = document.getElementById ("confirmNameChange");
-  
   if (!localStorage.getItem("savedUsername")) {
     username.value = "Player";
   } else {
