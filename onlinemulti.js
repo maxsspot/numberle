@@ -56,7 +56,7 @@ function openChange () {
 }
 
 function checkForDisallowed () {
-  var checkedValue = profanityCleaner.clean(username.value.trim().replace(/\s+/g, ""));
+  var checkedValue = profanityCleaner.clean(username.value.trim());
   if (username.value.includes ("<") || username.value.includes (">") || checkedValue.includes("*")) {
     username.style.borderBottom = "red solid 1px";
     confirmSettings.disabled = true;
