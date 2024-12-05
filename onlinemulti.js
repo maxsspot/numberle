@@ -7,6 +7,7 @@ var confirmSettings = document.getElementById ("confirmNameChange");
 var censorExplicit = document.getElementById ("filterLanguage");
 var transitionCover = document.getElementById ("transitionCover");
 var lobby = document.getElementById ("lobby");
+var playerContainer = document.getElementById ("playerContainer");
 
 window.onload = function(){
   menu = document.getElementById("mainMenu");
@@ -89,6 +90,7 @@ function createRoomF () {
     var lobbyHost = document.createElement("p");
     lobbyHost.innerHTML = username.value;
     lobbyHost.style.color = "yellow";
+    playerContainer.appendChild(lobbyHost);
   },750);
   
   setTimeout(function () {
