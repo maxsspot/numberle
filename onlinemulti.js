@@ -3,7 +3,7 @@ var joinRoom = document.getElementById ("joinARoom");
 var createRoom = document.getElementById ("createARoom");
 var changeUsername = document.getElementById ("changeUsername");
 var username = document.getElementById ("username");
-var changeUserButton = document.getElementById ("confirmNameChange");
+//var changeUserButton = document.getElementById ("confirmNameChange");
 
 function hideAll () {
   menu.style.display = "none";
@@ -35,11 +35,7 @@ function openChange () {
 function checkForDisallowed () {
   if (username.value.includes ("<") || username.value.includes (">")) {
     username.style.borderBottom = "red solid 1px";
-    changeUserButton.style.color = "grey";
-    changeUserButton.disabled = true;
   } else {
     username.style.borderBottom = "white solid 1px";
-    changeUserButton.style.color = "white";
-    changeUserButton.disabled = false;
   }
 }
