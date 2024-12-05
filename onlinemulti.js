@@ -22,6 +22,10 @@ window.onload = function(){
   } else {
     username.value = "Player";
   }
+
+  if (localStorage.getItem("censorExplicit")) {
+    censorExplicit.checked = true;
+  }
 };
 
 function hideAll () {
