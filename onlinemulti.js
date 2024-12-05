@@ -67,7 +67,7 @@ function checkForDisallowed () {
 }
 
 function confirmSettingsF () {
-  localStorage.setItem("savedUsername",username.value)
+  localStorage.setItem("savedUsername",username.value.trim().replace(/\s+/g, ""))
   if (censorExplicit.checked) {
     localStorage.setItem ("censorExplicit","true");
   } else {
