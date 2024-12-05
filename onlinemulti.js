@@ -51,6 +51,6 @@ function checkForDisallowed () {
   }
 }
 
-function confirmSettings () {
+function confirmSettingsF () {
   localStorage.setItem("savedUsername",username.value)
 }
