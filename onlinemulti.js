@@ -63,7 +63,7 @@ function confirmSettingsF () {
   returnHome();
 }
 
-function createRoom () {
+function createRoomF () {
   transitionCover.style.opacity = "1";
   transitionCover.style.pointerEventss = "all"
 
