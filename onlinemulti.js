@@ -5,7 +5,7 @@ var changeUsername = document.getElementById ("changeUsername");
 var username = document.getElementById ("username");
 var confirmSettings = document.getElementById ("confirmNameChange");
 
-document.onload = function(){
+window.onload = function(){
   if (localStorage.getItem("savedUsername")) {
     username.value = localStorage.getItem("savedUsername")
   } else {
@@ -53,4 +53,5 @@ function checkForDisallowed () {
 
 function confirmSettingsF () {
   localStorage.setItem("savedUsername",username.value)
+  returnHome();
 }
