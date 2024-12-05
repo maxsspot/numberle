@@ -28,6 +28,7 @@ html, body {user-select:none;}
 	border-radius:5px;
 	padding:5px;
 	margin:auto;
+	text-align:left;
 }
 
 .guideline {
