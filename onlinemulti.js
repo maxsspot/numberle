@@ -3,7 +3,15 @@ var joinRoom = document.getElementById ("joinARoom");
 var createRoom = document.getElementById ("createARoom");
 var changeUsername = document.getElementById ("changeUsername");
 var username = document.getElementById ("username");
-//var changeUserButton = document.getElementById ("confirmNameChange");
+var confirmSettings = document.getElementById ("confirmNameChange");
+
+document.onload = function(){
+  if (!localStorage.setItem("savedUsername")) {
+    username.value = "Player";
+  } else {
+    username.value = localStorage.getItem("savedUsername")
+  }
+};
 
 function hideAll () {
   menu.style.display = "none";
@@ -36,7 +44,13 @@ function checkForDisallowed () {
   var checkedValue = profanityCleaner.clean(username.value);
   if (username.value.includes ("<") || username.value.includes (">") || checkedValue.includes("*")) {
     username.style.borderBottom = "red solid 1px";
+    confirmSettings.disabled = true;
   } else {
     username.style.borderBottom = "white solid 1px";
+    confirmSettings.disabled = false;
   }
+}
+
+function confirmSettings () {
+  localStorage.setItem("savedUsername",username.value)
 }
