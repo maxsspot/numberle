@@ -20,13 +20,13 @@ html, body {user-select:none;}
 	border-radius:5px;
 	border:white solid 1px;
 	float:left;
-	left:5px;
+	margin-left:5px;
 	top:5px;
 	z-index:1;
 }
 
 #lobby {
-	border:red solid 1px;
+	/*border:red solid 1px;*/
 }
 
 #playerContainer {
