@@ -20,6 +20,7 @@ html, body {user-select:none;}
 	border-radius:5px;
 	border:white solid 1px;
 	position:fixed;
+	float:left;
 	left:10px;
 	top:10px;
 }
