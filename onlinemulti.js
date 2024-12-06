@@ -46,6 +46,12 @@ function hideAll () {
 function returnHome () {
   hideAll();
   menu.style.display = "block"
+
+  if (localStorage.getItem("savedUsername")) {
+    username.value = localStorage.getItem("savedUsername")
+  } else {
+    username.value = "Player";
+  }
 }
 
 function openJoin () {
