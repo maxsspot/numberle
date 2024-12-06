@@ -21,8 +21,8 @@ html, body {user-select:none;}
 	border:white solid 1px;
 	position:fixed;
 	float:left;
-	left:10px;
-	top:10px;
+	left:0px;
+	top:0px;
 }
 
 #playerContainer {
