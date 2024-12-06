@@ -12,6 +12,7 @@ var roomCode;
 var roomCodeText;
 
 window.onload = function(){
+  console.log("SCRIPT LOADED!");
   menu = document.getElementById("mainMenu");
   joinRoom = document.getElementById ("joinARoom");
   createRoom = document.getElementById ("createARoom");
