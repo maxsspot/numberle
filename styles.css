@@ -24,6 +24,10 @@ html, body {user-select:none;}
 	top:0px;
 }
 
+#lobby {
+	border:red solid 1px;
+}
+
 #playerContainer {
 	width:300px;
 	height:auto;
