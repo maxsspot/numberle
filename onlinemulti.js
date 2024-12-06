@@ -120,15 +120,5 @@ function createRoomF () {
     transitionCover.style.opacity = "0";
     transitionCover.style.pointerEvents = "none"
   },1500);
+ }
 }
-}
-
-window.hideAll = hideAll;
-window.returnHome = returnHome;
-window.openJoin = openJoin;
-window.openCreate = openCreate;
-window.openChange = openChange;
-window.returnHome = returnHome;
-window.checkForDisallowed = checkForDisallowed;
-window.confirmSettingsF = confirmSettingsF;
-window.createRoomF = createRoomF;
