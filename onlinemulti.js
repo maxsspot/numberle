@@ -33,6 +33,21 @@ window.onload = function(){
   if (localStorage.getItem("censorExplicit")) {
     censorExplicit.checked = true;
   }
+
+  // FIREBASE INITILIZATION //
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyBJccFM9q7mmNWaSnwbJTRhFxW468UHa2Y",
+    authDomain: "numerale-af566.firebaseapp.com",
+    databaseURL: "https://numerale-af566-default-rtdb.firebaseio.com",
+    projectId: "numerale-af566",
+    storageBucket: "numerale-af566.firebasestorage.app",
+    messagingSenderId: "892091001667",
+    appId: "1:892091001667:web:3f9868308db65f8ce75df6"
+  };
+
+  const app = initializeApp(firebaseConfig);
 };
 
 function hideAll () {
@@ -91,9 +106,22 @@ function confirmSettingsF () {
 }
 
 function createRoomF () {
+  roomCode = Math.floor(Math.random()*999999999) + 100000000;
+  
   transitionCover.style.opacity = "1";
   transitionCover.style.pointerEvents = "all"
 
+  // 
+  
+  const roomRef = ref(database, "lobbies/" + roomCode);
+
+  set(roomRef, {
+    host:username,
+    players:[username]
+  });
+
+  //
+  
   setTimeout (function () {
     hideAll();
     lobby.style.display = "block";
@@ -101,7 +129,6 @@ function createRoomF () {
     lobbyHost.innerHTML = username.value;
     lobbyHost.style.color = "yellow";
     playerContainer.appendChild(lobbyHost);
-    roomCode = Math.floor(Math.random()*999999999) + 100000000;
     roomCodeText.innerHTML = roomCode;
   },750);
   
