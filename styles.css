@@ -19,10 +19,8 @@ html, body {user-select:none;}
 	height:30px;
 	border-radius:5px;
 	border:white solid 1px;
-	position:fixed;
-	right:125%;
+	float:left;
 	z-index:1;
-	top:0px;
 }
 
 #lobby {
