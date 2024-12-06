@@ -122,3 +122,8 @@ function createRoomF () {
   },1500);
 }
 }
+
+window.openJoin = openJoin;
+window.openCreate = openCreate;
+window.openChange = openChange;
+window.returnHome = returnHome;
