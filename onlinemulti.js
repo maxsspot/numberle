@@ -123,4 +123,3 @@ function createRoomF () {
     transitionCover.style.pointerEvents = "none"
   },1500);
  }
-}
