@@ -62,6 +62,10 @@ html, body {user-select:none;}
 	margin:5px;
 }
 
+#username {
+	user-select:all;
+}
+
 .onlineMenu:hover {
 	text-decoration:underline;
 }
