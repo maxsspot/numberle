@@ -19,6 +19,9 @@ html, body {user-select:none;}
 	height:30px;
 	border-radius:5px;
 	border:white solid 1px;
+	position:fixed;
+	left:10px;
+	top:10px;
 }
 
 #playerContainer {
