@@ -34,6 +34,7 @@ window.onload = function(){
     censorExplicit.checked = true;
   }
 
+  /*
   // FIREBASE INITILIZATION //
   import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js";
 
@@ -49,7 +50,8 @@ window.onload = function(){
 
   const app = initializeApp(firebaseConfig);
 };
-
+*/
+  
 function hideAll () {
   menu.style.display = "none";
   joinRoom.style.display = "none";
