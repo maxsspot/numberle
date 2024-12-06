@@ -21,6 +21,7 @@ window.onload = function(){
   censorExplicit = document.getElementById ("filterLanguage");
   transitionCover = document.getElementById ("transitionCover");
   lobby = document.getElementById ("lobby");
+  playerContainer = document.getElementById ("playerContainer");
   roomCodeText = document.getElementById ("roomCode");
   
   if (localStorage.getItem("savedUsername")) {
