@@ -34,7 +34,8 @@ window.onload = function(){
   if (localStorage.getItem("censorExplicit")) {
     censorExplicit.checked = true;
   }
-  
+}
+
 function hideAll () {
   menu.style.display = "none";
   joinRoom.style.display = "none";
