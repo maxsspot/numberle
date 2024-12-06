@@ -20,8 +20,7 @@ html, body {user-select:none;}
 	border-radius:5px;
 	border:white solid 1px;
 	float:left;
-	margin-left:5px;
-	top:5px;
+	margin-left:15px;
 	z-index:1;
 }
 
