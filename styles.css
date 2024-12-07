@@ -45,6 +45,19 @@ html, body {user-select:none;}
 	background-color:transparent;
 }
 
+#yourMessage {
+	width:90%;
+	border:transparent solid 1px;
+}
+
+#yourMessage::placeholder {
+	color:white;
+}
+
+#yourMessage:focus {
+	border:trasnaprent solid 1px;
+}
+
 #lobby {
 	/*border:red solid 1px;*/
 }
