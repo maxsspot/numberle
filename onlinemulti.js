@@ -205,7 +205,7 @@ function joinRoomF() {
         updatedPlayers.forEach(player => {
           const playerElement = document.createElement("p");
           playerElement.innerHTML = player;
-          playerContainer.appendChild(playerElement);
+          //playerContainer.appendChild(playerElement);
         });
       });
     } else {
