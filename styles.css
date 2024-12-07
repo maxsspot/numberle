@@ -32,12 +32,12 @@ html, body {user-select:none;}
 }
 
 #messageBox {
-	width:250px;
+	width:100%;
 	padding:10px;
-	border-radius:5px;
 	border:transparent;
 	height:150px;
 	word-wrap:break-word;
+	color:white;
 	border-bottom:white solid 1px;
 	outline:none;
 	resize:none;
