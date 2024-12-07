@@ -8,9 +8,9 @@
         Access-Control-Allow-Origin = "https://numerale.netlify.app"
         X-Forwarded-Proto = "https"
         X-Permitted-Cross-Domain-Policies = "none"
-        Cross-Origin-Opener-Policy = "same-origin"
-        Cross-Origin-Resource-Policy = "same-origin"
-        Cross-Origin-Embedder-Policy = "require-corp"
+        #Cross-Origin-Opener-Policy = "same-origin"
+        #Cross-Origin-Resource-Policy = "same-origin"
+        #Cross-Origin-Embedder-Policy = "require-corp"
         
         Strict-Transport-Security = '''
             max-age=31557600;
