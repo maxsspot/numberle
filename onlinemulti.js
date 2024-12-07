@@ -46,9 +46,6 @@ window.onload = function(){
   }
 }
 
-const database = firebase.database();
-
-
 try {
   database.goOffline();
   console.log("Disconnected from Firebase Realtime Database.");
