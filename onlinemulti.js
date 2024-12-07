@@ -144,42 +144,6 @@ function createRoomF () {
  }
 
 function joinRoomF() {
-  const roomCodeInput = document.getElementById("joiningCode").value.trim();
-  const roomRef = ref(database, "lobbies/" + roomCodeInput);
-
-  get(roomRef).then((snapshot) => {
-    if (snapshot.exists()) {
-      const roomData = snapshot.val();
-      const currentPlayers = roomData.players || [];
-
-      if (!currentPlayers.includes(username.value)) {
-        const updatedPlayers = [...currentPlayers, username.value];
-        update(roomRef, { players: updatedPlayers });
-      }
-
-      hideAll();
-      lobby.style.display = "block";
-      playerContainer.innerHTML = "";
-      updatedPlayers.forEach((player) => {
-        const playerElement = document.createElement("p");
-        playerElement.innerHTML = player;
-        playerContainer.appendChild(playerElement);
-      });
-    } else {
-      Swal.fire("Room Not Found", "The room code you entered does not exist.", "error");
-    }
-  });
-
-  transitionCover.style.opacity = "1";
-  transitionCover.style.pointerEvents = "all";
-  setTimeout(function () {
-    transitionCover.style.opacity = "0";
-    transitionCover.style.pointerEvents = "none";
-  }, 1500);
-}
-
-/*
-function joinRoomF() {
   const roomCode = document.getElementById("joiningCode").value.trim();
   const roomRef = ref(database, "Lobbies/" + roomCode);
 
@@ -238,4 +202,3 @@ function joinRoomF() {
     }
   })
 }
-*/
