@@ -24,6 +24,13 @@ html, body {user-select:none;}
 	z-index:1;
 }
 
+#chatbox {
+	width:200px;
+	background-color:grey;
+	border-radius:5px;
+	float:left;
+}
+
 #lobby {
 	/*border:red solid 1px;*/
 }
