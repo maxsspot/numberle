@@ -46,7 +46,7 @@ html, body {user-select:none;}
 }
 
 #yourMessage {
-	width:90%;
+	width:200px;
 	border:transparent solid 1px;
 }
 
@@ -59,7 +59,7 @@ html, body {user-select:none;}
 }
 
 #sendMessage {
-	width:30px;
+	width:50px;
 	height:30px
 }
 
