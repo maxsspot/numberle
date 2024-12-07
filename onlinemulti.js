@@ -146,7 +146,7 @@ function createRoomF() {
       playerContainer.innerHTML = "";
       updatedPlayers.forEach((player) => {
         const playerElement = document.createElement("p");
-        playerElement.innerHTML = player;
+        playerElement.innerHTML = player + " (You)";
         if (player === updatedRoomData.host) {
           playerElement.style.color = "yellow";
         }
@@ -188,7 +188,7 @@ function joinRoomF() {
             playerContainer.innerHTML = "";
             updatedPlayers.forEach((player) => {
               const playerElement = document.createElement("p");
-              playerElement.innerHTML = player + " (You);
+              playerElement.innerHTML = player + " (You)";
               if (player === updatedRoomData.host) {
                 playerElement.style.color = "yellow";
               }
