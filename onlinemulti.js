@@ -99,11 +99,9 @@ function createRoomF () {
 
   // 
   
-  const roomRef = ref(database, "lobbies/" + roomCode);
-
-  set(roomRef, {
-    host:username,
-    players:[username]
+  set(ref(database, "lobbies/" + roomCode), {
+    host: usernameValue,
+    players: [usernameValue],
   });
 
   //
