@@ -105,11 +105,12 @@ function createRoomF () {
   // 
   
   const roomRef = ref(database, "lobbies/" + roomCode);
-
   set(roomRef, {
     host: username,
     players: [username]
   })
+  .then(() => console.log("Data written successfully"))
+  .catch((error) => console.error("Error writing data:", error));
 
   //
   
