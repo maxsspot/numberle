@@ -166,7 +166,8 @@ function joinRoomF() {
           roomCodeText.innerHTML = roomCode;
           const host = roomData.host || "Unknown";
           const hostElement = document.createElement("p");
-          hostElement.innerHTML = "Host: " + host;
+          hostElement.innerHTML = host;
+          hostElement.style.color="yellow";
           playerContainer.appendChild(hostElement);
 
           players.forEach(player => {
