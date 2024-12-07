@@ -12,8 +12,6 @@ var roomCode;
 var roomCodeText;
 
 window.onload = function(){
-  console.log(getDatabase);
-  console.log(ref);
   menu = document.getElementById("mainMenu");
   joinRoom = document.getElementById ("joinARoom");
   createRoom = document.getElementById ("createARoom");
