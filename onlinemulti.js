@@ -18,7 +18,7 @@ document.getElementById("openCreateRoom").addEventListener("click", openCreate);
 document.getElementById("createRoom").addEventListener("click", createRoomF);
 
 import { database } from "./firebaseConfig.js";
-import { getDatabase, ref, set, get, onValue } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-database.js";
+import { getDatabase, ref, set, get, onValue, update} from "https://www.gstatic.com/firebasejs/11.0.2/firebase-database.js";
 
 window.onload = function(){
   menu = document.getElementById("mainMenu");
