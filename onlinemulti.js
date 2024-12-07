@@ -46,6 +46,18 @@ window.onload = function(){
   }
 }
 
+const database = firebase.database();
+
+
+try {
+  database.goOffline();
+  console.log("Disconnected from Firebase Realtime Database.");
+} catch (error) {
+  console.error("Error disconnecting:", error);
+}
+
+
+
 window.addEventListener("unload", () => {
     firebase.database().goOffline();
 });
