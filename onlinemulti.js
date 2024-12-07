@@ -20,7 +20,7 @@ document.getElementById("changeUsernameB").addEventListener("click", openChange)
 document.getElementById("confirmNameChange").addEventListener("click", confirmSettingsF);
 
 import { database } from "./firebaseConfig.js";
-import { firebase, getDatabase, ref, set, get, onValue, update } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-database.js";
+import { getDatabase, ref, set, get, onValue, update } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-database.js";
 
 window.onload = function(){
   menu = document.getElementById("mainMenu");
@@ -45,6 +45,10 @@ window.onload = function(){
     censorExplicit.checked = true;
   }
 }
+
+window.addEventListener("unload", () => {
+    firebase.database().goOffline();
+});
 
 function hideAll () {
   menu.style.display = "none";
