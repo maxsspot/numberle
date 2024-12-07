@@ -58,6 +58,11 @@ html, body {user-select:none;}
 	border:trasnaprent solid 1px;
 }
 
+#sendMessage {
+	width:30px;
+	height:30px
+}
+
 #lobby {
 	/*border:red solid 1px;*/
 }
