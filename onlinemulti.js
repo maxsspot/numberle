@@ -142,10 +142,9 @@ function createRoomF () {
  }
 
 function joinRoomF() {
-  const roomCode = document.getElementById("joiningCode").value.trim(); // Get the entered room code
-  const roomRef = ref(database, "lobbies/" + roomCode); // Reference to the room in the database
+  const roomCode = document.getElementById("joiningCode").value.trim();
+  const roomRef = ref(database, "Lobbies/" + roomCode);
 
-  // Fetch the room data
   get(roomRef).then((snapshot) => {
     if (snapshot.exists()) {
       const roomData = snapshot.val(); 
