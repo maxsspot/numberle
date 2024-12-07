@@ -11,6 +11,7 @@ var playerContainer = document.getElementById ("playerContainer");
 var roomCode;
 var roomCodeText;
 
+document.getElementById("openJoinRoom").addEventListener("click", openJoin);
 document.getElementById("openCreateRoom").addEventListener("click", openCreate);
 document.getElementById("createRoom").addEventListener("click", createRoomF);
 
