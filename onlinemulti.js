@@ -112,8 +112,10 @@ function createRoomF () {
   .then(() => console.log("Data written successfully"))
   .catch((error) => console.error("Error writing data:", error));
   */
-  const testRef = ref(database, 'testNode');
-  set(testRef, { message: 'Hello, Firebase!' })
+  const testRef = ref(database, 'Lobbies/' + roomCode);
+  set(testRef, { 
+    host:username.value
+  })
   .then(() => console.log("Test data written successfully"))
   .catch(error => console.error("Error writing test data:", error));
   //
