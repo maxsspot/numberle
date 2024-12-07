@@ -11,6 +11,8 @@ var playerContainer = document.getElementById ("playerContainer");
 var roomCode;
 var roomCodeText;
 
+document.getElementById("openCreateRoom").addEventListener("click", openCreate);
+
 import { database } from "./firebaseConfig.js";
 import { ref, set } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-database.js";
 
