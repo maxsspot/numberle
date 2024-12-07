@@ -13,6 +13,7 @@ var roomCodeText;
 var maxNumber;
 
 document.getElementById("openJoinRoom").addEventListener("click", openJoin);
+document.getElementById("joinRoom").addEventListener("click", joinRoomF);
 document.getElementById("openCreateRoom").addEventListener("click", openCreate);
 document.getElementById("createRoom").addEventListener("click", createRoomF);
 
@@ -115,8 +116,8 @@ function createRoomF () {
   .then(() => console.log("Data written successfully"))
   .catch((error) => console.error("Error writing data:", error));
   */
-  const testRef = ref(database, 'Lobbies/' + roomCode);
-  set(testRef, { 
+  const roomRef = ref(database, 'Lobbies/' + roomCode);
+  set(roomRef, { 
     host:username.value,
     maxNumber:maxNumber.value
   })
@@ -139,3 +140,62 @@ function createRoomF () {
     transitionCover.style.pointerEvents = "none"
   },1500);
  }
+
+function joinRoomF() {
+  const roomCode = document.getElementById("joiningCode").value.trim(); // Get the entered room code
+  const roomRef = ref(database, "lobbies/" + roomCode); // Reference to the room in the database
+
+  // Fetch the room data
+  get(roomRef).then((snapshot) => {
+    if (snapshot.exists()) {
+      const roomData = snapshot.val(); 
+      
+      const players = roomData.players || [];
+      players.push(username.value); 
+
+      update(roomRef, {
+        players: players
+      }).then(() => {
+        setTimeout(function () {
+          hideAll();
+          lobby.style.display = "block";
+
+          var player = document.createElement("p");
+          player.innerHTML = username.value;
+          playerContainer.appendChild(player);
+
+          roomCodeText.innerHTML = roomCode;
+          const host = roomData.host || "Unknown";
+          const hostElement = document.createElement("p");
+          hostElement.innerHTML = "Host: " + host;
+          playerContainer.appendChild(hostElement);
+
+          players.forEach(player => {
+            const playerElement = document.createElement("p");
+            playerElement.innerHTML = player;
+            playerContainer.appendChild(playerElement);
+          });
+        }, 750);
+        
+        setTimeout(function () {
+          transitionCover.style.opacity = "0";
+          transitionCover.style.pointerEvents = "none";
+        }, 1500);
+      })
+      
+      onValue(roomRef, (snapshot) => {
+        const updatedRoomData = snapshot.val();
+        const updatedPlayers = updatedRoomData.players || [];
+
+        playerContainer.innerHTML = "";
+        updatedPlayers.forEach(player => {
+          const playerElement = document.createElement("p");
+          playerElement.innerHTML = player;
+          playerContainer.appendChild(playerElement);
+        });
+      });
+    } else {
+      alert("Room not found.");
+    }
+  })
+}
