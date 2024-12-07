@@ -115,7 +115,7 @@ function confirmSettingsF () {
 }
 
 function createRoomF() {
-  roomCode = Math.floor(Math.random() * 999999999) + 100000000;
+  roomCode = Math.floor(Math.random() * 999999) + 100000;
   maxNumber = document.getElementById("maxNumberOnline").value;
 
   transitionCover.style.opacity = "1";
