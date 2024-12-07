@@ -11,6 +11,9 @@ var playerContainer = document.getElementById ("playerContainer");
 var roomCode;
 var roomCodeText;
 
+import { database } from "./firebaseConfig.js";
+import { ref, set } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-database.js";
+
 window.onload = function(){
   menu = document.getElementById("mainMenu");
   joinRoom = document.getElementById ("joinARoom");
