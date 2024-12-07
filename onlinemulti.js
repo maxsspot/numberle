@@ -161,16 +161,17 @@ function joinRoomF() {
           hideAll();
           lobby.style.display = "block";
 
-          var player = document.createElement("p");
-          player.innerHTML = username.value;
-          playerContainer.appendChild(player);
-
-          roomCodeText.innerHTML = roomCode;
           const host = roomData.host || "Unknown";
           const hostElement = document.createElement("p");
           hostElement.innerHTML = host;
           hostElement.style.color="yellow";
           playerContainer.appendChild(hostElement);
+          
+          var player = document.createElement("p");
+          player.innerHTML = username.value;
+          playerContainer.appendChild(player);
+
+          roomCodeText.innerHTML = roomCode;
 
           players.forEach(player => {
             const playerElement = document.createElement("p");
