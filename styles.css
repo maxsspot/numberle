@@ -47,6 +47,8 @@ html, body {user-select:none;}
 
 #yourMessage {
 	width:175px;
+	text-align:left;
+	text-indent:5px;
 	border:transparent solid 1px;
 }
 
