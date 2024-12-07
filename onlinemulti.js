@@ -10,6 +10,7 @@ var lobby = document.getElementById ("lobby");
 var playerContainer = document.getElementById ("playerContainer");
 var roomCode;
 var roomCodeText;
+var maxNumber;
 
 document.getElementById("openJoinRoom").addEventListener("click", openJoin);
 document.getElementById("openCreateRoom").addEventListener("click", openCreate);
@@ -99,6 +100,7 @@ function confirmSettingsF () {
 
 function createRoomF () {
   roomCode = Math.floor(Math.random()*999999999) + 100000000;
+  maxNumber = document.getElementById ("maxNumberOnline")
   
   transitionCover.style.opacity = "1";
   transitionCover.style.pointerEvents = "all"
@@ -115,7 +117,8 @@ function createRoomF () {
   */
   const testRef = ref(database, 'Lobbies/' + roomCode);
   set(testRef, { 
-    host:username.value
+    host:username.value,
+    maxNumber:maxNumber.value
   })
   .then(() => console.log("Test data written successfully"))
   .catch(error => console.error("Error writing test data:", error));
