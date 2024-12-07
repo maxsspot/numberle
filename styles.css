@@ -32,6 +32,7 @@ html, body {user-select:none;}
 }
 
 #messageBox {
+	box-sizing:border-box;
 	width:100%;
 	padding:10px;
 	border:transparent;
