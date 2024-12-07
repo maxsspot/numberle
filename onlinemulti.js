@@ -146,7 +146,6 @@ function createRoomF () {
       const updatedRoomData = snapshot.val();
       const updatedPlayers = updatedRoomData.players || [];
 
-      playerContainer.innerHTML = "";
       updatedPlayers.forEach(player => {
         const playerElement = document.createElement("p");
         playerElement.innerHTML = player;
