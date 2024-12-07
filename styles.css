@@ -39,6 +39,9 @@ html, body {user-select:none;}
 	height:150px;
 	word-wrap:break-word;
 	border-bottom:white solid 1px;
+	outline:none;
+	resize:none;
+	background-color:transparent;
 }
 
 #lobby {
