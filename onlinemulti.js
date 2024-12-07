@@ -141,6 +141,18 @@ function createRoomF () {
     transitionCover.style.opacity = "0";
     transitionCover.style.pointerEvents = "none"
   },1500);
+
+  onValue(roomRef, (snapshot) => {
+      const updatedRoomData = snapshot.val();
+      const updatedPlayers = updatedRoomData.players || [];
+
+      playerContainer.innerHTML = "";
+      updatedPlayers.forEach(player => {
+        const playerElement = document.createElement("p");
+        playerElement.innerHTML = player;
+        playerContainer.appendChild(playerElement);
+      });
+    });
  }
 
 function joinRoomF() {
@@ -173,11 +185,11 @@ function joinRoomF() {
 
           roomCodeText.innerHTML = roomCode;
 
-          players.forEach(player => {
+          /*players.forEach(player => {
             const playerElement = document.createElement("p");
             playerElement.innerHTML = player;
             playerContainer.appendChild(playerElement);
-          });
+          });*/
         }, 750);
         
         setTimeout(function () {
