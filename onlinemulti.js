@@ -12,6 +12,7 @@ var roomCode;
 var roomCodeText;
 
 document.getElementById("openCreateRoom").addEventListener("click", openCreate);
+document.getElementById("createRoom").addEventListener("click", createRoomF);
 
 import { database } from "./firebaseConfig.js";
 import { ref, set } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-database.js";
