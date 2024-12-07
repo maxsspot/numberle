@@ -25,10 +25,20 @@ html, body {user-select:none;}
 }
 
 #chatbox {
-	width:200px;
+	width:250px;
 	background-color:grey;
 	border-radius:5px;
 	float:left;
+}
+
+#mesageBox {
+	width:250px;
+	padding:10px;
+	border-radius:5px;
+	border:transparent;
+	height:150px;
+	word-wrap:break-word;
+	border-bottom:white solid 1px;
 }
 
 #lobby {
@@ -41,6 +51,7 @@ html, body {user-select:none;}
 	border:white solid 1px;
 	border-radius:5px;
 	padding:10px;
+	word-wrap:break-word;
 	margin:auto;
 	text-align:left;
 }
