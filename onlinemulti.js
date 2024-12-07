@@ -21,6 +21,8 @@ import { database } from "./firebaseConfig.js";
 import { ref, set } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-database.js";
 
 window.onload = function(){
+  firebase.database().goOffline();
+
   menu = document.getElementById("mainMenu");
   joinRoom = document.getElementById ("joinARoom");
   createRoom = document.getElementById ("createARoom");
