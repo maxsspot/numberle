@@ -13,15 +13,6 @@ var roomCodeText;
 var maxNumber;
 var chatbox = document.getElementById ("chatbox");
 
-document.getElementById("openJoinRoom").addEventListener("click", openJoin);
-document.getElementById("joinRoom").addEventListener("click", joinRoomF);
-document.getElementById("openCreateRoom").addEventListener("click", openCreate);
-document.getElementById("createRoom").addEventListener("click", createRoomF);
-document.getElementById("changeUsernameB").addEventListener("click", openChange);
-document.getElementById("confirmNameChange").addEventListener("click", confirmSettingsF);
-document.getElementById("openChatbox").addEventListener("click", openChatboxF);
-document.getElementById("username").addEventListener("oninput", checkForDisallowed);
-
 import { database } from "./firebaseConfig.js";
 import { getDatabase, ref, set, get, onValue, update } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-database.js";
 
@@ -211,3 +202,12 @@ function openChatboxF () {
   chatbox.style.opacity = "1"
   chatbox.style.pointerEvents = "all"
 }
+
+document.getElementById("openJoinRoom").addEventListener("click", openJoin);
+document.getElementById("joinRoom").addEventListener("click", joinRoomF);
+document.getElementById("openCreateRoom").addEventListener("click", openCreate);
+document.getElementById("createRoom").addEventListener("click", createRoomF);
+document.getElementById("changeUsernameB").addEventListener("click", openChange);
+document.getElementById("confirmNameChange").addEventListener("click", confirmSettingsF);
+document.getElementById("openChatbox").addEventListener("click", openChatboxF);
+document.getElementById("username").addEventListener("oninput", checkForDisallowed);
