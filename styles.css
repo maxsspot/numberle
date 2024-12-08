@@ -28,7 +28,8 @@ html, body {user-select:none;}
 	width:250px;
 	background-color:grey;
 	border-radius:5px;
-	float:left;
+	position:fixed;
+	laft:35px;
 }
 
 #messageBox {
