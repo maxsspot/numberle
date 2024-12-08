@@ -31,11 +31,6 @@
 	</div>
 	<br>
 	<div id = "mainMenu">
-		<div id = "chatbox">
-			<textarea id = "messageBox" readonly></textarea><br>
-			<input id = "yourMessage" placeholder = "Type your message here..." />
-			<button id = "sendMessage"><i class="fa-solid fa-paper-plane fa-lg"></i></button>
-		</div>
 		<h1>Numerale</h1>
 		<button class = "onlineMenu" id = "openJoinRoom" onclick = "openJoin()">Join a room</button><br>
 		<button class = "onlineMenu" id = "openCreateRoom" onclick = "openCreate()">Create a room</button><br>
@@ -73,6 +68,11 @@
 	</div>
 	<div id = "lobby">
 		<button id = "openChatbox"><i class="fa-solid fa-message fa-lg"></i></button>
+		<div id = "chatbox">
+			<textarea id = "messageBox" readonly></textarea><br>
+			<input id = "yourMessage" placeholder = "Type your message here..." />
+			<button id = "sendMessage"><i class="fa-solid fa-paper-plane fa-lg"></i></button>
+		</div>
 		<br><br>
 		<h2>ID: <span id = "roomCode"></span></h2>
 		<br>
