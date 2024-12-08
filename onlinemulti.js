@@ -16,7 +16,7 @@ var chatbox = document.getElementById ("chatbox");
 import { database } from "./firebaseConfig.js";
 import { getDatabase, ref, set, get, onValue, update } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-database.js";
 
-const addedTo = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
+const addedTo = ["A","B","C","D","E","F","G","H","J","K","L","M","N","O","P","Q","R",,"T","U","V","W","X","Y","Z"]
 
 document.getElementById("openJoinRoom").addEventListener("click", openJoin);
 document.getElementById("joinRoom").addEventListener("click", joinRoomF);
@@ -44,7 +44,7 @@ window.onload = function(){
   if (localStorage.getItem("savedUsername")) {
     username.value = localStorage.getItem("savedUsername")
   } else {
-    username.value = `Player${addedTo[Math.floor(Math.random()*25) + 1]}${addedTo[Math.floor(Math.random()*25) + 1]}`;
+    username.value = `Player${addedTo[Math.floor(Math.random()*23) + 1]}${addedTo[Math.floor(Math.random()*23) + 1]}`;
   }
 
   if (localStorage.getItem("censorExplicit")) {
