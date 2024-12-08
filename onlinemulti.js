@@ -201,7 +201,7 @@ function joinRoomF() {
         });
       }
     } else {
-      Swal.fire("Room Not Found", "error");
+      Swal.fire("Room Not Found");
     }
   }).catch((error) => console.error("Error joining room:", error));
 }
