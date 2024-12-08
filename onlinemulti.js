@@ -25,6 +25,7 @@ document.getElementById("createRoom").addEventListener("click", createRoomF);
 document.getElementById("changeUsernameB").addEventListener("click", openChange);
 document.getElementById("confirmNameChange").addEventListener("click", confirmSettingsF);
 document.getElementById("openChatbox").addEventListener("click", openChatboxF);
+document.getElementById("sendMessage").addEventListener("click", sendMessageF);
 document.getElementById("username").addEventListener("input", checkForDisallowed);
 
 window.onload = function(){
@@ -53,7 +54,7 @@ window.onload = function(){
 }
 
 try {
-  goOffline(database);
+  firebase.database().goOffline();
   console.log("Disconnected from Firebase Realtime Database.");
 } catch (error) {
   console.log("Error disconnecting:", error);
@@ -212,4 +213,8 @@ function joinRoomF() {
 function openChatboxF () {
   chatbox.style.opacity = "1"
   chatbox.style.pointerEvents = "all"
+}
+
+function sendMessageF() {
+
 }
