@@ -210,4 +210,4 @@ document.getElementById("createRoom").addEventListener("click", createRoomF);
 document.getElementById("changeUsernameB").addEventListener("click", openChange);
 document.getElementById("confirmNameChange").addEventListener("click", confirmSettingsF);
 document.getElementById("openChatbox").addEventListener("click", openChatboxF);
-document.getElementById("username").addEventListener("oninput", checkForDisallowed);
+document.getElementById("username").addEventListener("input", checkForDisallowed);
