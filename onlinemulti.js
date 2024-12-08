@@ -200,6 +200,11 @@ function joinRoomF() {
           });
         });
       }
+    } else if (currentPlayers.includes(username.value)) {
+      var username = prompt("Someone else in the room shares the same username. Please type a new name into the box below. This will be your name until you leave the room.");
+      if (username != null) {
+          joinRoomF();
+      }
     } else {
       Swal.fire("Room Not Found");
     }
