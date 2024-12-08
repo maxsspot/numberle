@@ -50,7 +50,7 @@ window.onload = function(){
 }
 
 try {
-  database.goOffline();
+  goOffline(database);
   console.log("Disconnected from Firebase Realtime Database.");
 } catch (error) {
   console.log("Error disconnecting:", error);
