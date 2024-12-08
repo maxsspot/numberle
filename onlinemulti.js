@@ -169,37 +169,37 @@ function joinRoomF() {
       const roomData = snapshot.val();
       const currentPlayers = roomData.players || [];
 
-      if (!currentPlayers.includes(username.value)) {
-        currentPlayers.push(username.value);
+      //if (!currentPlayers.includes(username.value)) {
+      currentPlayers.push(username.value);
 
-        update(roomRef, { players: currentPlayers }).then(() => {
-          setTimeout(function () {
-            hideAll();
-            lobby.style.display = "block";
-            roomCodeText.innerHTML = roomCodeInput;
-          }, 750);
+      update(roomRef, { players: currentPlayers }).then(() => {
+        setTimeout(function () {
+          hideAll();
+          lobby.style.display = "block";
+          roomCodeText.innerHTML = roomCodeInput;
+        }, 750);
 
-          setTimeout(function () {
-            transitionCover.style.opacity = "0";
-            transitionCover.style.pointerEvents = "none";
-          }, 1500);
+        setTimeout(function () {
+          transitionCover.style.opacity = "0";
+          transitionCover.style.pointerEvents = "none";
+        }, 1500);
 
-          onValue(roomRef, (snapshot) => {
-            const updatedRoomData = snapshot.val();
-            const updatedPlayers = updatedRoomData.players || [];
+        onValue(roomRef, (snapshot) => {
+          const updatedRoomData = snapshot.val();
+          const updatedPlayers = updatedRoomData.players || [];
 
-            playerContainer.innerHTML = "";
-            updatedPlayers.forEach((player) => {
-              const playerElement = document.createElement("p");
-              playerElement.innerHTML = player;
-              if (player === updatedRoomData.host) {
-                playerElement.style.color = "yellow";
-              }
-              playerContainer.appendChild(playerElement);
-            });
+          playerContainer.innerHTML = "";
+          updatedPlayers.forEach((player) => {
+            const playerElement = document.createElement("p");
+            playerElement.innerHTML = player;
+            if (player === updatedRoomData.host) {
+              playerElement.style.color = "yellow";
+            }
+            playerContainer.appendChild(playerElement);
           });
         });
-      }
+      });
+      //}
     } else {
       Swal.fire("Room Not Found");
     }
