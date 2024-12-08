@@ -80,7 +80,7 @@ function returnHome () {
   if (localStorage.getItem("savedUsername")) {
     username.value = localStorage.getItem("savedUsername")
   } else {
-    username.value = "Player";
+    username.value = `Player${addedTo[Math.floor(Math.random()*25) + 1]}${addedTo[Math.floor(Math.random()*25) + 1]}`;
   }
 }
 
