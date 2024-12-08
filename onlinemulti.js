@@ -11,6 +11,7 @@ var playerContainer = document.getElementById ("playerContainer");
 var roomCode;
 var roomCodeText;
 var maxNumber;
+var chatbox = document.getElementById ("chatbox");
 
 document.getElementById("openJoinRoom").addEventListener("click", openJoin);
 document.getElementById("joinRoom").addEventListener("click", joinRoomF);
@@ -18,6 +19,7 @@ document.getElementById("openCreateRoom").addEventListener("click", openCreate);
 document.getElementById("createRoom").addEventListener("click", createRoomF);
 document.getElementById("changeUsernameB").addEventListener("click", openChange);
 document.getElementById("confirmNameChange").addEventListener("click", confirmSettingsF);
+document.getElementById("openChatbox").addEventListener("click", openChatboxF);
 
 import { database } from "./firebaseConfig.js";
 import { getDatabase, ref, set, get, onValue, update } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-database.js";
@@ -34,6 +36,7 @@ window.onload = function(){
   lobby = document.getElementById ("lobby");
   playerContainer = document.getElementById ("playerContainer");
   roomCodeText = document.getElementById ("roomCode");
+  chatbox = document.getElementById ("chatbox");
   
   if (localStorage.getItem("savedUsername")) {
     username.value = localStorage.getItem("savedUsername")
@@ -201,4 +204,9 @@ function joinRoomF() {
       Swal.fire("Room Not Found", "The room code you entered does not exist.", "error");
     }
   }).catch((error) => console.error("Error joining room:", error));
+}
+
+function openChatboxF () {
+  chatbox.style.opacity = "1"
+  chatbox.style.pointerEvents = "all"
 }
