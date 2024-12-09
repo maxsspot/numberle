@@ -12,7 +12,7 @@ var playerContainer = document.getElementById ("playerContainer");
 var roomCode;
 var roomCodeText;
 var maxNumber;
-var chatbox = document.getElementById ("chatbox");
+var chatbox = document.getElementById ("messageBox");
 
 import { database } from "./firebaseConfig.js";
 import { getDatabase, ref, set, get, onValue, update, push } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-database.js";
