@@ -316,6 +316,7 @@ window.onbeforeunload = function removePlayer() {
 
         if (roomData.host === username.value) {
             update(roomRef, { roomActive: false })
+            monitorRoomStatus()
         }
         
         update(roomRef, { players: updatedPlayers }).catch((error) => {
