@@ -230,7 +230,7 @@ function openChatboxF () {
 function sendMessageF() {
   var messageContent = document.getElementById ("yourMessage");
   const roomCodeInput = document.getElementById("joiningCode").value.trim();
-  const roomRef = ref(database, "Lobbies/" + roomCodeInput + "/messages");
+  const roomRef = ref(database, "Lobbies/" + (roomCodeInput || roomCode) + "/messages");
   const newMessageRef = push(roomRef);
 
   set(newMessageRef, {
@@ -250,7 +250,7 @@ onValue(messagesRef, (snapshot) => {
 
   for (const key in messages) {
     const message = messages[key];
-    chatbox += `${message.sender}:${message.content}\n`;
+    chatbox += `${message.sender}: ${message.content}\n`;
   }
 
   chatbox.scrollTop = chatbox.scrollHeight;
