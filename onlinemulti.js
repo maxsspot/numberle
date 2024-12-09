@@ -12,7 +12,6 @@ var playerContainer = document.getElementById ("playerContainer");
 var roomCode;
 var roomCodeText;
 var maxNumber;
-var playerElement;
 var chatbox = document.getElementById ("messageBox");
 var inGame = false;
 var shouldOpenChat = true;
@@ -286,5 +285,7 @@ document.addEventListener("keydown", function(event) {
 });  
 
 function reloadedPage() {
-  playerContainer.removeChild(username.value);
+  var playerElement = username.value;
+
+  playerContainer.removeChild(playerElement);
 }
