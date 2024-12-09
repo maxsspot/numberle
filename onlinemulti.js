@@ -79,6 +79,7 @@ function monitorRoomStatus() {
       const roomData = snapshot.val();
 
       if (!roomData.roomActive) {
+        remove(roomRef);
         returnHome();
         Swal.fire("Room Closed","The host was disconnected.")
       }
@@ -315,7 +316,6 @@ window.onbeforeunload = function removePlayer() {
 
         if (roomData.host === username.value) {
             update(roomRef, { roomActive: false })
-            remove(roomRef);
         }
         
         update(roomRef, { players: updatedPlayers }).catch((error) => {
