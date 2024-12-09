@@ -13,6 +13,7 @@ var roomCode;
 var roomCodeText;
 var maxNumber;
 var chatbox = document.getElementById ("messageBox");
+var inGame = false;
 
 import { database } from "./firebaseConfig.js";
 import { getDatabase, ref, set, get, onValue, update, push } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-database.js";
@@ -230,18 +231,21 @@ function openChatboxF () {
 // Sends a message
 function sendMessageF() {
   var messageContent = document.getElementById ("yourMessage");
-  const roomCodeInput = document.getElementById("joiningCode").value.trim();
-  const roomRef = ref(database, "Lobbies/" + (roomCodeInput || roomCode) + "/messages");
-  const newMessageRef = push(roomRef);
-
-  set(newMessageRef, {
-    sender:username.value,
-    content:messageContent.value.trim(),
-  }).then(() => {
-    messageContent.value="";
-  });
+  if (messageContent.value.trim != "") {
+    const roomCodeInput = document.getElementById("joiningCode").value.trim();
+    const roomRef = ref(database, "Lobbies/" + (roomCodeInput || roomCode) + "/messages");
+    const newMessageRef = push(roomRef);
+  
+    set(newMessageRef, {
+      sender:username.value,
+      content:messageContent.value.trim(),
+    }).then(() => {
+      messageContent.value="";
+    });
+  }
 }
 
+// Starts listening for new messages
 function initListening() {
   var roomCodeInput = document.getElementById("joiningCode").value.trim();
   const messagesRef = ref(database, "Lobbies/" + roomCodeText.innerHTML + "/messages");
@@ -259,3 +263,9 @@ function initListening() {
     chatbox.scrollTop = chatbox.scrollHeight;
   });
 }
+
+document.addEventListener("keydown", function(event) {
+    if (event.key === 'Enter' && !inGame) {
+      sendMessageF();
+    }
+});  
