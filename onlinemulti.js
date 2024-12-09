@@ -17,7 +17,7 @@ var inGame = false;
 var shouldOpenChat = true;
 
 import { database } from "./firebaseConfig.js";
-import { getDatabase, ref, set, get, onValue, update, push } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-database.js";
+import { getDatabase, ref, set, remove, get, onValue, update, push } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-database.js";
 
 const addedTo = ["A","B","C","D","E","F","G","H","J","K","L","M","N","O","P","Q","R","T","U","V","W","X","Y","Z"]
 
@@ -294,9 +294,7 @@ window.onbeforeunload = function removePlayer() {
         const updatedPlayers = players.filter(player => player !== username.value);
 
         if (roomData.host === username.value) {
-            returnHome();
             remove(roomRef);
-            Swal.Fire("Room Closed","The room host was disconnected");
         }
         
         update(roomRef, { players: updatedPlayers }).catch((error) => {
