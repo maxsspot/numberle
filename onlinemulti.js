@@ -242,8 +242,8 @@ function sendMessageF() {
 }
 
 // Recieves messages
-const roomCodeInput = document.getElementById("joiningCode").value.trim();
-const messagesRef = ref(database, "Lobbies/" + (roomCodeInput || roomCode) + "/messages");
+var roomCodeInput = document.getElementById("joiningCode").value.trim();
+const messagesRef = ref(database, "Lobbies/" + roomCodeText.innerHTML + "/messages");
 
 onValue(messagesRef, (snapshot) => {
   const messages = snapshot.val();
