@@ -12,7 +12,7 @@ var playerContainer = document.getElementById ("playerContainer");
 var roomCode;
 var roomCodeText;
 var maxNumber;
-var chatbox = document.getElementById ("messageBox").value;
+var chatbox = document.getElementById ("messageBox");
 
 import { database } from "./firebaseConfig.js";
 import { getDatabase, ref, set, get, onValue, update, push } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-database.js";
@@ -43,7 +43,7 @@ window.onload = function(){
   lobby = document.getElementById ("lobby");
   playerContainer = document.getElementById ("playerContainer");
   roomCodeText = document.getElementById ("roomCode");
-  chatbox = document.getElementById ("messageBox").value;
+  chatbox = document.getElementById ("messageBox");
   
   if (localStorage.getItem("savedUsername")) {
     username.value = localStorage.getItem("savedUsername")
