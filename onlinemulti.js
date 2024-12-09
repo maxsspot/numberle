@@ -285,18 +285,22 @@ document.addEventListener("keydown", function(event) {
 });  
 
 function reloadedPage() {
-  const roomRef = ref(database + "Lobbies/" + roomCodeText.innerHTML);
-
-  get(roomRef).then((snapshot) => {
-    if (snpahost.exists()) {
-      const roomData = snapshot.val();
-      const players = roomData.players || [];
-
-      const updatedPlayers = players.filter(player => player !== username.value)
-
-      update (roomRef, {players: updatedPlayers}).catch((error) => {
-        console.log("problem");
-      });
-    }
-  });
+  try {
+    const roomRef = ref(database + "Lobbies/" + roomCodeText.innerHTML);
+  
+    get(roomRef).then((snapshot) => {
+      if (snpahost.exists()) {
+        const roomData = snapshot.val();
+        const players = roomData.players || [];
+  
+        const updatedPlayers = players.filter(player => player !== username.value)
+  
+        update (roomRef, {players: updatedPlayers}).catch((error) => {
+          console.log("problem");
+        });
+      }
+    });
+  } catch (error) {
+    console.error("Uncaught error in reloadedPage:", error);
+  }
 }
