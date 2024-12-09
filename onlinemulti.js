@@ -285,6 +285,7 @@ document.addEventListener("keydown", function(event) {
 });  
 
 window.onbeforeunload = function removePlayer() {
+    var hostLeft;
     const roomRef = ref(database, "Lobbies/" + (roomCodeText.innerHTML || roomCode));
 
     get(roomRef).then((snapshot) => {
@@ -295,6 +296,12 @@ window.onbeforeunload = function removePlayer() {
 
         if (roomData.host === username.value) {
             remove(roomRef);
+            hostLeft = true;
+        }
+
+        if (hostLeft) {
+            returnHome();
+            Swal.Fire("Room Closed", "The room host has been disconnected.")
         }
         
         update(roomRef, { players: updatedPlayers }).catch((error) => {
