@@ -262,6 +262,10 @@ function initListening() {
     
     chatbox.scrollTop = chatbox.scrollHeight;
   });
+
+  if (censorExplicit.checked) {
+    profanityCleaner.clean(chatbox.value);
+  }
 }
 
 document.addEventListener("keydown", function(event) {
