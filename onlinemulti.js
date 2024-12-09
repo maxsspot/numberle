@@ -248,6 +248,7 @@ function initListening() {
   
   onValue(messagesRef, (snapshot) => {
     const messages = snapshot.val();
+    chatbox.value = '';
     
     for (const key in messages) {
       const message = messages[key];
