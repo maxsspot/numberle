@@ -285,7 +285,7 @@ document.addEventListener("keydown", function(event) {
 });  
 
 function reloadedPage() {
-  const roomRef = ref(database + "Lobbies + "roomCode");
+  const roomRef = ref(database + "Lobbies/" + roomCode");
 
   get(roomRef).then((snapshot) => {
     if (snpahost.exists()) {
