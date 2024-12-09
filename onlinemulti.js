@@ -229,6 +229,7 @@ function openChatboxF () {
 // Sends a message
 function sendMessageF() {
   var messageContent = document.getElementById ("yourMessage").value.trim();
+  const roomCodeInput = document.getElementById("joiningCode").value.trim();
   const roomRef = ref(database, "Lobbies/" + roomCodeInput + "/messages");
   const newMessageRef = push(roomRef);
 
@@ -241,6 +242,7 @@ function sendMessageF() {
 }
 
 // Recieves messages
+const roomCodeInput = document.getElementById("joiningCode").value.trim();
 const messagesRef = ref(database, "Lobbies/" + roomCodeInput + "/messages");
 
 onValue(messagesRef, (snapshot) => {
