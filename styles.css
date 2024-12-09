@@ -15,11 +15,12 @@ html {
 html, body {user-select:none;}
 
 #startGame {
-	width:100px;
+	width:125px;
 	height:30px;
 	background-color:yellow;
-	border:white solid 1px;
+	border:transparent solid 1px;
 	border-radius:5px;
+	color:black;
 }
 
 #openChatbox {
