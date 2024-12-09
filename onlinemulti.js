@@ -252,4 +252,4 @@ onValue(messagesRef, (snapshot) => {
   }
 
   chatbox.scrollTop = chatbox.scrollHeight;
-}
+});
