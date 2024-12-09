@@ -298,5 +298,5 @@ function reloadedPage() {
         console.log("problem");
       });
     }
-  }
+  });
 }
