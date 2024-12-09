@@ -17,7 +17,7 @@ var inGame = false;
 var shouldOpenChat = true;
 
 import { database } from "./firebaseConfig.js";
-import { getDatabase, ref, set, get, onValue, update, push } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-database.js";
+import { getDatabase, ref, set, get, onValue, update, push, filter } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-database.js";
 
 const addedTo = ["A","B","C","D","E","F","G","H","J","K","L","M","N","O","P","Q","R","T","U","V","W","X","Y","Z"]
 
