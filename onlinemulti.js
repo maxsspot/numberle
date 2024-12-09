@@ -218,7 +218,7 @@ function joinRoomF() {
         });
       }
     } else {
-      Swal.fire("Room Not Found");
+      Swal.fire("Room not found");
     }
   }).catch((error) => console.error("Error joining room:", error));
 }
@@ -284,7 +284,7 @@ document.addEventListener("keydown", function(event) {
     }
 });  
 
-window.onbeforeunload = function reloadedPage() {
+window.onbeforeunload = function removePlayer() {
     const roomRef = ref(database, "Lobbies/" + (roomCodeText.innerHTML || roomCode));
 
     get(roomRef).then((snapshot) => {
@@ -293,6 +293,11 @@ window.onbeforeunload = function reloadedPage() {
         const players = roomData.players || [];
         const updatedPlayers = players.filter(player => player !== username.value);
 
+        if (username.value == roomData.host) {
+            returnHome();
+            Swal.Fire("Room Closed","The room host was disconnected");
+        }
+        
         update(roomRef, { players: updatedPlayers }).catch((error) => {
           logErrorToServer(error);
         });
