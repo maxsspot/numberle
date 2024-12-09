@@ -1,3 +1,4 @@
+// Variables
 var menu = document.getElementById("mainMenu");
 var joinRoom = document.getElementById ("joinARoom");
 var createRoom = document.getElementById ("createARoom");
@@ -18,6 +19,7 @@ import { getDatabase, ref, set, get, onValue, update } from "https://www.gstatic
 
 const addedTo = ["A","B","C","D","E","F","G","H","J","K","L","M","N","O","P","Q","R",,"T","U","V","W","X","Y","Z"]
 
+// Bind events to elements
 document.getElementById("openJoinRoom").addEventListener("click", openJoin);
 document.getElementById("joinRoom").addEventListener("click", joinRoomF);
 document.getElementById("openCreateRoom").addEventListener("click", openCreate);
@@ -28,6 +30,7 @@ document.getElementById("openChatbox").addEventListener("click", openChatboxF);
 document.getElementById("sendMessage").addEventListener("click", sendMessageF);
 document.getElementById("username").addEventListener("input", checkForDisallowed);
 
+// Do stuff on game load
 window.onload = function(){
   menu = document.getElementById("mainMenu");
   joinRoom = document.getElementById ("joinARoom");
@@ -61,11 +64,11 @@ try {
 }
 
 
-
 window.addEventListener("unload", () => {
     firebase.database().goOffline();
 });
 
+// Hide all menus
 function hideAll () {
   menu.style.display = "none";
   joinRoom.style.display = "none";
@@ -74,6 +77,7 @@ function hideAll () {
   lobby.style.display = "none";
 }
 
+// Return to main menu
 function returnHome () {
   hideAll();
   menu.style.display = "block"
@@ -85,21 +89,25 @@ function returnHome () {
   }
 }
 
+// Opens the join room page
 function openJoin () {
   hideAll();
   joinRoom.style.display = "block";
 }
 
+// Opens the create room page
 function openCreate () {
   hideAll();
   createRoom.style.display = "block";
 }
 
+// Opens the settings page
 function openChange () {
   hideAll();
   changeUsername.style.display = "block";
 }
 
+// Checks for disallowed characters/words whenever a character is typed
 function checkForDisallowed () {
   var checkedValue = profanityCleaner.clean(username.value.trim());
   if (username.value.includes ("<") || username.value.includes (">") || checkedValue.includes("*")) {
@@ -111,6 +119,7 @@ function checkForDisallowed () {
   }
 }
 
+// Confirms and saves your chosen settings
 function confirmSettingsF () {
   localStorage.setItem("savedUsername",username.value)
   if (censorExplicit.checked) {
@@ -121,6 +130,7 @@ function confirmSettingsF () {
   returnHome();
 }
 
+// Creates a room
 function createRoomF() {
   roomCode = Math.floor(Math.random() * 999999) + 100000;
   maxNumber = document.getElementById("maxNumberOnline").value;
@@ -163,7 +173,7 @@ function createRoomF() {
   }).catch((error) => console.error("Error creating room:", error));
 }
 
-
+// Joins a room
 function joinRoomF() {
   const roomCodeInput = document.getElementById("joiningCode").value.trim();
   const roomRef = ref(database, "Lobbies/" + roomCodeInput);
@@ -210,11 +220,35 @@ function joinRoomF() {
   }).catch((error) => console.error("Error joining room:", error));
 }
 
+// Opens the chatbox
 function openChatboxF () {
   chatbox.style.opacity = "1"
   chatbox.style.pointerEvents = "all"
 }
 
+// Sends a message
 function sendMessageF() {
+  var messageContent = document.getElementById ("yourMessage").value.trim();
+  const roomRef = ref(database, "Lobbies/" + roomCodeInput + "/messages");
+  const newMessageRef = push(roomRef);
 
+  set(newMessageRef, {
+    sender:username.value,
+    content:messageContent
+  }).then(() => {
+    messageContent.value="";
+  });
 }
+
+// Recieves messages
+const messagesRef = ref(database, "Lobbies/" + roomCodeInput + "/messages");
+
+onValue(messagesRef, (snapshot) => {
+  const messages = snapshot.val();
+
+  for (const key in messages) {
+    const message = messages[key];
+    chatbox.value += `${message.sender}:${message.content}`;
+  }
+
+  chatbox.scrollTop = chatbox.scrollHeight;
