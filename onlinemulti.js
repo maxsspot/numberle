@@ -14,6 +14,7 @@ var roomCodeText;
 var maxNumber;
 var chatbox = document.getElementById ("messageBox");
 var inGame = false;
+var shouldOpenChat = true;
 
 import { database } from "./firebaseConfig.js";
 import { getDatabase, ref, set, get, onValue, update, push } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-database.js";
@@ -222,11 +223,18 @@ function joinRoomF() {
   }).catch((error) => console.error("Error joining room:", error));
 }
 
-// Opens the chatbox
+// Opens/Closes the chatbox
 function openChatboxF () {
-  document.getElementById("chatbox").style.opacity = "1"
-  document.getElementById("chatbox").style.pointerEvents = "all"
-  initListening()
+  if (shouldOpenChat) {
+    document.getElementById("chatbox").style.opacity = "1"
+    document.getElementById("chatbox").style.pointerEvents = "all"
+    initListening()
+    shouldOpenChat = false;
+  } else {
+    document.getElementById("chatbox").style.opacity = "0"
+    document.getElementById("chatbox").style.pointerEvents = "none"
+    shouldOpenChat = true;
+  }
 }
 
 // Sends a message
