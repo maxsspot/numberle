@@ -12,6 +12,7 @@ var playerContainer = document.getElementById ("playerContainer");
 var roomCode;
 var roomCodeText;
 var maxNumber;
+var playerElement;
 var chatbox = document.getElementById ("messageBox");
 var inGame = false;
 var shouldOpenChat = true;
@@ -165,7 +166,7 @@ function createRoomF() {
 
       playerContainer.innerHTML = "";
       updatedPlayers.forEach((player) => {
-        const playerElement = document.createElement("p");
+        var playerElement = document.createElement("p");
         playerElement.innerHTML = player;
         if (player === updatedRoomData.host) {
           playerElement.style.color = "yellow";
@@ -207,7 +208,7 @@ function joinRoomF() {
   
             playerContainer.innerHTML = "";
             updatedPlayers.forEach((player) => {
-              const playerElement = document.createElement("p");
+              var playerElement = document.createElement("p");
               playerElement.innerHTML = player;
               if (player === updatedRoomData.host) {
                 playerElement.style.color = "yellow";
@@ -283,3 +284,7 @@ document.addEventListener("keydown", function(event) {
       openChatboxF();
     }
 });  
+
+function reloadedPage() {
+  playerContainer.removeChild(playerElement);
+}
