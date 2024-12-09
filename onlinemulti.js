@@ -12,7 +12,7 @@ var playerContainer = document.getElementById ("playerContainer");
 var roomCode;
 var roomCodeText;
 var maxNumber;
-var chatbox = document.getElementById ("chatbox").value;
+var chatbox = document.getElementById ("chatbox");
 
 import { database } from "./firebaseConfig.js";
 import { getDatabase, ref, set, get, onValue, update, push } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-database.js";
@@ -243,14 +243,14 @@ function sendMessageF() {
 
 // Recieves messages
 const roomCodeInput = document.getElementById("joiningCode").value.trim();
-const messagesRef = ref(database, "Lobbies/" + roomCode + "/messages");
+const messagesRef = ref(database, "Lobbies/" + (roomCodeInput || roomCode) + "/messages");
 
 onValue(messagesRef, (snapshot) => {
   const messages = snapshot.val();
 
   for (const key in messages) {
     const message = messages[key];
-    chatbox += `${message.sender}: ${message.content}\n`;
+    chatbox.value += `${message.sender}: ${message.content}\n`;
   }
 
   chatbox.scrollTop = chatbox.scrollHeight;
