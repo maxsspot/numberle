@@ -256,16 +256,15 @@ function initListening() {
     
     for (const key in messages) {
       const message = messages[key];
-      console.log(`${message.sender}: ${message.content}`);
-      chatbox.value += `${message.sender}: ${message.content}\n`;
+      if (censorExplicit.checked) {
+        chatbox.value += `${message.sender}: profanityCleaner.clean(${message.content})\n`;
+      } else {
+        chatbox.value += `${message.sender}: ${message.content}\n`;
+      }
     }
     
     chatbox.scrollTop = chatbox.scrollHeight;
   });
-
-  if (censorExplicit.checked) {
-    profanityCleaner.clean(chatbox.value);
-  }
 }
 
 document.addEventListener("keydown", function(event) {
