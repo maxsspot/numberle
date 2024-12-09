@@ -146,6 +146,7 @@ function createRoomF() {
     host: username.value,
     maxNumber: maxNumber,
     players: [username.value],
+    roomActive: true,
   }).then(() => {
     setTimeout(function () {
       hideAll();
@@ -285,7 +286,6 @@ document.addEventListener("keydown", function(event) {
 });  
 
 window.onbeforeunload = function removePlayer() {
-    var hostLeft;
     const roomRef = ref(database, "Lobbies/" + (roomCodeText.innerHTML || roomCode));
 
     get(roomRef).then((snapshot) => {
@@ -295,13 +295,8 @@ window.onbeforeunload = function removePlayer() {
         const updatedPlayers = players.filter(player => player !== username.value);
 
         if (roomData.host === username.value) {
+            update(roomRef, { roomActive: false })
             remove(roomRef);
-            hostLeft = true;
-        }
-
-        if (hostLeft) {
-            returnHome();
-            Swal.Fire("Room Closed", "The room host has been disconnected.")
         }
         
         update(roomRef, { players: updatedPlayers }).catch((error) => {
@@ -309,4 +304,19 @@ window.onbeforeunload = function removePlayer() {
         });
       }
     })
+}
+
+function monitorRoomStatus() {
+  const roomRef = ref(database, "Lobbies/" + roomCode);
+
+  onValue(roomRef, (snapshot) => {
+    if (snapshot.exists()) {
+      const roomData = snapshot.val();
+
+      if (!roomData.roomActive) {
+        returnHome();
+        Swal.fire("Room Closed","The host was disconnected.")
+      }
+    }
+  }};
 }
