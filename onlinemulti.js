@@ -70,6 +70,22 @@ window.addEventListener("unload", () => {
     firebase.database().goOffline();
 });
 
+// Monitors the status of the room
+function monitorRoomStatus() {
+  const roomRef = ref(database, "Lobbies/" + roomCode);
+
+  onValue(roomRef, (snapshot) => {
+    if (snapshot.exists()) {
+      const roomData = snapshot.val();
+
+      if (!roomData.roomActive) {
+        returnHome();
+        Swal.fire("Room Closed","The host was disconnected.")
+      }
+    }
+  });
+}
+
 // Hide all menus
 function hideAll () {
   menu.style.display = "none";
@@ -179,6 +195,8 @@ function createRoomF() {
 
 // Joins a room
 function joinRoomF() {
+  monitorRoomStatus()
+  
   const roomCodeInput = document.getElementById("joiningCode").value.trim();
   const roomRef = ref(database, "Lobbies/" + roomCodeInput);
 
@@ -285,6 +303,7 @@ document.addEventListener("keydown", function(event) {
     }
 });  
 
+// Leaves the room
 window.onbeforeunload = function removePlayer() {
     const roomRef = ref(database, "Lobbies/" + (roomCodeText.innerHTML || roomCode));
 
@@ -306,17 +325,4 @@ window.onbeforeunload = function removePlayer() {
     })
 }
 
-function monitorRoomStatus() {
-  const roomRef = ref(database, "Lobbies/" + roomCode);
 
-  onValue(roomRef, (snapshot) => {
-    if (snapshot.exists()) {
-      const roomData = snapshot.val();
-
-      if (!roomData.roomActive) {
-        returnHome();
-        Swal.fire("Room Closed","The host was disconnected.")
-      }
-    }
-  });
-}
