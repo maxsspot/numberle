@@ -286,5 +286,5 @@ document.addEventListener("keydown", function(event) {
 });  
 
 function reloadedPage() {
-  playerContainer.removeChild(playerElement);
+  playerContainer.removeChild(username.value);
 }
