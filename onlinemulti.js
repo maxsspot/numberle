@@ -250,7 +250,7 @@ onValue(messagesRef, (snapshot) => {
 
   for (const key in messages) {
     const message = messages[key];
-    chatbox.value += "hi\n";
+    chatbox.value += `${message.sender}: ${message.content}\n`;
   }
 
   chatbox.scrollTop = chatbox.scrollHeight;
