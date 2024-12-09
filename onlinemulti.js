@@ -285,7 +285,18 @@ document.addEventListener("keydown", function(event) {
 });  
 
 function reloadedPage() {
-  var playerElement = username.value;
+  const roomRef = ref(database + "Lobbies + "roomCode");
 
-  playerContainer.removeChild(playerElement);
+  get(roomRef).then((snapshot) => {
+    if (snpahost.exists()) {
+      const roomData = snapshot.val();
+      const players = roomData.players || [];
+
+      const updatedPlayers = players.filter(player => player !== username.value)
+
+      update (roomRef, {players: updatedPlayers}).catch((error) => {
+        console.log("problem");
+      });
+    }
+  }
 }
