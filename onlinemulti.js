@@ -244,7 +244,7 @@ function sendMessageF() {
 
 function initListening() {
   var roomCodeInput = document.getElementById("joiningCode").value.trim();
-  const messagesRef = ref(database, "Lobbies/" + roomCode + "/messages");
+  const messagesRef = ref(database, "Lobbies/" + roomCodeText.innerHTML + "/messages");
   
   onValue(messagesRef, (snapshot) => {
     const messages = snapshot.val();
