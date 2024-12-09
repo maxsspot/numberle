@@ -43,7 +43,7 @@ window.onload = function(){
   lobby = document.getElementById ("lobby");
   playerContainer = document.getElementById ("playerContainer");
   roomCodeText = document.getElementById ("roomCode");
-  chatbox = document.getElementById ("chatbox");
+  chatbox = document.getElementById ("messageBox");
   
   if (localStorage.getItem("savedUsername")) {
     username.value = localStorage.getItem("savedUsername")
