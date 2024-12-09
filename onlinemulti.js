@@ -285,7 +285,6 @@ document.addEventListener("keydown", function(event) {
 });  
 
 window.onbeforeunload = function reloadedPage() {
-  try {
     const roomRef = ref(database, "Lobbies/" + roomCode);
 
     get(roomRef).then((snapshot) => {
@@ -298,6 +297,5 @@ window.onbeforeunload = function reloadedPage() {
           logErrorToServer(error);
         });
       }
-    }).catch((error) => logErrorToServer(error));
-  }
-};
+    })
+}
