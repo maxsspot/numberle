@@ -66,9 +66,9 @@ try {
 }
 
 
-/*window.addEventListener("unload", () => {
+window.addEventListener("unload", () => {
     firebase.database().goOffline();
-});*/
+});
 
 // Hide all menus
 function hideAll () {
