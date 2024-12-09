@@ -284,24 +284,20 @@ document.addEventListener("keydown", function(event) {
     }
 });  
 
-function reloadedPage() {
+window.onbeforeunload = function reloadedPage() {
   try {
-    const roomRef = ref(database + "Lobbies/" + roomCodeText.innerHTML);
-  
+    const roomRef = ref(database, "Lobbies/" + roomCode);
+
     get(roomRef).then((snapshot) => {
-      if (snpahost.exists()) {
+      if (snapshot.exists()) {
         const roomData = snapshot.val();
         const players = roomData.players || [];
-  
-        const updatedPlayers = players.filter(player => player !== username.value)
-  
-        update (roomRef, {players: updatedPlayers}).catch((error) => {
-          console.log("problem");
+        const updatedPlayers = players.filter(player => player !== username.value);
+
+        update(roomRef, { players: updatedPlayers }).catch((error) => {
+          logErrorToServer(error);
         });
       }
-    });
-  } catch (error) {
-    alert("Uncaught error: " + error.message); // Show error details
-    debugger;
+    }).catch((error) => logErrorToServer(error));
   }
-}
+};
