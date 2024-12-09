@@ -23,6 +23,14 @@ html, body {user-select:none;}
 	color:black;
 }
 
+#startGame:hover {
+	text-decoration:underline;
+}
+
+#forHost {
+	display:none;
+}
+
 #openChatbox {
 	width:30px;
 	height:30px;
