@@ -250,6 +250,7 @@ onValue(messagesRef, (snapshot) => {
 
   for (const key in messages) {
     const message = messages[key];
+    console.log(`${message.sender}: ${message.content}`);
     chatbox.value += `${message.sender}: ${message.content}\n`;
   }
 
