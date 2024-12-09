@@ -224,6 +224,7 @@ function joinRoomF() {
 function openChatboxF () {
   document.getElementById("chatbox").style.opacity = "1"
   document.getElementById("chatbox").style.pointerEvents = "all"
+  initListening()
 }
 
 // Sends a message
@@ -241,18 +242,19 @@ function sendMessageF() {
   });
 }
 
-// Recieves messages
-var roomCodeInput = document.getElementById("joiningCode").value.trim();
-const messagesRef = ref(database, "Lobbies/" + roomCodeText.innerHTML + "/messages");
-
-onValue(messagesRef, (snapshot) => {
-  const messages = snapshot.val();
-
-  for (const key in messages) {
-    const message = messages[key];
-    console.log(`${message.sender}: ${message.content}`);
-    chatbox.value += `${message.sender}: ${message.content}\n`;
-  }
-
-  chatbox.scrollTop = chatbox.scrollHeight;
-});
+function initListening() {
+  var roomCodeInput = document.getElementById("joiningCode").value.trim();
+  const messagesRef = ref(database, "Lobbies/" + roomCode + "/messages");
+  
+  onValue(messagesRef, (snapshot) => {
+    const messages = snapshot.val();
+    
+    for (const key in messages) {
+      const message = messages[key];
+      console.log(`${message.sender}: ${message.content}`);
+      chatbox.value += `${message.sender}: ${message.content}\n`;
+    }
+    
+    chatbox.scrollTop = chatbox.scrollHeight;
+  });
+}
