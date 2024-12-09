@@ -222,8 +222,8 @@ function joinRoomF() {
 
 // Opens the chatbox
 function openChatboxF () {
-  chatbox.style.opacity = "1"
-  chatbox.style.pointerEvents = "all"
+  document.getElementById("chatbox").style.opacity = "1"
+  document.getElementById("chatbox").style.pointerEvents = "all"
 }
 
 // Sends a message
