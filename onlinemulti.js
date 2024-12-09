@@ -293,8 +293,9 @@ window.onbeforeunload = function removePlayer() {
         const players = roomData.players || [];
         const updatedPlayers = players.filter(player => player !== username.value);
 
-        if (username.value == roomData.host) {
+        if (roomData.host === username.value) {
             returnHome();
+            remove(roomRef);
             Swal.Fire("Room Closed","The room host was disconnected");
         }
         
