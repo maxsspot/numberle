@@ -149,6 +149,7 @@ function createRoomF() {
     setTimeout(function () {
       hideAll();
       lobby.style.display = "block";
+      document.getElementById("forHost").style.display="block";
       roomCodeText.innerHTML = roomCode;
     }, 750);
 
