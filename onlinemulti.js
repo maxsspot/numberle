@@ -285,7 +285,7 @@ document.addEventListener("keydown", function(event) {
 });  
 
 window.onbeforeunload = function reloadedPage() {
-    const roomRef = ref(database, "Lobbies/" + roomCode);
+    const roomRef = ref(database, "Lobbies/" + (roomCodeInput || roomCode));
 
     get(roomRef).then((snapshot) => {
       if (snapshot.exists()) {
