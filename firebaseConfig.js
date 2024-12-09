@@ -1,6 +1,6 @@
 // Import the Firebase SDK modules
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js";
-import { getDatabase, ref, set, get, onValue, update} from "https://www.gstatic.com/firebasejs/11.0.2/firebase-database.js";
+import { getDatabase, ref, set, get, onValue, update, push } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-database.js";
 
 // Firebase configuration
 const firebaseConfig = {
