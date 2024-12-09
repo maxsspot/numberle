@@ -279,5 +279,7 @@ function initListening() {
 document.addEventListener("keydown", function(event) {
     if (event.key === 'Enter' && !inGame) {
       sendMessageF();
+    } else if (event.key === 'esc' && !shouldOpenChat) {
+      openChatboxF();
     }
 });  
