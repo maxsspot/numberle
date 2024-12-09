@@ -318,5 +318,5 @@ function monitorRoomStatus() {
         Swal.fire("Room Closed","The host was disconnected.")
       }
     }
-  }};
+  });
 }
