@@ -301,6 +301,7 @@ function reloadedPage() {
       }
     });
   } catch (error) {
-    console.error("Uncaught error in reloadedPage:", error);
+    alert("Uncaught error: " + error.message); // Show error details
+    debugger;
   }
 }
