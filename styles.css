@@ -31,7 +31,7 @@ html, body {user-select:none;}
 	display:none;
 }
 
-#openChatbox, #removePlayer, #remove {
+#openChatbox, #removePlayer {
 	width:30px;
 	height:30px;
 	border-radius:5px;
@@ -41,14 +41,18 @@ html, body {user-select:none;}
 	z-index:1;
 }
 
-#removePlayer, #remove {
+#removePlayer {
 	background-color:red;
 	margin-left:5px;
 	display:none;
 }
 
 #remove {
-	display:block;
+	width:30px;
+	height:30px;
+	border-radius:5px;
+	border:white solid 1px;
+	background-color:red;
 }
 
 #chatbox, #removePlayerBox {
@@ -65,6 +69,7 @@ html, body {user-select:none;}
 
 #removePlayerBox {
 	padding:10px;
+	left:100px;
 	opacity:1;
 	pointer-events:all;
 }
