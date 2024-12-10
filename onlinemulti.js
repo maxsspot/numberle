@@ -128,9 +128,16 @@ function keepRoomState() {
       }
 
       if (roomData.gameStarted) {
-        
+        tillGameStart=5;
+        var startCountdown = setInterval(function () {
+          tillGameStart--;
+          document.getElementById("tillGameStartText").innerHTML = tillGameStart
+
+          if (tillGameStart == -1) {
+            clearInterval(startCountdown)
+          }
+        ),1000};
       }
-    }
   });
 } 
 
@@ -339,7 +346,7 @@ window.onbeforeunload = function removePlayer() {
     })
 }
 
-function fromKickTrue () {
-  fromKicking = true;
-  removePlayer();
+function startGame() {
+  const roomRef = ref(database, "Lobbies/" + (roomCodeText.innerHTML || roomCode));
+  update(roomRef, { gameStarted: true })
 }
