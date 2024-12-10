@@ -115,7 +115,7 @@ function openChange () {
 
 // Monitors room state
 function keepRoomState() {
-  const roomCodeInput = document.getElementById("joiningCode").value.trim();
+  /*const roomCodeInput = document.getElementById("joiningCode").value.trim();
   const roomRef = ref(database, "Lobbies/" + roomCodeInput);
 
   onValue(roomRef, (snapshot) => {
@@ -148,9 +148,9 @@ function keepRoomState() {
             }
           }, 1000);
         }
-      }*/
+      }
     }
-  });
+  });*/
 }
 
 // Checks for disallowed characters/words whenever a character is typed
