@@ -136,7 +136,7 @@ function keepRoomState() {
           if (tillGameStart == -1) {
             clearInterval(startCountdown)
           }
-        ),1000};
+        },1000);
       }
   });
 } 
