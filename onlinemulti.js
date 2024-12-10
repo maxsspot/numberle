@@ -206,6 +206,8 @@ function createRoomF() {
       transitionCover.style.pointerEvents = "none";
     }, 1500);
 
+    keepRoomState()
+
     onValue(roomRef, (snapshot) => {
       const updatedRoomData = snapshot.val();
       const updatedPlayers = updatedRoomData.players || [];
