@@ -316,6 +316,7 @@ document.addEventListener("keydown", function(event) {
 
 function fromKickTrue () {
   fromKicking = true;
+  removePlayer();
 }
 
 // Leaves the room
