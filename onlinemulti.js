@@ -70,23 +70,6 @@ window.addEventListener("unload", () => {
     firebase.database().goOffline();
 });
 
-// Monitors the status of the room
-function monitorRoomStatus() {
-  const roomRef = ref(database, "Lobbies/" + roomCode);
-
-  onValue(roomRef, (snapshot) => {
-    if (snapshot.exists()) {
-      const roomData = snapshot.val();
-
-      if (!roomData.roomActive) {
-        remove(roomRef);
-        returnHome();
-        Swal.fire("Room Closed","The host was disconnected.")
-      }
-    }
-  });
-}
-
 // Hide all menus
 function hideAll () {
   menu.style.display = "none";
@@ -125,6 +108,21 @@ function openChange () {
   hideAll();
   changeUsername.style.display = "block";
 }
+
+// Monitors room state
+function keepRoomState() {
+  onValue(roomRef, (snapshot) => {
+    if (snapshot.exists()) {
+      const roomData = snapshot.val();
+  
+      if (!roomData.roomActive) {
+        returnHome();
+        Swal.fire("Room Closed","The host was disconnected.")
+        remove(roomRef);
+      }
+    }
+  });
+} 
 
 // Checks for disallowed characters/words whenever a character is typed
 function checkForDisallowed () {
@@ -219,7 +217,7 @@ function joinRoomF() {
             transitionCover.style.pointerEvents = "none";
           }, 1500);
 
-          monitorRoomStatus()
+          keepRoomState()
 
           onValue(roomRef, (snapshot) => {
             const updatedRoomData = snapshot.val();
@@ -316,12 +314,9 @@ window.onbeforeunload = function removePlayer() {
 
         if (roomData.host === username.value) {
             update(roomRef, { roomActive: false })
-            monitorRoomStatus()
         } else {
             update(roomRef, { players: updatedPlayers })
         }
       }
     })
 }
-
-
