@@ -43,6 +43,8 @@ html, body {user-select:none;}
 
 #removePlayer {
 	background-color:red;
+	margin-left:-5px;
+	display:none;
 }
 
 #chatbox {
