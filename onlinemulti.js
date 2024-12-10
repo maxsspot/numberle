@@ -33,7 +33,7 @@ document.getElementById("confirmNameChange").addEventListener("click", confirmSe
 document.getElementById("openChatbox").addEventListener("click", openChatboxF);
 document.getElementById("sendMessage").addEventListener("click", sendMessageF);
 document.getElementById("username").addEventListener("input", checkForDisallowed);
-//document.getElementById("removePlayer").addEventListener("click", fromKickTrue);
+document.getElementById("startGame").addEventListener("input", startGame);
 
 // Do stuff on game load
 window.onload = function(){
@@ -126,6 +126,10 @@ function keepRoomState() {
         Swal.fire("Room Closed","The host disconnected.")
         remove(roomRef);
       }
+
+      if (roomData.gameStarted) {
+        
+      }
     }
   });
 } 
@@ -168,6 +172,7 @@ function createRoomF() {
     maxNumber: maxNumber,
     players: [username.value],
     roomActive: true,
+    gameStarted: false,
   }).then(() => {
     setTimeout(function () {
       hideAll();
@@ -322,13 +327,8 @@ window.onbeforeunload = function removePlayer() {
       if (snapshot.exists()) {
         const roomData = snapshot.val();
         const players = roomData.players || [];
-        if (!fromKicking) {
-          const updatedPlayers = players.filter(player => player !== username.value);
-        } else if (fromKicking) {
-          toRemove = prompt ("Type the username of the player you would like to remove.");
-          const updatedPlayers = players.filter(player => player !== toRemove.value);
-          fromKicking = false;
-        }
+        
+        const updatedPlayers = players.filter(player => player !== username.value);
 
         if (roomData.host === username.value) {
             update(roomRef, { roomActive: false })
