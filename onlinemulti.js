@@ -314,11 +314,6 @@ document.addEventListener("keydown", function(event) {
     }
 });  
 
-function fromKickTrue () {
-  fromKicking = true;
-  removePlayer();
-}
-
 // Leaves the room
 window.onbeforeunload = function removePlayer() {
     const roomRef = ref(database, "Lobbies/" + (roomCodeText.innerHTML || roomCode));
@@ -342,4 +337,9 @@ window.onbeforeunload = function removePlayer() {
         }
       }
     })
+}
+
+function fromKickTrue () {
+  fromKicking = true;
+  removePlayer();
 }
