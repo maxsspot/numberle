@@ -355,7 +355,7 @@ window.onbeforeunload = function removePlayer() {
             update(roomRef, { roomActive: false })
         }
 
-        if (players.length === 0) {
+        if (updatedPlayers.length === 0) {
             remove(roomRef);
         }
 
