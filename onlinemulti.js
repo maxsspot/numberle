@@ -117,29 +117,41 @@ function openChange () {
 function keepRoomState() {
   const roomCodeInput = document.getElementById("joiningCode").value.trim();
   const roomRef = ref(database, "Lobbies/" + roomCodeInput);
+
   onValue(roomRef, (snapshot) => {
     if (snapshot.exists()) {
       const roomData = snapshot.val();
-  
+
       if (!roomData.roomActive) {
         returnHome();
-        Swal.fire("Room Closed","The host disconnected.")
+        Swal.fire("Room Closed", "The host disconnected.");
         remove(roomRef);
+        return;
       }
 
       if (roomData.gameStarted) {
-        tillGameStart=5;
-        var startCountdown = setInterval(function () {
-          tillGameStart--;
-          document.getElementById("tillGameStartText").innerHTML = tillGameStart
+        if (!window.startCountdownRunning) {
+          window.startCountdownRunning = true;
+          let tillGameStart = 5;
 
-          if (tillGameStart == -1) {
-            clearInterval(startCountdown)
-          }
-        },1000);
+          const countdownInterval = setInterval(function () {
+            tillGameStart--;
+            const countdownElement = document.getElementById("tillGameStartText");
+            
+            if (countdownElement) {
+              countdownElement.innerHTML = tillGameStart;
+            }
+
+            if (tillGameStart < 0) {
+              clearInterval(countdownInterval);
+              window.startCountdownRunning = false;
+            }
+          }, 1000);
+        }
       }
+    }
   });
-} 
+}
 
 // Checks for disallowed characters/words whenever a character is typed
 function checkForDisallowed () {
