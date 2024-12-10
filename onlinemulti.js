@@ -15,6 +15,7 @@ var maxNumber;
 var chatbox = document.getElementById ("messageBox");
 var inGame = false;
 var shouldOpenChat = true;
+var fromKicking = false;
 var kickPlayerList;
 
 import { database } from "./firebaseConfig.js";
@@ -32,6 +33,7 @@ document.getElementById("confirmNameChange").addEventListener("click", confirmSe
 document.getElementById("openChatbox").addEventListener("click", openChatboxF);
 document.getElementById("sendMessage").addEventListener("click", sendMessageF);
 document.getElementById("username").addEventListener("input", checkForDisallowed);
+document.getElementById("removePlayer").addEventListener("click", fromKickTrue);
 
 // Do stuff on game load
 window.onload = function(){
@@ -312,6 +314,10 @@ document.addEventListener("keydown", function(event) {
     }
 });  
 
+function fromKickTrue () {
+  fromKicking = true;
+}
+
 // Leaves the room
 window.onbeforeunload = function removePlayer() {
     const roomRef = ref(database, "Lobbies/" + (roomCodeText.innerHTML || roomCode));
@@ -320,7 +326,13 @@ window.onbeforeunload = function removePlayer() {
       if (snapshot.exists()) {
         const roomData = snapshot.val();
         const players = roomData.players || [];
-        const updatedPlayers = players.filter(player => player !== username.value);
+        if (!fromKicking) {
+          const updatedPlayers = players.filter(player => player !== username.value);
+        } else if (fromKicking) {
+          toRemove = prompt ("Type the username of the player you would like to remove.");
+          const updatedPlayers = players.filter(player => player !== toRemove.value);
+          fromKicking = false;
+        }
 
         if (roomData.host === username.value) {
             update(roomRef, { roomActive: false })
