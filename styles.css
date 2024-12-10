@@ -31,7 +31,7 @@ html, body {user-select:none;}
 	display:none;
 }
 
-#openChatbox {
+#openChatbox, #removePlayer {
 	width:30px;
 	height:30px;
 	border-radius:5px;
@@ -39,6 +39,10 @@ html, body {user-select:none;}
 	float:left;
 	margin-left:15px;
 	z-index:1;
+}
+
+#removePlayer {
+	background-color:red;
 }
 
 #chatbox {
