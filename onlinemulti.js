@@ -33,7 +33,7 @@ document.getElementById("confirmNameChange").addEventListener("click", confirmSe
 document.getElementById("openChatbox").addEventListener("click", openChatboxF);
 document.getElementById("sendMessage").addEventListener("click", sendMessageF);
 document.getElementById("username").addEventListener("input", checkForDisallowed);
-document.getElementById("startGame").addEventListener("input", startGame);
+document.getElementById("startGame").addEventListener("click", startGame);
 
 // Do stuff on game load
 window.onload = function(){
