@@ -237,10 +237,10 @@ function joinRoomF() {
               }
               playerContainer.appendChild(playerElement);
               
-              var newPlayer = document.createElement("option");
+             /* var newPlayer = document.createElement("option");
               newPlayer.text = player;
               newPlayer.value = player;
-              kickPlayerList.appendChild(newPlayer);
+              kickPlayerList.appendChild(newPlayer);*/
             });
           });
         });
