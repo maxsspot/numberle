@@ -111,6 +111,7 @@ function openChange () {
 
 // Monitors room state
 function keepRoomState() {
+  const roomRef = ref(database, "Lobbies/" + roomCodeInput);
   onValue(roomRef, (snapshot) => {
     if (snapshot.exists()) {
       const roomData = snapshot.val();
