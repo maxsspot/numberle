@@ -195,9 +195,7 @@ function createRoomF() {
 }
 
 // Joins a room
-function joinRoomF() {
-  monitorRoomStatus()
-  
+function joinRoomF() {  
   const roomCodeInput = document.getElementById("joiningCode").value.trim();
   const roomRef = ref(database, "Lobbies/" + roomCodeInput);
 
@@ -220,7 +218,9 @@ function joinRoomF() {
             transitionCover.style.opacity = "0";
             transitionCover.style.pointerEvents = "none";
           }, 1500);
-  
+
+          monitorRoomStatus()
+
           onValue(roomRef, (snapshot) => {
             const updatedRoomData = snapshot.val();
             const updatedPlayers = updatedRoomData.players || [];
@@ -317,11 +317,9 @@ window.onbeforeunload = function removePlayer() {
         if (roomData.host === username.value) {
             update(roomRef, { roomActive: false })
             monitorRoomStatus()
+        } else {
+            update(roomRef, { players: updatedPlayers })
         }
-        
-        update(roomRef, { players: updatedPlayers }).catch((error) => {
-          logErrorToServer(error);
-        });
       }
     })
 }
