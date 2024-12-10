@@ -72,9 +72,9 @@ window.addEventListener("unload", () => {
 
 // Monitors the status of the room
 function monitorRoomStatus() {
-  const roomRef = ref(database, "Lobbies/" + roomCode);
+  const statusRef = ref(database, "Lobbies/" + roomCode + "/roomActive");
 
-  onValue(roomRef, (snapshot) => {
+  onValue(statusRef, (snapshot) => {
     if (snapshot.exists()) {
       const roomData = snapshot.val();
 
