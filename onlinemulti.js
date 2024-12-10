@@ -79,7 +79,7 @@ function monitorRoomStatus() {
       const roomData = snapshot.val();
 
       if (!roomData.roomActive) {
-        remove(roomRef);
+        remove(statusRef);
         returnHome();
         Swal.fire("Room Closed","The host was disconnected.")
       }
