@@ -91,7 +91,7 @@ function returnHome () {
   if (localStorage.getItem("savedUsername")) {
     username.value = localStorage.getItem("savedUsername")
   } else {
-    username.value = `Player${addedTo[Math.floor(Math.random()*25) + 1]}${addedTo[Math.floor(Math.random()*25) + 1]}`;
+    username.value = `Player${addedTo[Math.floor(Math.random()*23) + 1]}${addedTo[Math.floor(Math.random()*23) + 1]}`;
   }
 }
 
@@ -352,7 +352,7 @@ window.onbeforeunload = function removePlayer() {
         const updatedPlayers = players.filter(player => player !== username.value);
 
         if (roomData.host === username.value) {
-            update(roomRef, { roomActive: false })
+            //update(roomRef, { roomActive: false })
         }
 
         update(roomRef, { players: updatedPlayers })
