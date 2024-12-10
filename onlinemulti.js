@@ -240,7 +240,7 @@ function joinRoomF() {
               var newPlayer = document.createElement("option");
               newPlayer.text = player;
               newPlayer.value = player;
-              kickPlayerList.appenChild(newPlayer);
+              kickPlayerList.appendChild(newPlayer);
             });
           });
         });
