@@ -119,7 +119,7 @@ function keepRoomState() {
   
       if (!roomData.roomActive) {
         returnHome();
-        Swal.fire("Room Closed","The host was disconnected.")
+        Swal.fire("Room Closed","The host disconnected.")
         remove(roomRef);
       }
     }
