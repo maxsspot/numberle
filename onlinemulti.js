@@ -129,7 +129,7 @@ function keepRoomState() {
         return;
       }
 
-      if (roomData.gameStarted) {
+      if (roomData.gameStarted == true) {
         if (!window.startCountdownRunning) {
           window.startCountdownRunning = true;
           let tillGameStart = 5;
