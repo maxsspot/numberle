@@ -7,9 +7,10 @@ var normalMode = document.createElement ("option");normalMode.value = "Normal Mo
 var timedNormalMode = document.createElement ("option");timedNormalMode.value = "Timed Normal Mode";timedNormalMode.text = "Timed Normal";mode.appendChild(timedNormalMode);
 var challengeMode = document.createElement ("option");challengeMode.value = "Challenge Mode";challengeMode.text = "Challenge";mode.appendChild(challengeMode);
 var timedChallengeMode = document.createElement ("option");timedChallengeMode.value = "Timed Challenge Mode";timedChallengeMode.text = "Timed Challenge";mode.appendChild(timedChallengeMode);
+var vsBot = document.createElement ("option");vsBot.value = "VS Bot";vsBot.text = "VS Bot";mode.appendChild(vsBot);
+//////////
 var multiPlayer = document.createElement ("option");multiPlayer.text = "MULTIPLAYER";multiPlayer.disabled = true;multiPlayer.style.color="grey";multiPlayer.style.fontWeight="bold";mode.appendChild(multiPlayer);
 var localMultiplayer = document.createElement ("option");localMultiplayer.value = "Local Multiplayer";localMultiplayer.text = "Local Multiplayer";mode.appendChild(localMultiplayer);
-var vsBot = document.createElement ("option");vsBot.value = "VS Bot";vsBot.text = "VS Bot";mode.appendChild(vsBot);
 
 // Performs actions depending on the mode
 mode.addEventListener('change', function() {
