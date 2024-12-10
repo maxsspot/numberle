@@ -191,7 +191,7 @@ function createRoomF() {
     maxNumber: maxNumber,
     players: [username.value],
     roomActive: true,
-    gameStarted: false,
+    //gameStarted: false,
   }).then(() => {
     setTimeout(function () {
       hideAll();
