@@ -43,7 +43,7 @@ html, body {user-select:none;}
 
 #removePlayer {
 	background-color:red;
-	margin-left:-5px;
+	margin-left:0px;
 	display:none;
 }
 
