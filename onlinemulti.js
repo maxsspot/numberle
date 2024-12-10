@@ -169,6 +169,7 @@ function createRoomF() {
       hideAll();
       lobby.style.display = "block";
       document.getElementById("forHost").style.display="block";
+      document.getElementById("removePlayer").style.display="block";
       roomCodeText.innerHTML = roomCode;
     }, 750);
 
