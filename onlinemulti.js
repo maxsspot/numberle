@@ -15,6 +15,7 @@ var maxNumber;
 var chatbox = document.getElementById ("messageBox");
 var inGame = false;
 var shouldOpenChat = true;
+var kickPlayerList;
 
 import { database } from "./firebaseConfig.js";
 import { getDatabase, ref, set, remove, get, onValue, update, push } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-database.js";
@@ -46,6 +47,7 @@ window.onload = function(){
   playerContainer = document.getElementById ("playerContainer");
   roomCodeText = document.getElementById ("roomCode");
   chatbox = document.getElementById ("messageBox");
+  kickPlayerList = document.getElementById("playerList");
   
   if (localStorage.getItem("savedUsername")) {
     username.value = localStorage.getItem("savedUsername")
@@ -234,6 +236,11 @@ function joinRoomF() {
                 playerElement.style.color = "yellow";
               }
               playerContainer.appendChild(playerElement);
+              
+              var newPlayer = document.createElement("option");
+              newPlayer.text = player;
+              newPlayer.value = player;
+              kickPlayerList.appenChild(newPlayer);
             });
           });
         });
