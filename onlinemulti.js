@@ -72,14 +72,14 @@ window.addEventListener("unload", () => {
 
 // Monitors the status of the room
 function monitorRoomStatus() {
-  const statusRef = ref(database, "Lobbies/" + roomCode + "/roomActive");
+  const roomRef = ref(database, "Lobbies/" + roomCode);
 
-  onValue(statusRef, (snapshot) => {
+  onValue(roomRef, (snapshot) => {
     if (snapshot.exists()) {
       const roomData = snapshot.val();
 
       if (!roomData.roomActive) {
-        remove(statusRef);
+        remove(roomRef);
         returnHome();
         Swal.fire("Room Closed","The host was disconnected.")
       }
