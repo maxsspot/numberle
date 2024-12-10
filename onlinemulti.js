@@ -129,7 +129,7 @@ function keepRoomState() {
         return;
       }
 
-      if (roomData.gameStarted == true) {
+      /*if (roomData.gameStarted == true) {
         if (!window.startCountdownRunning) {
           window.startCountdownRunning = true;
           let tillGameStart = 5;
@@ -148,7 +148,7 @@ function keepRoomState() {
             }
           }, 1000);
         }
-      }
+      }*/
     }
   });
 }
@@ -352,7 +352,7 @@ window.onbeforeunload = function removePlayer() {
         const updatedPlayers = players.filter(player => player !== username.value);
 
         if (roomData.host === username.value) {
-            //update(roomRef, { roomActive: false })
+            update(roomRef, { roomActive: false })
         }
 
         update(roomRef, { players: updatedPlayers })
