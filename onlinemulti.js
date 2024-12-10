@@ -112,6 +112,7 @@ function openChange () {
 // Monitors room state
 function keepRoomState() {
   const roomRef = ref(database, "Lobbies/" + roomCodeInput);
+  const roomCodeInput = document.getElementById("joiningCode").value.trim();
   onValue(roomRef, (snapshot) => {
     if (snapshot.exists()) {
       const roomData = snapshot.val();
