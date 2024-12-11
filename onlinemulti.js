@@ -323,7 +323,7 @@ function initListening() {
       document.getElementById ("openChatbox").style.border = "#FF6666 solid 1px"
   
       setTimeout(function() {
-        document.getElementById ("openChatbox").style.border = "#FF6666 solid 1px"
+        document.getElementById ("openChatbox").style.border = "white solid 1px"
       },1000);
     }
   });
