@@ -123,8 +123,9 @@ function keepRoomState() {
         const roomData = snapshot.val();
         if (roomData.gameStarted) {
           alert("game has started");
-        }
+       }
     });
+  });
 }
 
 // Checks for disallowed characters/words whenever a character is typed
