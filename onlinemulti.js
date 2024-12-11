@@ -134,7 +134,7 @@ function keepRoomState() {
             if (toStart == -1) {
               clearInterval(countdown);
             }
-          });
+          },1000);
        }
     }
   });
