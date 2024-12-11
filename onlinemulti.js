@@ -131,7 +131,7 @@ function keepRoomState() {
             toStart-=1;
             toStartText.innerHTML = toStart;
 
-            if (toStart == -1) {
+            if (toStart == 0) {
               clearInterval(countdown);
               document.getElementById("gameStarts").style.opacity = "0";
             }
