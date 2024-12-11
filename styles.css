@@ -17,6 +17,7 @@ html, body {user-select:none;}
 #gameStarts {
 	opacity:0;
 	transition:all 0.5s;
+	pointer-events:none;
 }
 
 #startGame {
@@ -91,7 +92,7 @@ html, body {user-select:none;}
 	font-family:"Fredoka", sans-serif;
 	outline:none;
 	resize:none;
-	background-color:black;
+	background-color:transparent;
 }
 
 #yourMessage {
