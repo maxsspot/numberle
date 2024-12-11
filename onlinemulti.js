@@ -123,9 +123,9 @@ function keepRoomState() {
         const roomData = snapshot.val();
         if (roomData.gameStarted) {
           document.getElementById("gameStarts").style.opacity = "1";
-
+          var toStart = 3;
+          
           var countdown = setInterval(function() {
-            var toStart = 3;
             var toStartText = document.getElementById("tillGameStartText");
 
             toStart-=1;
