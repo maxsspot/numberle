@@ -124,7 +124,7 @@ function keepRoomState() {
         if (roomData.gameStarted) {
           alert("game has started");
        }
-    });
+    }
   });
 }
 
