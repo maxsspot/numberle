@@ -119,10 +119,12 @@ function keepRoomState() {
   const roomRef = ref(database, "Lobbies/" + roomCodeInput);
 
   onValue(roomRef, (snapshot) => {
-    if (roomRef.gameStarted) {
-      alert("game has started");
-    }
-  });
+    if (snapshot.exists()) {
+        const roomData = snapshot.val();
+        if (roomData.gameStarted) {
+          alert("game has started");
+        }
+    });
 }
 
 // Checks for disallowed characters/words whenever a character is typed
