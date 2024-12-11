@@ -133,6 +133,7 @@ function keepRoomState() {
 
             if (toStart == -1) {
               clearInterval(countdown);
+              document.getElementById("gameStarts").style.opacity = "0";
             }
           },1000);
        }
