@@ -75,8 +75,7 @@ html, body {user-select:none;}
 #removePlayerBox {
 	padding:10px;
 	left:85px;
-	opacity:1;
-	pointer-events:all;
+	opacity:0;
 	display:none;
 }
 
