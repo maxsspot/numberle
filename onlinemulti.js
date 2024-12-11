@@ -316,13 +316,13 @@ function initListening() {
         chatbox.value += `${message.sender}: ${message.content}\n`;
       }
 
-      if (shouldOpenChat) {
+      /*if (shouldOpenChat) {
         document.getElementById ("openChatbox").style.border = "#FF6666 solid 1px"
   
         setTimeout(function() {
           document.getElementById ("openChatbox").style.border = "white solid 1px"
         },1000);
-      }
+      }*/
     }
     
     chatbox.scrollTop = chatbox.scrollHeight;
