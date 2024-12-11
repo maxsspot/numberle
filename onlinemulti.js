@@ -134,6 +134,9 @@ function keepRoomState() {
             if (toStart == 0) {
               clearInterval(countdown);
               document.getElementById("gameStarts").style.opacity = "0";
+              setTimeout(function() {
+                document.getElementById("gameStarts").style.display = "none";
+              },500);
               inGame=true;
             }
           },1000);
