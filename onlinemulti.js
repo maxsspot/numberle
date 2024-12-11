@@ -115,42 +115,14 @@ function openChange () {
 
 // Monitors room state
 function keepRoomState() {
-  /*const roomCodeInput = document.getElementById("joiningCode").value.trim();
+  const roomCodeInput = document.getElementById("joiningCode").value.trim();
   const roomRef = ref(database, "Lobbies/" + roomCodeInput);
 
   onValue(roomRef, (snapshot) => {
-    if (snapshot.exists()) {
-      const roomData = snapshot.val();
-
-      if (!roomData.roomActive) {
-        returnHome();
-        Swal.fire("Room Closed", "The host disconnected.");
-        remove(roomRef);
-        return;
-      }
-
-      /*if (roomData.gameStarted == true) {
-        if (!window.startCountdownRunning) {
-          window.startCountdownRunning = true;
-          let tillGameStart = 5;
-
-          const countdownInterval = setInterval(function () {
-            tillGameStart--;
-            const countdownElement = document.getElementById("tillGameStartText");
-            
-            if (countdownElement) {
-              countdownElement.innerHTML = tillGameStart;
-            }
-
-            if (tillGameStart < 0) {
-              clearInterval(countdownInterval);
-              window.startCountdownRunning = false;
-            }
-          }, 1000);
-        }
-      }
+    if (roomRef.gameStarted) {
+      alert("game has started");
     }
-  });*/
+  });
 }
 
 // Checks for disallowed characters/words whenever a character is typed
@@ -191,7 +163,7 @@ function createRoomF() {
     maxNumber: maxNumber,
     players: [username.value],
     roomActive: true,
-    //gameStarted: false,
+    gameStarted: false,
   }).then(() => {
     setTimeout(function () {
       hideAll();
