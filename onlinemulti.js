@@ -134,6 +134,7 @@ function keepRoomState() {
             if (toStart == 0) {
               clearInterval(countdown);
               document.getElementById("gameStarts").style.opacity = "0";
+              inGame=true;
             }
           },1000);
        }
@@ -317,6 +318,14 @@ function initListening() {
     }
     
     chatbox.scrollTop = chatbox.scrollHeight;
+
+    if (shouldOpenChat) {
+      document.getElementById ("openChatbox").style.border = "red solid 1px"
+  
+      setTimeout(function() {
+        document.getElementById ("openChatbox").style.border = "white solid 1px"
+      },1000);
+    }
   });
 }
 
