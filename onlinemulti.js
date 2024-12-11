@@ -122,7 +122,19 @@ function keepRoomState() {
     if (snapshot.exists()) {
         const roomData = snapshot.val();
         if (roomData.gameStarted) {
-          alert("game has started");
+          document.getElementById("gameStarts").style.opacity = "1";
+
+          var countdown = setInterval(function() {
+            var toStart = 3;
+            var toStartText = document.getElementById("tillGameStartText");
+
+            toStart--;
+            toStartText.innerHTML = toStart;
+
+            if (toStart == -1) {
+              clearInterval(countdown);
+            }
+          });
        }
     }
   });
