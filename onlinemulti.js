@@ -128,7 +128,7 @@ function keepRoomState() {
             var toStart = 3;
             var toStartText = document.getElementById("tillGameStartText");
 
-            toStart--;
+            toStart-=1;
             toStartText.innerHTML = toStart;
 
             if (toStart == -1) {
