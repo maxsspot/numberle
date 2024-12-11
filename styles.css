@@ -89,10 +89,9 @@ html, body {user-select:none;}
 	color:white;
 	border-bottom:white solid 1px;
 	font-family:"Fredoka", sans-serif;
-	background-color:black;
 	outline:none;
 	resize:none;
-	background-color:transparent;
+	background-color:black;
 }
 
 #yourMessage {
