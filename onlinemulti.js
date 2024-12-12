@@ -48,7 +48,6 @@ window.onload = function(){
   playerContainer = document.getElementById ("playerContainer");
   roomCodeText = document.getElementById ("roomCode");
   chatbox = document.getElementById ("messageBox");
-  kickPlayerList = document.getElementById("playerList");
   
   if (localStorage.getItem("savedUsername")) {
     username.value = localStorage.getItem("savedUsername")
