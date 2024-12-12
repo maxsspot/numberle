@@ -15,8 +15,7 @@ var maxNumber;
 var chatbox = document.getElementById ("messageBox");
 var inGame = false;
 var shouldOpenChat = true;
-var fromKicking = false;
-var kickPlayerList;
+var canSendMessage = true;
 
 import { database } from "./firebaseConfig.js";
 import { getDatabase, ref, set, remove, get, onValue, update, push } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-database.js";
@@ -287,18 +286,25 @@ function openChatboxF () {
 
 // Sends a message
 function sendMessageF() {
-  var messageContent = document.getElementById ("yourMessage");
-  if (messageContent.value.trim() != "") {
-    const roomCodeInput = document.getElementById("joiningCode").value.trim();
-    const roomRef = ref(database, "Lobbies/" + (roomCodeInput || roomCode) + "/messages");
-    const newMessageRef = push(roomRef);
-  
-    set(newMessageRef, {
-      sender:username.value,
-      content:messageContent.value.trim(),
-    }).then(() => {
-      messageContent.value="";
-    });
+  if (canSendMessage) {
+    canSendMessage = false;
+    var messageContent = document.getElementById ("yourMessage");
+    if (messageContent.value.trim() != "") {
+      const roomCodeInput = document.getElementById("joiningCode").value.trim();
+      const roomRef = ref(database, "Lobbies/" + (roomCodeInput || roomCode) + "/messages");
+      const newMessageRef = push(roomRef);
+    
+      set(newMessageRef, {
+        sender:username.value,
+        content:messageContent.value.trim(),
+      }).then(() => {
+        messageContent.value="";
+      });
+    }
+
+    setTimeout(function() {
+      canSendMessage = true;
+    },1500);
   }
 }
 
@@ -332,6 +338,7 @@ function initListening() {
   });
 }
 
+// In relation to sending messages
 document.addEventListener("keydown", function(event) {
     if (event.key === 'Enter' && !inGame) {
       sendMessageF();
