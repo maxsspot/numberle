@@ -388,7 +388,7 @@ window.onbeforeunload = function removePlayer() {
     })
 }
 
-function start//game() {
+function startgame() {
   const roomRef = ref(database, "Lobbies/" + (roomCodeText.innerHTML || roomCode));
   update(roomRef, { gameStarted: true })
 
