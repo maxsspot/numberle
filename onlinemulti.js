@@ -17,6 +17,7 @@ var chatbox = document.getElementById ("messageBox");
 var inGame = false;
 var shouldOpenChat = true;
 var canSendMessage = true;
+var chatStuff = document.getElementById("chatStuff");
 
 import { database } from "./firebaseConfig.js";
 import { getDatabase, ref, set, remove, get, onValue, update, push } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-database.js";
@@ -81,6 +82,7 @@ function hideAll () {
   createARoom.style.display = "none";
   changeUsername.style.display = "none";
   lobby.style.display = "none";
+  chatStuff.style.display = "none";
 }
 
 // Return to main menu
@@ -138,10 +140,7 @@ function keepRoomState() {
                 hideAll()
                 inGameUI.style.display="block";
 
-                document.getElementById("openChatbox").style.display = "block";
-                chatbox.style.display = "block";
-                chatbox.style.display = "0";
-                chatbox.style.pointerEvents = "none";
+                chatStuff.style.display = "block";
                 
                 document.getElementById("gameStarts").style.display = "none";
               },500);
@@ -204,6 +203,7 @@ function createRoomF() {
     setTimeout(function () {
       transitionCover.style.opacity = "0";
       transitionCover.style.pointerEvents = "none";
+      chatStuff.style.display = "block";
     }, 1500);
 
     keepRoomState()
@@ -251,6 +251,8 @@ function joinRoomF() {
           setTimeout(function () {
             transitionCover.style.opacity = "0";
             transitionCover.style.pointerEvents = "none";
+
+            chatStuff.style.display = "block";
           }, 1500);
 
           keepRoomState()
@@ -402,10 +404,7 @@ function startGame() {
           hideAll()
           inGameUI.style.display="block";
         
-          document.getElementById("openChatbox").style.display = "block";
-          chatbox.style.display = "block";
-          chatbox.style.display = "0";
-          chatbox.style.pointerEvents = "none";
+          chatStuff.style.display = "block";
         
           document.getElementById("gameStarts").style.display = "none";
       },500);
