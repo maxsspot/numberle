@@ -144,7 +144,10 @@ function keepRoomState() {
                 
                 document.getElementById("gameStarts").style.display = "none";
               },500);
+              
               inGame=true;
+
+              //game()
             }
           },1000);
        }
@@ -354,7 +357,7 @@ function initListening() {
 
 // In relation to sending messages
 document.addEventListener("keydown", function(event) {
-    if (event.key === 'Enter' && !inGame) {
+    if (event.key === 'Enter' && !shouldOpenChat) {
       sendMessageF();
     } else if (event.key === 'Escape' && !shouldOpenChat) {
       openChatboxF();
@@ -385,7 +388,7 @@ window.onbeforeunload = function removePlayer() {
     })
 }
 
-function startGame() {
+function start//game() {
   const roomRef = ref(database, "Lobbies/" + (roomCodeText.innerHTML || roomCode));
   update(roomRef, { gameStarted: true })
 
@@ -410,6 +413,8 @@ function startGame() {
       },500);
       
       inGame=true;
+
+      //game();
     }
   },1000);
 }
