@@ -387,7 +387,7 @@ function startGame() {
   const roomRef = ref(database, "Lobbies/" + (roomCodeText.innerHTML || roomCode));
   update(roomRef, { gameStarted: true })
 
-  toStart=3;
+  var toStart=3;
   
   var countdown = setInterval(function() {
     var toStartText = document.getElementById("tillGameStartText");
