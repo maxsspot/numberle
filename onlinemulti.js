@@ -137,6 +137,12 @@ function keepRoomState() {
               setTimeout(function() {
                 hideAll()
                 inGameUI.style.display="block";
+
+                document.getElementById("openChatbox").style.display = "block";
+                chatBox.style.display = "block";
+                chatBox.style.display = "0";
+                chatBox.style.pointerEvents = "none";
+                
                 document.getElementById("gameStarts").style.display = "none";
               },500);
               inGame=true;
@@ -380,9 +386,29 @@ window.onbeforeunload = function removePlayer() {
 function startGame() {
   const roomRef = ref(database, "Lobbies/" + (roomCodeText.innerHTML || roomCode));
   update(roomRef, { gameStarted: true })
+  
+  var countdown = setInterval(function() {
+    var toStartText = document.getElementById("tillGameStartText");
 
-  setTimeout (function() {
-    hideAll();
-    inGame.style.display="block";
-  },3500);
+    toStart-=1;
+    toStartText.innerHTML = toStart;
+
+    if (toStart == 0) {
+      clearInterval(countdown);
+      document.getElementById("gameStarts").style.opacity = "0";
+      setTimeout(function() {
+          hideAll()
+          inGameUI.style.display="block";
+        
+          document.getElementById("openChatbox").style.display = "block";
+          chatBox.style.display = "block";
+          chatBox.style.display = "0";
+          chatBox.style.pointerEvents = "none";
+        
+          document.getElementById("gameStarts").style.display = "none";
+      },500);
+      
+      inGame=true;
+    }
+  },1000);
 }
