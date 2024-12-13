@@ -14,6 +14,10 @@ html {
 
 html, body {user-select:none;}
 
+#chatStuff {
+	display:none;
+}
+
 #gameStarts {
 	opacity:0;
 	transition:all 0.5s;
