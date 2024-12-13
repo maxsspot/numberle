@@ -386,6 +386,8 @@ window.onbeforeunload = function removePlayer() {
 function startGame() {
   const roomRef = ref(database, "Lobbies/" + (roomCodeText.innerHTML || roomCode));
   update(roomRef, { gameStarted: true })
+
+  toStart=3;
   
   var countdown = setInterval(function() {
     var toStartText = document.getElementById("tillGameStartText");
