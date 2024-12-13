@@ -223,7 +223,10 @@ function createRoomF() {
 function joinRoomF() {  
   const roomCodeInput = document.getElementById("joiningCode").value.trim();
   const roomRef = ref(database, "Lobbies/" + roomCodeInput);
-
+  
+  transitionCover.style.opacity = "1";
+  transitionCover.style.pointerEvents = "all";
+  
   get(roomRef).then((snapshot) => {
     if (snapshot.exists()) {
       const roomData = snapshot.val();
@@ -377,4 +380,9 @@ window.onbeforeunload = function removePlayer() {
 function startGame() {
   const roomRef = ref(database, "Lobbies/" + (roomCodeText.innerHTML || roomCode));
   update(roomRef, { gameStarted: true })
+
+  setTimeout (function() {
+    hideAll();
+    inGame.style.display="block";
+  },3500);
 }
