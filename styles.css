@@ -186,7 +186,7 @@ a:hover {
 	text-decoration:underline;
 }
 
-#joinARoom, #createARoom, #changeUsername, #lobby {
+#joinARoom, #createARoom, #changeUsername, #lobby, #inGame {
 	display:none;
 }
 
