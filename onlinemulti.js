@@ -139,9 +139,9 @@ function keepRoomState() {
                 inGameUI.style.display="block";
 
                 document.getElementById("openChatbox").style.display = "block";
-                chatBox.style.display = "block";
-                chatBox.style.display = "0";
-                chatBox.style.pointerEvents = "none";
+                chatbox.style.display = "block";
+                chatbox.style.display = "0";
+                chatbox.style.pointerEvents = "none";
                 
                 document.getElementById("gameStarts").style.display = "none";
               },500);
@@ -403,9 +403,9 @@ function startGame() {
           inGameUI.style.display="block";
         
           document.getElementById("openChatbox").style.display = "block";
-          chatBox.style.display = "block";
-          chatBox.style.display = "0";
-          chatBox.style.pointerEvents = "none";
+          chatbox.style.display = "block";
+          chatbox.style.display = "0";
+          chatbox.style.pointerEvents = "none";
         
           document.getElementById("gameStarts").style.display = "none";
       },500);
