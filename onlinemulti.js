@@ -3,7 +3,7 @@ var menu = document.getElementById("mainMenu");
 var joinRoom = document.getElementById ("joinARoom");
 var createRoom = document.getElementById ("createARoom");
 var changeUsername = document.getElementById ("changeUsername");
-var inGame = document.getElementById ("inGame");
+var inGameUI = document.getElementById ("inGame");
 var username = document.getElementById ("username");
 var confirmSettings = document.getElementById ("confirmNameChange");
 var censorExplicit = document.getElementById ("filterLanguage");
@@ -136,7 +136,7 @@ function keepRoomState() {
               document.getElementById("gameStarts").style.opacity = "0";
               setTimeout(function() {
                 hideAll()
-                inGame.style.display="block";
+                inGameUI.style.display="block";
                 document.getElementById("gameStarts").style.display = "none";
               },500);
               inGame=true;
