@@ -143,6 +143,10 @@ function keepRoomState() {
                 chatStuff.style.display = "block";
                 
                 document.getElementById("gameStarts").style.display = "none";
+
+                chatStuff.style.marginTop = "-5px";
+                chatStuff.style.right = "0px";
+                chatStuff.style.position = "fixed";
               },500);
               
               inGame=true;
