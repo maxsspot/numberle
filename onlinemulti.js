@@ -207,7 +207,7 @@ function createRoomF() {
       transitionCover.style.opacity = "0";
       transitionCover.style.pointerEvents = "none";
       chatStuff.style.display = "block";
-    }, 1500);
+    }, 1250);
 
     keepRoomState()
 
@@ -256,7 +256,7 @@ function joinRoomF() {
             transitionCover.style.pointerEvents = "none";
 
             chatStuff.style.display = "block";
-          }, 1500);
+          }, 1250);
 
           keepRoomState()
 
@@ -388,10 +388,12 @@ window.onbeforeunload = function removePlayer() {
     })
 }
 
+// Starts the game
 function startGame() {
   const roomRef = ref(database, "Lobbies/" + (roomCodeText.innerHTML || roomCode));
   update(roomRef, { gameStarted: true })
 
+  document.getElementById("gameStarts").style.opacity = "1";
   var toStart=3;
   
   var countdown = setInterval(function() {
