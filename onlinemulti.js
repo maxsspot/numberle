@@ -409,10 +409,10 @@ function startGame() {
           hideAll()
           inGameUI.style.display="block";
         
-          chatStuff.style.display = "block";
+          chatStuff.style.display = "inline-block";
         
           document.getElementById("gameStarts").style.display = "none";
-          document.getElementById("chatStuff").style.marginTop = "-20px";
+          chatStuff.style.marginTop = "-20px";
       },500);
       
       inGame=true;
