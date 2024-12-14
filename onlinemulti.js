@@ -413,7 +413,7 @@ function startGame() {
         
           document.getElementById("gameStarts").style.display = "none";
           chatStuff.style.marginTop = "-5px";
-          chatStuff.style.marginRight = "10px";
+          chatStuff.style.right = "10px";
           chatStuff.style.position = "fixed";
       },500);
       
