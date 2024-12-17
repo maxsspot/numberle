@@ -17,6 +17,7 @@ var maxNumber;
 var chatbox = document.getElementById ("messageBox");
 var inGame = false;
 var shouldOpenChat = true;
+var shouldOpenRemove = true;
 var canSendMessage = true;
 var chatStuff = document.getElementById("chatStuff");
 
@@ -34,6 +35,7 @@ document.getElementById("changeUsernameB").addEventListener("click", openChange)
 document.getElementById("confirmNameChange").addEventListener("click", confirmSettingsF);
 document.getElementById("openChatbox").addEventListener("click", openChatboxF);
 document.getElementById("sendMessage").addEventListener("click", sendMessageF);
+document.getElementById("openBanPlayer").addEventListener("click", openBanF);
 document.getElementById("username").addEventListener("input", checkForDisallowed);
 document.getElementById("startGame").addEventListener("click", startGame);
 
@@ -394,6 +396,36 @@ window.onbeforeunload = function removePlayer() {
         update(roomRef, { players: updatedPlayers })
       }
     })
+}
+
+// Open the remove player box
+function openBanF () {
+  if (shouldOpenRemove) {    
+    document.getElementById("removePlayerBox").style.opacity = "1";
+    document.getElementById("removePlayerBox").style.pointerEvents = "all"
+    shouldOpenRemove=false;
+  } else {
+    document.getElementById("removePlayerBox").style.opacity = "0";
+    document.getElementById("removePlayerBox").style.pointerEvents = "none"
+    shouldOpenRemove=true;
+  }
+}
+
+// Host removed a player
+function banPlayer() {
+  const roomRef = ref(database, "Lobbies/" + (roomCodeText.innerHTML || roomCode));
+
+  get(roomRef).then((snapshot) => {
+    if (snapshot.exists()) {
+      const roomData = snapshot.val();
+      const players = roomData.players || [];
+      const playerToRemove = document.getElementById ("playerList");
+      
+      const updatedPlayers = players.filter(player => player !== playerToRemove.value);
+
+      update(roomRef, { players: updatedPlayers })
+    }
+  })
 }
 
 // Starts the game
