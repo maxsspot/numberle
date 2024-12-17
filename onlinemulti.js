@@ -20,6 +20,7 @@ var shouldOpenChat = true;
 var shouldOpenRemove = true;
 var canSendMessage = true;
 var chatStuff = document.getElementById("chatStuff");
+var playerList = document.getElementById("playerList");
 
 import { database } from "./firebaseConfig.js";
 import { getDatabase, ref, set, remove, get, onValue, update, push } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-database.js";
@@ -36,6 +37,7 @@ document.getElementById("confirmNameChange").addEventListener("click", confirmSe
 document.getElementById("openChatbox").addEventListener("click", openChatboxF);
 document.getElementById("sendMessage").addEventListener("click", sendMessageF);
 document.getElementById("openBanPlayer").addEventListener("click", openBanF);
+document.getElementById("remove").addEventListener("click", banPlayer);
 document.getElementById("username").addEventListener("input", checkForDisallowed);
 document.getElementById("startGame").addEventListener("click", startGame);
 
@@ -55,7 +57,8 @@ window.onload = function(){
   playerContainer = document.getElementById ("playerContainer");
   roomCodeText = document.getElementById ("roomCode");
   chatbox = document.getElementById ("messageBox");
-  
+  playerList = document.getElementById("playerList");
+
   if (localStorage.getItem("savedUsername")) {
     username.value = localStorage.getItem("savedUsername")
   } else {
@@ -283,10 +286,10 @@ function joinRoomF() {
               }
               playerContainer.appendChild(playerElement);
               
-             /* var newPlayer = document.createElement("option");
-              newPlayer.text = player;
-              newPlayer.value = player;
-              kickPlayerList.appendChild(newPlayer);*/
+              var newPlayer = document.createElement("option");
+              newPlayer.text = username.value;
+              newPlayer.value = username.value;
+              playerList.appendChild(newPlayer);
             });
           });
         });
