@@ -9,6 +9,7 @@ var confirmSettings = document.getElementById ("confirmNameChange");
 var censorExplicit = document.getElementById ("filterLanguage");
 var transitionCover = document.getElementById ("transitionCover");
 var lobby = document.getElementById ("lobby");
+var maxNumberText = document.getElementById ("maxNumberText");
 var playerContainer = document.getElementById ("playerContainer");
 var roomCode;
 var roomCodeText;
@@ -48,6 +49,7 @@ window.onload = function(){
   censorExplicit = document.getElementById ("filterLanguage");
   transitionCover = document.getElementById ("transitionCover");
   lobby = document.getElementById ("lobby");
+  maxNumberText = document.getElementById ("maxNumberText");
   playerContainer = document.getElementById ("playerContainer");
   roomCodeText = document.getElementById ("roomCode");
   chatbox = document.getElementById ("messageBox");
@@ -211,6 +213,8 @@ function createRoomF() {
       transitionCover.style.opacity = "0";
       transitionCover.style.pointerEvents = "none";
       chatStuff.style.display = "block";
+
+      maxNumberText.innerHTML = maxNumber;
     }, 1250);
 
     keepRoomState()
