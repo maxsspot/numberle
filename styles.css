@@ -54,7 +54,6 @@ html, body {user-select:none;}
 #removePlayer {
 	background-color:red;
 	margin-right:5px;
-	display:none;
 }
 
 #remove {
@@ -79,9 +78,8 @@ html, body {user-select:none;}
 
 #removePlayerBox {
 	padding:10px;
-	left:85px;
+	right:85px;
 	opacity:0;
-	display:none;
 }
 
 #messageBox {
