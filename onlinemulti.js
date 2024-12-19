@@ -468,8 +468,12 @@ function startGame() {
 
       //game();
 
-      const roomData = snapshot.val();
-      currentPlayer.innerHTML = roomData.host;
+      onValue(roomRef, (snapshot) => {
+        if (snapshot.exists()) {
+          const roomData = snapshot.val();
+          currentPlayer.innerHTML = roomData.host;
+        }
+      });
     }
   },1000);
 }
