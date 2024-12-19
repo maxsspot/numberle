@@ -20,6 +20,7 @@ var inGame = false;
 var shouldOpenChat = true;
 var shouldOpenRemove = true;
 var canSendMessage = true;
+var isHost;
 
 var chatStuff = document.getElementById("chatStuff");
 var playerList = document.getElementById("playerList");
@@ -201,6 +202,8 @@ function confirmSettingsF () {
 
 // Creates a room
 function createRoomF() {
+  isHost = true;
+  
   roomCode = Math.floor(Math.random() * 999999) + 100000;
   maxNumber = document.getElementById("maxNumberOnline").value;
 
@@ -499,8 +502,14 @@ function game () {
   onValue(roomRef, (snapshot) => {
     const roomData = snapshot.val();
     if (snapshot.exists()) {
-      maxNumber = Math.floor(Math.random()* roomData.maxNumber) + 1
-      highestNumber.innerHTML = maxNumber;
+      if (isHost) {
+        maxNumber = Math.floor(Math.random()* roomData.maxNumber) + 1
+        set(roomRef, {
+          numberToGuess: maxNumber,
+        })
+      }
+      
+      highestNumber.innerHTML = roomDate.numberToGuess;
     }
   })
 }
