@@ -493,6 +493,8 @@ function updateBoxAvailability () {
 
 // Does some start of game checks
 function game () {
+  const roomRef = ref(database, "Lobbies/" + (roomCodeText.innerHTML || roomCode));
+  
   updateBoxAvailability();
   onValue(roomRef, (snapshot) => {
     const roomData = snapshot.val();
