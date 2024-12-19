@@ -501,8 +501,6 @@ function updateBoxAvailability () {
 function game () {
   const roomRef = ref(database, "Lobbies/" + (roomCodeText.innerHTML || roomCode));
   
-  updateBoxAvailability();
-  
   onValue(roomRef, (snapshot) => {
     const roomData = snapshot.val();
     if (snapshot.exists()) {
@@ -510,4 +508,6 @@ function game () {
       highestNumber.innerHTML = roomData.numberToGuess;
     }
   })
+
+  updateBoxAvailability();
 }
