@@ -485,7 +485,7 @@ function startGame() {
 }
 
 // Updates the active player
-function boxAvailability () {
+function updateBoxAvailability () {
   if (username.value != currentPlayer.innerHTML) {
     guessBox.disabled = true;
   }
@@ -493,7 +493,7 @@ function boxAvailability () {
 
 // Does some start of game checks
 function game () {
-  updateActivePlayer();
+  updateBoxAvailability();
   onValue(roomRef, (snapshot) => {
     const roomData = snapshot.val();
     if (snapshot.exists()) {
