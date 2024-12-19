@@ -27,6 +27,8 @@ html, body {user-select:none;}
 	right:40px;
 	margin-top:25px;
 	opacity:0;
+	pointer-events:none;
+	transition:all 0.5s;
 }
 
 #gameStarts {
