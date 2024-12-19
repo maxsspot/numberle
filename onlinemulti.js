@@ -509,7 +509,7 @@ function game () {
         })
       }
       
-      highestNumber.innerHTML = roomDate.numberToGuess;
+      highestNumber.innerHTML = roomData.numberToGuess;
     }
   })
 }
