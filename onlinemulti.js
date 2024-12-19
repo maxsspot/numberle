@@ -466,7 +466,7 @@ function startGame() {
       
       inGame=true;
 
-      game();
+      //game();
 
       const roomData = snapshot.val();
       currentPlayer.innerHTML = roomData.host;
