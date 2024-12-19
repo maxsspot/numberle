@@ -26,7 +26,9 @@ var playerList = document.getElementById("playerList");
 
 var currentPlayerText = document.getElementById("currentPlaying")
 var guessBox = document.getElementById("multiBox");
-  
+var highestNumber = document.getElementById("highest");
+
+
 import { database } from "./firebaseConfig.js";
 import { getDatabase, ref, set, remove, get, onValue, update, push } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-database.js";
 
@@ -482,9 +484,21 @@ function startGame() {
   },1000);
 }
 
-// Does some start of game checks
-function game() {
+// Updates the active player
+function boxAvailability () {
   if (username.value != currentPlayer.innerHTML) {
     guessBox.disabled = true;
   }
+}
+
+// Does some start of game checks
+function game () {
+  updateActivePlayer();
+  onValue(roomRef, (snapshot) => {
+    const roomData = snapshot.val();
+    if (snapshot.exists()) {
+      maxNumber = Math.floor(Math.random()* roomData.maxNumber) + 1
+      highestNumber.innerHTML = maxNumber;
+    }
+  })
 }
