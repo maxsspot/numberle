@@ -19,8 +19,8 @@ html, body {user-select:none;}
 }
 
 #newMessage {
-	width:15px;
-	height:15px;
+	width:10px;
+	height:10px;
 	background-color:red;
 	border-radius:50%;
 	position:fixed;
