@@ -24,11 +24,11 @@ var isHost;
 
 var chatStuff = document.getElementById("chatStuff");
 var playerList = document.getElementById("playerList");
+var messageIndicator = document.getElementById("newMessage");
 
 var currentPlayerText = document.getElementById("currentPlaying")
 var guessBox = document.getElementById("multiBox");
 var highestNumber = document.getElementById("highest");
-
 
 import { database } from "./firebaseConfig.js";
 import { getDatabase, ref, set, remove, get, onValue, update, push } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-database.js";
@@ -319,6 +319,7 @@ function openChatboxF () {
     document.getElementById("chatbox").style.opacity = "1"
     document.getElementById("chatbox").style.pointerEvents = "all"
     initListening()
+    messageIndicator.style.opacity = "0";
     shouldOpenChat = false;
   } else {
     document.getElementById("chatbox").style.opacity = "0"
@@ -378,6 +379,10 @@ function initListening() {
     }
     
     chatbox.scrollTop = chatbox.scrollHeight;
+
+    if (shouldOpenChat) {
+      messageIndicator.style.opacity = "1";
+    }
   });
 }
 
