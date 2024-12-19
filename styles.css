@@ -24,8 +24,8 @@ html, body {user-select:none;}
 	background-color:red;
 	border-radius:50%;
 	position:fixed;
-	right:5px;
-	top:20px;
+	margin-right:5px;
+	margin-top:20px;
 }
 
 #gameStarts {
