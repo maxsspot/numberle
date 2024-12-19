@@ -19,13 +19,11 @@ html, body {user-select:none;}
 }
 
 #newMessage {
-	width:10px;
 	padding:5px;
-	height:10px;
 	background-color:red;
 	border-radius:50%;
 	position:fixed;
-	right:15px;
+	right:25px;
 	margin-top:20px;
 }
 
