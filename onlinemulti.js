@@ -479,7 +479,7 @@ function startGame() {
         const roomData = snapshot.val();
         if (snapshot.exists()) {
           maxNumber = Math.floor(Math.random()* roomData.maxNumber) + 1
-          set(roomRef, {
+          update(roomRef, {
             numberToGuess: maxNumber,
           })
         }
