@@ -169,7 +169,7 @@ function keepRoomState() {
 // Checks for disallowed characters/words whenever a character is typed
 function checkForDisallowed () {
   var checkedValue = profanityCleaner.clean(username.value.trim());
-  if (username.value.includes ("<") || username.value.includes (">") || username.lower().value.includes("kys") || checkedValue.includes("*")) {
+  if (username.value.includes ("<") || username.value.includes (">") || username.value.toLowerCase().includes("kys") || checkedValue.includes("*")) {
     username.style.borderBottom = "red solid 1px";
     confirmSettings.disabled = true;
   } else {
