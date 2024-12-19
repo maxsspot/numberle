@@ -21,6 +21,7 @@ var shouldOpenRemove = true;
 var canSendMessage = true;
 var chatStuff = document.getElementById("chatStuff");
 var playerList = document.getElementById("playerList");
+var currentPlayerText = document.getElementById("currentPlaying")
 
 import { database } from "./firebaseConfig.js";
 import { getDatabase, ref, set, remove, get, onValue, update, push } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-database.js";
@@ -159,6 +160,9 @@ function keepRoomState() {
               inGame=true;
 
               //game()
+              
+              const roomData = snapshot.val();
+              currentPlayer.innerHTML = roomData.host;
             }
           },1000);
        }
@@ -462,7 +466,11 @@ function startGame() {
       
       inGame=true;
 
-      //game();
+      game();
+
+      const roomData = snapshot.val();
+      currentPlayer.innerHTML = roomData.host;
     }
   },1000);
 }
+
