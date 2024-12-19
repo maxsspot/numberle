@@ -26,6 +26,7 @@ html, body {user-select:none;}
 	position:fixed;
 	right:40px;
 	margin-top:25px;
+	opacity:0;
 }
 
 #gameStarts {
