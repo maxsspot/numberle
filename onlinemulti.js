@@ -479,6 +479,11 @@ function startGame() {
         if (snapshot.exists()) {
           const roomData = snapshot.val();
           currentPlayer.innerHTML = roomData.host;
+
+          maxNumber = Math.floor(Math.random()* roomData.maxNumber) + 1
+          set(roomRef, {
+            numberToGuess: maxNumber,
+          })
         }
       });
 
@@ -499,16 +504,10 @@ function game () {
   const roomRef = ref(database, "Lobbies/" + (roomCodeText.innerHTML || roomCode));
   
   updateBoxAvailability();
+  
   onValue(roomRef, (snapshot) => {
     const roomData = snapshot.val();
     if (snapshot.exists()) {
-      if (isHost) {
-        maxNumber = Math.floor(Math.random()* roomData.maxNumber) + 1
-        set(roomRef, {
-          numberToGuess: maxNumber,
-        })
-      }
-      
       highestNumber.innerHTML = roomData.numberToGuess;
     }
   })
