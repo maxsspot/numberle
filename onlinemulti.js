@@ -162,11 +162,11 @@ function keepRoomState() {
               },500);
               
               inGame=true;
-
-              game()
               
               const roomData = snapshot.val();
               currentPlayer.innerHTML = roomData.host;
+
+              game();
             }
           },1000);
        }
@@ -470,14 +470,14 @@ function startGame() {
       
       inGame=true;
 
-      game();
-
       onValue(roomRef, (snapshot) => {
         if (snapshot.exists()) {
           const roomData = snapshot.val();
           currentPlayer.innerHTML = roomData.host;
         }
       });
+
+      game();
     }
   },1000);
 }
