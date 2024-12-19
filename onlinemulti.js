@@ -477,9 +477,6 @@ function startGame() {
 
       onValue(roomRef, (snapshot) => {
         if (snapshot.exists()) {
-          const roomData = snapshot.val();
-          currentPlayer.innerHTML = roomData.host;
-
           maxNumber = Math.floor(Math.random()* roomData.maxNumber) + 1
           set(roomRef, {
             numberToGuess: maxNumber,
@@ -508,6 +505,7 @@ function game () {
   onValue(roomRef, (snapshot) => {
     const roomData = snapshot.val();
     if (snapshot.exists()) {
+      currentPlayer.innerHTML = roomData.host;
       highestNumber.innerHTML = roomData.numberToGuess;
     }
   })
