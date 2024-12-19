@@ -200,9 +200,44 @@ function confirmSettingsF () {
   returnHome();
 }
 
+// Starts listening for new messages
+function initListening() {
+  var roomCodeInput = document.getElementById("joiningCode").value.trim();
+  const messagesRef = ref(database, "Lobbies/" + roomCodeText.innerHTML + "/messages");
+  
+  onValue(messagesRef, (snapshot) => {
+    const messages = snapshot.val();
+    chatbox.value = '';
+    
+    for (const key in messages) {
+      const message = messages[key];
+      if (censorExplicit.checked) {
+        chatbox.value += `${message.sender}: ${profanityCleaner.clean(message.content)}\n`;
+      } else {
+        chatbox.value += `${message.sender}: ${message.content}\n`;
+      }
+
+      /*if (shouldOpenChat) {
+        document.getElementById ("openChatbox").style.border = "#FF6666 solid 1px"
+  
+        setTimeout(function() {
+          document.getElementById ("openChatbox").style.border = "white solid 1px"
+        },1000);
+      }*/
+    }
+    
+    chatbox.scrollTop = chatbox.scrollHeight;
+
+    if (shouldOpenChat) {
+      messageIndicator.style.opacity = "1";
+    }
+  });
+}
+
 // Creates a room
 function createRoomF() {
   isHost = true;
+  initListening();
   
   roomCode = Math.floor(Math.random() * 999999) + 100000;
   maxNumber = document.getElementById("maxNumberOnline").value;
@@ -258,6 +293,7 @@ function createRoomF() {
 function joinRoomF() {  
   const roomCodeInput = document.getElementById("joiningCode").value.trim();
   const roomRef = ref(database, "Lobbies/" + roomCodeInput);
+  initListening();
   
   transitionCover.style.opacity = "1";
   transitionCover.style.pointerEvents = "all";
@@ -318,7 +354,6 @@ function openChatboxF () {
   if (shouldOpenChat) {
     document.getElementById("chatbox").style.opacity = "1"
     document.getElementById("chatbox").style.pointerEvents = "all"
-    initListening()
     messageIndicator.style.opacity = "0";
     shouldOpenChat = false;
   } else {
@@ -350,40 +385,6 @@ function sendMessageF() {
       canSendMessage = true;
     },1500);
   }
-}
-
-// Starts listening for new messages
-function initListening() {
-  var roomCodeInput = document.getElementById("joiningCode").value.trim();
-  const messagesRef = ref(database, "Lobbies/" + roomCodeText.innerHTML + "/messages");
-  
-  onValue(messagesRef, (snapshot) => {
-    const messages = snapshot.val();
-    chatbox.value = '';
-    
-    for (const key in messages) {
-      const message = messages[key];
-      if (censorExplicit.checked) {
-        chatbox.value += `${message.sender}: ${profanityCleaner.clean(message.content)}\n`;
-      } else {
-        chatbox.value += `${message.sender}: ${message.content}\n`;
-      }
-
-      /*if (shouldOpenChat) {
-        document.getElementById ("openChatbox").style.border = "#FF6666 solid 1px"
-  
-        setTimeout(function() {
-          document.getElementById ("openChatbox").style.border = "white solid 1px"
-        },1000);
-      }*/
-    }
-    
-    chatbox.scrollTop = chatbox.scrollHeight;
-
-    if (shouldOpenChat) {
-      messageIndicator.style.opacity = "1";
-    }
-  });
 }
 
 // In relation to sending messages
