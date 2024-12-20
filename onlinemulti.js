@@ -395,13 +395,17 @@ function makeGuess() {
 document.addEventListener("keydown", function(event) {
     if (event.key === 'Enter' && !shouldOpenChat) {
       sendMessageF();
-    } else if (event.key === 'Enter' && inGame && shouldOpenChat) {
-      makeGuess();
     } else if (event.key === 'Escape' && !shouldOpenChat) {
       openChatboxF();
     }
 });  
 
+guessBox.addEventListener("keydown", function() {
+    if (event.key === 'Enter' && inGame && shouldOpenChat) {
+      makeGuess();
+    } 
+})
+;
 // Leaves the room
 window.onbeforeunload = function removePlayer() {
     const roomRef = ref(database, "Lobbies/" + (roomCodeText.innerHTML || roomCode));
