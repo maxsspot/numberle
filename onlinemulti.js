@@ -499,8 +499,10 @@ function banPlayer() {
 // Starts the game
 function startGame() {
   const roomRef = ref(database, "Lobbies/" + (roomCodeText.innerHTML || roomCode));
-  update(roomRef, { gameStarted: true })
-
+  update(roomRef, { 
+    gameStarted: true,
+  })
+  
   document.getElementById("gameStarts").style.opacity = "1";
   var toStart=3;
   
@@ -534,6 +536,7 @@ function startGame() {
           update(roomRef, {
             numberToGuess: maxNumber,
             minNumber: 0,
+            maxNumber: maxNumber;
           })
         }
       });
