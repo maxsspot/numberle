@@ -394,13 +394,13 @@ function makeGuess() {
   get(roomRef).then((snapshot) => {
     if (snapshot.exists()) {
       const roomData = snapshot.val();
-      if (guessBox.value<roomData.numberToGuess) {
+      if (guessBox.value>roomData.numberToGuess) {
         update(roomRef, {
           maxNumber: guessBox.value,
         }).then(() => {
           highestNumber.innerHTML = roomData.maxNumber;
         });
-      } else if (guessBox.value>roomData.numberToGuess) {
+      } else if (guessBox.value<roomData.numberToGuess) {
         update(roomRef, {
           minNumber: guessBox.value,
         }).then(() => {
