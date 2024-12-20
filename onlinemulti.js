@@ -390,31 +390,32 @@ function sendMessageF() {
 // Make a guess
 function makeGuess() {
   const roomRef = ref(database, "Lobbies/" + (roomCodeText.innerHTML || roomCode));
-
-  if (snapshot.exists()) {
-    const roomData = snapshot.val();
-    if (guessBox.value<roomData.maxNumber) {
-      roomData.maxNumber = guessBox.value;
-      highestNumber.innerHTML = roomData.maxNumber;
-    } else if (guessBox.value>roomData.lowestNumber) {
-      roomData.minNumber = guessBox.value;
-      lowestNumber.innerHTML = roomData.minNumber;
-    } else {
-      if (isHost) {
-        Swal.fire({
-          title: currentPlayerText.innerHTML + ' WON!',
-          icon: 'success',
-          allowOutsideClick: false,
-          showConfirmButton: true,
-        })
+  get(roomRef).then((snapshot) => {
+    if (snapshot.exists()) {
+      const roomData = snapshot.val();
+      if (guessBox.value<roomData.maxNumber) {
+        roomData.maxNumber = guessBox.value;
+        highestNumber.innerHTML = roomData.maxNumber;
+      } else if (guessBox.value>roomData.lowestNumber) {
+        roomData.minNumber = guessBox.value;
+        lowestNumber.innerHTML = roomData.minNumber;
       } else {
-        Swal.fire({
-          title: currentPlayerText.innerHTML + ' WON!',
-          icon: 'success',
-          allowOutsideClick: false,
-          showConfirmButton: false,
-        })
-      }
+        if (isHost) {
+          Swal.fire({
+            title: currentPlayerText.innerHTML + ' WON!',
+            icon: 'success',
+            allowOutsideClick: false,
+            showConfirmButton: true,
+          })
+        } else {
+          Swal.fire({
+            title: currentPlayerText.innerHTML + ' WON!',
+            icon: 'success',
+            allowOutsideClick: false,
+            showConfirmButton: false,
+          })
+        }
+      })
     }
   }
 }
