@@ -29,7 +29,8 @@ var messageIndicator = document.getElementById("newMessage");
 var currentPlayerText = document.getElementById("currentPlaying")
 var guessBox = document.getElementById("multiBox");
 var highestNumber = document.getElementById("highest");
-
+var lowestNumber = document.getElementById("lowest");
+  
 import { database } from "./firebaseConfig.js";
 import { getDatabase, ref, set, remove, get, onValue, update, push } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-database.js";
 
@@ -388,7 +389,29 @@ function sendMessageF() {
 
 // Make a guess
 function makeGuess() {
-  alert ("guess made");
+  const roomRef = ref(database, "Lobbies/" + (roomCodeText.innerHTML || roomCode));
+
+  if (snapshot.exists()) {
+    const roomData = snapshot.val();
+    if (guessBox.value<roomData.maxNumber) {
+      roomData.maxNumber = guessBox.value;
+      highestNumber.innerHTML = roomData.maxNumber;
+    } else if (guessBox.value>roomData.lowestNumber) {
+      roomData.minNumber = guessBox.value;
+      lowestNumber.innerHTML = roomData.minNumber;
+    } else {
+      Swal.fire({
+        title: currentPlayerText.innerHTML + ' WON!',
+        icon: 'success',
+        allowOutsideClick: false
+        if (isHost) {
+          showConfirmButton: true,
+        } else {
+          showConfirmButton: true,
+        }
+      })
+    }
+  }
 }
 
 // In relation to sending messages
@@ -497,6 +520,7 @@ function startGame() {
           maxNumber = Math.floor(Math.random()* roomData.maxNumber) + 1
           update(roomRef, {
             numberToGuess: maxNumber,
+            minNumber: 0,
           })
         }
       });
