@@ -414,8 +414,8 @@ function makeGuess() {
             allowOutsideClick: false,
             showConfirmButton: false,
           })
-        }*/
-      }
+        }
+      }*/
     })
   }
 }
