@@ -416,8 +416,8 @@ function makeGuess() {
           })
         }
       }*/
-    })
-  }
+    }
+  })
 }
 
 // In relation to sending messages
