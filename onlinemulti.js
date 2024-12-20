@@ -396,10 +396,10 @@ function makeGuess() {
       if (guessBox.value<roomData.maxNumber) {
         roomData.maxNumber = guessBox.value;
         highestNumber.innerHTML = roomData.maxNumber;
-      } else if (guessBox.value>roomData.lowestNumber) {
+      } else if (guessBox.value>roomData.minNumber) {
         roomData.minNumber = guessBox.value;
         lowestNumber.innerHTML = roomData.minNumber;
-      } else {
+      }/* else {
         if (isHost) {
           Swal.fire({
             title: currentPlayerText.innerHTML + ' WON!',
@@ -414,7 +414,7 @@ function makeGuess() {
             allowOutsideClick: false,
             showConfirmButton: false,
           })
-        }
+        }*/
       }
     }
   })
