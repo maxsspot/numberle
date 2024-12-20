@@ -404,7 +404,7 @@ function makeGuess() {
           minNumber: guessBox.value,
         }).then(() => {
           lowestNumber.innerHTML = roomData.minNumber;
-        })'
+        })
       }/* else {
         if (isHost) {
           Swal.fire({
