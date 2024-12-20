@@ -217,6 +217,7 @@ function createRoomF() {
     host: username.value,
     maxNumber: maxNumber,
     players: [username.value],
+    minNumber: 0,
     roomActive: true,
     gameStarted: false,
   }).then(() => {
