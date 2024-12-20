@@ -386,10 +386,17 @@ function sendMessageF() {
   }
 }
 
+// Make a guess
+function makeGuess() {
+  alert ("guess made");
+}
+
 // In relation to sending messages
 document.addEventListener("keydown", function(event) {
     if (event.key === 'Enter' && !shouldOpenChat) {
       sendMessageF();
+    } else if (event.key === 'Enter' && inGame && shouldOpenChat) {
+      makeGuess();
     } else if (event.key === 'Escape' && !shouldOpenChat) {
       openChatboxF();
     }
