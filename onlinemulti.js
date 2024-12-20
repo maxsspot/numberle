@@ -400,16 +400,21 @@ function makeGuess() {
       roomData.minNumber = guessBox.value;
       lowestNumber.innerHTML = roomData.minNumber;
     } else {
-      Swal.fire({
-        title: currentPlayerText.innerHTML + ' WON!',
-        icon: 'success',
-        allowOutsideClick: false
-        if (isHost) {
+      if (isHost) {
+        Swal.fire({
+          title: currentPlayerText.innerHTML + ' WON!',
+          icon: 'success',
+          allowOutsideClick: false,
           showConfirmButton: true,
-        } else {
-          showConfirmButton: true,
-        }
-      })
+        })
+      } else {
+        Swal.fire({
+          title: currentPlayerText.innerHTML + ' WON!',
+          icon: 'success',
+          allowOutsideClick: false,
+          showConfirmButton: false,
+        })
+      }
     }
   }
 }
