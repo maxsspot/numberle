@@ -415,7 +415,7 @@ function makeGuess() {
             showConfirmButton: false,
           })
         }
-      })
+      }
     }
   }
 }
