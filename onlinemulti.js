@@ -395,14 +395,16 @@ function makeGuess() {
       const roomData = snapshot.val();
       if (guessBox.value<roomData.maxNumber) {
         update(roomRef, {
-            maxNumber: guessBox.value,
-        })
-        highestNumber.innerHTML = roomData.maxNumber;
+          maxNumber: guessBox.value,
+        }).then(() => {
+          highestNumber.innerHTML = roomData.maxNumber;
+        });
       } else if (guessBox.value>roomData.minNumber) {
         update(roomRef, {
-            minNumber: guessBox.value,
-        })
-        lowestNumber.innerHTML = roomData.minNumber;
+          minNumber: guessBox.value,
+        }).then(() => {
+          lowestNumber.innerHTML = roomData.minNumber;
+        })'
       }/* else {
         if (isHost) {
           Swal.fire({
