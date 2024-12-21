@@ -562,7 +562,7 @@ function game () {
     const roomData = snapshot.val();
     if (snapshot.exists()) {
       currentPlayer.innerHTML = roomData.host;
-      highestNumber.innerHTML = roomData.numberToGuess;
+      highestNumber.innerHTML = roomData.maxNumber;
     }
   })
 
