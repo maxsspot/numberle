@@ -537,7 +537,6 @@ function startGame() {
           update(roomRef, {
             numberToGuess: maxNumber,
             minNumber: 0,
-            highestNumber: maxNumber,
           })
         }
       });
