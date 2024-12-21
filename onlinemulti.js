@@ -218,6 +218,7 @@ function createRoomF() {
     maxNumber: maxNumber,
     players: [username.value],
     minNumber: 0,
+    highestNumber: maxNumber,
     roomActive: true,
     gameStarted: false,
   }).then(() => {
@@ -396,9 +397,9 @@ function makeGuess() {
       const roomData = snapshot.val();
       if (guessBox.value>roomData.numberToGuess) {
         update(roomRef, {
-          maxNumber: guessBox.value,
+          highestNumber: guessBox.value,
         }).then(() => {
-          highestNumber.innerHTML = roomData.maxNumber;
+          highestNumber.innerHTML = roomData.highestNumber;
         });
       } else if (guessBox.value<roomData.numberToGuess) {
         update(roomRef, {
@@ -536,7 +537,7 @@ function startGame() {
           update(roomRef, {
             numberToGuess: maxNumber,
             minNumber: 0,
-            maxNumber: maxNumber,
+            highestNumber: maxNumber,
           })
         }
       });
